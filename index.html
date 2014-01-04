@@ -1,12 +1,15 @@
 ---
-layout: default
+layout: bootstrap
 title: basp.github.io
 ---
 <div id="home">
   <h1>Blog Posts</h1>
-  <ul class="posts">
+  <ul class="nav nav-pills nav-stacked">
     {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        <span class="badge pull-right">{{ post.date | date_to_string }}</span>
+    </li>
     {% endfor %}
   </ul>
 </div>
