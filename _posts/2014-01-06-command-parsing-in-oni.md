@@ -3,7 +3,7 @@ layout: post
 title: "Command Parsing in Oni"
 tags: [dev, moo, oni]
 ---
-In the previous post, I rambled a bit about strings in Erlang. Strings are not too bad but for Oni (lum invader) I decided to go with binary strings. These look like `<<"fubar">>` and consume only a byte per character. According to the [Erlang Efficiency Guide](http://www.erlang.org/doc/efficiency_guide/binaryhandling.html) they also have several optimized operations in the VM.
+In the [previous post](http://basp.github.io/2014/01/06/string-manipulation-in-erlang.html), I rambled a bit about strings in Erlang. Strings are not too bad but for Oni (lum invader) I decided to go with binary strings. These look like `<<"fubar">>` and consume only a byte per character. According to the [Erlang Efficiency Guide](http://www.erlang.org/doc/efficiency_guide/binaryhandling.html) they also have several optimized operations in the VM.
 
 Unfortunately that means we cannot use a lot of stuff that would otherwise be free. Things like everything from the `strings` module and `io_lib:format` will be somewhat missed. However, even though there will be a lot of strings going in and out of Oni, this doesn't mean that we have to be slow about it. In fact, handling strings, matching and formatting will be one of the main tasks that the Oni runtime will have to perform so hopefully we are smart about it.
 
