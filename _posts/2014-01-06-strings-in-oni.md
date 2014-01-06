@@ -31,7 +31,7 @@ When we try to parse something with the `parse/1` function we get one of those. 
   	  <<"toolbox">>]}
 	2> 
 
-In the above result with get this rather ugly tuple but it has meaning. In order we can see the verb ("get"), the direct object ("silver bullet"), the preposition ("with"), the indirect object ("shady toolbox"), the argument string (everything but the verb) and the argument list (a combination of the direct object, preposition and indirect object tokens).
+In the above result with get this rather ugly tuple but it has meaning. In order we can see the verb (`<<"get">>`), the direct object (`<<"silver bullet">>`), the preposition (`<<"with">>`), the indirect object (`<<"shady toolbox">>`), the argument string (everything but the verb) and the argument list (a combination of the direct object, preposition and indirect object tokens).
 
 ### Command Parsing
 The parsing of Oni commands is efficient. I do not claim it to be fast but I claim it to be fast enough for the purposes for which it is designed: handle parsing of player input.
