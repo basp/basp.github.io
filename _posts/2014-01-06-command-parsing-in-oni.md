@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Strings in Oni"
+title: "Command Parsing in Oni"
 tags: [dev, moo, oni]
 ---
 In the previous post, I rambled a bit about strings in Erlang. Strings are not too bad but for Oni (lum invader) I decided to go with binary strings. These look like `<<"fubar">>` and consume only a byte per character. According to the [Erlang Efficiency Guide](http://www.erlang.org/doc/efficiency_guide/binaryhandling.html) they also have several optimized operations in the VM.
@@ -45,6 +45,8 @@ For our purposes, the MOO (command) parser works as follows:
 * 	If no preposition is found, everything after the verb is considered to be the direct object.
 
 As we can see in the above, Oni can parse the preposition too and return a complete commmand spec. Even on complex commands it's hard to get the parser to take more than a microsecond to parse input. Also, it takes only one pass to parse the command into a full `cmdspec()` tuple.
+
+__To be continued__
 
 #### Fun Fact
 During testing, the `shady toolbox` actually revealed a subtle bug in the parser - it was ignoring stuff at random! Turnes out it was a little too eager to parse things as prepositions. It parsed the `toolbox` as the `to` preposition and then decided it had found a preposition so it would not have to parse further. The solution was simple: add a space to the binary match expression.
