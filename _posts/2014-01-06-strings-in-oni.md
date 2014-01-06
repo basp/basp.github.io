@@ -44,7 +44,7 @@ For our purposes, the MOO (command) parser works as follows:
 * 	If a preposition is found, everything between verb and preposition is considered to be the direct object and everything after the preposition is considered to be the indirect object.
 * 	If no preposition is found, everything after the verb is considered to be the direct object.
 
-As we have sene above, Oni can parse the preposition too and return a complete commmand spec. Even on complex commands it's hard to get the parser to take more than a microsecond to parse input. Also, it takes only one pass to parse the command into a full `cmdspec()` tuple.
+As we can see in the above, Oni can parse the preposition too and return a complete commmand spec. Even on complex commands it's hard to get the parser to take more than a microsecond to parse input. Also, it takes only one pass to parse the command into a full `cmdspec()` tuple.
 
 #### Fun Fact
 During testing, the `shady toolbox` actually revealed a subtle bug in the parser - it was ignoring stuff at random! Turnes out it was a little too eager to parse things as prepositions. It parsed the `toolbox` as the `to` preposition and then decided it had found a preposition so it would not have to parse further. The solution was simple: add a space to the binary match expression.
