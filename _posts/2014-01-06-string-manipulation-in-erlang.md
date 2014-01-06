@@ -13,7 +13,7 @@ That doesn't sound good but it's not too bad either. Yes, they take up a bit of 
 
 Indeed, in Erlang strings are not arrays. You can't just do some random indexing and substringing like you can in most languages. This might seem like a downside but rather __it's a good thing__. Even though most languages allow you to do this, random substringing, indexing, getting chars and whatnot from whatever position in the string is __NOT__ a good thing. 
 
-Note that you can probably do efficient substring in erlang using `string:sub_string` but just the awkward naming should warn you to not use this. Substringing is just not something that is natural to functional languages. Almost every problem except from the most trival ones are better solved by not using a `sub_string` operation.
+Note that you can probably do efficient substring in erlang using `string:sub_string` but just the awkward naming should warn you to not use this. Substringing is just not something that is natural to functional languages. Almost every problem except from the most trival ones are better solved by __NOT__ using a `sub_string` operation.
 
 Erlang almost forces you to handle every string like a stream of characters and this is actually a good thing because treating the string like some random access memory to poke around in is just wrong and leads to code that is error prone, unreadable and therefore unmaintainable. Even if you look at a modern C like Go you will see that any serious string work (like in the [scanner](http://golang.org/src/pkg/text/scanner/scanner.go) and [parser](http://golang.org/src/pkg/go/parser/parser.go)) is usually not done with just poking about in an array of characters.
 
