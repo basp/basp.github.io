@@ -10,6 +10,38 @@ Unfortunately that means we cannot use a lot of stuff that would otherwise be fr
 ### Input
 The main form of input into Oni is text but we are not forced to handle these as strings. We can handle these like sequences of bytes and using one of Erlang's awesome features (binary matching) we can do a lot of cool stuff (and fast too). Oni is not interrested in handling unicode anyway. We will just handle everything like ASCII (otherwise we couldn't do this, at least not so easily) and speed through it.
 
+For example, here is the `trim_start` function. It's oblivious, it just returns `Rest` whenever it finds a non-whitespace character:
+
+	%%-----------------------------------------------------------------------------
+	%% @doc Removes beginning whitespace.
+	%%-----------------------------------------------------------------------------
+	-spec trim_start(Data::binary()) -> binary().
+	trim_start(<<>>) -> 
+		<<>>;
+	trim_start(<<C, Rest/binary>>) 
+		when C =:= $\s; C =:= $\t; C =:= $\r; C =:= $\n -> trim_start(Rest);
+	trim_start(Data) ->
+		Data.
+
+This `trim_start` function is easy though because we can start from the beginning. Doing `trim_end` we have to suffer a bit:
+
+	%%-----------------------------------------------------------------------------
+	%% @doc Removes trailing whitespace.
+	%%-----------------------------------------------------------------------------
+	-spec trim_end(Data::binary()) -> binary().
+	trim_end(Data) ->
+		trim_end(Data, <<>>, <<>>).
+
+	%% Internal helper
+	trim_end(<<>>, _Buffer, Acc) -> Acc;
+	trim_end(<<C, Rest/binary>>, Buffer, Acc)
+		when C =:= $\s; C =:= $\t; C =:= $\r; C =:= $\n ->
+			trim_end(Rest, <<Buffer/binary, C>>, Acc);
+	trim_end(<<C, Rest/binary>>, Buffer, Acc) ->
+		trim_end(Rest, <<>>, <<Acc/binary, Buffer/binary, C>>).
+
+The `trim_end/3` accumulates any character in `Buffer`. Whenever it finds a non-whitespace character it will  append `Buffer` to its accumulator (`Acc`) value, reset `Buffer` and recurse. Whenever it finds a whitespace value this will be added to the `Buffer`. If it runs out of characters, it will return whatever is in the `Acc` value while discarding everything in `Buffer`. The `Buffer` that is discarded represents our trailing whitespace so what is left in `Rest` is our trimmed `binary()`.
+
 Because I don't like to convert stuff while it's handled by internal processes I kinda want everything to be a `binary()`. This means I have to do parsing and formatting on binaries too. The command parsing routines for _lum invader_ are in the `oni_cmd` module. This module exports only one function: `parse(Data::binary()) -> cmdspec()`. 
 
 The `cmdspec` is a somewhat convoluted tuple that has one of the following forms: 
