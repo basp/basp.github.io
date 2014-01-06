@@ -10,7 +10,7 @@ Unfortunately that means we cannot use a lot of stuff that would otherwise be fr
 ### Input
 The main form of input into Oni is text but we are not forced to handle these as strings. We can handle these like sequences of bytes and using one of Erlang's awesome features (binary matching) we can do a lot of cool stuff (and fast too). Oni is not interrested in handling unicode anyway. We will just handle everything like ASCII (otherwise we couldn't do this, at least not so easily) and speed through it.
 
-For example, here is the `trim_start` function. It's oblivious, it just returns `Rest` whenever it finds a non-whitespace character:
+For example, here is the `trim_start` function. It's oblivious, it just returns `Data` whenever it finds a non-whitespace character (whitespace characters are guarded):
 
 	%%-----------------------------------------------------------------------------
 	%% @doc Removes beginning whitespace.
