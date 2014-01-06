@@ -25,7 +25,7 @@ For example, here is the `trim_start` function. It's oblivious, it just returns 
 
 This `trim_start` function is easy though because we can start from the beginning. 
 
-Doing `trim_end` we have to suffer a bit because we have to deal with everything. We cannot be sure that we handled all whitespace and non-whitespace until we have reached te end of the binary. However, when we call this it's usually called from the `trim/1` function. This will first trim the whitespace so at least we can skip those.
+Doing `trim_end` we have to suffer a bit because we have to deal with everything. We cannot be sure that we handled all whitespace and non-whitespace until we have reached te end of the binary. However, when we call this it's usually in conjunction with the `trim/1` function. This will first trim the starting whitespace so at least we can skip those.
 
 	%%-----------------------------------------------------------------------------
 	%% @doc Removes trailing whitespace.
