@@ -82,7 +82,7 @@ For our purposes, the MOO (command) parser works as follows:
 
 As we can see in the above, Oni can parse the preposition too and return a complete commmand spec. Even on complex commands it's hard to get the parser to take more than a microsecond to parse input. Also, it takes only one pass to parse the command into a full `cmdspec()` tuple.
 
-The command parser will _normalize_ all your duplicate spaces between tokens before feeding them to the VM. That means it will split on whitespace into tokens and then join those tokens into `dobjstr()` and `iobjstr()` with a single space character as a  seperator.
+The command parser will _normalize_ most of your duplicate spaces between tokens before feeding them to the VM. That means it will split on whitespace into tokens and then join those tokens into `dobjstr()` and `iobjstr()` with a single space character as a  seperator.
 
 	3> oni_cmd:parse(<<"get gold     nuggets from    disintegrating      box">>).
 	 {<<"get">>,<<"gold nuggets">>,<<"from">>,
