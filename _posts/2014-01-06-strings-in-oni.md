@@ -12,7 +12,17 @@ The main form of input into Oni is text but we are not forced to handle these as
 
 Because I don't like to convert stuff while it's handled by internal processes I kinda want everything to be a `binary()`. This means I have to do parsing and formatting on binaries too. The command parsing routines for _lum invader_ are in the `oni_cmd` module. This module exports only one function: `parse(Data::binary()) -> cmdspec()`. 
 
-The `cmdspec` is a somewhat convoluted tuple that has one of the following forms: `{Verb::binary(), Dobjstr::binary(), Argstr::binary(), Args::[binary()]}` or `{Verb::binary(), Dobjstr::binary(), Prep::binary(), Iobjstr::binary(), Argstr::binary(), Args::[binary()]}`.
+The `cmdspec` is a somewhat convoluted tuple that has one of the following forms: 
+
+	{Verb::binary(), Dobjstr::binary(), 
+	 Argstr::binary(), Args::[binary()]}
+
+Or like this: 
+
+	{Verb::binary(), Dobjstr::binary(), Prep::binary(), Iobjstr::binary(), 
+	 Argstr::binary(), Args::[binary()]}
+
+When we try to parse something with the `parse/1` function we get one of those. Below is an example with an indirect object:
 
 	1> oni_cmd:parse(<<"get silver bullet with shady toolbox">>).
 	 {<<"get">>,<<"silver bullet">>,<<"with">>,
