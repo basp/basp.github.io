@@ -23,7 +23,9 @@ For example, here is the `trim_start` function. It's oblivious, it just returns 
 	trim_start(Data) ->
 		Data.
 
-This `trim_start` function is easy though because we can start from the beginning. Doing `trim_end` we have to suffer a bit:
+This `trim_start` function is easy though because we can start from the beginning. 
+
+Doing `trim_end` we have to suffer a bit because we have to deal with everything. We cannot be sure that we handled all whitespace and non-whitespace until we have reached te end of the binary. However, when we call this it's usually called from the `trim/1` function. This will first trim the whitespace so at least we can skip those.
 
 	%%-----------------------------------------------------------------------------
 	%% @doc Removes trailing whitespace.
@@ -40,7 +42,7 @@ This `trim_start` function is easy though because we can start from the beginnin
 	trim_end(<<C, Rest/binary>>, Buffer, Acc) ->
 		trim_end(Rest, <<>>, <<Acc/binary, Buffer/binary, C>>).
 
-The `trim_end/3` accumulates any character in `Buffer`. Whenever it finds a non-whitespace character it will  append `Buffer` to its accumulator (`Acc`) value, reset `Buffer` and recurse. Whenever it finds a whitespace value this will be added to the `Buffer`. If it runs out of characters, it will return whatever is in the `Acc` value while discarding everything in `Buffer`. The `Buffer` that is discarded represents our trailing whitespace so what is left in `Rest` is our trimmed `binary()`.
+The `trim_end/3` accumulates any character in `Buffer`. Whenever it finds a non-whitespace character it will  append `Buffer` to its accumulator (`Acc`) value, reset `Buffer` and recurse. Whenever it finds a whitespace value this will be added to the `Buffer`. If it runs out of characters, it will return whatever is in the `Acc` value while discarding everything in `Buffer`. The `Buffer` that is discarded represents our trailing whitespace so what is left in `Rest` is our trimmed `binary()`. The unfortunate part is that if we want to trim whitespace __we have to run from the beginning__. Luckily, we are dealing with small commands so this should not be too much of a problem.
 
 Because I don't like to convert stuff while it's handled by internal processes I kinda want everything to be a `binary()`. This means I have to do parsing and formatting on binaries too. The command parsing routines for _lum invader_ are in the `oni_cmd` module. This module exports only one function: `parse(Data::binary()) -> cmdspec()`. 
 
