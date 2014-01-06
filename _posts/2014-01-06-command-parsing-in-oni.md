@@ -82,7 +82,17 @@ For our purposes, the MOO (command) parser works as follows:
 
 As we can see in the above, Oni can parse the preposition too and return a complete commmand spec. Even on complex commands it's hard to get the parser to take more than a microsecond to parse input. Also, it takes only one pass to parse the command into a full `cmdspec()` tuple.
 
-__To be continued__
+The command parser will _normalize_ all your duplicate spaces between tokens before feeding them to the VM. That means it will split on whitespace into tokens and then join those tokens into `dobjstr()` and `iobjstr()` with a single space character as a  seperator.
+
+	3> oni_cmd:parse(<<"get gold     nuggets from    disintegrating      box">>).
+	 {<<"get">>,<<"gold nuggets">>,<<"from">>,
+ 	  <<"disintegrating box">>,
+      <<"gold     nuggets from    disintegrating      box">>,
+      [<<"gold">>,<<"nuggets">>,<<"from">>,<<"disintegrating">>,
+      <<"box">>]}
+   	4>
+
+Note that Oni preserves all your significant whitespace in the `argstr` value. This value is often used to output to players _as is_ so it makes sense to preserve the whitespace. Also note that in the `dobjstr` and `iobjstr` values, the whitespace has been normalized (to a single space character).
 
 #### Fun Fact
 During testing, the `shady toolbox` actually revealed a subtle bug in the parser - it was ignoring stuff at random! Turnes out it was a little too eager to parse things as prepositions. It parsed the `toolbox` as the `to` preposition and then decided it had found a preposition so it would not have to parse further. The solution was simple: add a space to the binary match expression.
