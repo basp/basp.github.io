@@ -65,6 +65,7 @@ Generally, the infrastructure will manage all the entry bookkeeping but you can 
 Important matching routines have been put into their own module: `oni_match`. This is the API into all matching support. The exported routines are used heavily but the command parser when it tries to resolve object string references into actual object identifiers.
 
 #### Respect the Wizard Flag
+Fubar
 In the prototype, the `wizard` flag was there only for show but Oni actually respects this flag in a basic way now. If you are a `wizard`, you will have access to quite a few powerfull constructs (so be careful assinging this flag). You can execute Erlang expression lists on the server at will using the `;` operator:
 
     > ;3 + 2.
