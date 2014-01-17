@@ -38,5 +38,5 @@ There are a few utility modules included in Oni.
 
 *   `oni_ansi` includes ANSI color support out of the box. You can either `style` or `strip` something from Oni ANSI color hints such as `$fg_blue;`, `$reset;` and much others.
 *   `oni_match` has matching routines for various things. It is designed to be used by the runtime as well as verb implementations.
-*   `oni_gender` is a module that will set all the gender and pronoun related properties on objects. These are especially important if you plant to use `ps` (pronoun sub) from the `oni_bstr` module.
+*   `oni_gender` is a module that will set all the gender and pronoun related properties on objects. These are especially important if you plan to use `ps` (pronoun sub) from the `oni_bstr` module.
 *   `oni_bstr` offers utility functions to work with binary data as strings. These are also used a lot internally.
