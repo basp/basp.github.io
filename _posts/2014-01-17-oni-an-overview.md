@@ -3,9 +3,9 @@ layout: post
 title: "Oni Overview"
 tags: [dev, moo, oni]
 ---
-If you follow this blow it might not be immediately obvious but there are actually two Oni's: there is the _old_ (Oni)[https://github.com/basp/oni] and there is (ラム・インベーダ)[https://github.com/basp/lum-invader].
+If you follow this blog it might not be immediately obvious but there are actually two Oni's: there is the _old_ [Oni](https://github.com/basp/oni) and there is [ラム・インベーダ](https://github.com/basp/lum-invader).
 
-The difference between the two is that the __old Oni__ is just a prototype. I stopped developing that because it has fulfilled its purpose. Everything is going into __ラム・インベーダ__ for now and even that is kinda about to burst out of its seams but I have to tag on some other stuff before that will evolve. For now I recommend focussing on (ラム・インベーダ)[https://github.com/basp/lum-invader] though.
+The difference between the two is that the __old Oni__ is just a prototype. I stopped developing that because it has fulfilled its purpose. Everything is going into __ラム・インベーダ__ for now and even that is kinda about to burst out of its seams but I have to tag on some other stuff before that will evolve. For now I recommend focussing on [ラム・インベーダ](https://github.com/basp/lum-invader) though.
 
 ## 鬼ラム・インベーダ
 At this point its useful to give an overview on the various parts of Oni and how it's all coming together. In general we have OTP components, infrastructure and utilities. Below is a general overview:
