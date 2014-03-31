@@ -24,8 +24,16 @@ Before you can set out, the game requires you to choose a background. There is r
 
 If you really have no clue I recommend going for the ranger or botanist. These are very straightforward to complete for new players as they only depend on you having a few skills. Also, they both allow you to take up a few (or all of) the _primitive assembly_ skills too which is a nice syphon of skillpoints during your reroll. You do have a bit more control with the ranger background on __when__ you want to finish it but it also gives you one less reroll point. 
 
-### Setting out
-After you dispatched to a planet or linked up with an existing colony, you'll find yourself with a basic set of harvesting and crafting equipment. Also you get some other helpfull items such as the datapad and handbook. Take a moment to look through stuff you have and `examine` everything to find out what actions (commands) it supports.
+### Setting up
+After you dispatched to a planet or linked up with an existing colony, you'll find yourself with a basic set of harvesting and crafting equipment. Also you get some other helpfull items such as the datapad and handbook. Take a moment to look through your `inventory` and `examine` everything to find out what actions (commands) it supports.
+
+Afer this check out your crafting tools (probably on the basic crafting tool) and do a `list basic` to see what things it can craft. One of these is a _pre-fab shelter kit_ which you should make as soon as possible. Before you do though, try to find a nice spot. Ideally, it has a nice long room description signalling the abundance of a lot of resources. 
+
+Also, you want to setup near a spot that has a good variety of biomes nearby. When starting out, you really want a planet that has a plenty of forest, jungle, mountains and desert. Other biomes are required but if you have the aforementioned biomes on your planet (and preferably nearby) you'll be in a good position to craft everything you need to get spaceborn. 
+
+Before you start exploring take a note of your `status` and note the amount of skillpoints available. You could probably learn some skills right now. If you are a ranger you should probably look into the primitive weapons category. If you are a botanist, check out the exploration category. If you have a different background you have to decide for yourself for now (sorry about that).
+
+Note though, if you are unsure you can safely keep your skillpoints for now and spend them when you are sure about what skill you want.
 
 ### TODO
 * Learn the primitive assembly skills (these are useful for almost all builds, especially when starting out)
