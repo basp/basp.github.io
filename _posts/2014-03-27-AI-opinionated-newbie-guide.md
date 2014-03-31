@@ -48,7 +48,7 @@ Before you start exploring take a note of your `status` and note the amount of s
 Note though, if you are unsure you can safely keep your skillpoints for now and spend them when you are sure about what skill you want.
 
 ### Crafting
-
+If you are doing this guide it is strongly recommended you consider taking at least everything up onto the _crafter_ skill in the _primitive assembly_ tree. I actually recommend going for _artisan_ as well whenever you can. It takes a whopping 400 points but is worth it for the health, stamina and clarity bonuses it provides alone. Let alone that this will allow you to make even more skillpoints (and improve quality) when crafting or improvising things manually (on a non-automated processor).
 
 ### TODO (tentative list below)
 * Learn the primitive assembly skills (these are useful for almost all builds, especially when starting out)
