@@ -13,6 +13,8 @@ You are not here to read about the history of Wayfar1444 though. That can wait. 
 ### Starting out for the first time
 Starting out for the first time is a little bit different because more mechanics need to be explained. If you are completely new, start here.
 
+TODO: Insert thingy about shuttle here so I'm not dumping everyone blindly into instructions. [Averitti's guide](https://sites.google.com/site/accordingtomariah/change-the-banner) is doing a much better job on this.
+
 The game will explain most of the actions at this point so just play along. The game might give you a hint to add a description. It might also direct you to the next target. Feel free to follow anything the game says for fun and profit but for the guide you should go east and check out the colony dispatch terminal.
 
 After you set your `@gender` and `background` you can use the dispatch terminal to either link up with an existing colony or dispatch to a planet of your choice to setup your own personal colony.
