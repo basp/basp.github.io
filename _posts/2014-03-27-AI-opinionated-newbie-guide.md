@@ -31,9 +31,9 @@ The admins have expressed it is allowed to multiplay (have two simultaneous conn
 It's not a very honorable thing to do but it __is__ allowed (and sometimes can be useful if you made a bad decision like parking your asteroid miner at the orbital starship construction platform, crafting a new ship there and forgetting you can't fly your old one back).
 
 ### About Wayfar1444
-Wayfar1444 is a MOO that is built upon the [hellcore](http://hellmoo.org/wiki/index.php/HellCore). It's the only playable game I know of that has been built on it. In fact, this game and hellcore are tied together in more than one way on more than one level.
+Wayfar1444 is a MOO that is built upon the [hellcore](http://hellmoo.org/wiki/index.php/HellCore). It's the only playable game I know of that has been built on it. In fact, this game and hellcore are tied together in more than one way.
 
-Howevever, you are not here to read about the history of Wayfar1444. That can wait. The rest of this guide will explain how to go from a <del>lowly</del> welcomed newbie to a <del>pro</del> reasonably self sufficient Wayfar1444 player that knows his or her way around... Somewhat.
+Let's not get into that, you are not here to read about the history of Wayfar1444. That can wait. The rest of this guide will explain how to go from a <del>lowly newbie</del> welcomed new player to a <del>pro</del> reasonably self sufficient Wayfar1444 player that knows his or her way around... Somewhat.
 
 ### Starting out for the first time
 Starting out for the first time is a little bit different because more mechanics need to be explained. If you are completely new, start here. Otherwise, just skip whatever you deem not interesting.
