@@ -7,7 +7,7 @@ Welcome to Wayfar 1444. This guide is here to help you get started playing the g
 
 Note one: this guide is meant as a companion guide to [Averitti's guide](https://sites.google.com/site/accordingtomariah/change-the-banner) excellent writings. In fact, before you read even further I recommend you read her stuff first. It's much more awesome. Read the reast below afterwards.
 
-Note that this an opionated guide so it will be full of statements that might not really be true after all. It's kinda fail safe though (at time of writing). Keep in mind though to _do experiment_ yourself outside the boundaries of what is said below whenever you feel comfortable.
+Note two: this an opionated guide so it will be full of statements that might not really be true after all. It's kinda fail safe though (at time of writing). Keep in mind though to _do experiment_ yourself outside the boundaries of what is said below whenever you feel comfortable.
 
 #### Interacting with Other Players
 Turn `chatnet on`. Now you can `chat you message here` with other players. You can view a history of the chat by typing `chatnet history`.
