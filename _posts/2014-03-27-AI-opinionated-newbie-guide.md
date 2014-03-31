@@ -11,7 +11,7 @@ Note two: this an opionated guide so it will be full of statements that might no
 
 Note three: commands you can type are `represented like this` (don't type that, it won't work). You can `help commands` to get a basic overview of what is possible. Also you can `help` to get an index on stuff you can `help thingy` on. For example, from that list, `help newbie` works too and is very useful. 
 
-#### Interacting with Other Players
+### Interacting with Other Players
 Turn `chatnet on`. Now you can `chat you message here` with other players. You can view a history of the chat by typing `chatnet history`.
 
 You can view all the players that are currently connected by typing `who`. This will show up a list with everyone and the thing they are doing. Take note of the __Idle__ column as this is useful information to determine whether your communications with this person will be effective.
@@ -22,7 +22,7 @@ If you get no response, don't spam but try at another time with other players on
 
 Remember though upon who you call. Not all might have good intentions.
 
-##### Corpnet
+#### Corpnet
 If you are in a corp you can use `corp your message here` to chat too. You can chat with your buddies this way but I'm sure they have told you at this point.
 
 #### Multiplaying
