@@ -37,7 +37,7 @@ Before you start exploring take a note of your `status` and note the amount of s
 
 Note though, if you are unsure you can safely keep your skillpoints for now and spend them when you are sure about what skill you want.
 
-### TODO
+### TODO (tentative list below)
 * Learn the primitive assembly skills (these are useful for almost all builds, especially when starting out)
 
 * Love the datapad that you are given; you an "lookup <thing> with datapad" and it will tell you how/what tool you need to make it
@@ -52,7 +52,7 @@ Note though, if you are unsure you can safely keep your skillpoints for now and 
 
 * Build a starship complex; you'll need this to get spaceborn.
 
-* Get spaceborne; getting spaceborn is arguably easier than getting airborn. Flying around in starships is important so you better get this down as soon as possible.
+* Get spaceborne; getting spaceborne is arguably easier than getting airborne. Flying around in starships is important so you better get this down as soon as possible.
 
 * Learn how to navigate around the Wayfar space; sometimes it's a bit tricky when there are planets that have the same name as their system. You'll eventually learn to visualize it in your head though.
 
