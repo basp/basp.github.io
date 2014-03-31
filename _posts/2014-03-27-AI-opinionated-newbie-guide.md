@@ -3,7 +3,6 @@ title: AI corporation opionionated newbie guide
 tags: games, wayfar1444, moo
 layout: post
 ---
-## Opionionated AI corp newbie guide
 Welcome to Wayfar 1444. This guide is here to help you get started playing the game but keep in mind that this is an _opinionanted_ guide. That being said, it will set you upon the path of being self sufficient which is one of the primary goals.
 
 ### About Wayfar1444
