@@ -8,7 +8,7 @@ Welcome to Wayfar 1444. This guide is here to help you get started playing the g
 ### About Wayfar1444
 Wayfar1444 is a MOO that is built upon the hellcore. It's the only playable game I know of that has been built on it. In fact, this game and hellcore are tied together in more than one way on more than one level.
 
-You are not here to read about the history of Wayfar1444 though. That can wait. The rest of this guide will explain how to go from a lowly newbie to a <del>pro</del>reasonably self sufficient Wayfar1444 player.
+You are not here to read about the history of Wayfar1444 though. That can wait. The rest of this guide will explain how to go from a lowly newbie to a <del>pro</del> reasonably self sufficient Wayfar1444 player.
 
 ### Starting out for the first time
 Starting out for the first time is a little bit different because more mechanics need to be explained. If you are completely new, start here.
