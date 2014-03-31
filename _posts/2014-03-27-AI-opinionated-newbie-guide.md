@@ -14,6 +14,17 @@ Note three: commands you can type are `represented like this` (don't type that, 
 #### Interacting with Other Players
 Turn `chatnet on`. Now you can `chat you message here` with other players. You can view a history of the chat by typing `chatnet history`.
 
+You can view all the players that are currently connected by typing `who`. This will show up a list with everyone and the thing they are doing. Take note of the __Idle__ column as this is useful information to determine whether your communications with this person will be effective.
+
+You can also directly `page someplayer your message here`. If you really need some attention. Please don't harras a player. Some people might be very busy or some might have a hard time with processing all incoming information that the game is processing due to whatever reason (they might just be drunk).
+
+If you get no response, don't spam but try at another time with other players online. If someone is able to help you and sees your message you will most likely get some help. Also feel free to page players if you see them doing something interesting that might be useful to you (like harvesting with some unknown apparatus). 
+
+Remember though upon who you call. Not all might have good intentions.
+
+##### Corpnet
+If you are in a corp you can use `corp your message here` to chat too. You can chat with your buddies this way but I'm sure they have told you at this point.
+
 #### Multiplaying
 The admins have expressed it is allowed to multiplay (have two simultaneous connections on two characters) at the same time. However, they also explictly mentioned this _is within reasonable_ boundaries. This is no excuse to hammer the server, instead, use this to check for bugs that you can otherwise not see. For example, how do your actions appear to other players? Or does the bug happen with every character or only a particular one? Also you can use it to rescue a stranded ship in case you get killed in an awkward spot. 
 
