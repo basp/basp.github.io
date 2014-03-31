@@ -48,7 +48,11 @@ Before you start exploring take a note of your `status` and note the amount of s
 Note though, if you are unsure you can safely keep your skillpoints for now and spend them when you are sure about what skill you want.
 
 ### Crafting
-If you are doing this guide it is strongly recommended you consider taking at least everything up onto the _crafter_ skill in the _primitive assembly_ tree. I actually recommend going for _artisan_ as well whenever you can. It takes a whopping 400 points but is worth it for the health, stamina and clarity bonuses it provides alone. Let alone that this will allow you to make even more skillpoints (and improve quality) when crafting or improvising things manually (on a non-automated processor).
+If you are doing this guide it is strongly recommended you consider taking at least everything up until and including the __crafter__ skill in the __primitive assembly__ tree. I actually recommend going for __artisan__ as well whenever you can. It takes a whopping 400 points but is worth it for the health, stamina and clarity bonuses alone. Additionally, this will allow you to make even more skillpoints (and improve quality) when crafting or improvising things manually (on a non-automated processor).
+
+Crafting is a reasonably essential skill, especially when you have nobody else to do it for you. Also, it's a lot of fun and even trying to do all the various recipes alone will require you to perform a lot of work. However, that may sound as a chore but it isn't: adventuring is a lot of fun and trying to find out where to get that particular resource thingy you need might require some investigation.
+
+Note: I looked for ages for a __slimfast intake__ blueprint only to find out I could just order from the complext terminal in your _home_.
 
 ### TODO (tentative list below)
 * Learn the primitive assembly skills (these are useful for almost all builds, especially when starting out)
