@@ -16,7 +16,7 @@ Turn `chatnet on`. Now you can `chat you message here` with other players. You c
 
 You can view all the players that are currently connected by typing `who`. This will show up a list with everyone and the thing they are doing. Take note of the __Idle__ column as this is useful information to determine whether your communications with this person will be effective.
 
-You can also directly `page someplayer your message here`. If you really need some attention. Please don't harras a player. Some people might be very busy or some might have a hard time with processing all incoming information that the game is processing due to whatever reason (they might just be drunk).
+You can also directly `page someplayer your message here`. If you really need some attention, `page vanity Hiya!`. Please don't harras a player. Some people might be very busy or some might have a hard time with processing all incoming information that the game is processing due to whatever reason (they might just be drunk).
 
 If you get no response, don't spam but try at another time with other players online. If someone is able to help you and sees your message you will most likely get some help. Also feel free to page players if you see them doing something interesting that might be useful to you (like harvesting with some unknown apparatus). 
 
