@@ -11,6 +11,8 @@ Note two: this an opionated guide so it will be full of statements that might no
 
 Note three: commands you can type are `represented like this` (don't type that, it won't work). You can `help commands` to get a basic overview of what is possible. Also you can `help` to get an index on stuff you can `help thingy` on. For example, from that list, `help newbie` works too and is very useful. 
 
+Note four: If you see `Vanity` or `Ranyne` online. Feel free to page them for any questions you might have. Check their __idle__ status though.
+
 ### Interacting with Other Players
 Turn `chatnet on`. Now you can `chat you message here` with other players. You can view a history of the chat by typing `chatnet history`.
 
@@ -26,7 +28,7 @@ Remember though upon who you call. Not all might have good intentions.
 If you are in a corp you can use `corp your message here` to chat too. You can chat with your buddies this way but I'm sure they have told you at this point.
 
 #### Multiplaying
-The admins have expressed it is allowed to multiplay (have two simultaneous connections on two characters) at the same time. However, they also explictly mentioned this _is within reasonable_ boundaries. This is no excuse to hammer the server, instead, use this to check for bugs that you can otherwise not see. For example, how do your actions appear to other players? Or does the bug happen with every character or only a particular one? Also you can use it to rescue a stranded ship in case you get killed in an awkward spot. 
+The admins have expressed it is allowed to multiplay (have two simultaneous connections on two characters at the same time). However, they also explictly mentioned this _is within reasonable_ boundaries. This is no excuse to hammer the server, instead, use this to check for bugs that you can otherwise not see. For example, how do your actions appear to other players? Or does the bug happen with every character or only a particular one? Also you can use it to rescue a stranded ship in case you get killed in an awkward spot. 
 
 It's not a very honorable thing to do but it __is__ allowed (and sometimes can be useful if you made a bad decision like parking your asteroid miner at the orbital starship construction platform, crafting a new ship there and forgetting you can't fly your old one back).
 
