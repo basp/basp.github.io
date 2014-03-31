@@ -19,7 +19,7 @@ The game will explain most of the actions at this point so just play along. The 
 
 After you set your `@gender` and `background` you can use the dispatch terminal to either link up with an existing colony or dispatch to a planet of your choice to setup your own personal colony.
 
-Before you go though, do take a moment to `@decribe me as your description here` to set a custom description. It doesn't have to be an essay - even a single line is better than nothing.
+Before you go though, do take a moment to `@describe me as your description here` to set a custom description. It doesn't have to be an essay - even a single line is better than nothing.
 
 #### Backgrounds
 Before you can set out, the game requires you to choose a background. There is really no right or wrong choice here so I recommend you take the one that seems the right one for you and the way to want to play. 
