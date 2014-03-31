@@ -9,28 +9,24 @@ Welcome to Wayfar 1444. This guide is here to help you get started playing the g
 ## About Wayfar1444
 Wayfar1444 is a MOO that is built upon HellCore. It's the only playable game I know of that has been built on hellcore. In fact, this game and hellcore are tied togehter in more than one way on more than one level.
 
-You are not hare to read about the history of Wayfar1444 though. That can wait. The rest of this guide will explain how to go from a lowly newbie to a pro Wayfar1444 player.
+You are not here to read about the history of Wayfar1444 though. That can wait. The rest of this guide will explain how to go from a lowly newbie to a pro Wayfar1444 player.
 
 ## Starting out for the first time
 Starting out for the first time is a little bit different because more mechanics need to be explained. If you are completely new, start here.
 
-	rusting bucket seats in the back of a cheap shuttle
-	This squalid shuttle barely made the trip down from the sweltering star liner. The sooner you leave, the better. You can do so by typing: OUT.
+The game will explain most of the actions at this point so just play along. The game might give you a hint to add a description. It might also direct you to the next target. Feel free to follow anything the game says for fun and profit but for the guide you should go east and check out the colony dispatch terminal.
 
-The game will explain most of the actions at this point so just play along.
+After you set your `@gender` and `background` you can use the dispatch terminal to either link up with an existing colony or dispatch to a planet of your choice to setup your own personal colony.
 
-	> out
-	You walk out.
+Before you go though, do take a moment to `@decribe me as your description here` to set a custom description. It doesn't have to be an essay - even a single line is better than nothing.
 
-	commerce main junctionway [3, 3, 2]
-	The junctionway hums with passing traffic.  Travel zones lead north and south to the outfitting and sales 
-	district.
-	  Complex technician and a medical dog (dw-17523) are standing here.
-	You see a shuttle terminal and an economic loan terminal here.
-	[ Exits: north east south west in ]
-	Complex technician [to Rayne]: Oh! Hello, I didn't see you there.
+### Backgrounds
+Before you can set out, the game requires you to choose a background. There is really no right or wrong choice here so I recommend you take the one that seems the right one for you and the way to want to play. 
 
-The game might give you a hint to add a description. It might also direct you to the next target. Feel free to follow anything the game says for fun and profit but for the guide you should go east and check out the colony dispatch terminal.
+If you really have no clue I recommend going for the ranger or botanist. These are very straightforward to complete for new players as they only depend on you having a few skills. Also, they both allow you to take up a few (or all of) the _primitive assembly_ skills too which is a nice syphon of skillpoints during your reroll. You do have a bit more control with the ranger background on __when__ you want to finish it but it also gives you one less reroll point. 
+
+## Setting out
+After you dispatched to a planet or linked up with an existing colony, you'll find yourself with a basic set of harvesting and crafting equipment. Also you get some other helpfull items such as the datapad and handbook. Take a moment to look through stuff you have and `examine` everything to find out what actions (commands) it supports.
 
 ## TODO
 * Learn the primitive assembly skills (these are useful for almost all builds, especially when starting out)
