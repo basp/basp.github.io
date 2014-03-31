@@ -5,6 +5,8 @@ layout: post
 ---
 Welcome to Wayfar 1444. This guide is here to help you get started playing the game but keep in mind that this is an _opinionated_ guide. That being said, it will set you upon the path of being self sufficient which is one of the primary goals.
 
+Note one: this guide is meant as a companion guide to [Averitti's guide](https://sites.google.com/site/accordingtomariah/change-the-banner) excellent writings. In fact, before you read even further I recommend you read her stuff first. It's much more awesome. Read the reast below afterwards.
+
 Note that this an opionated guide so it will be full of statements that might not really be true after all. It's kinda fail safe though (at time of writing). Keep in mind though to _do experiment_ yourself outside the boundaries of what is said below whenever you feel comfortable.
 
 #### Interacting with Other Players
