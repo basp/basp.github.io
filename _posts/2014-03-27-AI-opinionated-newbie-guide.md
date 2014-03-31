@@ -17,7 +17,7 @@ TODO: Insert thingy about shuttle here so I'm not dumping everyone blindly into 
 
 The game will explain most of the actions at this point so just play along. The game might give you a hint to add a description. It might also direct you to the next target. Feel free to follow anything the game says for fun and profit but for the guide you should go east and check out the colony dispatch terminal.
 
-After you set your `@gender` and `background` you can use the dispatch terminal to either link up with an existing colony or dispatch to a planet of your choice to setup your own personal colony.
+After you set your `@gender` and `@background` you can use the dispatch terminal to either link up with an existing colony or dispatch to a planet of your choice to setup your own personal colony.
 
 Before you go though, do take a moment to `@describe me as your description here` to set a custom description. It doesn't have to be an essay - even a single line is better than nothing.
 
