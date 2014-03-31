@@ -7,6 +7,9 @@ Welcome to Wayfar 1444. This guide is here to help you get started playing the g
 
 Note that this an opionated guide so it will be full of statements that might not really be true after all. It's kinda fail safe though (at time of writing). Keep in mind though to _do experiment_ yourself outside the boundaries of what is said below whenever you feel comfortable.
 
+#### Interacting with Other Players
+Turn `chatnet on`. Now you can `chat you message here` with other players. You can view a history of the chat by typing `chatnet history`.
+
 #### Multiplaying
 The admins have expressed it is allowed to multiplay (have two simultaneous connections on two characters) at the same time. However, they also explictly mentioned this _is within reasonable_ boundaries. This is no excuse to hammer the server, instead, use this to check for bugs that you can otherwise not see. For example, how do your actions appear to other players? Or does the bug happen with every character or only a particular one? Also you can use it to rescue a stranded ship in case you get killed in an awkward spot. 
 
