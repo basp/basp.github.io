@@ -9,6 +9,8 @@ Note one: this guide is meant as a companion guide to [Averitti's excellent writ
 
 Note two: this an opionated guide so it will be full of statements that might not really be true after all. It's kinda fail safe though (at time of writing). Keep in mind though to _do experiment_ yourself outside the boundaries of what is said below whenever you feel comfortable.
 
+Note three: commands you can type are `represented like this` (don't type that, it won't work). You can `help commands` to get a basic overview of what is possible. Also you can `help` to get an index on stuff you can `help thingy` on. For example, from that list, `help newbie` works too and is very useful. 
+
 #### Interacting with Other Players
 Turn `chatnet on`. Now you can `chat you message here` with other players. You can view a history of the chat by typing `chatnet history`.
 
