@@ -82,7 +82,7 @@ Finally, as awesome as the datapad is, it has its limitations. There are bluepri
 ### Refineries
 The resources you harvest will have varying levels of quality. Some will be of good quality and others will be of very low quality. Each resource has an inherent quality potential but the actual quality of the resource will often be lower. 
 
-If you want to craft high quality items you need high quality resources too. Refining is the process of creating over-maxed quality resources from a bunch of crappy lower quality resources. There are three buildings involved with refining raw resources: the refinery for minerals, the organic processing plant for, well, organic stuff and the nuclear enrichtment plant for energy.
+If you want to craft high quality items you need high quality resources too. Refining is the process of creating over-maxed quality resources from a bunch of crappy lower quality resources. There are three buildings involved with refining raw resources: the refinery for minerals, the organic processing plant for, well, organic stuff and the nuclear enrichment plant for energy.
 
 The way refining works is that you `mass-add` lots of raw resources of varying quality to a refining processor (each refining building uses a different kind but they all work the same). Then when you `process` the raw resources you will get back refined resources that are a little bit over max quality. When you look at a refining processor you will notice a line saying the amount of material quality equivalent. This is the sum of the quality of all raw resources added to the processor and it determines the amount of refined resources you will get back.
 
