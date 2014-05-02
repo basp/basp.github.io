@@ -91,7 +91,7 @@ For example, assume you have one hundred inert metals of 5 quality. The material
 When you refine resources, the furnace (or reactor or resequencer) will be configured to that resource. You cannot refine other resources on it until you `reset` it. When you reset a processor that still has a bit of material quality equivalent left the game will ask you if you are sure about this as it will destroy the material inside. This might lead you to believe that you need to first get everything out from the processor before you can `mass-add` new stuff to it but this is not true. The warning only applies for any raw material that might be left (usually a bit of raw material equivalent left over from a previous resource). Any already refined resources in the processor will be completely safe. This means that you can focus on harvesting raw resources and refining then without having to worry with getting all the refined stuff out everytime you need to reset the furnace. 
 
 ### Pointers
-* Love the datapad that you are given; you an "lookup <thing> with datapad" and it will tell you how/what tool you need to make it.
+* Love the datapad that you are given; you can `lookup something with datapad` and it will tell you how/what tool you need to make it; use generic queries, don't `lookup 
 
 * Build shipping containers and use them to organize your things; shipping containers are only 8 inert metal (which you can find almost everywhere). Also, you label them for convenience.
 
