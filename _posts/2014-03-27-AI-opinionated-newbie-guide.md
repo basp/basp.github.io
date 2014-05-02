@@ -13,8 +13,6 @@ Note two: this an opionated guide so it will be full of statements that might no
 
 Note three: commands you can type are `represented like this` (don't type that, it won't work). You can `help commands` to get a basic overview of what is possible. Also you can `help` to get an index on stuff you can `help thingy` on. For example, from that list, `help newbie` works too and is very useful. 
 
-Note four: If you see `Vanity` or `Rayne` online. Feel free to page them for any questions you might have. Check their __idle__ status though.
-
 ### About Wayfar1444
 Wayfar1444 is a MOO that is built upon the [hellcore](http://hellmoo.org/wiki/index.php/HellCore). It's the only playable game I know of that has been built on it. In fact, this game and hellcore are tied together in more than one way.
 
@@ -23,7 +21,7 @@ Let's not get into that now though, you are not here to read about the history o
 ### Communication
 Turn `chatnet on`. Now you can `chat you message here` with other players. You can view a history of the chat by typing `chatnet history`.
 
-You can view all the players that are currently connected by typing `who`. This will show up a list with everyone and the thing they are doing. Take note of the __Idle__ column as this is useful information to determine whether your communications with this person will be effective.
+You can view all the players that are currently connected by typing `who`. This will show up a list with everyone and the thing they are doing. Take note of the __idle__ column as this is useful information to determine whether your communications with this person will be effective.
 
 You can also directly `page someplayer your message here`. If you really need some attention, `page vanity Hiya!`. Please don't harras a player. Some people might be very busy or some might have a hard time with processing all incoming information that the game is outputting due to whatever reason (they might just be drunk).
 
@@ -48,7 +46,7 @@ If you really have no clue I recommend going for the ranger (or botanist perhaps
 
 If you go with botanist you get to `explore` and `discover` a lot which also will add to your blueprint chip collection (more on that later, just collect these for now and store them somewhere safe). Additionally, you will probably find stuff that you need to research or hack. Store these somewhere safe too as they will be useful later when you are doing the lab technician or hacker backgrounds. 
 
-Note that some backgrounds involve jobs that include wait times (both ranger and botanist have these). 
+Note that some backgrounds involve jobs that include wait times (both ranger and botanist have these).
 
 ### Setting up
 After you dispatched to a planet or linked up with an existing colony, you'll find yourself with a basic set of harvesting and crafting equipment. Also you get some other helpfull items such as the datapad and handbook. Take a moment to look through your `inventory` and `examine` everything to find out what actions (commands) it supports.
@@ -63,6 +61,8 @@ Note that you can also use the `map` command to check out various aspects of you
 Before you start exploring for a good spot, check your `status` and `skills` and note the amount of skillpoints available. You could probably learn some skills right now. You can use the `skill` command to browse the available skill groups and also to view skills in each group and see what they do. The skill system in Wayfar1444 is very friendly and facilitates trying different skills and combinations out. If you `learn` a skill and you are not satisfied with it or if you just want to try out something else, you can always `forget` a skill and get 75% of your skillpoints back. 
 
 This also means you don't have to create an army of alts to try out various things as you can often easily flip your complete build around on your main faster than you can setup a new character. The reason for this is that you get skillpoints by using skills. So the more skills you have, the faster you will get skillpoints. This means that on a developed character it's usually not a big problem to regain the skillpoints that were lost.
+
+When you are a brand new character, the max amount of skillpoints you gain (and consequently spend) is 2500. You can increase this amount by completing your background and rerolling. More info about this below.
 
 ### Crafting
 Note: this section is about manual crafting, automated crafting and factories is explained a bit further down.
@@ -95,15 +95,19 @@ Believe me, you don't want a raiding party swooping down on your starship comple
 
 Also, if you land at a starship complex that you are authorized on, you can `load starship into starship complex` to store it. If you leave it outside it will be much easier target for any hackers that might stumble upon your compound.
 
-#### Warning
+#### WARNING
 Make sure you really trust the controller (owner) of the starship complex if you decide to `load` your ship in there. If the owner decides to transfer control of the building to somebody else (or to the corp) then all ships inside will be transfered too. 
 
 So, don't be like me and move your personal fleet out of your complex before you transfer it to somebody else. The same thing is true for vehicles and garages and hangars. In fact, all transferable stuff inside the building will be transfered including any droids and what not.
 
 ### Rerolling
-TODO
+Wayfar includes an ascention concept called "rerolling" and this is connected to the background you choose. Each background has a goal associated with it and when you complete that goal you can `reroll` and try again with a fresh built. Note that you can `reroll` to start over again any time you desire but you will only gain points if you completed your background.
+
+Each time you reroll, the max number of skillpoints you can gain will be increased by 100 up to a maximum of 3500. After that you can still reroll but max skillpoints will not go up anymore. Also, depending on your background you will get at least 1 reroll point if you completed the background prior to rerolling. You probably won't be able to do much with the reroll points until you get/buy/find some implants as the main use I found for them is getting implants installed.
 
 ### Pointers
+Below is a general overview of pointers/milestones that I recommend while you learn and progress in the game. Note that it is not intended that you do all these things on a single build, just spread them out over multiple rerolls. This is more or less intended as a general guideline for progression if you have no clue where to start or what to do next.
+
 * Love the datapad that you are given; you can `lookup something with datapad` and it will tell you how/what tool you need to make it; use generic queries, don't `lookup adaptive-phase fabric with datapad` but just `lookup fab with datapad` instead.
 
 * Build shipping containers and use them to organize your things; shipping containers require only 8 inert metal (and you can find this almost everywhere) and can be conveniently labeled to keep them apart if you have multiple in a single room.
