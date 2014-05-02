@@ -77,6 +77,19 @@ __Pro tip__: use generic queries with the datapad and don't try to be overly spe
 
 Besides regular crafting using the blueprints on a tool you can also `improvise` things if you have the __improvisation__ skill. There are two ways to improvise. You can just type `improvise` and you'll be presented with a menu of all the things in your inventory that can be used for improvisation. After selecting one of the items you get another menu of all the things you can craft with it. The second way to improvise is to `improvise something with tool`. A few of the crafting tools can be used for improvisation and you can `improvise with tool` to get a list of all the things you can improvise with said tool.
 
+Finally, as awesome as the datapad is, it has its limitations. There are blueprints that are not on the crafting tools by default but these have to be found in game. They usually contain pretty interesting things and some of them are highly desirable. The things you can make with blueprints that are found in the game world usually don't appear on the datapad. Also some of the things that you can `improvise` also doesn't appear and has to be found out by experimentation.
+
+## Refineries
+The resources you harvest will have varying levels of quality. Some will be of good quality and others will be of very low quality. Each resource has an inherent quality potential but the actual quality of the resource will often be lower. 
+
+If you want to craft high quality items you need high quality resources too. Refining is the process of creating over-maxed quality resources from a bunch of crappy lower quality resources. There are three buildings involved with refining raw resources: the refinery for minerals, the organic processing plant for, well, organic stuff and the nuclear enrichtment plant for energy.
+
+The way refining works is that you `mass-add` lots of raw resources of varying quality to a refining processor (each refining building uses a different kind but they all work the same). Then when you `process` the raw resources you will get back refined resources that are a little bit over max quality. When you look at a refining processor you will notice a line saying the amount of material quality equivalent. This is the sum of the quality of all raw resources added to the processor and it determines the amount of refined resources you will get back.
+
+For example, assume you have one hundred inert metals of 5 quality. The material quality equivalent will be 500 (100 * 5). When you process the raw inert metal you will get back individual pieces of 33 quality. So with a material quality equivalent of 500 this means we'll get back 500 / 33 = 15 pieces of refined inert metal. The material quality equivalent of 5 inert metal will remain in the processor.
+
+When you refine resources, the furnace (or reactor or resequencer) will be configured to that resource. You cannot refine other resources on it until you `reset` it. When you reset a refining device that still has a bit of material quality equivalent left the game will ask you if you are sure about this as it will destroy the material inside. This might lead you to believe that you need to first get everything out from the processor before you can `mass-add` new stuff to it but this is not true. The warning only applies for any raw material that might be left (usually a bit of raw material equivalent left over from a previous resource). Any already refined resources in the processor will be completely safe. This means that you can focus on harvesting raw resources and refining then without having to worry with getting all the refined stuff out everytime you need to reset the furnace. 
+
 ### Pointers
 * Love the datapad that you are given; you an "lookup <thing> with datapad" and it will tell you how/what tool you need to make it.
 
