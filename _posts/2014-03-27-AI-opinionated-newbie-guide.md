@@ -1,5 +1,5 @@
 ---
-title: Wayfar1444 Opionionated Newbie Guide
+title: Wayfar1444 Opionated Newbie Guide
 tags: games, wayfar1444, moo
 layout: post
 ---
