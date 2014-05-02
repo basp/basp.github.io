@@ -91,7 +91,15 @@ For example, assume you have one hundred inert metals of 5 quality. The material
 When you refine resources, the furnace (or reactor or resequencer) will be configured to that resource. You cannot refine other resources on it until you `reset` it. When you reset a processor that still has a bit of material quality equivalent left the game will ask you if you are sure about this as it will destroy the material inside. This might lead you to believe that you need to first get everything out from the processor before you can `mass-add` new stuff to it but this is not true. The warning only applies for any raw material that might be left (usually a bit of raw material equivalent left over from a previous resource). Any already refined resources in the processor will be completely safe. This means that you can focus on harvesting raw resources and refining then without having to worry with getting all the refined stuff out everytime you need to reset the furnace. 
 
 ### Starships
-TODO
+Eventually you probably want to get into space and explore further. There are various ways to get yourself a starship: you could craft one, you could buy one or you could steal one perhaps. If you are just starting out I strongly recommend the first option: building the ship yourself. For this you will need a starship complex. Even if you can use somebody else's complex it's probably a good idea to set one up yourself too. Don't forget to `configure` it to __private__ so only authorized people can land at it. 
+
+Believe me, you don't want a raiding party swooping down on your starship complex to blow it up and chop up all the ships you have in there.
+
+Also, if you land at a starship complex that you are authorized on, you can `load starship into starship complex` to store it. If you leave it outside it will be much easier target for any hackers that might stumble upon your compound.
+
+__WARNING__: Make sure you really trust the controller (owner) of the starship complex if you decide to `load` your ship in there. If the owner decides to transfer control of the building to somebody else (or to the corp) then all ships inside will be transfered too. 
+
+So, don't be like me and move your personal fleet out of your complex before you transfer it to somebody else. The same thing is true for vehicles and garages and hangars. In fact, all transferable stuff inside the building will be transfered including any droids and what not.
 
 ### Pointers
 * Love the datapad that you are given; you can `lookup something with datapad` and it will tell you how/what tool you need to make it; use generic queries, don't `lookup adaptive-phase fabric with datapad` but just `lookup fab with datapad` instead.
