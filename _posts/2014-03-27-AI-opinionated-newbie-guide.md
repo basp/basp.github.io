@@ -91,6 +91,7 @@ For example, assume you have one hundred inert metals of 5 quality. The material
 When you refine resources, the furnace (or reactor or resequencer) will be configured to that resource. You cannot refine other resources on it until you `reset` it. When you reset a processor that still has a bit of material quality equivalent left the game will ask you if you are sure about this as it will destroy the material inside. This might lead you to believe that you need to first get everything out from the processor before you can `mass-add` new stuff to it but this is not true. The warning only applies for any raw material that might be left (usually a bit of raw material equivalent left over from a previous resource). Any already refined resources in the processor will be completely safe. This means that you can focus on harvesting raw resources and refining then without having to worry with getting all the refined stuff out everytime you need to reset the furnace. 
 
 ### Starships
+TODO
 
 ### Pointers
 * Love the datapad that you are given; you can `lookup something with datapad` and it will tell you how/what tool you need to make it; use generic queries, don't `lookup adaptive-phase fabric with datapad` but just `lookup fab with datapad` instead.
@@ -107,11 +108,13 @@ When you refine resources, the furnace (or reactor or resequencer) will be confi
 
 * Build a starship complex, you'll need this to get spaceborn.
 
-* Get spaceborne; getting spaceborne is arguably easier than getting airborne. Flying around in starships is fun and kinda important so you better get this down as soon as possible.
+* Get to space, which is arguably easier than flying around on the surface. Piloting starships is fun and kinda important so you better get this down as soon as possible.
 
-* Learn how to navigate around the Wayfar space; sometimes it's a bit tricky when there are planets that have the same name as their system. You'll eventually learn to visualize it in your head though.
+* Craft an EVA suit. A padded EVA suit is a good starter suit and it's conveniently also a component for the chemical resistant and insulated EVA suits (which you probably wanna craft later after you found prolium).
 
-* Find the nearest moon with metallic moon biome; metallic moon biome is quite rare but most moons have at least a small percentage of it. You will need this biome to find fullerene which is required for more awesome equipment. Also look for ceramic geode and some other thing I can't remember. Just look around for exotic stuf.
+* Learn how to navigate around the Wayfar space, sometimes it's a bit tricky when there are planets that have the same name as their system. You'll eventually learn to visualize it in your head though.
+
+* Find the nearest moon with metallic moon biome. Metallic moon biome is quite rare but most moons have at least a small percentage of it. You will need this biome to find fullerene which is required for more awesome equipment. Also look for ceramic geode and some other thing I can't remember. Just look around for exotic stuf.
 
 * Mine gas clouds. You will eventually need stuff like prolium gas for fancy equipment. So craft an asteroid miner and a gas mining module (don't forget to install it) and fly to the nearest asteroid belt. Scan the various gas clouds until you find one that contains prolium gas and mine it.
 
