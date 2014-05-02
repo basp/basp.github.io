@@ -37,7 +37,7 @@ If you are in a corp you can use `corp your message here` to chat too. You can c
 ### Starting out for the first time
 Starting out for the first time is a little bit different because more mechanics need to be explained. If you are completely new, start here. Otherwise, just skip whatever you deem not interesting.
 
-When you just start out (or after a reroll, more on that later) you will find yourself in a shuttle with the game suggesting you to get out of it sooner than later. Just follow the instructions and go `out` of the shuttle and you'll find yourself at the commerce main junction way at the alpha complex. There's some shops and other facilities around but if you are eager to really get started you probably want to head `east` to the complex-alpha mall lobby.
+When you just start out (or after a reroll, more on that later) you will find yourself in a shuttle with the game suggesting you to get out. This is a good suggestion so just follow the instructions and go `out` of the shuttle. You'll end up at the commerce main junction way at the alpha complex. There's some shops and other facilities around but if you are eager to really get started you probably want to head `east` to the complex-alpha mall lobby.
 
 At this point the game may or may not give you some hints about terminals you see here. Before you can use any of them you will have to set both your `@gender` and `background` though. Also, take a moment to `@describe me as your description here` to set a custom description. It doesn't have to be an essay - even a single line is better than nothing.
 
