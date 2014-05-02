@@ -27,12 +27,10 @@ You can view all the players that are currently connected by typing `who`. This 
 
 You can also directly `page someplayer your message here`. If you really need some attention, `page vanity Hiya!`. Please don't harras a player. Some people might be very busy or some might have a hard time with processing all incoming information that the game is outputting due to whatever reason (they might just be drunk).
 
-If you get no response, don't spam but try at another time with other players online. If someone is able to help you and sees your message you will most likely get some help. Also feel free to page players if you see them doing something interesting that might be useful to you (like harvesting with some unknown apparatus). 
-
-Remember though upon who you call. Not all might have good intentions.
+If you get no response, don't spam but try at another time with other players online. If someone is able to help you and sees your message you will most likely get some help.  
 
 #### Corpnet
-If you are in a corp you can use `corp your message here` to chat too. You can chat with your buddies this way but I'm sure they have told you at this point.
+If you are in a corp you can use `corp your message here` to chat too. You can chat with your buddies this way but I'm sure they have told you about this already if you are in a corp.
 
 ### Starting out for the first time
 Starting out for the first time is a little bit different because more mechanics need to be explained. If you are completely new, start here. Otherwise, just skip whatever you deem not interesting.
@@ -97,9 +95,13 @@ Believe me, you don't want a raiding party swooping down on your starship comple
 
 Also, if you land at a starship complex that you are authorized on, you can `load starship into starship complex` to store it. If you leave it outside it will be much easier target for any hackers that might stumble upon your compound.
 
-__WARNING__: Make sure you really trust the controller (owner) of the starship complex if you decide to `load` your ship in there. If the owner decides to transfer control of the building to somebody else (or to the corp) then all ships inside will be transfered too. 
+#### Warning
+Make sure you really trust the controller (owner) of the starship complex if you decide to `load` your ship in there. If the owner decides to transfer control of the building to somebody else (or to the corp) then all ships inside will be transfered too. 
 
 So, don't be like me and move your personal fleet out of your complex before you transfer it to somebody else. The same thing is true for vehicles and garages and hangars. In fact, all transferable stuff inside the building will be transfered including any droids and what not.
+
+### Rerolling
+TODO
 
 ### Pointers
 * Love the datapad that you are given; you can `lookup something with datapad` and it will tell you how/what tool you need to make it; use generic queries, don't `lookup adaptive-phase fabric with datapad` but just `lookup fab with datapad` instead.
