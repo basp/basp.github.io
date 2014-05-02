@@ -62,22 +62,22 @@ You _do_ want to setup near a spot that has a good variety of biomes nearby. Whe
 Note that you can also use the `map` command to check out various aspects of your surroundings. The command itself will explain about its various options but the `map biome` one is the more useful.
 
 ### Skills
-Before you start exploring for a good spot, take a note of your `status` and `skills` and note the amount of skillpoints available. You could probably learn some skills right now. You can use the `skill` command to browse the available skill groups and also to view skills in each group and see what they do. The skill system in Wayfar1444 is very friendly and facilitates trying different skills and combinations out. If you `learn` a skill you are not satisfied with or if you just want to try out something else you can always `forget` a skill and get 75% of your skillpoints back. 
+Before you start exploring for a good spot, check your `status` and `skills` and note the amount of skillpoints available. You could probably learn some skills right now. You can use the `skill` command to browse the available skill groups and also to view skills in each group and see what they do. The skill system in Wayfar1444 is very friendly and facilitates trying different skills and combinations out. If you `learn` a skill and you are not satisfied with it or if you just want to try out something else, you can always `forget` a skill and get 75% of your skillpoints back. 
 
 This also means you don't have to create an army of alts to try out various things as you can often easily flip your complete build around on your main faster than you can setup a new character. The reason for this is that you get skillpoints by using skills. So the more skills you have, the faster you will get skillpoints. This means that on a developed character it's usually not a big problem to regain the skillpoints that were lost.
 
 ### Crafting
 Note: this section is about manual crafting, automated crafting and factories is explained a bit further down.
 
-Sooner or later you probably have to do some crafting. Even if you are more combat oriented and don't care about crafting much you most likely will not be able to avoid it. If you are reading this and just starting out then you probably don't have much crafting tools. So after you found a decent place to settle you probably want to craft some additional crafting tools. Fortunately you are given a basic crafting tool and you can use this to _bootstrap_ yourself. The structure crafting tool and equipment crafting tool are probably the most useful at this point.
+Sooner or later you probably have to do some crafting. Even if you are more combat oriented and don't care about crafting much you most likely will not be able to avoid it. If you are just starting out then you probably don't have much crafting tools. So after you found a decent place to settle you probably want to craft some additional crafting tools. Fortunately you are given a basic crafting tool and you can use this to _bootstrap_ yourself. The structure crafting tool and equipment crafting tool are probably the most useful at this point.
 
-Especially in the beginning but even when you are more experienced you will run into requirements for recipes that you probably don't know how to craft. Luckily, the game also provides you with a __colonial assembly datapad__. You can use this to `lookup thing with datapad` and if the datapad knows about it it will tell you what tool to use to make it. 
+Especially in the beginning, you will often run into recipes with unfamiliar requirements that you don't know (or can't remember) how to craft. Luckily, the game also provides you with a __colonial assembly datapad__. You can use this to `lookup thing with datapad` and if the datapad knows about it it will tell you what tool to use to make it. 
 
 __Pro tip__: use generic queries with the datapad and don't try to be overly specific. For example, if you need _adaptive-phase fabric_ don't `lookup adaptive-phase fabric with datapad` but `lookup fabric with datapad` instead. Or even just `lookup fab with datapad`. Your chance of success will be much higher and with luck you will also find out about some other interesting stuff you can make.
 
-Besides regular crafting using the blueprints on a tool you can also `improvise` things if you have the __improvisation__ skill. There are two ways to improvise. You can just type `improvise` and you'll be presented with a menu of all the things in your inventory that can be used for improvisation. After selecting one of the items you get another menu of all the things you can craft with it. The second way to improvise is to `improvise something with tool`. A few of the crafting tools can be used for improvisation and you can `improvise with tool` to get a list of all the things you can improvise with said tool.
+As awesome as the datapad is, it has its limitations. There are blueprints that are not on the crafting tools by default but these have to be found in game. They usually contain pretty interesting things and some of them are highly desirable. The things you can make with blueprints that are found in the game world usually don't appear on the datapad. Also some of the things that you can `improvise` also doesn't appear and has to be found out by experimentation.
 
-Finally, as awesome as the datapad is, it has its limitations. There are blueprints that are not on the crafting tools by default but these have to be found in game. They usually contain pretty interesting things and some of them are highly desirable. The things you can make with blueprints that are found in the game world usually don't appear on the datapad. Also some of the things that you can `improvise` also doesn't appear and has to be found out by experimentation.
+Besides regular crafting using the blueprints on a tool you can also `improvise` things if you have the __improvisation__ skill. There are two ways to improvise. You can just type `improvise` and you'll be presented with a menu of all the things in your inventory that can be used for improvisation. After selecting one of the items you get another menu of all the things you can craft with it. The second way to improvise is to `improvise something with tool`. A few of the crafting tools can be used for improvisation and you can `improvise with tool` to get a list of all the things you can improvise with said tool.
 
 ### Refineries
 The resources you harvest will have varying levels of quality. Some will be of good quality and others will be of very low quality. Each resource has an inherent quality potential but the actual quality of the resource will often be lower. 
@@ -90,20 +90,22 @@ For example, assume you have one hundred inert metals of 5 quality. The material
 
 When you refine resources, the furnace (or reactor or resequencer) will be configured to that resource. You cannot refine other resources on it until you `reset` it. When you reset a processor that still has a bit of material quality equivalent left the game will ask you if you are sure about this as it will destroy the material inside. This might lead you to believe that you need to first get everything out from the processor before you can `mass-add` new stuff to it but this is not true. The warning only applies for any raw material that might be left (usually a bit of raw material equivalent left over from a previous resource). Any already refined resources in the processor will be completely safe. This means that you can focus on harvesting raw resources and refining then without having to worry with getting all the refined stuff out everytime you need to reset the furnace. 
 
+### Starships
+
 ### Pointers
-* Love the datapad that you are given; you can `lookup something with datapad` and it will tell you how/what tool you need to make it; use generic queries, don't `lookup 
+* Love the datapad that you are given; you can `lookup something with datapad` and it will tell you how/what tool you need to make it; use generic queries, don't `lookup adaptive-phase fabric with datapad` but just `lookup fab with datapad` instead.
 
-* Build shipping containers and use them to organize your things; shipping containers are only 8 inert metal (which you can find almost everywhere). Also, you label them for convenience.
+* Build shipping containers and use them to organize your things; shipping containers require only 8 inert metal (and you can find this almost everywhere) and can be conveniently labeled to keep them apart if you have multiple in a single room.
 
-* Craft the advanced structure tool. You will need this to create better buildings.
+* Craft the advanced structure tool, you will need this to create better buildings. For example the ranch. 
 
-* Craft a ranch, your new home; only noobs live in a prefab starter house.
+* Craft a ranch. Only scrubs live in a prefab starter house. Build the shelter for the quick skillpoints and build a real house as soon as possible.
 
-* Setup a lab so you can build the advanced equipment workstation.
+* Setup a lab so you can build the advanced equipment workstation this will also provide you with a place where you can research artifacts.
 
 * Get better harvesting tools, this will save you a lot of time.  
 
-* Build a starship complex; you'll need this to get spaceborn.
+* Build a starship complex, you'll need this to get spaceborn.
 
 * Get spaceborne; getting spaceborne is arguably easier than getting airborne. Flying around in starships is fun and kinda important so you better get this down as soon as possible.
 
@@ -111,7 +113,7 @@ When you refine resources, the furnace (or reactor or resequencer) will be confi
 
 * Find the nearest moon with metallic moon biome; metallic moon biome is quite rare but most moons have at least a small percentage of it. You will need this biome to find fullerene which is required for more awesome equipment. Also look for ceramic geode and some other thing I can't remember. Just look around for exotic stuf.
 
-* Mine gas clouds; you will eventually need stuff like prolium gas for fancy equipment. Can craft an asteroid miner, a gas mining module and fly to the nearest asteroid belt. Scan the various gas clouds until you find one that contains prolium gas and mine it.
+* Mine gas clouds. You will eventually need stuff like prolium gas for fancy equipment. So craft an asteroid miner and a gas mining module (don't forget to install it) and fly to the nearest asteroid belt. Scan the various gas clouds until you find one that contains prolium gas and mine it.
 
 * Once you found prolium, you can craft a better EVA suit. Turn that old padded one into a chemical resistant or insulated EVA suit and/or craft yourself a sweet pneumatic exosuit.
 
