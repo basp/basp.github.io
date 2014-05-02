@@ -48,19 +48,23 @@ Before you can set out, the game requires you to choose a background. There is r
 
 If you really have no clue I recommend going for the ranger (or botanist perhaps). These are very straightforward to complete for new players as they only depend on you having a few skills. You do have a bit more control with the ranger background on __when__ you want to finish it but it gives you one less reroll point. 
 
-If you go with botanist you get to `explore` and `discover` a lot which also will add to your blueprint chip collection (more on that later, just collect these for now and store them somewhere safe). Note that exploring can take a while if you are just starting out. Also, some backgrounds involve jobs that include wait times (both ranger and botanist have these). 
+If you go with botanist you get to `explore` and `discover` a lot which also will add to your blueprint chip collection (more on that later, just collect these for now and store them somewhere safe). Additionally, you will probably find stuff that you need to research or hack. Store these somewhere safe too as they will be useful later when you are doing the lab technician or hacker backgrounds. 
+
+Note that some backgrounds involve jobs that include wait times (both ranger and botanist have these). 
 
 ### Setting up
 After you dispatched to a planet or linked up with an existing colony, you'll find yourself with a basic set of harvesting and crafting equipment. Also you get some other helpfull items such as the datapad and handbook. Take a moment to look through your `inventory` and `examine` everything to find out what actions (commands) it supports.
 
-Afer this check out your crafting tools (probably on the basic crafting tool) and do a `list basic` to see what things it can craft. One of these is a _pre-fab shelter kit_ which you should make as soon as possible. Before you do though, try to find a nice spot. Ideally, it has a nice long room description signalling the abundance of a lot of resources.
+Afer this check out your crafting tools (probably on the basic crafting tool) and do a `list basic` to see what things it can craft. One of these is a _pre-fab shelter kit_ which you should make as soon as possible. Before you do though, try to find a nice spot. Ideally, it has a nice long room description signalling the abundance of a lot of resources but this is not essential.
 
-Also, you want to setup near a spot that has a good variety of biomes nearby. When starting out, you really want a planet that has a plenty of forest, jungle, mountains and desert. Eventually you'll need to harvest in other biomes too if you have the aforementioned biomes on your planet (and preferably nearby) you'll be in a good position to craft everything you need to get spaceborn. Note that you can also use the `map` command to check out various aspects of your surroundings. The command itself will explain about its various options but the `map biome` one is the more useful.
+You _do_ want to setup near a spot that has a good variety of biomes nearby. When starting out, you probably want to be on a planet that has a __forest__, __jungle__, __mountains__ and __desert__ and a spot that has those biomes nearby. Eventually you'll need to harvest in other biomes too but that can wait. If you have the aforementioned biomes on your planet (and preferably nearby) you'll be in a good position to craft everything you need to get spaceborn. 
+
+Note that you can also use the `map` command to check out various aspects of your surroundings. The command itself will explain about its various options but the `map biome` one is the more useful.
 
 ### Skills
 Before you start exploring for a good spot, take a note of your `status` and `skills` and note the amount of skillpoints available. You could probably learn some skills right now. You can use the `skill` command to browse the available skill groups and also to view skills in each group and see what they do. The skill system in Wayfar1444 is very friendly and facilitates trying different skills and combinations out. If you `learn` a skill you are not satisfied with or if you just want to try out something else you can always `forget` a skill and get 75% of your skillpoints back. 
 
-This also means you don't have to create an army of alts to try out various things as you can often easily flip your complete build around on your main faster than you can setup a new character. The reason for this is that you get skillpoints by using skills. So the more skills you have, the faster you will get skillpoints. This means that on a developed character it's usually not a big problem to regain any skillpoints lost forgetting skills.
+This also means you don't have to create an army of alts to try out various things as you can often easily flip your complete build around on your main faster than you can setup a new character. The reason for this is that you get skillpoints by using skills. So the more skills you have, the faster you will get skillpoints. This means that on a developed character it's usually not a big problem to regain the skillpoints that were lost.
 
 ### Crafting
 Note: this section is about manual crafting, automated crafting and factories is explained a bit further down.
@@ -69,7 +73,7 @@ Sooner or later you probably have to do some crafting. Even if you are more comb
 
 Especially in the beginning but even when you are more experienced you will run into requirements for recipes that you probably don't know how to craft. Luckily, the game also provides you with a __colonial assembly datapad__. You can use this to `lookup thing with datapad` and if the datapad knows about it it will tell you what tool to use to make it. 
 
-Pro tip: use generic queries with the datapad and don't try to be overly specific. For example, if you need _adaptive-phase fabric_ don't `lookup adaptive-phase fabric with datapad` but `lookup fabric with datapad` instead. Or even just `lookup fab with datapad`. Your chance of success will be much higher and with luck you will also find out about some other interesting stuff you can make.
+__Pro tip__: use generic queries with the datapad and don't try to be overly specific. For example, if you need _adaptive-phase fabric_ don't `lookup adaptive-phase fabric with datapad` but `lookup fabric with datapad` instead. Or even just `lookup fab with datapad`. Your chance of success will be much higher and with luck you will also find out about some other interesting stuff you can make.
 
 Besides regular crafting using the blueprints on a tool you can also `improvise` things if you have the __improvisation__ skill. There are two ways to improvise. You can just type `improvise` and you'll be presented with a menu of all the things in your inventory that can be used for improvisation. After selecting one of the items you get another menu of all the things you can craft with it. The second way to improvise is to `improvise something with tool`. A few of the crafting tools can be used for improvisation and you can `improvise with tool` to get a list of all the things you can improvise with said tool.
 
