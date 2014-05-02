@@ -18,7 +18,7 @@ Note four: If you see `Vanity` or `Rayne` online. Feel free to page them for any
 ### About Wayfar1444
 Wayfar1444 is a MOO that is built upon the [hellcore](http://hellmoo.org/wiki/index.php/HellCore). It's the only playable game I know of that has been built on it. In fact, this game and hellcore are tied together in more than one way.
 
-Let's not get into that, you are not here to read about the history of Wayfar1444. That can wait. The rest of this guide will explain how to go from a <del>lowly newbie</del> welcomed new player to a <del>pro</del> reasonably self sufficient Wayfar1444 player that knows his or her way around... Somewhat.
+Let's not get into that now though, you are not here to read about the history of Wayfar1444. That can wait. The rest of this guide will explain how to go from a <del>lowly newbie</del> welcomed new player to a <del>pro</del> reasonably self sufficient Wayfar1444 player that knows his or her way around... Somewhat.
 
 ### Communication
 Turn `chatnet on`. Now you can `chat you message here` with other players. You can view a history of the chat by typing `chatnet history`.
