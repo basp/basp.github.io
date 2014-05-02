@@ -79,7 +79,7 @@ Besides regular crafting using the blueprints on a tool you can also `improvise`
 
 Finally, as awesome as the datapad is, it has its limitations. There are blueprints that are not on the crafting tools by default but these have to be found in game. They usually contain pretty interesting things and some of them are highly desirable. The things you can make with blueprints that are found in the game world usually don't appear on the datapad. Also some of the things that you can `improvise` also doesn't appear and has to be found out by experimentation.
 
-## Refineries
+### Refineries
 The resources you harvest will have varying levels of quality. Some will be of good quality and others will be of very low quality. Each resource has an inherent quality potential but the actual quality of the resource will often be lower. 
 
 If you want to craft high quality items you need high quality resources too. Refining is the process of creating over-maxed quality resources from a bunch of crappy lower quality resources. There are three buildings involved with refining raw resources: the refinery for minerals, the organic processing plant for, well, organic stuff and the nuclear enrichtment plant for energy.
