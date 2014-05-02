@@ -7,6 +7,8 @@ Update: this was originally called the AI opionated newbie guide but since the o
 
 Welcome to Wayfar 1444. This guide is here to help you get started playing the game but keep in mind that this is an _opinionated_ guide. That being said, it will set you upon the path of being self sufficient which is one of the primary goals.
 
+We'll start off with some new player instructions and basic advice and then gradually turn our attention to more advanced topics in order to try to cover as much scope as we can.
+
 Note one: this guide is meant as a companion guide to [Averitti's excellent writings](https://sites.google.com/site/accordingtomariah/change-the-banner). In fact, before you read even further I recommend you read her stuff first; it's much more awesome and also has a lot of informational screenshots. 
 
 Note two: this an opionated guide so it will be full of statements that might not really be true after all. Keep in mind though: _do experiment_ outside the boundaries of whatever is said below whenever you feel comfortable.
@@ -56,6 +58,8 @@ Afer this check out your crafting tools (probably only the basic crafting tool) 
 You _do_ want to setup near a spot that has a good variety of biomes nearby. When starting out, you probably want to be on a planet that has __forest__, __jungle__, __mountains__ and __desert__ and a spot that has those biomes nearby. Eventually you'll need to harvest in other biomes too but that can wait. If you have the aforementioned biomes on your planet (and preferably nearby) you'll be in a good position to craft everything you need to get spaceborn. 
 
 Note that you can also use the `map` command to check out various aspects of your surroundings. The command itself will explain about its various options but the `map biome` one is the more useful.
+
+Don't worry too much though. If you find a better spot later on you can always dismantle your buildings relocate. You can bring most stuff and get the materials for your buildings back but you probably have to rebuild your processors.
 
 ### Skills
 Before you start exploring for a good spot, check your `status` and `skills` and note the amount of skillpoints available. You could probably learn some skills right now. You can use the `skill` command to browse the available skill groups and also to view skills in each group and see what they do. The skill system in Wayfar1444 is very friendly and facilitates trying different skills and combinations out. If you `learn` a skill and you are not satisfied with it or if you just want to try out something else, you can always `forget` a skill and get 75% of your skillpoints back. 
