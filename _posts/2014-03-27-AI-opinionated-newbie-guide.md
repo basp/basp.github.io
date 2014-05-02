@@ -49,11 +49,11 @@ If you go with botanist you get to `explore` and `discover` a lot which also wil
 Note that some backgrounds involve jobs that include wait times (both ranger and botanist have these).
 
 ### Setting up
-After you dispatched to a planet or linked up with an existing colony, you'll find yourself with a basic set of harvesting and crafting equipment. Also you get some other helpfull items such as the datapad and handbook. Take a moment to look through your `inventory` and `examine` everything to find out what actions (commands) it supports.
+After you have been dispatched to a planet or linked up with an existing colony, you'll find yourself with a basic set of harvesting and crafting equipment. Also you get some other helpfull items such as the __datapad__ and __handbook__ (which you should read). Take a moment to look through your `inventory` and `examine` everything to find out what actions (commands) it supports.
 
-Afer this check out your crafting tools (probably on the basic crafting tool) and do a `list basic` to see what things it can craft. One of these is a _pre-fab shelter kit_ which you should make as soon as possible. Before you do though, try to find a nice spot. Ideally, it has a nice long room description signalling the abundance of a lot of resources but this is not essential.
+Afer this check out your crafting tools (probably only the basic crafting tool) and do a `list basic` to see what things it can craft. One of these is a _pre-fab shelter kit_ which you should make as soon as possible. Before you do though, try to find a nice spot. Ideally, it has a nice long room description signalling the abundance of a lot of resources but this is not essential.
 
-You _do_ want to setup near a spot that has a good variety of biomes nearby. When starting out, you probably want to be on a planet that has a __forest__, __jungle__, __mountains__ and __desert__ and a spot that has those biomes nearby. Eventually you'll need to harvest in other biomes too but that can wait. If you have the aforementioned biomes on your planet (and preferably nearby) you'll be in a good position to craft everything you need to get spaceborn. 
+You _do_ want to setup near a spot that has a good variety of biomes nearby. When starting out, you probably want to be on a planet that has __forest__, __jungle__, __mountains__ and __desert__ and a spot that has those biomes nearby. Eventually you'll need to harvest in other biomes too but that can wait. If you have the aforementioned biomes on your planet (and preferably nearby) you'll be in a good position to craft everything you need to get spaceborn. 
 
 Note that you can also use the `map` command to check out various aspects of your surroundings. The command itself will explain about its various options but the `map biome` one is the more useful.
 
