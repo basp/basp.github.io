@@ -3,7 +3,7 @@ title: Wayfar1444 Opionated Newbie Guide
 tags: games, wayfar1444, moo
 layout: post
 ---
-Update: This guide is slowly becoming more and more obsolete as stuff is transfered to the [wiki project](http://github.com/basp/).
+Update: This guide is slowly becoming more and more obsolete as stuff is transfered to the [wiki project](http://github.com/basp/wayfar1444/wiki).
 
 Welcome to Wayfar 1444. This guide is here to help you get started playing the game but keep in mind that this is an _opinionated_ guide. That being said, it will set you upon the path of being self sufficient which is one of the primary goals.
 
