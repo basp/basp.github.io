@@ -3,7 +3,7 @@ title: Wayfar1444 Opionated Newbie Guide
 tags: games, wayfar1444, moo
 layout: post
 ---
-Update: this was originally called the AI opionated newbie guide but since the old AI corp has transformed into Opes Sanctuary (OS) I'm changing the title.
+Update: This guide is slowly becoming more and more obsolete as stuff is transfered to the [wiki project](http://github.com/basp/).
 
 Welcome to Wayfar 1444. This guide is here to help you get started playing the game but keep in mind that this is an _opinionated_ guide. That being said, it will set you upon the path of being self sufficient which is one of the primary goals.
 
@@ -14,6 +14,7 @@ Note one: this guide is meant as a companion guide to [Averitti's excellent writ
 Note two: this an opionated guide so it will be full of statements that might not really be true after all. Keep in mind though: _do experiment_ outside the boundaries of whatever is said below whenever you feel comfortable.
 
 Note three: commands you can type are `represented like this` (don't type that, it won't work). You can `help commands` to get a basic overview of what is possible. Also you can `help` to get an index on stuff you can `help thingy` on. For example, from that list, `help newbie` works too and is very useful. 
+
 
 ### About Wayfar1444
 Wayfar1444 is a MOO that is built upon the [hellcore](http://hellmoo.org/wiki/index.php/HellCore). It's the only playable game I know of that has been built on it. In fact, this game and hellcore are tied together in more than one way.
