@@ -3,7 +3,6 @@ layout: post
 title: "What is TypeScript?"
 tags: [dev, javascript, typescript]
 ---
-# What is TypeScript?
 According to [the official site](http://www.typescriptlang.org), TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
 
 TypeScript is developed by Microsoft and one of the core developers is [Anders Hejlsberg](http://en.wikipedia.org/wiki/Anders_Hejlsberg), the lead architect of the C# programming language. You can clearly see some of the C# influence in the TypeScript language design.
