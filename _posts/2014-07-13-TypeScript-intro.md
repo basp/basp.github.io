@@ -1,3 +1,4 @@
+---
 layout: post
 title: "What is TypeScript?"
 tags: [dev, javascript, typescript]
