@@ -15,17 +15,9 @@ I was like. Ok let's do these tutorials to check it out. And it all seems a bit 
 #### And then...
 You start to think "ok, this tutorial is nice but what about real applications". So the next thing is just to start developing stuff with it. I immediately put it to work profesionally to see how far I could get. Expecting to stumble quite soon but strangely I didn't.
 
-I focussed on pulling all the logic from our existing ball of mud into a wide variety of services. Then I realized almost all of those services have to do with either IO, formatting or validation so I was easily able to generalize over that with TypeScript. Then it dawned on me those formatting services are actually AngularJS ```filter``` objects. I was affraid I had to rewrite some stuff but no. Thanks to AngularJS' excellent dependency injection I could just inject my existing formatting services into my filters by simply requesting them as a parameter. Now my end customers can easily use those services by just writing simple directives inside handlebar expressions such as:
+I focussed on pulling all the logic from our existing ball of mud into a wide variety of services. Then I realized almost all of those services have to do with either IO, formatting or validation so I was easily able to generalize over that with TypeScript. Then it dawned on me those formatting services are actually AngularJS ```filter``` objects. I was affraid I had to rewrite some stuff but no. Thanks to AngularJS' excellent dependency injection I could just inject my existing formatting services into my filters by simply requesting them as a parameter. Now my end customers can easily use those services by just writing simple directives inside handlebar expressions.
 
-	<p>&#123;&#123; customer | fullName &#125;&#125;</p>
-
-Or:
-
-	<p>&#123;&#123; customer | salutation &#125;&#125;</p>
-
-Or maybe:
-	
-	<p>&#123;&#123; customer | pronound:first:singular:object &#125;&#125;</p>
+TODO: Examples of expressions when I find out how to keep Jekyll from eating them.
 
 There is some real power there to put the data into the hands of designers. Those filters tend to be very tight and easily documented too and it's extremily easy (and valuable) to write a bunch taht fit your particular business domain.
 
