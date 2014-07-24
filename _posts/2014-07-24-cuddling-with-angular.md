@@ -10,7 +10,9 @@ I was lucky to find there is now an excellent framework for awesome client side 
 Because I'm writing this after the fact my memories will not be 100% accurate but they will have to do.
 
 #### At first...
-I was like. Ok let's do these tutorials to check it out. And it all seems a bit funky especially if you're new or coming back to JavaScript. I was fumbling around a lot trying to hook up my DOM elements to the proper controller behavior. Finding out how my service names are actually hooked into the service parameters (literally) and learning the difference between a ```factory``` and a ```service```. This is all documented but it might throw you off (especially if you're just fumbling around and using TypeScript like me).
+"Ok let's do these tutorials to check it out." 
+
+And it all seems a bit funky especially if you're new or coming back to JavaScript. I was fumbling around a lot trying to hook up my DOM elements to the proper controller behavior. Finding out how my service names are actually hooked into the service parameters (literally) and learning the difference between a ```factory``` and a ```service```. This is all documented but it might throw you off (especially if you're just fumbling around and using TypeScript like me).
 
 #### And then...
 You start to think "ok, this tutorial is nice but what about real applications". So the next thing is just to start developing stuff with it. I immediately put it to work profesionally to see how far I could get. Expecting to stumble quite soon but strangely I didn't.
