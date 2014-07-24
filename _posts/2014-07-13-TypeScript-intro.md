@@ -14,16 +14,29 @@ As you add more and more type declarations and narrow them down you will find th
 ## What Does It Look Like?
 Well it looks a lot like some child of JavaScript and C# and that's not really surprising. This, for example is perfectly valid TypeScript:
 
-    function(foo, bar) {
+    function quux(foo, bar) {
         return { name: foo, description: bar };
     }
     
 It's just JavaScript. However, TypeScript allows us to make this a little bit more explicit:
 
-    function(foo: string, bar: string) {
+    function quux(foo: string, bar: string) {
         return { name: foo, description: bar };
     }
+
+Also one of the first things that you will notice is that lambda's are funky:
+
+	var quux = (foo, bar) => { name: foo, description: bar };
+
+Or a multiline lambda:
+
+	var quux = (foo, bar) => {
+		console.log('Never mind me, just tracing from quux.');
+		return { name: foo, description: bar };
+	};
     
+I personally __don't miss__ the fugly ```function``` keyword.
+
 Not only will it inspect the arguments, it now can also give us information (by inference) of the thing we are returning. It now knows we are returing an object that has two properties: `name` and `description` which are both of type `string`.
 
 Since we just saw types (integral to TypeScript) it's worth noting that TypeScript doesn't impose any artificial types on top of JavaScript. If you really don't care you just use the `any` type which means everything goes. It supports `Date`, `string`, `number` but not `float` or `int` for example because those are not native to JavaScript in the first place. So any types that TypeScript supports out of the box are all a natural fit for the JavaScript we already write (we just don't enforce those types in our code yet but they are there, behind the scenes).
