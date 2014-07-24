@@ -43,7 +43,10 @@ However, you can just as well invoke the TypeScript compiler manually by any mea
 If you're looking for something more beefier I can recommend [WebStorm](http://www.jetbrains.com/webstorm/) by JetBrains, it's a great JavaScript IDE with TypeScript integration and is very reasonably priced. I'm more of a Visual Studio dude myself but did purchase WebStorm to see if it might offer any advantages for some kinds of development. Unfortanately I don't have enough experience with it to draw any real conclusions but I might write up another post about the two once.
 
 # Don't Use If...
-You're just the sole developer on a very small application.
+### _UPDATE_: 
+You should always develop in TypeScript unless you're using WebStorm. Use WebStorm for regular JavaScript and just use the type definitions for IDE support. I find TypeScript support in WebStorm is there but kinda causing me a lot of friction. Use Visual Studio Express 2013 for your TypeScript and you'll find it a very smooth and rewarding experience. So yes, always use TypeScript if you can and when it makes sense. Very often, ```any``` is awesome too so don't limit yourself too much, focus on interfaces.
+
+<del>You're just the sole developer on a very small application.</del>
 
 My feeling is TypeScript is best for medium to large JavaScript applications of reasonable complexity and where (and this might be most important) multiple people are working on the same things. Lot's of people might argue that the types only get in the way as does the extra compilation stage and they are right if you are alone. 
 
