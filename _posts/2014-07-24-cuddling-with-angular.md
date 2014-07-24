@@ -3,7 +3,7 @@ layout: post
 title: Cuddling with AngularJS
 tags: [dev, javascript, typescript]
 ---
-After spending a few weeks intimately with AngularJS i must say I like it. After spending two whole years doing only server side programming professionally and only dabbling in client side programming now and then it was a refreshing experience to step back into JavaScript land and find so much awesome stuff out therer.. 
+Now that I have spent a few weeks intimately with AngularJS I must say I like it. After spending two whole years doing only server side programming professionally and only dabbling in client side programming now and then it was a refreshing experience to step back into JavaScript land and find so much awesome stuff out therer.. 
 
 I was lucky to find there is now an excellent framework for awesome client side applications and yes, I'm late to the party but it's Angular.
 
