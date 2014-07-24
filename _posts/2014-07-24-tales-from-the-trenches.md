@@ -19,7 +19,7 @@ Another collegue got a similar "change some text" request but it was uploaded as
 screenshot. Some poor dude thought it would be a smart idea to take a screenshot of an existing 
 page, add some text to it using paint or photoplop or whatever and send that to ICT with a RFC. 
 Being the good programmer that my coworker is he just saved the screenshot to the images folder 
-of the application in question, included a ```img``` tag in the HTML pointing to that image 
-and deployed it. 
+of the application in question, included a ```img``` tag in the HTML pointing to the screenshot
+image and deployed it. 
 
 Apparently this was not what the customer had in mind.
