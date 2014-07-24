@@ -11,7 +11,7 @@ TypeScript is not intrusive. You can start by treating it just as JavaScript. It
 
 As you add more and more type declarations and narrow them down you will find the compiler to be a great help in avoiding most of the runtime errors. 
 
-# What Does It Look Like?
+## What Does It Look Like?
 Well it looks a lot like some child of JavaScript and C# and that's not really surprising. This, for example is perfectly valid TypeScript:
 
     function(foo, bar) {
@@ -30,20 +30,20 @@ Since we just saw types (integral to TypeScript) it's worth noting that TypeScri
 
 There's lot's more to TypeScript and I encourage you to check it out yourself but this was mainly to point out it's very much just like JavaScript and that you have much control over how much typing you are gonna subject yourself to.
 
-# Modules, Classes, Interaces
+## Modules, Classes, Interaces
 TypeScript supports all of these concepts in a very natural way and it all maps to very clean JavaScript code that is perfectly readable even though it was produced by a compiler. However, sometimes it can be a bit tricky when dealing with external frameworks or libraries when it matters whether it's gonna `new` up a function or just `invoke` it.
 
 This means you'll sometimes might have to go back to the compiled `.js` and look at the code produced to determine what API call you have to use in order to get it to work all together. But even if that fails you can just create an ordinary JavaScript thingy like you would without TypeScript and it still would work fine. Again, TypeScript is very unobtrusive and you can use as much of it as you want.
 
-# Tools
+## Tools
 When you write TypeScript v.s. JavaScript it will have to be compiled by the TypeScript compiler. This is integrated into Visual Studio (including express) and will make sure that your script complies with the type declarations. 
 
 However, you can just as well invoke the TypeScript compiler manually by any means you deem appropriate. That said, the integration in Visual Studio is excellent and the [free express edition](http://www.visualstudio.com/downloads/download-visual-studio-vs#d-express-web) is highly recommended for TypeScript development. You'll probably have to install either Update 2 or [Update 3 RC](http://support.microsoft.com/kb/2933779) in order to get the actual TypeScript templates and support.
 
 If you're looking for something more beefier I can recommend [WebStorm](http://www.jetbrains.com/webstorm/) by JetBrains, it's a great JavaScript IDE with TypeScript integration and is very reasonably priced. I'm more of a Visual Studio dude myself but did purchase WebStorm to see if it might offer any advantages for some kinds of development. Unfortanately I don't have enough experience with it to draw any real conclusions but I might write up another post about the two once.
 
-# Don't Use If...
-### _UPDATE_: 
+## Don't Use If...
+#### _UPDATE_: 
 You should always develop in TypeScript unless you're using WebStorm. Use WebStorm for regular JavaScript and just use the type definitions for IDE support. I find TypeScript support in WebStorm is there but kinda causing me a lot of friction. Use Visual Studio Express 2013 for your TypeScript and you'll find it a very smooth and rewarding experience. So yes, always use TypeScript if you can and when it makes sense. Very often, ```any``` is awesome too so don't limit yourself too much, focus on interfaces.
 
 <del>You're just the sole developer on a very small application.</del>
