@@ -19,9 +19,7 @@ I focussed on pulling all the logic from our existing ball of mud into a wide va
 
 TODO: Examples of expressions when I find out how to keep Jekyll from eating them.
 
-There is some real power there to put the data into the hands of designers. Those filters tend to be very tight and easily documented too and it's extremily easy (and valuable) to write a bunch taht fit your particular business domain.
-
-Now we can finally put the power back into the ands of end users. If they require a different form of ```salutation``` we can easily implement another (custom) ```salutation``` (we have a __TypeScript interface__ for this) and inject that instead. 
+There is some real power there to put the data into the hands of designers. Those filters tend to be very tight and easily documented too and it's extremily easy (and valuable) to write a bunch that fit your particular business domain.
 
 #### Snags
 Almost every time I ran into a problem was because I was not using Angular but fighting it. But then you learn about ```$apply``` and find out you can easily integrate foreign code too if needed (jQuery plugins for example). For all the other stuff that you are doing yourself inside of an Angular controlled environment you should be able to get away using what Angular has to offer. 
