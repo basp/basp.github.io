@@ -29,6 +29,6 @@ Almost every time I ran into a problem was because I was not using Angular but f
 If something feels difficult you'll probably have to approach the problem from a different (no pun intended) angle. Most of these times you can re-model your view-model so it will better suit Angular's ```ng-model``` (which might be tricky at first).
 
 #### Evaluation
-Along the way there was of course stuff to learn and find out. I had to learn how to use ```ng-model``` effectively (always make sure there's a __dot__ (```.```) in there) and also how to use nested controllers (there is nothing to it really, children can see parent scope but not parent cannot look into child scope, as it should be). 
+Along the way there was of course stuff to learn and find out. I had to learn how to use ```ng-model``` effectively (always make sure there's a __dot__ (```.```) in there) and also how to use nested controllers (there is nothing to it really, children can see parent scope but parent cannot look into child scope, as it should be). 
 
 I can really recommmend the excellent [Build Your Own Angular](http://teropa.info/build-your-own-angular) book to learn more about the inner workings. I still have to cover a lot of material from that book but so far the chapter on how ```$scope``` works has been very insightfull and excellently written.
