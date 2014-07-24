@@ -44,12 +44,12 @@ Since we just saw types (integral to TypeScript) it's worth noting that TypeScri
 There's lot's more to TypeScript and I encourage you to check it out yourself but this was mainly to point out it's very much just like JavaScript and that you have much control over how much typing you are gonna subject yourself to.
 
 ## Modules, Classes, Interaces
-TypeScript supports all of these concepts in a very natural way and it all maps to very clean JavaScript code that is perfectly readable even though it was produced by a compiler. However, sometimes it can be a bit tricky when dealing with external frameworks or libraries when it matters whether it's gonna `new` up a function or just `invoke` it.
+TypeScript supports all of these concepts in a very natural way and it all maps to very clean JavaScript code that is perfectly readable even though it was produced by a compiler (nowadays often also called a _transpiler_). However, sometimes it can be a bit tricky when dealing with external frameworks or libraries when it matters whether it's gonna `new` up a function or just `invoke` it.
 
-This means you'll sometimes might have to go back to the compiled `.js` and look at the code produced to determine what API call you have to use in order to get it to work all together. But even if that fails you can just create an ordinary JavaScript thingy like you would without TypeScript and it still would work fine. Again, TypeScript is very unobtrusive and you can use as much of it as you want.
+This means you might have to go back to the compiled `.js` and look at the code produced and verify it with API you are trying to use to get things to work together. But even if that fails you can just create an ordinary JavaScript thingy like you would without TypeScript and it still will work fine (remember, it's still ordinary JavaScript so everything you know already works). TypeScript is very unobtrusive and you can use as much of it as you want.
 
 ## Tools
-When you write TypeScript v.s. JavaScript it will have to be compiled by the TypeScript compiler. This is integrated into Visual Studio (including express) and will make sure that your script complies with the type declarations. 
+When you write TypeScript v.s. JavaScript it will have to be compiled by the TypeScript compiler/transpiler. This is integrated into Visual Studio (including express) and will make sure that your script complies with the type declarations. 
 
 However, you can just as well invoke the TypeScript compiler manually by any means you deem appropriate. That said, the integration in Visual Studio is excellent and the [free express edition](http://www.visualstudio.com/downloads/download-visual-studio-vs#d-express-web) is highly recommended for TypeScript development. You'll probably have to install either Update 2 or [Update 3 RC](http://support.microsoft.com/kb/2933779) in order to get the actual TypeScript templates and support.
 
