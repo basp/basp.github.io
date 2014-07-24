@@ -34,7 +34,7 @@ Now we can finally put the power back into the ands of end users. If they requir
 #### Snags
 Almost every time I ran into a problem was because I was not using Angular but fighting it. But then you learn about ```$apply``` and find out you can easily integrate foreign code too if needed (jQuery plugins for example). For all the other stuff that you are doing yourself inside of an Angular controlled environment you should be able to get away using what Angular has to offer. 
 
-If something feels difficult you're probably have to approach the problem from a different (no pun intended) angle. Most of these times you can re-model your view-model so it will better suit Angular's ```ng-model``` (which might be tricky at first).
+If something feels difficult you'll probably have to approach the problem from a different (no pun intended) angle. Most of these times you can re-model your view-model so it will better suit Angular's ```ng-model``` (which might be tricky at first).
 
 #### Evaluation
 Along the way there was of course stuff to learn and find out. I had to learn how to use ```ng-model``` effectively (always make sure there's a __dot__ (```.```) in there) and also how to use nested controllers. Along the way I made use of the excellent (Build Your Own Angular)[http://teropa.info/build-your-own-angular] book to learn more about the inner workings. I still have to cover a lot of material from that book but so far the chapter on how ```$scope``` works has been very insightfull and excellently written. I can really recommend this book if you are even remotely serious about getting into AngularJS.
