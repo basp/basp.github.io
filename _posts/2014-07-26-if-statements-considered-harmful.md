@@ -3,6 +3,10 @@ title: If-statements Considered Harmful
 tags: software development
 layout: post
 ---
+	if(you.areUsingIfStatementsOften, () => {
+		notify(you, 'probably suck as a software developer');S
+	});
+
 ### Disclaimer
 This post is about ```if``` __statements__. Those things that don't yield a result but just do __something__ or __some other thing__. They are the tell of a side-effect. And side-effects suck so ```if``` statements suck as well.
 
