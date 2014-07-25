@@ -11,7 +11,7 @@ In fact, statements tend to suck in general because they don't have a value. Wha
 If you like statements and especially ```if``` statements you better stop reading.
 
 ### Statements
-Statements suck gigantic arse. I'm not quite sure who invented that shit but he or she should be retroactively be stoned in punishement (I'm being overly dramatic here, note that I'm not actually being serious about stoning the poor sod). Why are statements so bad? Well, they don't tell you shit for starters.
+Statements suck gigantic arse. Why? Well, they don't tell you shit for starters. A  statement is like that coworker who doesn't respond but in the end complies with your request or gives a personal spin to it without any feedback. It nods but you have no clue what the fuck is gonna happen.
 
 #### They Are Void
 You know what ```void``` is? Nothing. All statements return conceptual ```void``` by definition so they are bascially just expressions that have no result. This means they are crappy expressions because they actually have no clue what they are doing. They _jsut do something_ and then say "I'm done, good luck, I'm outta here.".
