@@ -20,7 +20,7 @@ Statements suck gigantic arse. Why? Well, they don't tell you shit for starters.
 We have absolutely no need for statements anymore. I argue that everything should just be an expression. Everything should at least return something. Even if it's only a ```boolean```. Please, don't leave me hanging, give me a reply baby.
 
 #### They Are Void
-You know what ```void``` is? Nothing. All statements return conceptual ```void``` by definition so they are bascially just expressions that have no result. In fact, they tend to _eat_ valuable results because of their nature. This means they are crappy expressions because they have no way to signal are doing apart from using closed-in or (much much worse) global variables. They _just do something_ and then say "I'm done, something changed (for the better hopefully), good luck, I'm outta here.".
+You know what ```void``` is? Nothing. All statements return conceptual ```void``` by definition so they are bascially just expressions that have no result. In fact, they tend to _eat_ valuable results because of their nature. This means they are crappy expressions because they have no way to signal what the hell the did apart from using closed-in or (much much worse) global variables. They _just do something_ and then say "I'm done, something changed (for the better hopefully), good luck, I'm outta here.".
 
 ### Switches
 And for all monkies who think a ```switch``` will be better: unless it's a ```switch``` expression (more like a pattern matcher)  then __NO__. Sorry unless you're writing a low level parser or tokenizer keep away from those damn switches. Use a ```hash``` => ```function``` lookup instead (i.e. an ad-hoc interface).
