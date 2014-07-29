@@ -20,7 +20,9 @@ Yeah __considered harmful__ things should be considered with a grain of salt. An
 ### Statements
 Statements suck gigantic arse. Why? Well, they don't tell you shit for starters. A  statement is like that coworker who doesn't respond but in the end complies with your request or gives a personal spin to it without any feedback. It nods but you have no clue what the fuck is gonna happen. Those are statements. You call it and hope for the best.  _Hopefull programming_ I call it.
 
-We have absolutely no need for statements anymore. I argue that everything should just be an expression. Everything should at least return something. Even if it's only a ```boolean```. Please, don't leave me hanging, give me a reply baby.
+We have absolutely no need for statements anymore. I argue that everything should just be an expression. Everything should at least return something. <de.>Even if it's only a ```boolean```. Please, don't leave me hanging, give me a reply baby.</del> Returning a ```bool``` or ```boolean``` is just as nasty as returning nothing. 
+
+Don't return a bool, this is only valid when your method name begins with __is__ or __has__. If you can return a ```bool``` you can just as well return a ```{ success: bool; reasons: string[] }```. And that even gives you flexibility for the future in case you wanna return multiple fail reasons.
 
 #### They Are Void
 You know what ```void``` is? Nothing. All statements return conceptual ```void``` by definition so they are bascially just expressions that have no result. In fact, they tend to _eat_ valuable results because of their nature. This means they are crappy expressions because they have no way to signal what the hell the did apart from using closed-in or (much much worse) global variables. They _just do something_ and then say "I'm done, something changed (for the better hopefully), good luck, I'm outta here.".
