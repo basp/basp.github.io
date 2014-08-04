@@ -1,5 +1,5 @@
 ---
-title: TODO: Calculation!
+title: TODO Calculation
 tags: software development, stupidity
 layout: post
 ---
