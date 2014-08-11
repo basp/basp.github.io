@@ -58,16 +58,14 @@ like testing stuff in a controlled environment? Why don't we software engineers 
 better job of making it happen then?). We can easily inject a custom `provider` that
 delivers the exact `Date` that we are interested in. 
 
-This is the first key to so called __unit testing__: never ever depend on system level 
-functions or other values you cannot control.
+> #1 Whenver you depend on a value you cannot control, abstract it as a service.
 
-Now we come to the second rule with is basically just an extension on the first rule. It's
-a bit easier to explain because we can just say:
+> #2 Hide all `IO` behind services and don't worry if they are tiny.
 
-> Whenever you use `IO`, use a service to abstract it.
-
-If you consider system functions and OS level functions IO too then you will only need 
-rule #2. Hide all `IO` behind services and don't worry if they are tiny.
+Note that (strictly) `IO` are also values you cannot really control (because of the
+relation between input and output). So you would only need __#1__ but `IO` is so 
+common it helps to mention that explicitly. Once you realize how much `IO` you're
+actually doing you can easily abstract it away behind more sensible interfaces.
 
 ### Families
 Services tend to neatly converge into a common group of services: providers,
