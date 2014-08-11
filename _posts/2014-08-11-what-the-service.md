@@ -16,7 +16,7 @@ point you will also have to start to see the benefits of __dependency injection_
 if you are not aware of them already.
 
 ### What __IS__ a service?
-Let's start with a silly but still somewhat illuminating definition: a
+Let's start with a silly but still somewhat illuminating definition:
 
 	> A service is a piece of code (no matter how small) that provides a service to some 
 	> piece of client code (usually an application).
