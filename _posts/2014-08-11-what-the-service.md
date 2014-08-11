@@ -58,9 +58,9 @@ like testing stuff in a controlled environment? Why don't we software engineers 
 better job of making it happen then?). We can easily inject a custom `provider` that
 delivers the exact `Date` that we are interested in. 
 
-> #1 Whenver you depend on a value you cannot control, abstract it as a service.
+> Whenver you depend on a value you cannot control, abstract it as a service.
 
-> #2 Hide all `IO` behind services and don't worry if they are tiny.
+> Hide all `IO` behind services and don't worry if they are tiny.
 
 Note that (strictly) `IO` are also values you cannot really control (because of the
 relation between input and output). So you would only need __#1__ but `IO` is so 
