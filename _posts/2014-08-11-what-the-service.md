@@ -42,7 +42,7 @@ implementation but this would make it instantly untestable. Assume we wrote this
 	}
 
 How would you ever test that? You can't? You are at the whim of the `OS` at this point 
-so either you can do some crazy hack to repogram the clock or just improve your
+so either you can do some crazy hack to reprogram the clock or just improve your
 interface. 
 
 Consider this instead:
