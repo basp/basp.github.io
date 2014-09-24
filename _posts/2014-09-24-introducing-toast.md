@@ -5,7 +5,7 @@ tags: [dev, toast, pixi]
 ---
 Toast is a flexible NoSQL data storage that your DBA's are going to love. It tries to offer the best of the two sides of the big data chasm. To the the DBA's it offers a well defined schema and a natural API. To the programmers it offers well defined data structures and a natural API. Both sides will live in bliss and stars will shine upon them forever. 
 
-Toast is not a single thing, it involves boast (just) Toast, the core package, Toast the server component and Pixi, the Toast client reference implementation.
+Toast is not a single thing, it involves (just) Toast, the core package, Toast the server component and Pixi, the Toast client reference implementation.
 
 Oh, Toast is also mostly a .NET thing.
 
