@@ -81,4 +81,7 @@ in other ways too and some might argue with my classification and that's fine as
 long as you remember that every computation can be writen as a `from`, `select`,
 `where`. 
 
-Yes. It's SQL. Who would've thunk that?
+### Aside
+Yes. It's SQL. Who would've thunk that? Kidding aside, group all your services that do the same kind of thing behind the same kind of name but __don't prefix__ it. Don't do `ProviderName` but do `NameProvider` instead. If you are thinking about how to group things in the solution explorer then you are doing it wrong. You should have a family of `ThingyProvider` thingies. Not `ProviderThingy` thingies. 
+
+Code is more important than tools. Don't ever use naming or directories because it's easier in your tool. Someone else might not even be using the same tool and if tools cannot be made to work with your or a company agreed style of coding then they are shitty tools and you should probably not be using them.
