@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Lemonade Glasses (by Spinviss)"
+title: "Lemonade Glasses (by Spinvis)"
 ---
 <pre>
 Oh, if you could be here, today
