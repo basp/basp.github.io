@@ -2,6 +2,7 @@
 layout: post
 title: "Lemonade Glasses (by Spinviss)"
 ---
+<pre>
 Oh, if you could be here, today
 My strange friend
 And that you would be sober... 
@@ -57,3 +58,4 @@ And his "wrong" tune
 But I will tell you, there will be a time
 For sure
 That he may do it another time
+</pre>
