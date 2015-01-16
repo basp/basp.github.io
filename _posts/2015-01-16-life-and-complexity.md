@@ -38,7 +38,10 @@ Now what if we are observing an infinite stream of bits that is somehow converte
 
 > Entropy is an extensive property. It has the _dimension of energy divided by temperature_, which has a [bla about units and convertions].
 
-This basically says (to me at least but feel free to flame/correct me if I'm wrong) that entropy increases if you increase energy relative to the temperature (if temperature stays equals, if you increase energy you gain entropy).
+This basically says (to me at least but feel free to flame/correct me if I'm wrong) that entropy increases if you increase energy relative to the temperature within the context of some observed _system_ (if temperature stays equals, if you increase energy you gain entropy).
+
+#### System?
+Well from a layman's perspective (I know nothing about this except from reading hopefully truth worthy sources) it seems that we cannot consider entropy without some context of a system of some sorts. There has to be context, one cannot just say "we have 10% of entropy Captain" without having established some kind of context of reference.
 
 #### Flying With Entropy
 It's easy to make entropy. There is a whole lot of ways but one of the most fundamental ways has to be one of the oldest: creating a fire.
