@@ -12,7 +12,7 @@ At least, if you are lucky enough to live in a country where your leaders are no
 This is a long post. I will go rambling from east to west, make a lot of assumptions, be ignorant and a whole lot of other stuff... Maybe... Probably.
 
 ### Entropy
-At this point the author has to concede he is not much of a thermal dynamics expert nor possibly aware from all the other fields that deal with a concept known as _entropy_. It's a big word but in this case I'm referring to the amount of _randomness_ there is in any kind of system (entropy: order and disorder)[http://en.wikipedia.org/wiki/Entropy_(order_and_disorder].
+At this point the author has to concede he is not much of a thermal dynamics expert nor possibly aware from all the other fields that deal with a concept known as _entropy_. It's a big word but in this case I'm referring to the amount of _randomness_ there is in any kind of system [entropy: order and disorder](http://en.wikipedia.org/wiki/Entropy_(order_and_disorder).
 
 And even though in software we don't deal with entropy directly. I do consider force to battle against and as a programmer it would be wise to recognize entropy if you have the chance.
 
