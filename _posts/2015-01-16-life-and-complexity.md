@@ -47,3 +47,13 @@ Why do airplanes fly? Why do hot air balloons float? Some people might say "beca
 
 Airplanes fly because of entropy. Hot air balloons float because of entropy. But entropy is meaningless unless we provide a context where it applies. In this case it's the molecules that form our atmosphere.
 
+People will tell you happily that hot air rises up and cold air descends if the air underneath is warmer. But why? 
+
+There's a whole league of science subscribed to this field (and no worries, it has been figured out a long time ago) but still. The average person doesn't wonder. He or she will just accept hot air rising over cold air but never know why. 
+
+This saddens me. 
+
+
+	TODO: This is not finished, lot more rambling to come. But I just like 
+	to push things out as soon as possible because really, that's when the 
+	actual faults and mistakes become apparent.
