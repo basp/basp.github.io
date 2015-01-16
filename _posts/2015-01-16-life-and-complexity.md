@@ -12,9 +12,12 @@ At least, if you are lucky enough to live in a country where your leaders are no
 This is a long post. I will go rambling from east to west, make a lot of assumptions, be ignorant and a whole lot of other stuff... Maybe... Probably.
 
 ### Entropy
-At this point the author has to concede he is not much of a thermal dynamics expert nor possibly aware from all the other fields that deal with a concept known as _entropy_. It's a big word but in this case I'm referring to the amount of _randomness_ there is in any kind of system [entropy: order and disorder](http://en.wikipedia.org/wiki/Entropy_(order_and_disorder).
+At this point the author has to concede he is not much of a thermal dynamics expert nor possibly aware from all the other fields that deal with a concept known as _entropy_. It's a big word but in this case I'm referring to the amount of _randomness_ there is in any kind of system.
 
-And even though in software we don't deal with entropy directly. I do consider force to battle against and as a programmer it would be wise to recognize entropy if you have the chance.
+__NOTE__: 
+And yes, lot's of hand waving and short cuts, curb stones etc. Don't worry, we'll cover the inner workings once we have everyone up to speed.
+
+And even though in software we don't deal with entropy directly. I do consider it a real force to battle against and as a programmer it would be wise to recognize this enemy.
 
 #### Sidenote
 If you really look at how entropy is used (even though it might have a special definition) in other systems you will notice it will always have to do with the amount of _disorder_ there is a system. How a particular form of _disorder_ is defined is usually a parameter of the field in which the concept of entropy is used.
@@ -55,7 +58,6 @@ People will tell you happily that hot air rises up and cold air descends if the 
 There's a whole league of science subscribed to this field (and no worries, it has been figured out a long time ago) but still. The average person doesn't wonder. He or she will just accept hot air rising over cold air but never know why. 
 
 This saddens me. 
-
 
 	TODO: This is not finished, lot more rambling to come. But I just like 
 	to push things out as soon as possible because really, that's when the 
