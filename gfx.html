@@ -181,7 +181,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[203]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -213,7 +213,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[204]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">P1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
@@ -232,11 +232,11 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[204]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[6]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&lt;matplotlib.lines.Line2D at 0x27dcda09b0&gt;]</pre>
+<pre>[&lt;matplotlib.lines.Line2D at 0x43c4f932b0&gt;]</pre>
 </div>
 
 </div>
@@ -344,14 +344,14 @@ ElPpVgAAAABJRU5ErkJggg==
 <p>We can also think of this another way. If we have two points $P_1$ and $P_2$ then we can say that $P_t = P_1 + t(P_2 - P_1)$. Now considering that one of rules of the vector space is that when we substract two points we get a vector so that $V = P_2 - P_1$ then this this is equivalent to the above: $P_t = P_1 + t\vec{V}$.</p>
 <p>However, there's another way to write this: $P_t = (1 - t)P_1 + tP_2$.</p>
 <p>We can see that this is true by expanding it: $(1 - t)P_1 + tP_2 = P_1 - tP_1 + tP_2 = P_1 + t(P_2 - P_1)$.</p>
-<p>Let's make sure by we're sane by checking our results in <code>python</code>. In the code below, 'u' is calculated with our initial version $P_1 + t(P_2 - P_1)$, <code>v</code> is calculated using the expanded version $P_1 - tP_1 + tP_2$ and <code>w</code> is calculated using our refactored version $(1 - t)P_1 + tP_2$.</p>
+<p>Let's make sure by we're sane by checking our results in <code>python</code>. In the code below, <code>u</code> is calculated with our initial version $P_1 + t(P_2 - P_1)$, <code>v</code> is calculated using the expanded version $P_1 - tP_1 + tP_2$ and <code>w</code> is calculated using our refactored version $(1 - t)P_1 + tP_2$.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[205]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">p1</span> <span class="o">=</span> <span class="mi">0</span>
@@ -394,7 +394,7 @@ ElPpVgAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[206]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">t1</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">t</span>
@@ -413,7 +413,7 @@ ElPpVgAAAABJRU5ErkJggg==
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[206]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[8]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -439,36 +439,66 @@ ElPpVgAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[213]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="c"># P1, P2 and P3 are the vertices of our triangle </span>
+<span class="n">P1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+<span class="n">P2</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span>
+<span class="n">P3</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span>
+
+<span class="c"># P is a point that lies in the space defined</span>
+<span class="c"># by the vertices P1, P2 and P3</span>
+<span class="n">P</span> <span class="o">=</span> <span class="mf">1.8</span><span class="p">,</span> <span class="mf">2.9</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="k">def</span> <span class="nf">plot_example</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot;Plots our example triangle P1, P2, P3 with a point P in the middle.&quot;&quot;&quot;</span>
-    <span class="n">P1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
-    <span class="n">P2</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span>
-    <span class="n">P3</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span>
+    <span class="sd">&quot;&quot;&quot;Plots a triangle with annotations using vertices P1, P2 and P3.&quot;&quot;&quot;</span>
 
-    <span class="n">P</span> <span class="o">=</span> <span class="mf">1.8</span><span class="p">,</span> <span class="mf">2.9</span>
-
+    <span class="c"># Plot the 3 edges of our triangle</span>
     <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="p">[(</span><span class="n">P1</span><span class="p">,</span> <span class="n">P2</span><span class="p">),</span> <span class="p">(</span><span class="n">P2</span><span class="p">,</span> <span class="n">P3</span><span class="p">),</span> <span class="p">(</span><span class="n">P3</span><span class="p">,</span> <span class="n">P1</span><span class="p">)]:</span>
         <span class="n">p0</span><span class="p">,</span> <span class="n">p1</span> <span class="o">=</span> <span class="n">p</span>
         <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">((</span><span class="n">p0</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">p1</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="p">(</span><span class="n">p0</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">p1</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="s">&#39;b&#39;</span><span class="p">)</span>
 
+    <span class="c"># Plot 3 black dots `ko` at the vertices of our triangle</span>
     <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="p">[</span><span class="n">P1</span><span class="p">,</span> <span class="n">P2</span><span class="p">,</span> <span class="n">P3</span><span class="p">]:</span> 
         <span class="n">px</span><span class="p">,</span> <span class="n">py</span> <span class="o">=</span> <span class="n">p</span>
         <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">px</span><span class="p">,</span> <span class="n">py</span><span class="p">,</span> <span class="s">&#39;ko&#39;</span><span class="p">)</span>
 
+    <span class="c"># Plot `P`</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">P</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">P</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s">&#39;ro&#39;</span><span class="p">)</span>
+    
+    <span class="c"># We&#39;ll grab the axes for some fancy annotation</span>
     <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">()</span>    
+    
+    <span class="c"># Set the limites so we&#39;ll have some padding around our triangle</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">6.0</span><span class="p">)</span>
+    
+    <span class="c"># Make sure nothing is skewed</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="mf">1.0</span><span class="p">)</span>
+    
+    <span class="c"># Plot our vertice annotations</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s">&#39;$P_1$&#39;</span><span class="p">,</span> <span class="n">P1</span><span class="p">,</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="n">P1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">P1</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s">&#39;$P_2$&#39;</span><span class="p">,</span> <span class="n">P2</span><span class="p">,</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="n">P2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mf">0.25</span><span class="p">,</span> <span class="n">P2</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s">&#39;$P_3$&#39;</span><span class="p">,</span> <span class="n">P3</span><span class="p">,</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="n">P3</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mf">0.25</span><span class="p">,</span> <span class="n">P3</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+    
+    <span class="c"># Plot our vector annotations</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s">r&#39;$\vec{a}$&#39;</span><span class="p">,</span> <span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s">r&#39;$\vec{b}$&#39;</span><span class="p">,</span> <span class="p">(</span><span class="mf">3.25</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">))</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s">r&#39;$\vec{c}$&#39;</span><span class="p">,</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+    
+    <span class="c"># Plot the annotation for P</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s">&#39;P&#39;</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="n">P</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mf">0.25</span><span class="p">,</span> <span class="n">P</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
 </pre></div>
 
@@ -489,7 +519,7 @@ ElPpVgAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[208]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">plot_example</span><span class="p">()</span>
@@ -626,7 +656,7 @@ AAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now one of the basic problems in graphics we face is how to write $P$ in terms of the vertices $P1$, $P2$ and $P3$ of a triangle. Let's start by looking at the vectors $\vec{a} = P2 - P1$ and $\vec{b} = P3 - P1$.</p>
+<p>Now one of the basic problems in graphics we face is how to write $P$ in terms of the vertices $P1$, $P2$ and $P3$ of a triangle. Let's start by looking at the vectors $\vec{a} = P_2 - P_1$ and $\vec{b} = P_3 - P_1$.</p>
 <p>We need a function $f(t)$ that plots a line <strong>orthogonal</strong> to $\vec{c}$ that intersects with point $P$.</p>
 
 </div>
@@ -634,7 +664,7 @@ AAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[209]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">P3</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span><span class="mi">2</span>
@@ -654,7 +684,7 @@ AAAAAElFTkSuQmCC
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[209]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[19]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -680,7 +710,7 @@ AAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[210]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">plot_example</span><span class="p">()</span>
@@ -704,11 +734,11 @@ AAAAAElFTkSuQmCC
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[210]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[20]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.text.Annotation at 0x27dd155b70&gt;</pre>
+<pre>&lt;matplotlib.text.Annotation at 0x43c524fda0&gt;</pre>
 </div>
 
 </div>
@@ -888,19 +918,6 @@ gg==
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre> 
-</pre></div>
-
-</div>
-</div>
-</div>
-
 </div>
     </div>
   </div>
