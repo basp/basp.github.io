@@ -1,21 +1,196 @@
----
-layout: bootstrap
-title: basp.github.io
----
-<p>Welcome to my design lab note space. I'm slowly migrating old notes over here but for updates on <a href="http://github.com/basp/lum-invader/">Oni</a> you've come the the right place.</p>
+<!DOCTYPE html>
+<html>
 
-<p>
-	There are two Oni MOO's right now: we have <a href="https://github.com/basp/oni">prototype Oni</a> and we have <a href="https://github.com/basp/lum-invader">Lum Invader</a>. The last repository is the way forward. Old (or classic) Oni (0.0.0) is considered a protoype. It has a some of the desired features but it is not designed well. It's useful for reference material and does well as a demo.
-</p>
+<head>
+    <meta charset="UTF-8">
 
-<ul class="nav nav-pills nav-stacked">
-    {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">
-        {{ post.title }}
+    <title>Sandbox</title>
 
-        <span class="badge pull-right">{{ post.date | date_to_string }}</span>
-      </a>      
-    </li>
-    {% endfor %}
-</ul>
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/popup.css" />
+    <link rel="stylesheet" href="css/utils.css" />
+    <link rel="stylesheet" href="css/padding.css" />
+
+    <link href='https://fonts.googleapis.com/css?family=Yellowtail' rel='stylesheet' type='text/css'>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            background-color: transparent;
+        }
+
+        body {
+            font-family: 'Yellowtail', cursive;
+            overflow-x: hidden;
+        }
+
+        #s-1 {
+            background-color: #000;
+            color: #fff;
+        }
+
+        #s-2 {
+            background-color: black;
+        }
+
+        #s-3 {
+            background-color: hotpink;
+            color: black;
+        }
+
+        #s-4 {
+            background-color: azure;
+            color: black;
+        }
+
+        #s-5 {
+            background-color: pink;
+            color: black;
+        }
+
+        .c-box {
+            position: absolute;
+            transition: background-color 200ms;
+            color: white;
+        }
+
+        .c-box--transparent {
+            background-color: transparent;
+        }        
+
+        .c-box--alt-1:hover {
+            background-color: azure;
+        }
+
+        .c-box--alt-2:hover {
+            background-color: hotpink;            
+        }
+
+        .c-box--alt-3:hover {
+            background-color: pink;            
+        }        
+
+        .c-box--alt-4:hover {
+            background-color: white;            
+        }        
+    </style>
+</head>
+
+<body>
+    <article>
+        <section id="s-1" class="l-height--1x" style="font-size: 5vh">
+            <div class="c-box c-box--alt-1 l-row--0 l-width--1x l-height--1-row"></div>
+            <div class="c-box c-box--alt-4 l-row--1 l-width--1x l-height--1-row"></div>
+            <div class="c-box c-box--alt-3 l-row--2 l-width--1x l-height--1-row"></div>
+            <div class="c-box c-box--alt-2 l-row--3 l-width--1x l-height--1-row"></div>
+            <div class="c-box c-box--alt-3 l-row--4 l-width--1x l-height--1-row">
+                <h1 class="c-box l-column--3 soft--top">Hiya I'm Kali!</h1>
+            </div>
+            <div class="c-box c-box--alt-1 l-row--5 l-width--1x l-height--1-row"></div>
+            <div class="c-box c-box--alt-3 l-row--6 l-width--1x l-height--1-row"></div>
+            <div class="c-box c-box--alt-1 l-row--7 l-width--1x l-height--1-row"></div>
+            <div class="c-box c-box--alt-4 l-row--8 l-width--1x l-height--1-row"></div>
+            <div class="c-box c-box--alt-2 l-row--9 l-width--1x l-height--1-row"></div>
+        </section>
+
+        <section id="s-3" class="l-height--1x">
+            <div class="c-box l-row--8 l-column--1/2 l-width--9-columns soft--top" style="font-size: 5vh">
+                <span>I also like various shades of pink and weird cursive fonts!</span>
+            </div>
+
+            <div class="c-box l-row--0 l-rl-column--1/2 l-width--5-columns soft--top" style="font-size: 5vw">
+                <span>I love bunnies...</span>
+            </div>
+
+            <div class="c-box l-row--2 l-column--1/2 l-width--2-columns soft--top" style="font-size: 3vw">
+                <span>And cats...</span>
+            </div>
+
+            <div class="c-popup js-popup l-row--3 l-column--1/2 l-width--2-columns">
+                <div class="c-popup__media">
+                    <img src="media/alana-01.jpg" class="u-responsive" />
+                </div>
+            </div>
+
+            <div class="c-popup js-popup l-row--2 l-rl-column--1/2 l-width--5-columns">
+                <div class="c-popup__media">
+                    <img src="media/bunny.jpg" class="u-responsive" />
+                </div>
+            </div>
+        </section>
+        
+        <section id="s-2" class="l-height--1-row">
+            <div class="c-box c-box--alt-1 l-column--0 l-width--1-column l-height--1-row"></div>
+            <div class="c-box c-box--alt-3 l-column--1 l-width--1-column l-height--1-row"></div>
+            <div class="c-box c-box--alt-4 l-column--2 l-width--1-column l-height--1-row"></div>
+            <div class="c-box c-box--alt-1 l-column--3 l-width--1-column l-height--1-row"></div>
+            <div class="c-box c-box--alt-2 l-column--4 l-width--1-column l-height--1-row"></div>
+            <div class="c-box c-box--alt-3 l-column--5 l-width--1-column l-height--1-row"></div>
+            <div class="c-box c-box--alt-1 l-column--6 l-width--1-column l-height--1-row"></div>
+            <div class="c-box c-box--alt-3 l-column--7 l-width--1-column l-height--1-row"></div>
+            <div class="c-box c-box--alt-2 l-column--8 l-width--1-column l-height--1-row"></div>
+            <div class="c-box c-box--alt-1 l-column--9 l-width--1-column l-height--1-row"></div>
+        </section>
+
+        <section id="s-2" class="l-height--1-row">
+            <div class="c-box c-box--alt-3 l-column--0 l-width--1-column l-height--1-row"></div>
+            <div class="c-box c-box--alt-1 l-column--1 l-width--1-column l-height--1-row"></div>
+            <div class="c-box c-box--alt-2 l-column--2 l-width--1-column l-height--1-row"></div>
+            <div class="c-box c-box--alt-1 l-column--3 l-width--1-column l-height--1-row"></div>
+            <div class="c-box c-box--alt-4 l-column--4 l-width--1-column l-height--1-row"></div>
+            <div class="c-box c-box--alt-2 l-column--5 l-width--1-column l-height--1-row"></div>
+            <div class="c-box c-box--alt-3 l-column--6 l-width--1-column l-height--1-row"></div>
+            <div class="c-box c-box--alt-1 l-column--7 l-width--1-column l-height--1-row"></div>
+            <div class="c-box c-box--alt-2 l-column--8 l-width--1-column l-height--1-row"></div>
+            <div class="c-box c-box--alt-3 l-column--9 l-width--1-column l-height--1-row"></div>
+        </section>
+
+        <section id="s-4" class="l-height--1x">
+            <div class="c-popup js-popup l-row--1 l-column--1-1/2 l-width--5-columns">
+                <div class="c-popup__media">
+                    <img src="media/alana-02.jpg" class="u-responsive" />
+                </div>
+            </div>
+
+            <div class="c-popup js-popup l-row--6 l-rl-column--1-1/2 l-width--3-columns">
+                <div class="c-popup__media">
+                    <img src="media/squirrel.jpg"" class="u-responsive" />
+                </div>
+            </div>
+        </section>
+
+        <section id="s-2" class="l-height--2-rows">
+            <div class="c-box c-box--alt-1 l-column--0 l-width--2-columns l-height--2-rows"></div>
+            <div class="c-box c-box--alt-3 l-column--2 l-width--2-columns l-height--2-rows"></div>
+            <div class="c-box c-box--alt-2 l-column--4 l-width--2-columns l-height--2-rows"></div>
+            <div class="c-box c-box--alt-1 l-column--6 l-width--2-columns l-height--2-rows"></div>
+            <div class="c-box c-box--alt-2 l-column--8 l-width--2-columns l-height--2-rows"></div>
+        </section>
+
+        <section id="s-5" class="l-height--9-rows" style="font-size: 3vh">
+            <div class="l-row l-row--6 l-column--0">
+                <span>I'm row seven, column 1.</span>
+            </div>
+            <div class="l-row l-row--7 l-rl-column--0">
+                <span>I'm at row eight (and also aligned from the right)</span>
+            </div>
+            <div class="l-row l-row--8 l-column--4">
+                <span>I'm at the bottom!</span>
+            </div>
+        </section>
+    </article>
+
+    <script src="//code.jquery.com/jquery-2.2.3.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/4.12.0/lodash.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/plugins/TextPlugin.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/jquery.ScrollMagic.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js"></script>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
