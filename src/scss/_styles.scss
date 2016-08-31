@@ -1,0 +1,96 @@
+/*
+ * This project is based on ITCSS
+ * http://itcss.io/
+ */
+
+
+
+/*
+    ITCSS STRUCTURE:
+    ----------
+    01-Settings: Global variables, config switches.
+    02-Tools: Default mixins and functions.
+    03-Generic: Ground-zero styles (Normalize.css, resets, box-sizing).
+    04-Base: Unclassed HTML elements (type selectors).
+    05-Objects: Cosmetic-free design patterns.
+    06-Components: Designed components, chunks of UI.
+    07-Trumps: Helpers and overrides.
+*/
+
+/* 01 - SETTINGS */
+// inuit partials
+@import "../../bower_components/inuit-defaults/settings.defaults";
+@import "../../bower_components/inuit-responsive-settings/settings.responsive";
+// custom partials
+@import "01-settings/animations.scss";
+@import "01-settings/colors";
+@import "01-settings/typography";
+@import "01-settings/layout";
+@import "01-settings/spacing";
+@import "01-settings/inuit";
+
+
+/* 02 - FUNCTIONS */
+// inuit partials
+@import "../../bower_components/inuit-functions/tools.functions";
+@import "../../bower_components/inuit-mixins/tools.mixins";
+@import "../../bower_components/inuit-tools-widths/tools.widths";
+@import "../../bower_components/inuit-responsive-tools/tools.responsive";
+// custom partials
+@import "02-tools/container-setup";
+
+
+/* 03 - GENERIC */
+// inuit partials
+@import "../../bower_components/inuit-normalize/generic.normalize";
+@import "../../bower_components/inuit-box-sizing/generic.box-sizing";
+// custom partials
+@import "03-generic/generic";
+
+
+/* 04 - BASE */
+// inuit partials
+//@import "../../bower_components/inuit-page/base.page";
+@import "../../bower_components/inuit-images/base.images";
+@import "../../bower_components/inuit-lists/base.lists";
+// custom partials
+@import "04-base/typography";
+
+
+/* 05 - OBJECTS */
+// inuit partials
+//@import "../../bower_components/inuit-buttons/objects.buttons";
+@import "../../bower_components/inuit-layout/objects.layout";
+@import "../../bower_components/inuit-layout-whitespace-fix/objects.layout-whitespace-fix";
+@import "../../bower_components/inuit-list-bare/objects.list-bare";
+@import "../../bower_components/inuit-list-block/objects.list-block";
+@import "../../bower_components/inuit-list-inline/objects.list-inline";
+@import "../../bower_components/inuit-tabs/objects.tabs";
+//@import "../../bower_components/inuit-pack/objects.pack";
+// custom partials
+@import "05-objects/layout";
+
+/* 06 - COMPONENTS */
+// 3rd party partials
+@import "../../bower_components/fancybox/source/jquery.fancybox";
+// custom partials
+@import "06-components/header";
+@import "06-components/video";
+@import "06-components/title";
+@import "06-components/story";
+@import "06-components/text";
+@import "06-components/quote";
+@import "06-components/parallax";
+@import "06-components/fancybox";
+
+
+/* 07 - TRUMPS */
+// inuit partials
+@import "../../bower_components/inuit-clearfix/trumps.clearfix";
+@import "../../bower_components/inuit-widths/trumps.widths";
+@import "../../bower_components/inuit-widths-responsive/trumps.widths-responsive";
+@import "../../bower_components/inuit-spacing/trumps.spacing";
+@import "../../bower_components/inuit-spacing-responsive/trumps.spacing-responsive";
+@import "../../bower_components/inuit-print/trumps.print";
+// custom partials
+@import "07-trumps/text";

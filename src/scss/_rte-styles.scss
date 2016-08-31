@@ -1,0 +1,59 @@
+/*
+ * This project is based on ITCSS 
+ * http://itcss.io/
+ */
+
+
+@import url(https://fonts.googleapis.com/css?family=Nunito:400,700,300);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans); 
+
+/* 01 - SETTINGS */
+// inuit partials
+@import "../../bower_components/inuit-defaults/settings.defaults";
+@import "../../bower_components/inuit-responsive-settings/settings.responsive";
+// custom partials
+//@import "01-settings/animations.scss";
+@import "01-settings/colors";
+@import "01-settings/typography";
+@import "01-settings/layout";
+@import "01-settings/spacing";
+@import "01-settings/inuit";
+
+
+/* 02 - FUNCTIONS */
+// inuit partials
+//@import "../../bower_components/inuit-functions/tools.functions"; 
+@import "../../bower_components/inuit-mixins/tools.mixins"; 
+@import "../../bower_components/inuit-tools-widths/tools.widths"; 
+@import "../../bower_components/inuit-responsive-tools/tools.responsive"; 
+
+// custom partials 
+@import "../icons/_generated.icons";
+
+/* 03 - GENERIC */
+// inuit partials
+@import "../../bower_components/inuit-normalize/generic.normalize";
+@import "../../bower_components/inuit-box-sizing/generic.box-sizing";
+// custom partials
+@import "03-generic/generic"; 
+
+/* 04 - BASE */
+@import "04-base/typography";
+
+/* 06 - COMPONENTS */
+@import "06-components/text"; 
+
+/* 04 - Trumps */
+@import "07-trumps/colors";
+@import "07-trumps/links";
+ 
+// RTE SPECIFIC STYLES
+body {
+    font-family: 'Open Sans';
+    background-color: #fff;
+}
+
+p { 
+    font-size: 14px;
+}
+

@@ -1,0 +1,41 @@
+﻿/*
+ * Creates container classes: .o-container--*
+ * $containers is defined in 01-settings/_vars
+ */
+@include container-setup($containers);
+
+.o-pagepanel {
+	position: relative;
+}
+
+.o-layout{
+    width: 82vw;
+	margin: 0 0 0 8.5vw;
+
+	/* Clearfix */
+	*zoom: 1;
+
+	&:before, &:after {
+	    content: " ";
+	    display: table;
+	}
+	&:after {
+	    clear: both;
+	}
+	/* end clearfix */
+
+	&-item{
+		&--left,
+	    &--right{
+	        width: 36.5vw;
+	    }
+
+		&--left{
+			float: left;
+		}
+	    &--right{
+	        float: right;
+	    }
+	}
+
+}

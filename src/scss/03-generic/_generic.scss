@@ -1,0 +1,50 @@
+/**
+ * Generic Platform styling
+ */
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+  background-color: colors(gray, x-dark) !important;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: $quarter-spacing-unit;
+    font-weight: $font-weight--bold;
+}
+select[multiple], select[size] {
+    height: auto;
+}
+textarea, input {
+	outline: none;
+}
+table{
+    td, th{
+        padding: 0 $half-spacing-unit;
+        &:first-child{
+            padding-left: 0;
+        }
+    }
+}

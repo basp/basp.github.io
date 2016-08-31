@@ -1,0 +1,13 @@
+/**
+ * Platform base spacing unit
+ */
+$base-spacing-unit: 3vh;
+
+
+/**
+ * Variations
+ */
+$quadruple-spacing-unit: round($base-spacing-unit * 4);
+$double-spacing-unit: round($base-spacing-unit * 2);
+$half-spacing-unit: round($base-spacing-unit / 2);
+$quarter-spacing-unit: round($base-spacing-unit / 4);

@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+<head>
+    <title>RCOAK - Stichting OOPOEH</title>
+
+    <link rel="stylesheet" href="https://i.icomoon.io/public/832d0feea6/RCOAK/style.css">
+
+    <link rel="stylesheet" href="src/css/glyphicons.css" />
+    <link rel="stylesheet" href="utils.css" />
+    <link rel="stylesheet" href="project.css" />
+
+    <style>
+        .c-content {
+            background: linear-gradient(to bottom, #C7867C, #F2AB93);
+        }
+
+        .c-quote {
+            color: #E2B1A6;
+        }
+    </style>
+</head>
+<body>
+    <!--
+    <div class="c-preloader js-preloader">
+        <i class="icon-logo"></i>
+    </div>
+    -->
+
+    <div class="c-content">
+        <div class="c-blind js-blind"></div>
+
+        <div class="c-menu">
+            <div class="c-menu__logo">
+                <a href="/index.html">
+                    <i class="icon-logo"></i>
+                </a>
+            </div>
+            <div class="c-menu__close">
+                <a href="/index.html">
+                    <i class="icon-close"></i>
+                </a>
+            </div>  
+        </div>
+
+        <div class="c-video-wrapper js-fade" data-duration="100">
+            <video class="c-video" loop muted autoplay>
+                <source src="dist/videos/oopoeh.mp4" type="video/mp4">
+            </video>        
+        </div>
+
+        <div class="c-title-wrapper">
+            <div class="c-title js-story">
+                <div class="js-story__part" data-speed="fast">
+                    <h2 class="c-title__h2">
+                        <span class="js-text">stichting oopoeh</span>
+                    </h2>
+                    <h1 class="c-title__h1">
+                        <span class="js-text">Een actiever leven</span><br/>
+                        <span class="js-text">voor ouderen,</span><br/>
+                        <span class="js-text">een leuker leven</span><br/>
+                        <span class="js-text">voor huisdieren</span>
+                    </h1>
+                    <h2 class="c-title__h2">
+                        <span class="js-text">Bezoek om</span>
+                        <span class="js-text js-text--strong">naar uit te kijken</span>
+                    </h2>
+                </div>
+            </div>
+
+            <span class="c-scroll-icon glyphicon glyphicon-chevron-down" />
+        </div>
+
+        <div class="c-main js-pin-section" style="height: 400vh">
+            <div class="c-pin js-pin" data-trigger-hook="0.25">
+                <div class="c-story js-story">
+                    <p>
+                        <span class="js-story__part" data-speed="fast" data-trigger-element="#video-1">
+                            <span class="js-text">Ouderen in Nederland beschikken over een grote dosis levenservaring, energie en kennis. En willen die benutten door iets leuks en zinvols te doen.</span>
+                        </span>
+                        <span class="js-story__part" data-speed="fast" data-trigger-element="#quote-2">
+                            <span class="js-text">Zij zijn graag in het gezelschap van een huisdier maar willen de volledige zorg niet meer dragen.</span>
+                        </span>
+                        <span class="js-story__part" data-speed="fast" data-trigger-element="#image-1">
+                            <span class="js-text">Bij OOPOEH kunnen ouderen zich aanmelden als een maatje voor een huisdier.</span>
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+            <div id="quote-1" class="js-quote c-quote" style="top: 50vh; right: 10vw" data-trigger-hook="1.0">
+                <span class="c-quote__txt js-quote__txt">een actiever</span>
+                <span class="c-quote__txt js-quote__txt">leven voor</span>
+                <span class="c-quote__txt js-quote__txt">ouderen</span>
+            </div>
+            
+            <div id="quote-2" class="js-quote c-quote" style="top: 150vh; right: 10vw" data-trigger-hook="1.0">
+                <span class="c-quote__txt js-quote__txt">een leuker</span>
+                <span class="c-quote__txt js-quote__txt">leven voor</span>
+                <span class="c-quote__txt js-quote__txt">huisdieren</span>
+            </div>
+
+            <div id="video-1" class="c-popup js-popup" 
+                 style="top: 75vh; right: 10vw; width: 50vw;" 
+                 data-width="50vw" 
+                 data-popup-width="80vw">
+
+                <div class="c-popup__media u-ar u-ar--16/9">
+                    <iframe class="u-ar__content"
+                            src="https://player.vimeo.com/video/180182236?title=0&byline=0&portrait=0&badge=0" 
+                            width="100%" height="100%"
+                            frameborder="0" 
+                            webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="c-popup__overlay js-popup__overlay">
+                    <div class="c-popup__icon js-popup__icon glyphicon glyphicon-play"
+                         data-trigger-element="#video-1"
+                         data-trigger-hook="0.8"></div>
+                </div>
+
+                <div class="c-popup__story js-popup__story" data-speed="normal">
+                    <i class="icon-close c-popup__close js-popup__close"></i>
+                    <h2 class="js-text">Oopoeh's aan het woord</h2>
+                </div>
+            </div>
+        
+            <div id="image-1" class="c-popup js-popup js-parallax" 
+                 style="width: 30vw; top: 225vh"
+                 data-width="30vw" 
+                 data-popup-width="50vw"
+                 data-speed="slow">
+                
+                <div class="c-popup__overlay js-popup__overlay">
+                    <div class="c-popup__icon js-popup__icon glyphicon glyphicon-search"
+                         data-trigger-hook="0.8"
+                         data-trigger-element="#image-1"></div>
+                </div>
+     
+                <img class="c-popup__media u-responsive" 
+                     src="dist/img/oopoeh-foto-staand.jpg">
+
+                <div class="c-popup__story js-popup__story" data-speed="xslow">
+                    <i class="icon-close c-popup__close js-popup__close"></i>
+                </div>
+            </div>      
+        </div><!-- c-main -->
+
+        <div style="height: 75vh">
+            <div style="position: absolute; left: 55vw; width: 35vw;">
+                <p style="margin-bottom: 16px">
+                    OOPOEH biedt alleenstaande ouderen laagdrempelige mogelijkheden om actiever te worden en het sociaal netwerk te vergroten. Door een vast oppasdier uit de buurt ontstaat er met de baasjes een vertrouwensrelatie, een echte vriendschap. Ook zal het contact tussen de mensen op straat en de ouderen, de OOPOEH’s, worden gestimuleerd door een huisdier. Een dier blijkt namelijk minstens net zo’n goede ‘conversation piece’ te zijn als het weer.
+                </p>
+                
+                <p style="margin-bottom: 16px">
+                    Hiernaast biedt Stichting OOPOEH de ouderen maandelijks gratis uitjes aan zodat ze elkaar leren kennen en onderling ook vriendschappen ontstaan.
+                </p>
+                
+                <p style="margin-bottom: 16px">
+                    Meer achtergrondinformatie:<br/>
+                    <a href="http://www.oopoeh.nl">www.oopoeh.nl</a>
+                </p>
+            </div>
+        </div>
+    </div><!-- c-container -->
+
+    <script src="https://player.vimeo.com/api/player.js"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/4.12.0/lodash.min.js"></script>
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/plugins/TextPlugin.min.js"></script>
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/jquery.ScrollMagic.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js"></script>
+
+    <script src="parallax.js"></script>
+    <script src="fade.js"></script>
+    <script src="text.js"></script>
+    <script src="quote.js"></script>
+    <script src="pin.js"></script>
+    <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+.c-story {
+    position: absolute;
+    left: 8.5vw;
+    width: 36.5vw;
+
+    &--wrapper{
+        position: relative;
+    }
+
+    p {
+        font-size: $inuit-heading-size-2;
+        line-height: $inuit-heading-line-2;
+        margin: 0 0 $base-spacing-unit 0;
+        color: colors(white);
+        font-weight: $font-weight--bold;
+    }
+
+    &--background{
+        background: linear-gradient(to bottom, transparentize(colors(gray, x-dark), 1)  45%, transparentize(colors(gray, x-dark), 0)  45%, colors(purple, mid-dark) 55%);
+    }
+    &--execution{
+        // background-color: colors(beige);
+        background: linear-gradient(to bottom, #ada49b, #da6f64);
+    }
+    &--conclusion{
+        // background-color: colors(blue);
+        background: linear-gradient(181deg, #6e788c, #7596b0);
+    }
+
+    &-bg{
+        &--purple{
+            background-color: colors(purple, mid-dark);
+        }
+        &--gray-x-dark{
+            background-color: colors(gray, x-dark);
+        }
+
+    }
+
+
+
+
+    &-credits{
+        position: absolute;
+        bottom: 10vw;
+        color: colors(white);
+        font-size: $inuit-heading-size-5;
+        line-height: $inuit-heading-line-3;
+
+        &--list{
+
+            &-item{
+                margin-bottom: 6.1vh;
+
+                &:last-child{
+                    margin-bottom: 0;
+                }
+
+                [class^="icon-"]{
+                    float: left;
+                    font-size: $inuit-heading-size-1;
+                    line-height: $inuit-heading-line-1;
+
+                    + [class^="icon-"]{
+                        margin-left: $base-spacing-unit;
+                    }
+                }
+                p{
+                    font-size: $inuit-heading-size-5;
+                    line-height: $inuit-heading-line-3;
+                    color: colors(purple);
+
+                }
+            }
+
+        }
+    }
+
+}
+
+
+.js-test--one{
+    position: absolute;
+    bottom: 30vw;
+    width: 82vw;
+    left: 8.5vw;
+
+    &__left,
+    &__right{
+        width: 36.5vw;
+        color: white;
+
+        font-size: $inuit-heading-size-5;
+        line-height: $inuit-heading-line-3;
+    }
+
+    &__left{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        font-size: $inuit-heading-size-3;
+        line-height: $inuit-heading-line-2;
+    }
+    &__right{
+        float: right;
+        right: 8.5vw;
+
+        > div{
+            margin-bottom: 6.1vh;
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+
+            [class^="icon-"]{
+                float: left;
+                font-size: $inuit-heading-size-1;
+                line-height: $inuit-heading-line-1;
+
+                + [class^="icon-"]{
+                    margin-left: $base-spacing-unit;
+                }
+            }
+
+            p{
+                font-size: $inuit-heading-size-5;
+                line-height: $inuit-heading-line-3;
+                color: colors(purple);
+
+            }
+        }
+
+
+    }
+
+
+}

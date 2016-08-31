@@ -1,0 +1,195 @@
+<!doctype html>
+<html>
+<head>
+    <title>Stichting Zorgdier</title>
+
+    <link rel="stylesheet" href="https://i.icomoon.io/public/832d0feea6/RCOAK/style.css">
+
+    <link rel="stylesheet" href="src/css/glyphicons.css" />
+    <link rel="stylesheet" href="src/css/grid.css" />
+    <link rel="stylesheet" href="utils.css" />
+    <link rel="stylesheet" href="project.css" />
+
+    <style>
+        .c-content {
+            background: linear-gradient(to bottom, #C7867C, #F2AB93);
+        }
+
+        .c-quote {
+            color: #E2B1A6;
+        }
+    </style>
+</head>
+<body>
+    <!--
+    <div class="c-preloader js-preloader">
+        <i class="icon-logo"></i>
+    </div>
+    -->
+
+    <div class="c-content">
+        <div class="c-blind js-blind"></div>
+
+        <div class="c-menu">
+            <div class="c-menu__logo">
+                <a href="/index.html">
+                    <i class="icon-logo"></i>
+                </a>
+            </div>
+            <div class="c-menu__close">
+                <a href="/index.html">
+                    <i class="icon-close"></i>
+                </a>
+            </div>  
+        </div>
+
+        <div class="c-video-wrapper js-fade" data-duration="100">
+            <video class="c-video" loop muted autoplay>
+                <source src="dist/videos/zorgdier1.mp4" type="video/mp4">
+            </video>        
+        </div>
+
+        <div class="c-title-wrapper">
+            <div class="c-title js-story">
+                <div class="js-story__part" data-speed="fast">
+                    <h2 class="c-title__h2">
+                        <span class="js-text">Zorgdier</span>
+                    </h2>
+                    <h1 class="c-title__h1">
+                        <span class="js-text">Dierbare aandacht</span><br/>
+                        <span class="js-text">in de zorg</span>
+                    </h1>
+                    <h2 class="c-title__h2">
+                        <span class="js-text">Bezoek om</span>
+                        <span class="js-text js-text--strong">naar uit te kijken</span>
+                    </h2>
+                </div>
+            </div>
+
+            <span class="c-scroll-icon glyphicon glyphicon-chevron-down" />            
+        </div>
+
+        <div class="c-main js-pin-section" style="height: 400vh">
+            <div class="c-pin js-pin" data-trigger-hook="0.25">
+                <div class="c-story js-story">
+                    <p>
+                        <span class="js-story__part" data-speed="fast" data-trigger-element="#video-1">
+                            <span class="js-text">Stichting ZorgDier Nederland startte 10 jaar geleden een initiatief waardoor mensen met eigen hond of kat wekelijks op bezoek gaan bij kwetsbare mensen die zelf de zorg voor hun dier niet meer kunnen dragen en die in veel gevallen ook niet meer zelfstandig wonen.</span>
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+            <div id="quote-1" class="js-quote c-quote" style="top: 50vh; right: 10vw" data-trigger-hook="1.0">
+                <span class="c-quote__txt js-quote__txt">uit liefde</span>
+                <span class="c-quote__txt js-quote__txt">voor mensen</span>
+            </div>
+            
+            <div id="quote-2" class="js-quote c-quote" style="top: 150vh; right: 10vw" data-trigger-hook="1.0">
+                <span class="c-quote__txt js-quote__txt">veilig</span>
+                <span class="c-quote__txt js-quote__txt">professioneel</span>
+                <span class="c-quote__txt js-quote__txt">en duurzaam</span>
+            </div>
+
+            <div id="video-1" class="c-popup js-popup" 
+                 style="top: 75vh; left: 10vw; width: 40vw;" 
+                 data-width="40vw" 
+                 data-popup-width="80vw">
+
+                <div class="c-popup__media u-ar u-ar--16/9">
+                    <iframe class="u-ar__content"
+                            src="https://player.vimeo.com/video/180167229?title=0&byline=0&portrait=0&badge=0" 
+                            width="100%" height="100%"
+                            frameborder="0" 
+                            webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="c-popup__overlay js-popup__overlay">
+                    <div class="c-popup__icon js-popup__icon glyphicon glyphicon-play"
+                         data-trigger-element="#video-1"
+                         data-trigger-hook="0.8"></div>
+                </div>
+
+                <div class="c-popup__story js-popup__story" data-speed="normal">
+                    <i class="icon-close c-popup__close js-popup__close"></i>
+                </div>
+            </div>
+
+            <div id="video-2" class="c-popup js-popup" 
+                 style="top: 150vh; left: 10vw; width: 40vw;" 
+                 data-width="40vw" 
+                 data-popup-width="80vw">
+
+                <div class="c-popup__media u-ar u-ar--16/9">
+                    <iframe class="u-ar__content"
+                            src="https://player.vimeo.com/video/180168191?title=0&byline=0&portrait=0&badge=0" 
+                            width="100%" height="100%"
+                            frameborder="0" 
+                            webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="c-popup__overlay js-popup__overlay">
+                    <div class="c-popup__icon js-popup__icon glyphicon glyphicon-play"
+                         data-trigger-element="#video-2"
+                         data-trigger-hook="0.8"></div>
+                </div>
+
+                <div class="c-popup__story js-popup__story" data-speed="normal">
+                    <i class="icon-close c-popup__close js-popup__close"></i>
+                </div>
+            </div>
+        </div><!-- c-main -->
+
+        <div style="left: 10vw; position: relative; width: 80vw; height: 75vh" class="grid">
+            <div class="grid__col grid__col--1-of-2" style="padding-top: 40vh">
+                <p>‘ZorgDier-teams’ (vrijwilligers met eigen huisdier) worden professioneel opgeleid voor wekelijkse bezoeken aan mensen in zorginstellingen of thuis.</p>
+
+                <p>
+                    Inmiddels hebben 240 vrijwilligers en 40 professionals de selectieprocedure en cursus ‘ZorgDier-team’ succesvol doorlopen. De integrale werkwijze van ZorgDier sluit aan op de Nederlandse zorgcultuur waardoor instellingen kunnen rekenen op een verantwoorde inzet van begeleiders met honden en katten voor hun cliënten.
+                </p>
+            </div>
+            <div class="grid__col grid__col--1-of-2" style="padding-left: 5vw">
+               <p>Effecten interactie mens en dier:</p>
+
+                <ul>
+                    <li>Verlaging van hartslag, bloeddruk en kalmerende werking</li>
+                    <li>Stimuleert de zintuigen en geestelijke capaciteiten zoals het geheugen en communicatieve vaardigheden</li>
+                    <li>Heeft een positief effect op het gevoel van eigenwaarde: een dier is niet (ver)oordelend</li>
+                    <li>Helpt mensen zich te concentreren</li>
+                    <li>Bevordert de openheid van mensen ten aanzien van hun omgeving (zieke mensen en mensen met een lage eigendunk zijn vaak sterk in zichzelf gekeerd)</li>
+                    <li>Stimuleert de communicatie tussen bewoners en verzorgers in een instelling (een dier is een welkome afwisseling en treedt mensen positief tegemoet)</li>
+                    <li>Zorgt voor aangenaam tijdverdrijf (even niet met de eigen zorgen bezig)</li>
+                    <li>Stimuleert beweging, het ontwikkelen van kracht, uithoudingsvermogen, balans en mobiliteit</li>
+                </ul>
+            
+                <p>
+                    Meer achtergrondinformatie:<br/>
+                    <a href="http://www.zorgdier.nl">www.zorgdier.nl</a>
+                </p>
+            </div>        
+        </div>
+    </div><!-- c-container -->
+
+    <script src="https://player.vimeo.com/api/player.js"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/4.12.0/lodash.min.js"></script>
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/plugins/TextPlugin.min.js"></script>
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/jquery.ScrollMagic.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js"></script>
+
+    <script src="fade.js"></script>
+    <script src="text.js"></script>
+    <script src="quote.js"></script>
+    <script src="pin.js"></script>
+    <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+header{
+    position: fixed;
+    top: 7.5vh;
+    left: 8.5vw;
+    width: 82vw;
+    z-index: 999;
+
+    .navbar-header {
+        float: left;
+        margin-left: -15px;
+    }
+
+    .navbar-brand {
+        float: left;
+        padding: 15px 15px;
+        font-size: $inuit-heading-size-2;
+        line-height: $inuit-heading-line-2;
+        color: colors(white);
+    }
+
+    .nav {
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+
+        > li {
+            position: relative;
+            display: block;
+
+            > a {
+
+                font-size: $inuit-heading-size-5;
+                line-height: $inuit-heading-line-5;
+               position: relative;
+               display: block;
+               padding: 10px 3vw;
+           }
+        }
+    }
+
+    .navbar-nav {
+        float: left;
+        margin: 0;
+
+        > li {
+            float: left;
+
+            > a {
+                padding-top: 15px;
+                padding-bottom: 15px;
+
+                font-weight: $font-weight--bold;
+                color: colors(white);
+                text-decoration: none;
+
+                &.active:after{
+                    content: '';
+                    margin-top: 2px;
+                    height: 2px;
+                    display: block;
+                    background-color: colors(white);
+                }
+            }
+        }
+    }
+
+    .navbar-right {
+        margin-right: -3vw;
+        float: right!important;
+    }
+}

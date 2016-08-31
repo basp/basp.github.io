@@ -1,0 +1,25 @@
+.c-title {
+    top: 50vh;
+    left: 8.5vw;
+    width: 82vw;
+    position: absolute;
+    color: colors(white);
+
+    h1, h2 {
+        font-size: $inuit-heading-size-2;
+        line-height: $inuit-heading-line-2;
+        margin: 0 0 $base-spacing-unit 0;
+        color: colors(white);
+        font-weight: $font-weight--bold;
+    }
+
+    h1 {
+        font-size: $inuit-heading-size-1 *1.5;
+        line-height: $inuit-heading-line-1 *1.2;
+    }
+
+    &--wrapper{
+        min-height: 175vh;
+    }
+
+}
