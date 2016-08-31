@@ -11,393 +11,9 @@
     <link rel="stylesheet" href="dist/css/styles-default.css" />
     <link rel="stylesheet" href="https://i.icomoon.io/public/832d0feea6/RCOAK/style.css">
     <link rel="stylesheet" href="http://scrollmagic.io/css/examples.css" type="text/css">
+    
     <link rel="stylesheet" href="utils.css" />
-
-
-    <style>
-        body {
-            font-family: Helvetica, sans-serif;
-            overflow-x: hidden;
-        }
-
-        ul, ol {
-            line-height: 1.67;
-        }
-
-        .c-header {
-            z-index: 1;
-            color: white;
-        }
-
-        .c-header--fixed {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-        }
-
-        .c-main-nav {
-            font-family: Helvetica, sans-serif;
-        }
-
-        .c-main-nav ul, .c-sub-nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-
-        .c-main-nav__item {
-            float: left;
-            padding-left: 2vw;
-        }
-
-        .c-main-nav__link {
-            display: block;
-            color: white;
-            font-weight: 600;
-            text-align: center;
-            text-decoration: none;
-            background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff);
-            background-size: 0% 3px, 0% 3px;
-            background-repeat: no-repeat, no-repeat;
-            background-position: 0% 87%, 0% 50%;
-            padding-bottom: 6%;
-        }
-
-        .c-main-nav__link:hover {
-            text-decoration: none;
-        }
-
-        .c-main-nav__link.is-active {
-            transition: background-size 500ms;
-            background-size: 100% 3px, 0% 3px;
-        }
-
-        .c-sub-nav-header {
-            color: white;
-            opacity: 0.4;
-        }
-
-        .c-date {
-            color: white;
-            opacity: 0.4;
-        }
-
-        .c-sub-nav__link {
-            display: inline;
-            color: white;
-            text-decoration: none;
-            font-size: 3vh;
-            font-weight: 600;
-            background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff);
-            background-size: 0% 3px, 0% 3px;
-            background-repeat: no-repeat, no-repeat;
-            background-position: 0% 87%, 0% 50%;
-        }
-
-        .c-sub-nav__link.is-active {
-            transition: background-size 500ms;
-            background-size: 100% 3px, 0% 3px;                      
-            padding-bottom: 1%;
-        }
-
-        .c-sub-nav__link:hover {
-            text-decoration: none;
-            transition: background-size 200ms;
-            background-size: 100% 3px, 0% 3px;          
-            padding-bottom: 1%;
-        }
-
-        .c-section {
-            position: relative;
-        }
-
-        .c-story {
-            left: 0vw;
-            color: white;
-        }
-
-        .c-story p {
-            font-size: 2.8vh;
-            font-weight: 600;
-        }
-
-        .js-text--strong {
-            background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff);
-            background-size: 0% 3px, 0% 3px;
-            background-repeat: no-repeat, no-repeat;
-            background-position: 0% 87%, 0% 50%;
-            padding-bottom: 1%;
-        }
-
-        #home {
-            min-height: 100vh;
-            background: #6e788c;
-        }
-
-        #projects {
-            min-height: 400vh;
-            background: linear-gradient(to bottom, #6e788c, #705b77);
-        }
-
-        #support {
-            height: 450vh;
-            background: linear-gradient(to top, #b1a096, #705b77);
-        }
-
-        #nalaten {
-            min-height: 300vh;
-            background: linear-gradient(to bottom, #b1a096, #705b77);      
-        }
-
-        #news {
-            min-height: 200vh;
-            background: linear-gradient(to bottom, #705b77, #6e788c);
-        }
-
-        #about {
-            min-height: 700vh;
-            background: linear-gradient(to bottom, #6e788c, #ada49b);
-        }
-
-        #contact {
-            min-height: 200vh;
-            background: linear-gradient(to bottom, #ada49b, #da6f64);      
-        }
-        
-        .c-fade {
-            opacity: 1;
-        }
-
-        .c-fade--anim {
-            transition: opacity 500ms;
-        }
-
-        .is-faded {
-            opacity: 0.25;
-        }
-
-        .c-side-content {
-            left: 5vw;
-            top: 20vh;
-            width: 40vw;
-            position: absolute;
-        }
-
-        .c-main-content {
-            left: 45vw;
-            top: 20vh;
-            width: 40vw;
-            position: absolute;
-            color: white;
-        }
-
-        .c-contact-form {
-            width: 100%;
-        }
-
-        .c-label {
-            display: block;
-        }
-
-        .c-text-field {
-            width: 95%;
-            padding: 8px;
-            border: 0;
-            color: white;
-            font-weight: 600;
-            background-color: rgba(255, 255, 255, 0.2);
-        }
-
-        .c-text-field--required {
-            background-color: rgba(255, 255, 255, 0.4);
-        }
-
-        .c-text-field.is-dirty.is-valid {
-            background-color: rgba(255, 255, 255, 0.2);            
-        }
-
-        .c-text-field--anim {
-            transition: background-color, 300ms;
-        }
-
-        a {
-            color: white;
-            font-weight: bold;
-            text-decoration: underline;
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-        h4 {
-            font-weight: bold;
-        }
-
-        .u-margin-bottom {
-            margin-bottom: 8px;
-        }
-
-        .c-menu {
-            padding-left: 5vw;
-            padding-right :5vw;
-            padding-top: 8vh;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 2;
-            color: white;
-        }
-
-        .c-menu__logo {
-            float: left;
-            font-size: 3.6vh;
-        }
-
-        .c-menu__close {
-            float: right;
-            padding-left: 5vw;
-            font-size: 1.8vh;
-        }
-
-        .c-menu__overview {
-            float: right;
-            padding-left: 5vw;
-            font-size: 1.8vh;
-        }
-
-        .c-quote {
-            z-index: 1;
-            position: absolute;
-            text-align: right;
-            font-size: 6.8vh;
-            line-height: 1vh;
-            letter-spacing: 0.3px;
-        }
-
-        .c-quote__txt {
-            display: block;
-            font-weight: bold;
-        }
-
-        .c-popup {
-            position: absolute;
-            transition: left 800ms, right 800ms, width 800ms, box-shadow 800ms;
-        }
-
-        .c-popup.is-maximized {
-            z-index: 10;
-        }
-
-        .c-popup.is-maximized .c-popup__media {
-            mix-blend-mode: normal;
-        }
-
-        .c-popup__media {
-            position: relative;
-            transition: box-shadow 1s;
-            mix-blend-mode: darken;
-        }
-
-        .c-popup__overlay {
-            position: absolute;
-            display: block;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            cursor: pointer;
-        }
-
-        .c-popup__overlay.is-hidden {
-            display: none;
-        }
-
-        .c-popup.is-maximized .c-popup__media {
-            box-shadow: 100px 100px 100px #000;            
-        }
-
-        .c-popup__story {
-            margin-top: 16px;
-            position: relative;
-            opacity: 0.0;
-            transition: opacity 200ms;
-        }
-
-        .c-popup__icon {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 2;
-            font-size: 50vh;
-            opacity: 0.0;
-            transition: opacity 300ms, font-size 300ms;
-        }
-
-        .c-popup__icon.is-visible {
-            opacity: 1.0;
-            font-size: 8vh;
-        }
-
-        .c-popup__close {
-            float: right;
-            font-size: 2vh;
-            cursor: pointer;
-        }
-
-        .c-popup.is-maximized .c-popup__story {
-            opacity: 1.0;
-        }
-
-        .c-blind {
-            opacity: 0.0;
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: black;
-            transition: opacity 500ms;
-            z-index: 9;
-        }
-
-        .c-blind.is-faded {
-            opacity: 0.7;
-        }
-
-        .c-popup__media {
-            mix-blend-mode: lighten;
-        }
-
-        .c-quote {
-            color: #a4b4d3;
-        }
-
-        .c-quote span {
-            line-height: 0.2vh;
-        }
-
-        .c-scroll-icon {
-            position: absolute;
-            top: 70vh;
-            left: 25vw;
-            font-size: 8vh;
-            color: white;
-        }
-
-        /* Overrides */
-
-        .c-story p {
-            line-height: 3.4vh;
-        }
-
-    </style>
+    <link rel="stylesheet" href="index.css" />
 </head>
 <body>
     <div class="c-blind js-blind"></div>
@@ -528,8 +144,10 @@
                     <img class="c-popup__media u-responsive" src="dist/img/gewoonbijzonder_preview.jpg">
                 </a>
 
-                <div class="c-popup__story js-popup__story" data-speed="xslow">
+                <div class="c-popup__story js-popup__story" data-speed="normal">
                     <i class="icon-close c-popup__close js-popup__close"></i>
+                    <h2 class="js-text">Gewoon bijzonder</h2>
+                    <p class="js-text">In 2 jaar tijd van leegstand naar wachtlijsten</p>
                 </div>
             </div>      
 
@@ -549,8 +167,10 @@
                     <img class="c-popup__media u-responsive" src="dist/img/straatpastoraat_preview.jpg">
                 </a>
 
-                <div class="c-popup__story js-popup__story" data-speed="xslow">
+                <div class="c-popup__story js-popup__story" data-speed="normal">
                     <i class="icon-close c-popup__close js-popup__close"></i>
+                    <h2 class="js-text">Het Straatpastoraat</h2>
+                    <p class="js-text">Een rechtvaardige en barmhartige samenleving</p>
                 </div>
             </div>      
 
@@ -570,8 +190,10 @@
                     <img class="c-popup__media u-responsive" src="dist/img/oopoeh_preview.jpg">
                 </a>
 
-                <div class="c-popup__story js-popup__story" data-speed="xslow">
+                <div class="c-popup__story js-popup__story" data-speed="normal">
                     <i class="icon-close c-popup__close js-popup__close"></i>
+                    <h2 class="js-text">Stichting OOPOEH</h2>
+                    <p class="js-text">Bezoek om naar uit te kijken</p>
                 </div>
             </div>      
 
@@ -591,8 +213,10 @@
                     <img class="c-popup__media u-responsive" src="dist/img/divadichtbij_preview.jpg">
                 </a>
 
-                <div class="c-popup__story js-popup__story" data-speed="xslow">
+                <div class="c-popup__story js-popup__story" data-speed="normal">
                     <i class="icon-close c-popup__close js-popup__close"></i>
+                    <h2 class="js-text">Diva Dichtbij</h2>
+                    <p class="js-text"></p>Bijzonder persoonlijk contact</p>
                 </div>
             </div>
 
@@ -612,8 +236,10 @@
                     <img class="c-popup__media u-responsive" src="dist/img/careclowns_preview.jpg">
                 </a>
 
-                <div class="c-popup__story js-popup__story" data-speed="xslow">
+                <div class="c-popup__story js-popup__story" data-speed="normal">
                     <i class="icon-close c-popup__close js-popup__close"></i>
+                    <h2 class="js-text">CareClowns</h2>
+                    <p class="js-text">Geef ouderen met dementie een geluksmoment</p>
                 </div>
             </div>    
 
@@ -633,8 +259,10 @@
                     <img class="c-popup__media u-responsive" src="dist/img/zorgdier_preview.jpg">
                 </a>
 
-                <div class="c-popup__story js-popup__story" data-speed="xslow">
+                <div class="c-popup__story js-popup__story" data-speed="normal">
                     <i class="icon-close c-popup__close js-popup__close"></i>
+                    <h2 class="js-text">Zorgdier</h2>
+                    <p class="js-text">Geef ouderen met dementie een geluksmoment</p>
                 </div>
             </div>                        
         </div>
