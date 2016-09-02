@@ -5,9 +5,8 @@
 
     <link rel="stylesheet" href="https://i.icomoon.io/public/832d0feea6/RCOAK/style.css">
 
-    <link rel="stylesheet" href="src/css/glyphicons.css" />
-    <link rel="stylesheet" href="utils.css" />
-    <link rel="stylesheet" href="project.css" />
+    <link rel="stylesheet" href="css/utils.css" />
+    <link rel="stylesheet" href="css/project.css" />
 
     <style>
         .c-content {
@@ -20,11 +19,9 @@
     </style>
 </head>
 <body>
-    <!--
     <div class="c-preloader js-preloader">
-        <i class="icon-logo"></i>
+        <div class="c-preloader__spinner"></div>
     </div>
-    -->
 
     <div class="c-content">
         <div class="c-blind js-blind"></div>
@@ -44,7 +41,7 @@
 
         <div class="c-video-wrapper js-fade" data-duration="100">
             <video class="c-video" loop muted autoplay>
-                <source src="dist/videos/oopoeh.mp4" type="video/mp4">
+                <source src="videos/oopoeh.mp4" type="video/mp4">
             </video>        
         </div>
 
@@ -67,7 +64,7 @@
                 </div>
             </div>
 
-            <span class="c-scroll-icon glyphicon glyphicon-chevron-down" />
+            <span class="c-scroll-icon icon-chevron-down" />
         </div>
 
         <div class="c-main js-pin-section" style="height: 400vh">
@@ -114,7 +111,7 @@
                 </div>
 
                 <div class="c-popup__overlay js-popup__overlay">
-                    <div class="c-popup__icon js-popup__icon glyphicon glyphicon-play"
+                    <div class="c-popup__icon js-popup__icon icon-play"
                          data-trigger-element="#video-1"
                          data-trigger-hook="0.8"></div>
                 </div>
@@ -125,20 +122,22 @@
                 </div>
             </div>
         
-            <div id="image-1" class="c-popup js-popup js-parallax" 
-                 style="width: 30vw; top: 225vh"
+            <div id="image-1" class="c-popup js-popup" 
+                 style="left: 0vw; width: 30vw; top: 225vh"
                  data-width="30vw" 
-                 data-popup-width="50vw"
+                 data-popup-width="40vw"
+                 data-left="0vw"
+                 data-popup-left="5vw"
                  data-speed="slow">
                 
                 <div class="c-popup__overlay js-popup__overlay">
-                    <div class="c-popup__icon js-popup__icon glyphicon glyphicon-search"
+                    <div class="c-popup__icon js-popup__icon icon-zoom"
                          data-trigger-hook="0.8"
                          data-trigger-element="#image-1"></div>
                 </div>
      
                 <img class="c-popup__media u-responsive" 
-                     src="dist/img/oopoeh-foto-staand.jpg">
+                     src="img/oopoeh-foto-staand.jpg">
 
                 <div class="c-popup__story js-popup__story" data-speed="xslow">
                     <i class="icon-close c-popup__close js-popup__close"></i>
@@ -178,11 +177,6 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js"></script>
 
-    <script src="parallax.js"></script>
-    <script src="fade.js"></script>
-    <script src="text.js"></script>
-    <script src="quote.js"></script>
-    <script src="pin.js"></script>
-    <script src="popup.js"></script>
+    <script src="js/app.js"></script>    
 </body>
 </html>

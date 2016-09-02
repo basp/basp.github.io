@@ -5,10 +5,9 @@
 
     <link rel="stylesheet" href="https://i.icomoon.io/public/832d0feea6/RCOAK/style.css">
 
-    <link rel="stylesheet" href="src/css/glyphicons.css" />
-    <link rel="stylesheet" href="src/css/grid.css" />
-    <link rel="stylesheet" href="utils.css" />
-    <link rel="stylesheet" href="project.css" />
+    <link rel="stylesheet" href="css/grid.css" />
+    <link rel="stylesheet" href="css/utils.css" />
+    <link rel="stylesheet" href="css/project.css" />
 
     <style>
         .c-content {
@@ -24,11 +23,9 @@
     </style>
 </head>
 <body>
-    <!--
     <div class="c-preloader js-preloader">
-        <i class="icon-logo"></i>
+        <div class="c-preloader__spinner"></div>
     </div>
-    -->
 
     <div class="c-content">
         <div class="c-blind js-blind"></div>
@@ -48,7 +45,7 @@
 
         <div class="c-video-wrapper js-fade" data-duration="100">
             <video class="c-video" loop muted autoplay>
-                <source src="dist/videos/straatpastoraat_1.mp4" type="video/mp4">
+                <source src="videos/straatpastoraat_1.mp4" type="video/mp4">
             </video>        
         </div>
 
@@ -69,7 +66,7 @@
                 </div>
             </div>
 
-            <span class="c-scroll-icon glyphicon glyphicon-chevron-down" />            
+            <span class="c-scroll-icon icon-chevron-down" />            
         </div>
 
         <div class="c-main js-pin-section" style="height: 400vh">
@@ -107,7 +104,7 @@
                 <span class="c-quote__txt js-quote__txt">boetes</span>
             </div>
 
-            <div id="image-1" class="c-popup js-popup js-parallax" 
+            <div id="image-1" class="c-popup js-popup" 
                  style="width: 40vw; top: 65vh; right: 20vw"
                  data-width="50vw" 
                  data-popup-width="70vw"
@@ -120,7 +117,7 @@
                 </div>
      
                 <img class="c-popup__media u-responsive" 
-                     src="dist/img/straatpastoraat1.jpg">
+                     src="img/straatpastoraat1.jpg">
 
                 <div class="c-popup__story js-popup__story" data-speed="fast">
                     <i class="icon-close c-popup__close js-popup__close"></i>
@@ -130,20 +127,20 @@
                 </div>
             </div>      
 
-            <div id="image-2" class="c-popup js-popup js-parallax" 
+            <div id="image-2" class="c-popup js-popup" 
                  style="left: 20vw; width: 30vw; top: 135vh"
                  data-width="30vw" 
                  data-popup-width="50vw"
                  data-speed="slow">
                 
                 <div class="c-popup__overlay js-popup__overlay">
-                    <div class="c-popup__icon js-popup__icon glyphicon glyphicon-search"
+                    <div class="c-popup__icon js-popup__icon icon-zoom"
                          data-trigger-hook="0.8"
                          data-trigger-element="#image-2"></div>
                 </div>
      
                 <img class="c-popup__media u-responsive" 
-                     src="dist/img/straatpastoraat2.jpg">
+                     src="img/straatpastoraat2.jpg">
 
                 <div class="c-popup__story js-popup__story" data-speed="fast">
                     <i class="icon-close c-popup__close js-popup__close"></i>
@@ -157,20 +154,20 @@
                 </div>
             </div>      
 
-            <div id="image-3" class="c-popup js-popup js-parallax" 
+            <div id="image-3" class="c-popup js-popup" 
                  style="right: 10vw; width: 30vw; top: 170vh"
                  data-width="30vw" 
                  data-popup-width="50vw"
                  data-speed="slow">
                 
                 <div class="c-popup__overlay js-popup__overlay">
-                    <div class="c-popup__icon js-popup__icon glyphicon glyphicon-search"
+                    <div class="c-popup__icon js-popup__icon icon-zoom"
                          data-trigger-hook="0.8"
                          data-trigger-element="#image-3"></div>
                 </div>
      
                 <img class="c-popup__media u-responsive" 
-                     src="dist/img/straatpastoraat3.jpg">
+                     src="img/straatpastoraat3.jpg">
 
                 <div class="c-popup__story js-popup__story" data-speed="fast">
                     <i class="icon-close c-popup__close js-popup__close"></i>
@@ -180,20 +177,20 @@
                 </div>
             </div>      
 
-            <div id="image-4" class="c-popup js-popup js-parallax" 
+            <div id="image-4" class="c-popup js-popup" 
                  style="left: 10vw; width: 40vw; top: 290vh"
                  data-width="40vw" 
                  data-popup-width="50vw"
                  data-speed="slow">
                 
                 <div class="c-popup__overlay js-popup__overlay">
-                    <div class="c-popup__icon js-popup__icon glyphicon glyphicon-search"
+                    <div class="c-popup__icon js-popup__icon icon-zoom"
                          data-trigger-hook="0.8"
                          data-trigger-element="#image-4"></div>
                 </div>
      
                 <img class="c-popup__media u-responsive" 
-                     src="dist/img/straatpastoraat4.jpg">
+                     src="img/straatpastoraat4.jpg">
 
                 <div class="c-popup__story js-popup__story" data-speed="fast">
                     <i class="icon-close c-popup__close js-popup__close"></i>
@@ -241,10 +238,6 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js"></script>
 
-    <script src="fade.js"></script>
-    <script src="text.js"></script>
-    <script src="quote.js"></script>
-    <script src="pin.js"></script>
-    <script src="popup.js"></script>
+    <script src="js/app.js"></script>    
 </body>
 </html>

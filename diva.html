@@ -5,10 +5,9 @@
 
     <link rel="stylesheet" href="https://i.icomoon.io/public/832d0feea6/RCOAK/style.css">
 
-    <link rel="stylesheet" href="src/css/glyphicons.css" />
-    <link rel="stylesheet" href="src/css/grid.css" />
-    <link rel="stylesheet" href="utils.css" />
-    <link rel="stylesheet" href="project.css" />
+    <link rel="stylesheet" href="css/grid.css" />
+    <link rel="stylesheet" href="css/utils.css" />
+    <link rel="stylesheet" href="css/project.css" />
 
     <style>
         .c-content {
@@ -29,11 +28,9 @@
     </style>
 </head>
 <body>
-    <!--
     <div class="c-preloader js-preloader">
-        <i class="icon-logo"></i>
+        <div class="c-preloader__spinner"></div>
     </div>
-    -->
 
     <div class="c-content">
         <div class="c-blind js-blind"></div>
@@ -53,7 +50,7 @@
 
         <div class="c-video-wrapper js-fade" data-duration="100">
             <video class="c-video" loop muted autoplay>
-                <source src="dist/videos/divadichtbij1.mp4" type="video/mp4">
+                <source src="videos/divadichtbij1.mp4" type="video/mp4">
             </video>        
         </div>
 
@@ -75,20 +72,20 @@
                 </div>
             </div>
             
-            <span class="c-scroll-icon glyphicon glyphicon-chevron-down" />            
+            <span class="c-scroll-icon icon-chevron-down" />            
         </div>
 
         <div class="c-main js-pin-section" style="height: 400vh">
             <div class="c-pin js-pin" data-trigger-hook="0.25">
                 <div class="c-story js-story">
                     <p>
-                        <span class="js-story__part" data-speed="fast" data-trigger-element="#image-1">
+                        <span class="js-story__part" data-speed="fast" data-trigger-element="#quote-1">
                             <span class="js-text">De Diva’s en Divo’s van Diva Dichtbij verzorgen kleinschalige, intieme optredens.</span>
+                            <span class="js-text">Meestal in de huiskamer van een verpleeghuis of bij iemand aan bed.</span>
                         </span>
-                        <span class="js-story__part" data-speed="fast" data-trigger-element="#image-3">
-                            <span class="js-text">Meestal in de huiskamer van een verpleeghuis of bij iemand aan bed.</span>    
+                                
                         </span>
-                        <span class="js-story__part" data-speed="fast" data-trigger-element="#image-3">
+                        <span class="js-story__part" data-speed="fast" data-trigger-element="#video-1">
                             <span class="js-text">Met professionele zang, theater en oprechte aandacht maken ze contact met de mens achter de zieke.</span>    
                         </span>
                     </p>
@@ -121,7 +118,7 @@
                 </div>
 
                 <div class="c-popup__overlay js-popup__overlay">
-                    <div class="c-popup__icon js-popup__icon glyphicon glyphicon-play"
+                    <div class="c-popup__icon js-popup__icon icon-play"
                          data-trigger-element="#video-1"
                          data-trigger-hook="0.8"></div>
                 </div>
@@ -162,10 +159,6 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js"></script>
 
-    <script src="fade.js"></script>
-    <script src="text.js"></script>
-    <script src="quote.js"></script>
-    <script src="pin.js"></script>
-    <script src="popup.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
