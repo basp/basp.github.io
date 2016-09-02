@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <title>RCOAK</title>
+    
+    <script>
+        document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    </script>
+    
+    <link rel="stylesheet" href="https://i.icomoon.io/public/832d0feea6/RCOAK/style.css">
+
+    <link rel="stylesheet" href="css/utils.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/preloader.css" />
+    <link rel="stylesheet" href="css/popup.css" />
+
+    <style>
+        .c-quote {
+            color: #a4b4d3;
+        }
+
+        .c-logo {
+            right: 2.5vw; 
+            top: 40vh; 
+            position: absolute; 
+            width: 20vw;
+        }
+
+        .c-logo img {
+            width: 100%;
+            height: 100%;
+            image-fit: contain;
+        }
+
+        .c-main-content {
+            right: 5vw;
+            width: 50vw;
+        }
+
+        .c-article {
+            margin-bottom: 56px;
+        }
+
+        .c-article__header {
+            text-transform: lowercase;
+        }
+
+        .c-menu {
+            width: 90vw;
+        }
+
+        .c-menu__overview {
+            font-size: 24px;
+            padding-top: 4px;
+            padding-left: 3vw;
+        }
+
+        .c-menu__logo a {
+            text-decoration: none;
+        }
+
+        .c-menu__close a {
+            text-decoration: none;
+        }
+
+        .c-menu__overview a {
+            text-decoration: none;
+        }
+
+        .c-main-nav__item {
+            padding-left: 3vw;
+        }
+
+        .c-main-nav__link {
+            padding-bottom: 0%;
+        }
+
+        .c-project-nav {
+        }
+
+        .c-project-nav__link {
+            display: inline-block;
+            border: 1px solid white;
+            padding: 16px;
+            font-size: 16px;
+            color: white;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        .c-project-nav__link:hover {
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="c-preloader js-preloader">
+        <svg class="c-preloader__spinner" height="50" width="50" class="c-preloader__spinner">
+            <circle class="c-preloader__path" cx="25" cy="25" r="20" fill="none" stroke-width="6" stroke-miterlimit="10"></circle>
+        </svg>
+    </div>
+
+    <div class="c-blind js-blind"></div>
+
+    <div class="c-menu">
+        <div class="c-menu__logo">
+            <a href="/index.html">
+                <i class="icon-logo"></i>
+            </a>
+        </div>
+        <div class="c-menu__overview">
+            <a href="/sitemap.html">
+                <i class="icon-menu"></i>
+            </a>
+        </div>  
+        <nav class="c-main-nav" style="float:right; font-size: 1.8vh">
+            <ul>
+                <li class="c-main-nav__item">
+                    <a class="c-main-nav__link js-nav" href="#projects" data-nav-target="projects">projecten</a>
+                </li>
+                <li class="c-main-nav__item">
+                    <a class="c-main-nav__link js-nav" href="#support" data-nav-target="support">aanvragen financiering</a>
+                </li>
+                <li class="c-main-nav__item">
+                    <a class="c-main-nav__link js-nav" href="#nalaten" data-nav-target="nalaten">nalaten</a>
+                </li>
+                <li class="c-main-nav__item">
+                    <a class="c-main-nav__link js-nav" href="#news" data-nav-target="news">actueel</a>
+                </li>
+                <li class="c-main-nav__item">
+                    <a class="c-main-nav__link js-nav" href="#about" data-nav-target="about">over ons</a>
+                </li>
+                <li class="c-main-nav__item">
+                    <a class="c-main-nav__link js-nav" href="#contact" data-nav-target="contact">contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <section id="home" class="c-section js-pin-section">
+        <div class="c-side-content" class="js-pin" data-trigger-element="home">
+            <div class="c-story js-story">
+                <div class="js-story__part" data-speed="xfast">
+                    <p>
+                        <span class="js-text js-text--strong">Geld nodig voor uw maatschappelijke project?</span>
+                    </p>
+
+                    <p>
+                        <span class="js-text">Als uw project</span>
+                        <span class="js-text js-text--strong">meer betekenis</span>
+                        <span class="js-text">geeft aan het leven van</span>
+                        <span class="js-text js-text--strong">ouderen</span>
+                        <span class="js-text">en - binnen Amsterdam - andere</span>
+                        <span class="js-text js-text--strong">kwetsbare groepen</span><span class="js-text">,</span>
+                        <span class="js-text">ondersteund ons fonds dit graag financieel.</span>
+                    </p>
+
+                    <p class="js-text" style="font-weight: normal; font-size: 2vh; line-height: 3vh">Benieuwd of uw project in aanmerking komt voor financiering?</p>
+
+                    <p>
+                        <a class="js-text" style="font-weight: normal; font-size: 2vh; line-height: 3vh " href="#">Bekijk de criteria en doe de quick scan</a>
+                    </p>
+                </div>
+            </div>            
+
+            <span style="left: 100%" class="c-scroll-icon icon-chevron-down" />
+    </section>
+
+    <div class="c-logo">
+        <img src="img/logo.svg" />
+    </div>
+
+    <div id="quote-0" class="js-quote c-quote" style="top: 60vh; right: 5vw" data-trigger-hook="1.0">
+        <span class="c-quote__txt js-quote__txt">scroll naar</span>
+        <span class="c-quote__txt js-quote__txt">beneden om</span>
+        <span class="c-quote__txt js-quote__txt">kennis te maken</span>
+        <span class="c-quote__txt js-quote__txt">met stichting</span>
+        <span class="c-quote__txt js-quote__txt">rcoak en onze</span>
+        <span class="c-quote__txt js-quote__txt">projecten</span>
+    </div>
+
+    <section id="projects" class="c-section js-pin-section">
+        <div class="c-side-content js-pin" data-trigger-element="projects" data-duration="225">
+            <h3 class="c-sub-nav-header">parelprojecten</h3>
+            
+            <nav class="c-sub-nav" class="js-story" style="color: white">
+                <p class="js-story__part" data-speed="xfast">
+                    <a href="/gewoon-bijzonder.html" class="c-sub-nav__link js-text">gewoon bijzonder</a><span class="c-sub-nav__link js-text">,</span> 
+                    <a href="/straatpastoraat.html" class="c-sub-nav__link js-text">straatpastoraat</a><span class="c-sub-nav__link js-text">,</span> 
+                    <a href="/oopoeh.html" class="c-sub-nav__link js-text">oopoeh</a><span class="c-sub-nav__link js-text">,</span> 
+                    <a href="/diva.html" class="c-sub-nav__link js-text">diva dichtbij</a><span class="c-sub-nav__link js-text">,</span> 
+                    <a href="/careclowns.html" class="c-sub-nav__link js-text">careclowns</a><span class="c-sub-nav__link js-text">,</span> 
+                    <a href="/zorgdier.html" class="c-sub-nav__link js-text">zorgdier</a>
+                </p>
+            </nav>
+        </div>
+
+        <div class="c-main-content">
+            <div id="quote-1" class="js-quote c-quote" style="top: 60vh; right: 0vw" data-trigger-hook="1.0">
+                <span class="c-quote__txt js-quote__txt">maak kennis</span>
+                <span class="c-quote__txt js-quote__txt">met stichting</span>
+                <span class="c-quote__txt js-quote__txt">rcoak en haar</span>
+                <span class="c-quote__txt js-quote__txt">projecten</span>
+            </div>
+
+            <div id="quote-2" class="js-quote c-quote" style="top: 145vh; right: 0vw" data-trigger-hook="1.0">
+                <span class="c-quote__txt js-quote__txt">zingeving en</span>
+                <span class="c-quote__txt js-quote__txt">levensvragen</span>
+            </div>
+
+            <div id="quote-3" class="js-quote c-quote" style="top: 215vh; right: 0vw" data-trigger-hook="1.0">
+                <span class="c-quote__txt js-quote__txt">betekenisvolle</span>
+                <span class="c-quote__txt js-quote__txt">tijdsbesteding</span>
+                <span class="c-quote__txt js-quote__txt">van ouderen</span>
+            </div>
+
+            <div id="gewoon-bijzonder-preview" class="c-popup js-popup" 
+                style="width: 40vw; top: 5vh; right: 0vw"
+                data-width="40vw" 
+                data-popup-width="50vw"
+                data-speed="slow">
+                    
+                <div class="c-popup__media">
+                    <a href="/gewoon-bijzonder.html">
+                        <img class="u-responsive" src="img/gewoonbijzonder_preview.jpg">
+                    </a>
+                    <div class="c-popup__overlay js-popup__overlay">
+                        <div class="c-popup__icon js-popup__icon icon-zoom"
+                            data-trigger-hook="0.8"
+                            data-trigger-element="#gewoon-bijzonder-preview">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="c-popup__story js-popup__story" data-speed="normal">
+                    <i class="icon-close c-popup__close js-popup__close"></i>
+                    <h3 class="js-text">Gewoon bijzonder</h2>
+                    <p>In 2 jaar tijd van leegstand naar wachtlijsten</p>
+                    <div class="c-project-nav">
+                        <a class="c-project-nav__link" href="/gewoon-bijzonder.html">
+                            <span>Klik hier naar het project te gaan</span> 
+                            <i class="icon-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>      
+
+            <div id="straatpastoraat-preview" class="c-popup js-popup" 
+                style="width: 40vw; top: 35vh; left: -45vw"
+                data-width="40vw"
+                data-left="-45vw"
+                data-popup-left="-40vw" 
+                data-popup-width="50vw"
+                data-speed="slow">
+    
+                <div class="c-popup__media">
+                    <a href="/straatpastoraat.html">
+                        <img class="u-responsive" src="img/straatpastoraat_preview.jpg">
+                    </a>
+                    <div class="c-popup__overlay js-popup__overlay">
+                        <div class="c-popup__icon js-popup__icon icon-zoom"
+                            data-trigger-hook="0.8"
+                            data-trigger-element="#straatpastoraat-preview">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="c-popup__story js-popup__story" data-speed="normal">
+                    <i class="icon-close c-popup__close js-popup__close"></i>
+                    <h3 class="js-text">Het Straatpastoraat</h2>
+                    <p>Een rechtvaardige en barmhartige samenleving</p>
+
+                    <div class="c-project-nav">
+                        <a class="c-project-nav__link" href="/straatpastoraat.html">
+                            <span>Klik hier naar het project te gaan</span> 
+                            <i class="icon-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>      
+
+            <div id="oopoeh-preview" class="c-popup js-popup" 
+                style="width: 40vw; top: 90vh; right: 10vw"
+                data-width="40vw" 
+                data-popup-width="50vw"
+                data-speed="slow">
+                
+                <div class="c-popup__media">
+                    <a href="/oopoeh.html">
+                        <img class="u-responsive" src="img/oopoeh_preview.jpg">
+                    </a>
+                    <div class="c-popup__overlay js-popup__overlay">
+                        <div class="c-popup__icon js-popup__icon icon-zoom"
+                            data-trigger-hook="0.8"
+                            data-trigger-element="#oopoeh-preview">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="c-popup__story js-popup__story" data-speed="normal">
+                    <i class="icon-close c-popup__close js-popup__close"></i>
+                    <h3 class="js-text">Stichting OOPOEH</h2>
+                    <p>Bezoek om naar uit te kijken</p>
+                    <div class="c-project-nav">
+                        <a class="c-project-nav__link" href="/oopoeh.html">
+                            <span>Klik hier naar het project te gaan</span> 
+                            <i class="icon-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>      
+
+            <div id="diva-preview" class="c-popup js-popup" 
+                style="width: 40vw; top: 165vh; right: 5vw;"
+                data-width="40vw" 
+                data-popup-width="50vw"
+                data-speed="slow">
+
+                <div class="c-popup__media">
+                    <a href="/diva.html">
+                        <img class="u-responsive" src="img/divadichtbij_preview.jpg">
+                    </a>
+                    <div class="c-popup__overlay js-popup__overlay">
+                        <div class="c-popup__icon js-popup__icon icon-zoom"
+                            data-trigger-hook="0.8"
+                            data-trigger-element="#diva-preview">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="c-popup__story js-popup__story" data-speed="normal">
+                    <i class="icon-close c-popup__close js-popup__close"></i>
+                    <h3 class="js-text">Diva Dichtbij</h2>
+                    <p></p>Bijzonder persoonlijk contact</p>
+                    <div class="c-project-nav">
+                        <a class="c-project-nav__link" href="/diva.html">
+                            <span>Klik hier naar het project te gaan</span> 
+                            <i class="icon-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="careclowns-preview" class="c-popup js-popup" 
+                style="width: 40vw; top: 175vh; left: -40vw"
+                data-width="40vw" 
+                data-popup-width="50vw"
+                data-speed="slow">
+                
+    
+                <div class="c-popup__media">
+                    <a href="/careclowns.html">
+                        <img class="u-responsive" src="img/careclowns_preview.jpg">
+                    </a>
+                    <div class="c-popup__overlay js-popup__overlay">
+                        <div class="c-popup__icon js-popup__icon icon-zoom"
+                            data-trigger-hook="0.8"
+                            data-trigger-element="#careclowns-preview">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="c-popup__story js-popup__story" data-speed="normal">
+                    <i class="icon-close c-popup__close js-popup__close"></i>
+                    <h3 class="js-text">CareClowns</h2>
+                    <p>Geef ouderen met dementie een geluksmoment</p>
+                    <div class="c-project-nav">
+                        <a class="c-project-nav__link" href="/careclowns.html">
+                            <span>Klik hier naar het project te gaan</span> 
+                            <i class="icon-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>    
+
+            <div id="zorgdier-preview" class="c-popup js-popup" 
+                style="width: 40vw; top: 240vh; right: 0vw"
+                data-width="40vw" 
+                data-popup-width="50vw"
+                data-speed="slow">
+                
+                <div class="c-popup__media">
+                    <a href="/zorgdier.html">
+                        <img class="u-responsive" src="img/zorgdier_preview.jpg">
+                    </a>
+                    <div class="c-popup__overlay js-popup__overlay">
+                        <div class="c-popup__icon js-popup__icon icon-zoom"
+                            data-trigger-hook="0.8"
+                            data-trigger-element="#zorgdier-preview">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="c-popup__story js-popup__story" data-speed="normal">
+                    <i class="icon-close c-popup__close js-popup__close"></i>
+                    <h3 class="js-text">Zorgdier</h2>
+                    <p>Geef ouderen met dementie een geluksmoment</p>
+                    <div class="c-project-nav">
+                        <a class="c-project-nav__link" href="/zorgdier.html">
+                            <span>Klik hier naar het project te gaan</span> 
+                            <i class="icon-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>                        
+        </div>
+    </section>
+
+    <section id="support" class="c-section js-pin-section">
+         <div class="c-side-content js-pin" data-trigger-element="support" data-duration="250">
+            <h3 class="c-sub-nav-header">Aanvragen financiering</h3>
+            
+            <nav class="c-sub-nav">
+                <ul>
+                    <li class="c-sub-nav__item">
+                        <div>
+                            <a class="c-sub-nav__link js-sub-nav" href="#donaties" 
+                               data-nav-target="voorwaarden"
+                               data-nav-align="support">
+                                Criteria &amp; voorwaarden
+                            </a>
+                        </div>
+                    </li>
+                    <li class="c-sub-nav__item">
+                        <div>
+                            <a class="c-sub-nav__link js-sub-nav" href="#aanvraagprocedure" 
+                               data-nav-target="aanvraagprocedure"
+                               data-nav-align="support">
+                               Van aanvraag tot uitbetaling
+                            </a>
+                        </div>
+                    </li>
+                    <li class="c-sub-nav__item">
+                        <div>
+                            <a class="c-sub-nav__link js-sub-nav" href="#afhandelingstermijn" 
+                               data-nav-target="afhandelingstermijn"
+                               data-nav-align="support">
+                               Toelichting definitieve projectaanvraag
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="c-main-content">
+            <article id="voorwaarden" class="c-article">
+                <div class="js-dim c-dim c-dim--anim" data-trigger-hook="0.05">
+                    <h3 class="c-article__header">Criteria &amp; voorwaarden</h3>
+                    
+                    <p>Uw project kan in aanmerking komen voor financiering door Stichting RCOAK als het gericht is op:</p>
+                    <ul>
+                        <li>het vergroten van het levensplezier van ouderen (minimaal 65+) in Nederland;</li>
+                        <li>armoedebestrijding en ondersteuning van kwetsbare groepen van alle leeftijden in Amsterdam.</li>
+                    </ul>
+                </div>
+
+                <div class="js-dim c-dim c-dim--anim" data-trigger-hook="0.05">
+                    <p>Het project dient te voldoen aan de volgende voorwaarden:</p>
+                    <ul>
+                        <li>Er wordt door uzelf en/of andere subsidieverstrekkers/fondsen bijgedragen aan de financiering.</li>
+                        <li>Het gaat om een éénmalige bijdrage. Bij uitzondering worden meerjarige donaties verstrekt, mits het project op langere termijn niet afhankelijk is van financiële bijdragen van Stichting RCOAK. Exploitatiesubsidies vallen buiten de doelstelling.</li>
+                    </ul>
+
+                    <p>Wij hebben een voorkeur voor projecten die in de startfase verkeren, innovatief zijn en in beperkte tijd worden uitgevoerd.</p>
+                </div>
+
+                <div class="js-dim c-dim c-dim--anim" data-trigger-hook="0.05">
+                    <h4>Uitsluitingscriteria</h4>
+
+                    <p>Er wordt geen donatie toegekend aan uw project indien het:</p>
+                    <ul>
+                        <li>tot de taak van de overheid of de kerk kan worden gerekend;</li>
+                        <li>een uitgesproken politiek karakter heeft;</li>
+                        <li>commerciële (neven)doelen kent;</li>
+                        <li>gericht is op zuiver wetenschappelijk onderzoek;</li>
+                        <li>als belangrijkste resultaat een publicatie of een symposium/congres heeft;in strijd is met christelijke levensbeschouwelijke beginselen.</li> 
+                    </ul>
+                </div>
+
+                <div class="js-dim c-dim c-dim--anim" data-trigger-hook="0.05">
+                    <h4>Quick scan</h4>
+                    <p>
+                        Voldoet uw project aan de voorwaarden en is geen van de uitsluitingscriteria van toepassing? 
+                        Dan zien wij graag een <a href="#">quick scan</a> aanvraag tegemoet. Bij een positieve beoordeling 
+                        ontvangt u binnen twee à drie werkdagen de inloggegevens voor de definitieve aanvraag.
+                    </p>
+                </div>
+            </article>
+
+            <article id="aanvraagprocedure" class="c-article">
+                <div class="js-dim c-dim c-dim--anim" data-trigger-hook="0.05">
+                    <h3 class="c-article__header">Van aanvraag tot uitbetaling</h3>
+
+                    <p>De stappen op een rij:</p>
+                    <ol>
+                        <li>Toets zelf uw project op onze <a href="#">criteria en voorwaarden</a></li>
+                        <li>Vraag een <a href="#">quick scan</a> aan</li>
+                        <li>Na een positieve beoordeling van de quickscan door RCOAK ontvangt u inloggegevens waarmee u de <a href="#">definitieve aanvraag</a> indient</li>
+                        <li>Binnen één tot drie maanden ontvangt u een afwijzing dan wel een toekenningsbrief van Stichting RCOAK</li>
+                        <li>Na afloop van uw project vult u het <a href="#">uitbetalingsformulier</a> in om het geld op uw rekening te krijgen</li>
+                    </ol>
+                </div>
+            </article>           
+
+            <article id="afhandelingstermijn" class="c-article">
+                <div class="js-dim c-dim c-dim--anim" data-trigger-hook="0.05">                
+                    <h3 class="c-article__header">Definitieve projectaanvraag</h3>
+
+                    <p>Dien als eerste stap een quick scan aanvraag in.</p> 
+
+                    <p>
+                        Tegelijk met een positieve reactie op uw quickscan, ontvangt u de inloggegevens waarmee u de definitieve aanvraag kunt indienen. 
+                        Het aanvraagformulier kan eventueel tussentijds worden opgeslagen, waardoor u op een later tijdstip uw aanvraag kunt afronden.
+                    </p>
+                </div>
+
+                <div class="js-dim c-dim c-dim--anim" data-trigger-hook="0.05">
+                    <p>Een complete projectaanvraag bestaat uit:</p>
+
+                    <ol>
+                        <li>korte situatieschets</li>
+                        <li>omschrijving project en gewenst resultaat;</li>
+                        <li>tijdsplanning en kostenraming, inclusief kosten voor eventuele ondersteuning door een professionele fondsenwerver;</li>
+                        <li>bijlagen:
+                            <ol>
+                                <li>projectbegroting, met vermelding van de uurtarieven</li>
+                                <li>financieel dekkingsplan</li>
+                                <li>recente kopie van het uittreksel van de Kamer van Koophandel</li>
+                                <li>recente jaarrekening</li>
+                            </ol>
+                        </li>
+                    </ol>
+
+                    <p>Na het indienen van de aanvraag ontvangt een ontvangstbevestiging.</p>                    
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="nalaten" class="c-section js-pin-section" class="c-article">
+        <div class="c-side-content js-pin" data-trigger-element="nalaten" data-duration="175">
+            <h3 class="c-sub-nav-header">nalaten</h3>       
+        </div>
+
+        <div class="c-main-content">
+            <div class="js-dim c-dim c-dim--anim" data-trigger-hook="0.05">
+                <h4>Fonds op Naam of nalaten via uw testament</h4>
+                <p>Wilt u iets waardevols nalaten en het verschil maken voor ouderen en andere kwetsbare groepen? Dan kunt u Stichting RCOAK laten opnemen in uw testament.</p>
+            </div>
+
+            <div class="js-dim c-dim c-dim--anim" data-trigger-hook="0.05">
+                <h4>U bepaalt</h4>
+                <p>Uw wensen en intenties zijn het uitgangspunt bij de besteding van uw geld.</p>
+            </div>
+
+
+            <div class="js-dim c-dim c-dim--anim" data-trigger-hook="0.05">
+                <h4>Waarom schenken aan Stichting RCOAK?</h4>
+                <p>Ons fonds biedt al ruim vier eeuwen financiële ondersteuning aan kwetsbare groepen en individuen in de samenleving, dankzij legaten en schenkingen van particulieren die zich hun lot aantrokken. In de tweede helft van de 20ste eeuw namen deze schenkingen en legaten af.</p>
+            </div>
+
+            <div class="js-dim c-dim c-dim--anim" data-trigger-hook="0.05">            
+                <p>Al decennialang realiseert Stichting RCOAK haar doelstelling vanuit de besteding van het rendement van het vermogen. Circa 2,5 miljoen euro per jaar wordt besteed aan projecten voor ouderen en kwetsbare groepen. Het vermogen van circa 100 miljoen euro houden we in stand, waardoor de continuïteit van onze stichting is gegarandeerd.</p>
+            </div>
+                
+            <div class="js-dim c-dim c-dim--anim" data-trigger-hook="0.05">
+                <p>Nu, in de 21ste eeuw, zijn wij - enigszins tot onze verrassing - opnieuw benaderd door particulieren die projecten voor kwetsbare groepen willen begunstigen. Deze recente ervaringen hebben ertoe geleid dat in 2012 besloten is ons fonds weer uitdrukkelijk open te stellen voor legaten en schenkingen en ook voor Fondsen op Naam. We blazen de eeuwenoude traditie weer nieuw leven in. Het eerste Fonds op Naam is inmiddels een feit.</p>
+            </div>
+
+            <div class="js-dim c-dim c-dim--anim" data-trigger-hook="0.05">
+                <p>De voornaamste reden dat wij ons openstellen voor schenkingen is dat de projecten die wij steunen vaak meer geld nodig hebben dan wij beschikbaar hebben vanuit het rendement van ons vermogen. Met uw extra bijdrage (naast de onze) kunnen we de slaagkans van een project vergroten.</p>
+            </div>
+
+            <div class="js-dim c-dim c-dim--anim" data-trigger-hook="0.05">
+                <p>Stichting RCOAK kenmerkt zich door:</p>
+                <ul>
+                    <li>een transparant beleid</li>
+                    <li>zeer lage kostenstructuur</li>
+                    <li>ruime ervaring en deskundigheid bij de beoordeling van projectaanvragen</li>
+                    <li>uiterst professioneel vermogensbeheer via een externe beheerder</li>
+                    <li>een uitstekend netwerk, waardoor wij tussen de vele initiatieven de relevante en kansrijke projecten weten te vinden.</li>
+                </ul>
+                <p>Dankzij onze ANBI (algemeen nut beogende instelling) status is uw schenking vrijgesteld van erfbelasting.</p>
+            </div>
+
+
+            <div class="js-dim c-dim c-dim--anim" data-trigger-hook="0.05">
+                <h4>Fonds op Naam, erfstelling of legaat</h4>
+                <p>Nalaten aan Stichting RCOAK kan op verschillende manieren. U kunt kiezen voor een:</p>
+                <ul>
+                    <li>Fonds op Naam: dit is een schenking aan Stichting RCOAK met een gerichte opdracht. U bepaalt zelf de naam en de doelstellingen (binnen het werkterrein van Stichting RCOAK).</li>
+                    <li>erfstelling: u benoemt Stichting RCOAK tot erfgenaam. Daarmee krijgen wij recht op (een deel) van uw nalatenschap.</li> 
+                    <li>legaat: u laat een geldbedrag of een bepaald goed na.</li> 
+                </ul>            
+            </div>
+
+            <div class="js-dim c-dim c-dim--anim" data-trigger-hook="0.05">
+                <h4>Meer informatie</h4>
+                <p>Bel ons via 020 623 22 88 voor meer informatie of een vrijblijvende afspraak.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="news" class="c-section js-pin-section">
+        <div class="c-side-content js-pin" data-trigger-element="news" data-duration="100">
+            <h3 class="c-sub-nav-header">actueel</h3>  
+            <nav class="c-sub-nav">
+                <ul>
+                    <li class="c-sub-nav__item">
+                        <div class="c-date">13 augustus 2016</div>
+                        <h3>
+                            <a href="#" class="c-sub-nav__link">RCOAK stopt met individuele noodhulp</a>
+                        </h3>
+                    </li>
+                    <li class="c-sub-nav__item">
+                        <div class="c-date">12 juli 2016</div>
+                        <h3>
+                            <a href="#" class="c-sub-nav__link">Juni-editie nieuwsbrief</a>
+                        </h3>
+                    </li>
+                    <li class="c-sub-nav__item">
+                        <div class="c-date">15 juni 2016</div>
+                        <h3>
+                            <a href=#" class="c-sub-nav__link">Mei-editie nieuwsbrief</a>
+                        </h3>
+                    </li>
+                    <li class="c-sub-nav__item">
+                        <div class="c-date">11 mei 2016</div>
+                        <h3>
+                            <a href=#" class="c-sub-nav__link">Mei-editie nieuwsbrief</a>
+                        </h3>
+                    </li>
+                    <li class="c-sub-nav__item">
+                        <div class="c-date">18 april 2016</div>
+                        <h3>
+                            <a href=#" class="c-sub-nav__link">Mei-editie nieuwsbrief</a>
+                        </h3>
+                    </li>
+                </ul>
+            </nav>     
+        </div>     
+
+        <div class="c-main-content">
+            <article id="news-2016-08-13">
+            </article>
+
+            <article id="news-2016-07-13">
+            </article>
+
+            <article id="news-2016-08-13">
+            </article>
+
+            <article id="news-2016-08-13">
+            </article>
+
+            <article id="news-2016-08-13">
+            </article>
+        </div>
+    </section>
+
+    <section id="about" class="c-section js-pin-section">
+        <div class="c-side-content js-pin" data-trigger-element="about" data-duration="650">
+            <h3 class="c-sub-nav-header">over ons</h3>
+
+            <nav class="c-sub-nav">
+                <ul>
+                    <li class="c-sub-nav__item">
+                        <div>
+                            <a class="c-sub-nav__link js-sub-nav" href="#missies" 
+                               data-nav-target="missies">missies</a>
+                        </div>
+                    </li>
+                    <li class="c-sub-nav__item">
+                        <div>
+                            <a class="c-sub-nav__link js-sub-nav" href="#geschiedenis" 
+                               data-nav-target="geschiedenis">geschiedenis</a>
+                        </div>
+                    </li>
+                    <li class="c-sub-nav__item">
+                        <div>
+                            <a class="c-sub-nav__link js-sub-nav" href="#bestuur" 
+                               data-nav-target="bestuur">bestuur & beheer</a>
+                        </div>
+                    </li>
+                    <li class="c-sub-nav__item">
+                        <div>
+                            <a class="c-sub-nav__link js-sub-nav" href="#hofjes" 
+                               data-nav-target="hofjes">hofjes</a>
+                        </div>
+                    </li>
+                    <li class="c-sub-nav__item">
+                        <div>
+                            <a class="c-sub-nav__link js-sub-nav" href="#samenwerkingen" 
+                               data-nav-target="samenwerkingen">samenwerkingen</a>
+                        </div>
+                    </li>
+                    <li class="c-sub-nav__item">
+                        <div>
+                            <a class="c-sub-nav__link js-sub-nav" href="#jaarverslag" 
+                               data-nav-target="jaarverslag">jaarverslag</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="c-main-content">
+            <article id="missies">
+                <div class="js-dim c-dim c-dim--anim" data-trigger-hook="0.05">                    
+                    <h3 class="c-article__header">Missie</h3>
+                </div>
+    
+                <div class="js-dim c-dim c-dim--anim" data-trigger-hook="0.05">                    
+                    <p>Stichting RCOAK (Roomsch Catholijk Oude Armen Kantoor) is een Amsterdams charitatief vermogensfonds gevestigd in een van de twee hofjes van Stichting RCOAK, 'Liefde is het Fondament', aan de Keizersgracht te Amsterdam. Wij ondersteunen uit de opbrengst van ons vermogen initiatieven en projecten die de kwaliteit van leven van ouderen en kwetsbare groepen bevorderen.</p>
+                </div>
+    
+                <div class="js-dim c-dim c-dim--anim" data-trigger-hook="0.05">                    
+                    <p>Stichting RCOAK kent een rijke geschiedenis van meer dan 400 jaar. Hiermee behoort de Stichting tot de oudste charitatieve vermogensfondsen in Nederland.</p>
+                </div>
+
+                <div class="js-dim c-dim c-dim--anim" data-trigger-hook="0.05">                                    
+                    <p>Stichting RCOAK geeft vandaag de dag de oude caritas modern gestalte en ondersteunt uit de opbrengst van haar vermogen initiatieven en projecten die de kwaliteit van leven van ouderen en, binnen Amsterdam, andere kwetsbare groepen bevorderen.</p>
+                </div>
+            </article>
+
+            <article id="geschiedenis">
+                <div class="js-dim c-dim c-dim--anim" data-trigger-hook="0.05">                    
+                    <h3 class="c-article__header">Geschiedenis</h3>
+                </div>
+    
+                <div class="js-dim c-dim c-dim--anim" data-trigger-hook="0.05">                    
+                    <p>Toen de protestanten het vanaf 1578 in Amsterdam voor het zeggen kregen, waren de katholieken voor het belijden van hun religie gedwongen ondergronds te gaan. Zij bleven echter hun weeskinderen, armen en ouderen ondersteunen vanuit het Roomsch Catholijk Oude Armen Kantoor, of Comptoir zoals het toen genoemd werd.</p>
+                </div>
+
+                <div class="js-dim c-dim c-dim--anim" data-trigger-hook="0.05">                    
+                    <p>Omstreeks 1610 moet het Roomsch Catholijk Oude Armen Kantoor al een hechte organisatie zijn geweest. Medio negentiende eeuw vond een grote verandering plaats toen RCOAK het St. Jacobsgesticht (1866) liet bouwen met gebruikmaking van een legaat van Baron van Brienen, het grootste katholieke oudeliedenhuis in Nederland. Sint Jacob bestaat nog altijd en maakt nu deel uit van een grote zorgkoepel in Amsterdam.</p>
+                </div>
+
+                <div class="js-dim c-dim c-dim--anim" data-trigger-hook="0.05">                    
+                    <p>Met de oprichting van de parochiale armbesturen is in 1920 de structurele bedeling van katholieke Amsterdammers vanuit RCOAK ten einde gekomen.</p>
+                </div>
+
+                <div class="js-dim c-dim c-dim--anim" data-trigger-hook="0.05">                    
+                    <p>RCOAK, inmiddels een stichting, geeft vandaag de dag de oude caritas modern gestalte en ondersteunt uit de opbrengst van haar kapitaal initiatieven die de kwaliteit van leven van ouderen en andere kwetsbare groepen bevorderen.</p>
+                </div>
+
+                <div class="js-dim c-dim c-dim--anim" data-trigger-hook="0.05">                    
+                    <h4>“Liefde het fundament”</h4>
+                </div>
+
+                <div class="js-dim c-dim c-dim--anim" data-trigger-hook="0.05">                    
+                    <p>Over de rijke geschiedenis van meer dan 400 jaar heeft dr. Jurjen Vis <a href="http://www.uitgeverijboom.nl/boeken/geschiedenis/liefde_het_fundament_9789085065494/">het boek “Liefde het Fundament”</a>, 400 jaar Roomsch Catholijk Oude Armen Kantoor in Amsterdam” geschreven, een uitgave van uitgeverij Boom. Kunstgeschiedenis, religiegeschiedenis en sociologie geven het verhaal extra diepte. Dit boek is verkrijgbaar bij Stichting RCOAK.</p>
+                </div>
+            </article>
+
+            <article id="bestuur">
+                <div class="js-dim c-dim c-dim--anim" data-trigger-hook="0.05">                    
+                    <h3 class="c-article__header">Bestuur en beheer</h3>
+                    <p>Stichting RCOAK wordt bestuurd door het College van Regenten:</p>
+                </div>
+
+                <div class="js-dim c-dim c-dim--anim" data-trigger-hook="0.05">                    
+                    <p>
+                        mr. J.G.J. (Joop) Janssen, voorzitter<br/>
+                        mr. D.C. (Diederik) van Wassenaer, penningmeester<br/>
+                        mr. E.R.S.M. (Eric) Marres, lid<br/>
+                        mr. C.A. (Cilian) Jansen Verplanke, lid<br/>
+                        prof. mr. dr. B.A.M. (Anne-Mei) The, lid<br/>
+                        mr. drs. T.S.M. (Therese) van Schie, lid<br/>
+                    </p>
+                </div>
+
+                <div class="js-dim c-dim c-dim--anim" data-trigger-hook="0.05">                    
+                    <p>Het College komt vier keer per jaar in vergadering bijeen.</p>
+                </div>
+
+                <div class="js-dim c-dim c-dim--anim" data-trigger-hook="0.05">                    
+                    <h4>Bureau</h4>
+                    <p>
+                        drs. F.M. (Frieda) de Pater, directeur<br/>
+                        J. (Anneke) Westeneng, project- en officemanager<br/>
+                        J. (Jennifer) van Vliet, financieel manager<br/>
+                    <p>
+                </div>
+                
+                <div class="js-dim c-dim c-dim--anim" data-trigger-hook="0.05">
+                    <p>Stichting RCOAK is lid van de Vereniging van Vermogensfondsen in Nederland en onderschrijft haar gedragscode. De Stichting kent een bestuursreglement waarin onder andere de zittingstermijnen van de Regenten en de herbenoemingsprocedures zijn geregeld. Ook heeft de Stichting een beleggingsstatuut. Het beheer van het vermogen is ondergebracht bij een professionele vermogensbeheerder die binnen het mandaat dat jaarlijks wordt vernieuwd zelfstandig het vermogen, belegd in effecten, beheert. De rentmeester draagt zorg voor het beheer van de landerijen.</p>
+                    <p>Stichting RCOAK is aangemerkt als Algemeen Nut Beogende Instelling. Dat betekent o.a. een vrijstelling van heffing van schenkingsrecht.</p>
+                    <p>Stichting RCOAK staat open voor legaten en nalatenschappen. Lees hierover meer in deze <a href="http://www.rcoak.nl/pdf/brosch.pdf">brochure</a>.</p>
+                </div>
+            </article>
+
+            <article id="hofjes">
+                <div class="js-dim c-dim c-dim--anim" data-trigger-hook="0.05">
+                    <h3 class="c-article__header">Hofjes</h3>
+                </div>
+
+                <div class="js-dim c-dim c-dim--anim" data-trigger-hook="0.05">
+                    <h4>Hofje Liefde is het Fondament</h4>
+                    <p>Het door Claas Reijnierszoon gestichte hofje ‘Liefde is het Fondament’ is gebouwd in 1618 en werd gedurende lange tijd beheerd door de twee oudste afstammelingen van de stichter, die in Amsterdam woonden. Er zullen oude mannen of vrouwen hebben gewoond, die tegen een kleine vergoeding hun laatste dagen mochten slijten in de beschutting van het mooie hofje aan de Keizersgracht.</p> 
+                </div>
+
+
+                <div class="js-dim c-dim c-dim--anim" data-trigger-hook="0.05">
+                    <p>In 1886 is de administratie van het hofje overgedragen aan Stichting RCOAK, die de 24 woningen tegen een matige huurprijs (in 1960 was dat zeven gulden per maand) ter beschikking stelde aan behoeftige alleenstaande vrouwen.</p>
+                </div>
+                    
+                <div class="js-dim c-dim c-dim--anim" data-trigger-hook="0.05">
+                    <p>In 1914 is het hofje, tegelijk met de twee ervoor staande huizen aan de gracht zeer grondig verbouwd in de toen populaire oud-Hollandse renaissancestijl. Aan het begin van het derde millennium is het hofje opnieuw intensief verbouwd naar ontwerp van de Amsterdamse architect F. Boogers. Een deel van het hofje dient nu als kantoor van Stichting RCOAK, een ander deel is verhuurd aan Amsterdamse organisaties die allen op hun eigen manier tot doel hebben om de kwaliteit van leven van kwetsbare groepen in Amsterdam te verbeteren. De gebruikers van het hofje kijken uit op de fraaie binnentuin ontworpen door tuin- en landschapsarchitect Arend-Jan van der Horst.</p>
+                </div>
+
+                <div class="js-dim c-dim c-dim--anim" data-trigger-hook="0.05">
+                    <p>Behalve Stichting RCOAK zijn de volgende organisaties op het hofje gehuisvest:</p>
+                    <ul>
+                        <li>Stichting CABO</li>
+                        <li>Stichting Gilde Amsterdam</li>
+                        <li>Vrijwilligersacademie</li>
+                    </ul>
+                </div>
+
+                <div class="js-dim c-dim c-dim--anim" data-trigger-hook="0.05">
+                    <h4>Het Lindenhofje</h4>
+                    <p>In het Lindenhofje, het andere hofje dat nog in bezit is van Stichting RCOAK, is sinds medio 2004 een palliatieve zorgvoorziening gevestigd voor kinderen met een levensbedreigende ziekte, een kinderhospice.</p>
+                </div>
+
+                <div class="js-dim c-dim c-dim--anim" data-trigger-hook="0.05">               
+                    <p>Het Lindenhofje, een complex van 21 hofjeshuizen rondom een binnentuin, ligt in het hart van de Jordaan aan de Lindengracht te Amsterdam. Oorspronkelijk waren deze hofjeshuizen bestemd voor oudere minder draagkrachtige katholieke Amsterdammers, maar sinds de jaren ‘70 werden de meeste hofjeshuizen verhuurd aan studenten.</p>
+                </div>
+
+
+                <div class="js-dim c-dim c-dim--anim" data-trigger-hook="0.05">
+                    <p>In 2001 heeft Stichting RCOAK besloten het hofje een andere bestemming te geven die beter aansluit bij de aloude woon-zorgfunctie van het hofje en ook bij de doelstelling van Stichting RCOAK. Dit besluit vormde de start van de transformatie van het Lindenhofje tot kinderhospice met behoud van de sfeer en historische uitstraling van het hofje. Het Leger des Heils is verantwoordelijk voor de exploitatie van het kinderhospice.</p>
+                    <p>Nadere informatie kan worden opgevraagd bij het <a href="http://www.legerdesheils.nl/">Leger des Heils</a>.</p>
+                </div>
+            </article>
+
+            <article id="samenwerkingen">
+                <div class="js-dim c-dim c-dim--anim" data-trigger-hook="0.05">
+                    <h3 class="c-article__header">Samenwerking met andere fondsen</h3>
+                    <p>Stichting RCOAK werkt samen met een aantal fondsen die ook donaties verstrekken aan projecten gericht op de bevordering van de kwaliteit van leven van ouderen, zie www.fondsenvoorouderen.nl. Elk fonds stelt zijn eigen donatiebeleid vast, waardoor specifieke aandachtsgebieden of prioriteiten kunnen verschillen. Bij grotere projecten hecht Stichting RCOAK er waarde aan dat uw project ook wordt ondersteund door één of meer van de volgende fondsen:</p>
+                </div>
+
+                <div class="js-dim c-dim c-dim--anim" data-trigger-hook="0.05">
+                    <p>
+                        <a href="">Fonds Sluyterman van Loo</a><br/>
+                        <a href="">Oranjefonds</a><br/>
+                        <a href="">Stichting Pape-Fonds</a><br/>
+                        <a href="">Nationaal Ouderenfonds zie ook Premieplan</a><br/>
+                        <a href="">Stichting Het RC Maagdenhuis</a><br/>
+                        <a href="">VSB Fonds</a><br/>
+                        <a href="">Innovatiefonds Zorgverzekeraars</a><br/>
+                        <a href="">Kansfonds</a><br/>
+                        <a href="">Fonds 1818</a><br/>
+                        <a href="">Fundatie Van den Santheuvel, Sobbe</a><br/>
+                        <a href="">Fonds NutsOhra</a><br/>
+                    </p>
+                
+                    <p>Stichting RCOAK is lid van de FIN, Vereniging van Vermogensfondsen in Nederland. <a href="http://www.verenigingvanfondsen.nl">www.verenigingvanfondsen.nl</a></p>
+                </div>
+            </article>
+
+            <article id="jaarverslag">
+                <h3 class="c-article__header">Jaarverslag</h3>
+
+                <p>Stichting RCOAK streeft naar een transparant donatiebeleid en publiceert sinds 2003 een jaarverslag.</p>
+ 
+                <p>U kunt de jaarverslagen digitaal raadplegen of op deze site downloaden in pdf-format.</p>
+ 
+                <p>Bekijk het Jaarverslag 2015 online.</p>
+
+                <p>Bekijk het Jaarverslag 2014 online.</p>
+                
+                <p>Bekijk het Jaarverslag 2013 online.</p>
+                
+                <p>Bekijk het Jaarverslag 2012 online.</p>
+                
+                <p>Bekijk het Jaarverslag 2011 online.</p>
+                              
+                <p>Download het Jaarverslag 2014. (20,9 MB)</p>
+                
+                <p>Download het Jaarverslag 2013. (13,5 MB)</p>
+                
+                <p>Download het Jaarverslag 2012. (19 MB)</p>
+                
+                <p>Download het Jaarverslag 2011. (5 MB)</p>
+                
+                <p>Download het Jaarverslag 2010. (1MB)</p>
+                
+                <p>Download het Jaarverslag 2009. (1MB)</p>
+                
+                <p>Download het Jaarverslag 2008. (3MB)</p>
+             </article>
+        </div>
+    </section>
+
+    <section id="contact" class="c-section js-pin-section">
+        <div class="c-side-content js-pin" data-trigger-element="contact" data-duration="100">
+            <h3 class="c-sub-nav-header">contact</h3>
+
+            <nav class="c-sub-nav">
+                <ul>
+                    <!--
+                    <li class="c-sub-nav__item">
+                        <div>
+                            <a class="c-sub-nav__link js-sub-nav" href="#nieuwsbrief" 
+                               data-nav-target="nieuwsbrief">nieuwsbrief</a>
+                        </div>
+                    </li>
+                    -->
+                    <li class="c-sub-nav__item">
+                        <div>
+                            <a class="c-sub-nav__link js-sub-nav" href="#vragen" 
+                               data-nav-target="vragen">vragen & opmerkingen</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+         </div>
+
+        <div class="c-main-content">
+            <!--
+            <article id="nieuwsbrief" style="height: 50vh">
+            </article>
+            -->
+
+            <article id="vragen">
+                <div class="js-dim c-dim c-dim--anim" data-trigger-hook="0.05">
+                    <h3 class="c-article__header">Vragen of opmerkingen?</h3>
+                    <p>Aarzel niet om onderstaand formulier in te vullen.</p>
+                    <p>U krijgt zo spoedig mogelijk antwoord.</p>
+                    <p>
+                        Leent uw vraag of opmerking zich niet voor schriftelijke behandeling, dan kunt u tijdens
+                        kantooruren bellen met het bureau van Stichting RCOAK: <strong>020-623 22 88</strong>
+                    </p>
+                </div>
+
+                <div>
+                    <form class="c-contact-form">
+                        <div class="js-dim c-dim c-dim--anim c-contact-form__item">
+                            <label for="organisatie" class="c-label">organisatie</label>
+                            <input class="c-text-field c-text-field--anim js-validate js-validate--required" 
+                                name="organisatie" type="text" />
+                        </div>
+                        <div class="js-dim c-dim c-dim--anim c-contact-form__item">
+                            <label for="projectnaam" class="c-label">naam project</label>
+                            <input class="c-text-field c-text-field--required c-text-field--anim js-validate js-validate--required" 
+                                name="projectnaam" type="text" />
+                        </div>
+                        <div class="js-dim c-dim c-dim--anim c-contact-form__item">
+                            <label for="email" class="c-label">e-mail adres</label>
+                            <input class="c-text-field c-text-field--required c-text-field--anim js-validate js-validate--required" 
+                                name="email" type="text" />
+                        </div>
+                        <div class="js-dim c-dim c-dim--anim c-contact-form__item">
+                            <label for="phone" class="c-label">telefoonnummer</label>
+                            <input class="c-text-field  c-text-field--anim" name="phone" type="text" />
+                        </div>
+                        <div class="js-dim c-dim c-dim--anim c-contact-form__item">
+                            <label for="message" class="c-label">vraag/opmerking</label>
+                            <textarea class="c-text-field c-text-field--required c-text-field--anim js-validate js-validate--required" 
+                                name="message" style="height: 40vh"></textarea>
+                        </div>
+                    </form>            
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/plugins/TextPlugin.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/jquery.ScrollMagic.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js"></script>    
+   
+    <script src="js/app.js"></script>
+
+    <script>
+        $(function () {
+            // Converts a screenheight (in vh or percentage units) to 
+            // a duration (in pixel units)
+            function screenHeightToDuration(screenHeight) {
+                return (screenHeight / 100) * $(window).height();
+            }
+
+            var controller = new ScrollMagic.Controller();
+
+            controller.scrollTo(function (newScrollPos) {
+                $('html body').animate({ scrollTop: newScrollPos });
+            });
+
+            $('.js-nav').each(function (index, elem) {
+                var $nav = $(elem), data = $nav.data() || {};
+                var $target = $('#' + data.navTarget);
+                var $section = $target.closest('.js-pin-section');
+        
+                $nav.on('click', function (e) {
+                    // Doesn't work on FireFox?!
+                    controller.scrollTo($target);
+                });
+        
+                // Toggle active look whenever it scrolls into view
+                var opts = {
+                    triggerElement: $target,
+                    triggerHook: 0.5,
+                    duration: $section.height()
+                };
+
+                new ScrollMagic.Scene(opts)
+                    .setClassToggle($nav, 'is-active')
+                    .addTo(controller);
+            });
+
+            $('.js-sub-nav').each(function (index, elem) {
+                var $nav = $(elem), data = $nav.data() || {};
+                var $target = $('#' + data.navTarget);
+                var $section = $target.closest('.js-pin-section');
+                var $article = $target.closest('article');
+                var top = $section.position().top + $target.position().top;
+
+                $nav.on('click', function (e) {
+                    // Doesn't work on FireFox?!
+                    controller.scrollTo(top);
+                });
+
+                var opts = {
+                    triggerElement: $target,
+                    triggerHook: 0.5,
+                    duration: $article.height()
+                };
+
+                new ScrollMagic.Scene(opts)
+                    .setClassToggle($nav, 'is-active')
+                    .addTo(controller);
+            });
+
+            $('.js-validate').on('change', function (e) {
+                var $this = $(this), val = $(this).val().trim();
+                $this.addClass('is-dirty');
+                if (val !== "") {
+                    $this.addClass('is-valid');
+                }
+                else {
+                    $this.removeClass('is-valid');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
