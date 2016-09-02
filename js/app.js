@@ -312,12 +312,25 @@ $(() => {
     $('.js-story').find('.js-strike').each((_index, elem) => {
         const tl = new TimelineMax();
         const $strike = $(elem);
+        const $strong = $strike.find('.js-text--strong');
         const data = $strike.data();
         const index = data.index;
         // We could parse these from data attributes as well
         // It's sad to see them hard coded like this...
-        tl.to(elem, 2, { backgroundSize: '0% 3px, 100% 3px' });
-        tl.to(elem, 1, { autoAlpha: 0.2 });
+        tl.add([
+            TweenMax.to(elem, 2, {
+                backgroundSize: '0% 3px, 100% 3px',
+                ease: Linear.easeNone
+            }),
+            TweenMax.to(elem, 1, {
+                autoAlpha: 0.4,
+                ease: Linear.easeNone
+            }),
+            TweenMax.to($strong, 1, {
+                backgroundSize: '0% 3px, 0% 3px',
+                ease: Power2.easeIn
+            })
+        ]);
         const opts = {
             triggerElement: data && data.triggerElement ? data.triggerElement : undefined,
             triggerHook: data && data.triggerHook ? data.triggerHook : 0.5,

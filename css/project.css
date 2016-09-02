@@ -59,6 +59,14 @@ a {
     padding-bottom: 1%;
 }
 
+.js-strike {
+    background: linear-gradient(#fff,#fff), linear-gradient(#fff,#fff);
+    background-size: 0% 3px, 0% 3px;
+    background-repeat: no-repeat, no-repeat;
+    background-position: 0% 87%, 0% 50%;
+    padding-bottom:1%;
+}
+
 .c-title-wrapper {
     position: relative; 
     height: 100vh
