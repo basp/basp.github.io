@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="css/utils.css" />
     <link rel="stylesheet" href="css/project.css" />
+    <link rel="stylesheet" href="css/preloader.css" />
 
     <style>
         #achtergrond {
@@ -66,11 +67,17 @@
             font-size: 1.8vh;
             font-weight: 700;
         }
+
+        .c-preloader__path {
+            stroke: #252222;
+        }
     </style>
 </head>
 <body>
     <div class="c-preloader js-preloader">
-        <div class="c-preloader__spinner"></div>
+        <svg class="c-preloader__spinner" height="50" width="50" class="c-preloader__spinner">
+            <circle class="c-preloader__path" cx="25" cy="25" r="20" fill="none" stroke-width="6" stroke-miterlimit="10"></circle>
+        </svg>
     </div>
 
     <div id="achtergrond" class="c-content">
@@ -253,7 +260,7 @@
                 </div>
 
                 <div class="c-popup__overlay js-popup__overlay">
-                    <div class="c-popup__icon js-popup__icon icon-zoom"
+                    <div class="c-popup__icon js-popup__icon icon-play"
                          data-trigger-element="#video-1"
                          data-trigger-hook="0.8"></div>
                 </div>

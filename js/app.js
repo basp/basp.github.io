@@ -29,7 +29,7 @@ $(() => {
         const $fade = $(elem), data = $fade.data();
         const duration = screenHeightToDuration(data.duration);
         const opts = { duration: duration };
-        tl.to(elem, 1, { opacity: 0.0 });
+        tl.to(elem, 1, { opacity: 0.0, display: 'none' });
         new ScrollMagic.Scene(opts)
             .setTween(tl)
             .addTo(controller);

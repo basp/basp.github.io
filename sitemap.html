@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/grid.css" />
     <link rel="stylesheet" href="css/utils.css" />
     <link rel="stylesheet" href="css/project.css" />
+    <link rel="stylesheet" href="css/preloader.css" />
 
     <style>
         .c-content {
@@ -30,11 +31,17 @@
         a {
             text-decoration: none;
         }
+
+        .c-preloader__path {
+            stroke: #C7867C;
+        }                
     </style>
 </head>
 <body>
     <div class="c-preloader js-preloader">
-        <div class="c-preloader__spinner"></div>
+        <svg class="c-preloader__spinner" height="50" width="50" class="c-preloader__spinner">
+            <circle class="c-preloader__path" cx="25" cy="25" r="20" fill="none" stroke-width="6" stroke-miterlimit="10"></circle>
+        </svg>
     </div>
 
     <div class="c-content" style="height: 100vh">
