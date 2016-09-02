@@ -24,6 +24,14 @@
     padding-top: 75%;   
 }
 
+.u-ar--4\:3:before {
+    padding-top: 75%;       
+}
+
 .u-ar--16\/9:before {
     padding-top: 56.25%;  
+}
+
+.u-ar--16\:9:before {
+    padding-top: 56.25%;      
 }
