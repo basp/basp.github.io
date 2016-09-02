@@ -1,0 +1,23 @@
+.c-title-wrapper {
+    position: relative; 
+    height: 100vh
+}
+
+.c-title {
+    position: relative;
+    top: 25vh;
+    left: 5vw;
+    width: 60vw;
+}
+
+.c-title__h1 {
+    font-size: 8.1vh;
+    line-height: 7.128vh;
+    font-weight: 700;
+}
+
+.c-title__h2 {
+    font-size: 3.6vh;
+    line-height: 3.96vh;
+    font-weight: 700;
+}

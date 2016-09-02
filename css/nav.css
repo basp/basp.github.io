@@ -1,0 +1,78 @@
+.c-main-nav {
+    font-family: Helvetica, sans-serif;
+}
+
+.c-main-nav ul, .c-sub-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.c-main-nav__item {
+    float: left;
+    padding-left: 3vw;
+    line-height: 1.7;
+}
+
+.c-main-nav__link {
+    display: block;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff);
+    background-size: 0% 3px, 0% 3px;
+    background-repeat: no-repeat, no-repeat;
+    background-position: 0% 87%, 0% 50%;
+    padding-bottom: 0%;    
+}
+
+.c-main-nav__link:hover {
+    text-decoration: none;
+    transition: background-size 500ms;
+    background-size: 100% 3px, 0% 3px;
+}
+
+.c-main-nav__link.is-active {
+    transition: background-size 500ms;
+    background-size: 100% 3px, 0% 3px;
+}
+
+.c-menu {
+    position: fixed;
+    top: 8vh;
+    left: 5vw;
+    width: 90vw;
+    z-index: 2;
+    color: white;
+}
+
+.c-menu__logo {
+    float: left;
+    font-size: 3.6vh;
+}
+
+.c-menu__close {
+    float: right;
+    font-size: 24px;
+}
+
+.c-menu__overview {
+    float: right;
+    font-size: 24px;
+    padding-left: 3vw;
+    line-height: 1.4;
+}
+
+.c-menu__logo a {
+    text-decoration: none;
+}
+
+.c-menu__close a {
+    text-decoration: none;
+}
+
+.c-menu__overview a {
+    text-decoration: none;
+}

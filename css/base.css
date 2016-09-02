@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: white;
+    font-family: Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+
+}
+
+h3 {
+    font-size: 3.6vh;
+    line-height: 3.96vh;
+    margin-bottom: 30px;
+}
+
+h4 {
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+
+ul, ol {
+    line-height: 2.1;
+    /* padding-bottom: 2vh; */
+    font-size: 16px;
+    margin-bottom: 24px;
+}
+
+p {
+    line-height: 2.1;
+    /* padding-bottom: 2vh; */
+    font-size: 16px;
+    margin-bottom: 30px;
+}
