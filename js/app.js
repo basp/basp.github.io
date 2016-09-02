@@ -152,6 +152,7 @@ $(() => {
         normal: (text) => text.length / 16,
         fast: (text) => text.length / 32,
         xfast: (text) => text.length / 64,
+        xxfast: (text) => text.length / 128
     };
     function createStoryTimeline($popup) {
         const $story = $popup.find('.js-popup__story');
@@ -279,6 +280,7 @@ $(() => {
         normal: (text) => text.length / 16,
         fast: (text) => text.length / 32,
         xfast: (text) => text.length / 64,
+        xxfast: (text) => text.length / 128
     };
     const controller = new ScrollMagic.Controller();
     $('.js-story__part').each((_index, elem) => {
