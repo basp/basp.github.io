@@ -37,7 +37,17 @@ $(() => {
 });
 
 },{}],3:[function(require,module,exports){
+"use strict";
+const VERSION = '0.9.3';
+exports.VERSION = VERSION;
+const NICK = 'konnichiwa';
+exports.NICK = NICK;
+
+},{}],4:[function(require,module,exports){
 /// <reference path="../../typings/index.d.ts" />
+"use strict";
+const info_1 = require('./info');
+console.log(`Running version ${info_1.VERSION} (${info_1.NICK})`);
 require('./pin');
 require('./popup');
 require('./quote');
@@ -47,7 +57,7 @@ require('./dim');
 require('./parallax');
 require('./preloader');
 
-},{"./dim":1,"./fade":2,"./parallax":4,"./pin":5,"./popup":6,"./preloader":7,"./quote":8,"./text":9}],4:[function(require,module,exports){
+},{"./dim":1,"./fade":2,"./info":3,"./parallax":5,"./pin":6,"./popup":7,"./preloader":8,"./quote":9,"./text":10}],5:[function(require,module,exports){
 /// <reference path="../../typings/index.d.ts" />
 "use strict";
 $(function () {
@@ -87,7 +97,7 @@ $(function () {
     });
 });
 
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 /// <reference path="../../typings/index.d.ts" />
 $(() => {
     // Converts a screenheight (in vh or percentage units) to 
@@ -124,7 +134,7 @@ $(() => {
     });
 });
 
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 /// <reference path="../../typings/index.d.ts" />
 $(() => {
     const controller = new ScrollMagic.Controller();
@@ -232,7 +242,7 @@ $(() => {
     });
 });
 
-},{}],7:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 /// <reference path="../../typings/index.d.ts" />
 $(window).on('load', function () {
     const $preloader = $('.js-preloader');
@@ -242,7 +252,7 @@ $(window).on('load', function () {
     }, 500);
 });
 
-},{}],8:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 /// <reference path="../../typings/index.d.ts" />
 $(() => {
     function createQuoteTimeline($quote) {
@@ -271,7 +281,7 @@ $(() => {
     });
 });
 
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 /// <reference path="../../typings/index.d.ts" />
 $(() => {
     const speeds = {
@@ -344,4 +354,4 @@ $(() => {
     });
 });
 
-},{}]},{},[3]);
+},{}]},{},[4]);

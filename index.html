@@ -9,91 +9,10 @@
     
     <link rel="stylesheet" href="https://i.icomoon.io/public/832d0feea6/RCOAK/style.css">
 
-    <link rel="stylesheet" href="css/utils.css" />
+    <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/index.css" />
-    <link rel="stylesheet" href="css/preloader.css" />
-    <link rel="stylesheet" href="css/popup.css" />
-
-    <style>
-        .c-quote {
-            color: #a4b4d3;
-        }
-
-        .c-logo {
-            right: 2.5vw; 
-            top: 40vh; 
-            position: absolute; 
-            width: 20vw;
-        }
-
-        .c-logo img {
-            width: 100%;
-            height: 100%;
-            image-fit: contain;
-        }
-
-        .c-main-content {
-            right: 5vw;
-            width: 50vw;
-        }
-
-        .c-article {
-            margin-bottom: 56px;
-        }
-
-        .c-article__header {
-            text-transform: lowercase;
-        }
-
-        .c-menu {
-            width: 90vw;
-        }
-
-        .c-menu__overview {
-            font-size: 24px;
-            padding-top: 4px;
-            padding-left: 3vw;
-        }
-
-        .c-menu__logo a {
-            text-decoration: none;
-        }
-
-        .c-menu__close a {
-            text-decoration: none;
-        }
-
-        .c-menu__overview a {
-            text-decoration: none;
-        }
-
-        .c-main-nav__item {
-            padding-left: 3vw;
-        }
-
-        .c-main-nav__link {
-            padding-bottom: 0%;
-        }
-
-        .c-project-nav {
-        }
-
-        .c-project-nav__link {
-            display: inline-block;
-            border: 1px solid white;
-            padding: 16px;
-            font-size: 16px;
-            color: white;
-            background-color: transparent;
-            text-decoration: none;
-        }
-
-        .c-project-nav__link:hover {
-            background-color: white;
-            color: black;
-        }
-    </style>
 </head>
+
 <body>
     <div class="c-preloader js-preloader">
         <svg class="c-preloader__spinner" height="50" width="50" class="c-preloader__spinner">
@@ -181,7 +100,7 @@
     </div>
 
     <section id="projects" class="c-section js-pin-section">
-        <div class="c-side-content js-pin" data-trigger-element="projects" data-duration="300">
+        <div class="c-side-content js-pin" data-trigger-element="projects" data-duration="225">
             <h3 class="c-sub-nav-header">parelprojecten</h3>
             
             <nav class="c-sub-nav" class="js-story" style="color: white">
@@ -220,16 +139,18 @@
                 data-width="40vw" 
                 data-popup-width="50vw"
                 data-speed="slow">
-                
-                <div class="c-popup__overlay js-popup__overlay">
-                    <div class="c-popup__icon js-popup__icon icon-zoom"
-                        data-trigger-hook="0.8"
-                        data-trigger-element="#gewoon-bijzonder-preview"></div>
+                    
+                <div class="c-popup__media">
+                    <a href="/gewoon-bijzonder.html">
+                        <img class="u-responsive" src="img/gewoonbijzonder_preview.jpg">
+                    </a>
+                    <div class="c-popup__overlay js-popup__overlay">
+                        <div class="c-popup__icon js-popup__icon icon-zoom"
+                            data-trigger-hook="0.8"
+                            data-trigger-element="#gewoon-bijzonder-preview">
+                        </div>
+                    </div>
                 </div>
-    
-                <a href="/gewoon-bijzonder.html">
-                    <img class="c-popup__media u-responsive" src="img/gewoonbijzonder_preview.jpg">
-                </a>
 
                 <div class="c-popup__story js-popup__story" data-speed="normal">
                     <i class="icon-close c-popup__close js-popup__close"></i>
@@ -251,16 +172,18 @@
                 data-popup-left="-40vw" 
                 data-popup-width="50vw"
                 data-speed="slow">
-                
-                <div class="c-popup__overlay js-popup__overlay">
-                    <div class="c-popup__icon js-popup__icon icon-zoom"
-                        data-trigger-hook="0.8"
-                        data-trigger-element="#straatpastoraat-preview"></div>
-                </div>
     
-                <a href="/straatpastoraat.html">
-                    <img class="c-popup__media u-responsive" src="img/straatpastoraat_preview.jpg">
-                </a>
+                <div class="c-popup__media">
+                    <a href="/straatpastoraat.html">
+                        <img class="u-responsive" src="img/straatpastoraat_preview.jpg">
+                    </a>
+                    <div class="c-popup__overlay js-popup__overlay">
+                        <div class="c-popup__icon js-popup__icon icon-zoom"
+                            data-trigger-hook="0.8"
+                            data-trigger-element="#straatpastoraat-preview">
+                        </div>
+                    </div>
+                </div>
 
                 <div class="c-popup__story js-popup__story" data-speed="normal">
                     <i class="icon-close c-popup__close js-popup__close"></i>
@@ -282,15 +205,17 @@
                 data-popup-width="50vw"
                 data-speed="slow">
                 
-                <div class="c-popup__overlay js-popup__overlay">
-                    <div class="c-popup__icon js-popup__icon icon-zoom"
-                        data-trigger-hook="0.8"
-                        data-trigger-element="#oopoeh-preview"></div>
+                <div class="c-popup__media">
+                    <a href="/oopoeh.html">
+                        <img class="u-responsive" src="img/oopoeh_preview.jpg">
+                    </a>
+                    <div class="c-popup__overlay js-popup__overlay">
+                        <div class="c-popup__icon js-popup__icon icon-zoom"
+                            data-trigger-hook="0.8"
+                            data-trigger-element="#oopoeh-preview">
+                        </div>
+                    </div>
                 </div>
-    
-                <a href="/oopoeh.html">
-                    <img class="c-popup__media u-responsive" src="img/oopoeh_preview.jpg">
-                </a>
 
                 <div class="c-popup__story js-popup__story" data-speed="normal">
                     <i class="icon-close c-popup__close js-popup__close"></i>
@@ -310,16 +235,18 @@
                 data-width="40vw" 
                 data-popup-width="50vw"
                 data-speed="slow">
-                
-                <div class="c-popup__overlay js-popup__overlay">
-                    <div class="c-popup__icon js-popup__icon icon-zoom"
-                        data-trigger-hook="0.8"
-                        data-trigger-element="#diva-preview"></div>
+
+                <div class="c-popup__media">
+                    <a href="/diva.html">
+                        <img class="u-responsive" src="img/divadichtbij_preview.jpg">
+                    </a>
+                    <div class="c-popup__overlay js-popup__overlay">
+                        <div class="c-popup__icon js-popup__icon icon-zoom"
+                            data-trigger-hook="0.8"
+                            data-trigger-element="#diva-preview">
+                        </div>
+                    </div>
                 </div>
-    
-                <a href="/diva.html">
-                    <img class="c-popup__media u-responsive" src="img/divadichtbij_preview.jpg">
-                </a>
 
                 <div class="c-popup__story js-popup__story" data-speed="normal">
                     <i class="icon-close c-popup__close js-popup__close"></i>
@@ -340,15 +267,18 @@
                 data-popup-width="50vw"
                 data-speed="slow">
                 
-                <div class="c-popup__overlay js-popup__overlay">
-                    <div class="c-popup__icon js-popup__icon icon-zoom"
-                        data-trigger-hook="0.8"
-                        data-trigger-element="#careclowns-preview"></div>
-                </div>
     
-                <a href="/careclowns.html">
-                    <img class="c-popup__media u-responsive" src="img/careclowns_preview.jpg">
-                </a>
+                <div class="c-popup__media">
+                    <a href="/careclowns.html">
+                        <img class="u-responsive" src="img/careclowns_preview.jpg">
+                    </a>
+                    <div class="c-popup__overlay js-popup__overlay">
+                        <div class="c-popup__icon js-popup__icon icon-zoom"
+                            data-trigger-hook="0.8"
+                            data-trigger-element="#careclowns-preview">
+                        </div>
+                    </div>
+                </div>
 
                 <div class="c-popup__story js-popup__story" data-speed="normal">
                     <i class="icon-close c-popup__close js-popup__close"></i>
@@ -369,15 +299,17 @@
                 data-popup-width="50vw"
                 data-speed="slow">
                 
-                <div class="c-popup__overlay js-popup__overlay">
-                    <div class="c-popup__icon js-popup__icon icon-zoom"
-                        data-trigger-hook="0.8"
-                        data-trigger-element="#zorgdier-preview"></div>
+                <div class="c-popup__media">
+                    <a href="/zorgdier.html">
+                        <img class="u-responsive" src="img/zorgdier_preview.jpg">
+                    </a>
+                    <div class="c-popup__overlay js-popup__overlay">
+                        <div class="c-popup__icon js-popup__icon icon-zoom"
+                            data-trigger-hook="0.8"
+                            data-trigger-element="#zorgdier-preview">
+                        </div>
+                    </div>
                 </div>
-    
-                <a href="/zorgdier.html">
-                    <img class="c-popup__media u-responsive" src="img/zorgdier_preview.jpg">
-                </a>
 
                 <div class="c-popup__story js-popup__story" data-speed="normal">
                     <i class="icon-close c-popup__close js-popup__close"></i>
@@ -395,7 +327,7 @@
     </section>
 
     <section id="support" class="c-section js-pin-section">
-         <div class="c-side-content js-pin" data-trigger-element="support" data-duration="350">
+         <div class="c-side-content js-pin" data-trigger-element="support" data-duration="250">
             <h3 class="c-sub-nav-header">Aanvragen financiering</h3>
             
             <nav class="c-sub-nav">
@@ -527,7 +459,7 @@
     </section>
 
     <section id="nalaten" class="c-section js-pin-section" class="c-article">
-        <div class="c-side-content js-pin" data-trigger-element="nalaten" data-duration="200">
+        <div class="c-side-content js-pin" data-trigger-element="nalaten" data-duration="175">
             <h3 class="c-sub-nav-header">nalaten</h3>       
         </div>
 
@@ -610,19 +542,19 @@
                     <li class="c-sub-nav__item">
                         <div class="c-date">15 juni 2016</div>
                         <h3>
-                            <a href=#" class="c-sub-nav__link">Mei-editie nieuwsbrief</a>
+                            <a href="#" class="c-sub-nav__link">Mei-editie nieuwsbrief</a>
                         </h3>
                     </li>
                     <li class="c-sub-nav__item">
                         <div class="c-date">11 mei 2016</div>
                         <h3>
-                            <a href=#" class="c-sub-nav__link">Mei-editie nieuwsbrief</a>
+                            <a href="#" class="c-sub-nav__link">Mei-editie nieuwsbrief</a>
                         </h3>
                     </li>
                     <li class="c-sub-nav__item">
                         <div class="c-date">18 april 2016</div>
                         <h3>
-                            <a href=#" class="c-sub-nav__link">Mei-editie nieuwsbrief</a>
+                            <a href="#" class="c-sub-nav__link">Mei-editie nieuwsbrief</a>
                         </h3>
                     </li>
                 </ul>
@@ -648,7 +580,7 @@
     </section>
 
     <section id="about" class="c-section js-pin-section">
-        <div class="c-side-content js-pin" data-trigger-element="about" data-duration="600">
+        <div class="c-side-content js-pin" data-trigger-element="about" data-duration="650">
             <h3 class="c-sub-nav-header">over ons</h3>
 
             <nav class="c-sub-nav">
@@ -963,7 +895,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js"></script>    
    
-    <script src="js/app.js"></script>
+    <script src="js/app.es5.js"></script>    
 
     <script>
         $(function () {

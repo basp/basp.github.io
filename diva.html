@@ -5,11 +5,8 @@
 
     <link rel="stylesheet" href="https://i.icomoon.io/public/832d0feea6/RCOAK/style.css">
 
-    <link rel="stylesheet" href="css/grid.css" />
-    <link rel="stylesheet" href="css/utils.css" />
+    <link rel="stylesheet" href="css/styles.css" />    
     <link rel="stylesheet" href="css/project.css" />
-    <link rel="stylesheet" href="css/preloader.css" />
-    <link rel="stylesheet" href="css/popup.css" />
 
     <style>
         .c-content {
@@ -20,12 +17,16 @@
             color: #9CA6B5;
         }
 
-        .c-popup__media {
+        .c-popup__media img {
             mix-blend-mode: lighten;
-        }
+        }            
+
+        .c-popup__media iframe {
+            mix-blend-mode: lighten;
+        }            
 
         .c-video-wrapper {
-            opacity: 0.7;
+            opacity: 0.36;
         }
 
         .c-preloader__path {
@@ -66,16 +67,16 @@
             <div class="c-title js-story">
                 <div class="js-story__part" data-speed="fast">
                     <h2 class="c-title__h2">
-                        <span class="js-text">parelproject</span>
+                        <span class="js-text">Diva dichtbij</span>
                     </h2>
                     <h1 class="c-title__h1">
-                        <span class="js-text">Diva</span><br/>
-                        <span class="js-text">dichtbij</span>
+                        <span class="js-text">Bijzonder</span><br/>
+                        <span class="js-text">persoonlijk contact</span> 
                     </h1>
                     <h2 class="c-title__h2">
-                        <span class="js-text">Bijzonder</span>
-                        <span class="js-text js-text--strong">persoonlijk</span> 
-                        <span class="js-text">contact</span>
+                        <span class="js-text">kleinschalige,</span>
+                        <span class="js-text js-text--strong">intieme</span> 
+                        <span class="js-text">optredens</span>
                     </h2>
                 </div>
             </div>
@@ -100,35 +101,35 @@
                 </div>
             </div>
 
-            <div id="quote-1" class="js-quote c-quote" style="top: 50vh; right: 10vw" data-trigger-hook="1.0">
+            <div id="quote-1" class="js-quote c-quote" style="top: 50vh; right: 5vw" data-trigger-hook="1.0">
                 <span class="c-quote__txt js-quote__txt">zang</span>
                 <span class="c-quote__txt js-quote__txt">ontroert</span>
             </div>
             
-            <div id="quote-2" class="js-quote c-quote" style="top: 130vh; right: 10vw" data-trigger-hook="1.0">
+            <div id="quote-2" class="js-quote c-quote" style="top: 130vh; right: 5vw" data-trigger-hook="1.0">
                 <span class="c-quote__txt js-quote__txt">bijzonder</span>
                 <span class="c-quote__txt js-quote__txt">persoonlijk</span>
                 <span class="c-quote__txt js-quote__txt">contact</span>
             </div>
 
             <div id="video-1" class="c-popup js-popup" 
-                 style="top: 75vh; left: 10vw; width: 50vw;" 
+                 style="top: 75vh; left: 5vw; width: 50vw;" 
                  data-width="50vw" 
                  data-popup-width="80vw">
 
-                <div class="c-popup__media u-ar u-ar--16/9">
+                <div class="c-popup__media u-ar u-ar--16:9">
                     <iframe class="u-ar__content"
                             src="https://player.vimeo.com/video/180154468?title=0&byline=0&portrait=0&badge=0" 
                             width="100%" height="100%"
                             frameborder="0" 
                             webkitallowfullscreen mozallowfullscreen allowfullscreen>
                     </iframe>
-                </div>
-
-                <div class="c-popup__overlay js-popup__overlay">
-                    <div class="c-popup__icon js-popup__icon icon-play"
-                         data-trigger-element="#video-1"
-                         data-trigger-hook="0.8"></div>
+                    <div class="c-popup__overlay js-popup__overlay">
+                            <div class="c-popup__icon js-popup__icon icon-play"
+                                  data-trigger-element="#video-1"
+                                  data-trigger-hook="0.8">
+                            </div>
+                    </div>
                 </div>
 
                 <div class="c-popup__story js-popup__story" data-speed="normal">
@@ -137,9 +138,17 @@
             </div>            
         </div><!-- c-main -->
 
-        <div style="left: 10vw; position: relative; width: 80vw; height: 75vh" class="grid">
-            <div class="grid__col grid__col--1-of-2" style="padding-top: 40vh">
-                <p>Dit contact, de aandacht, de interactie en het plezier zijn van grote waarde voor mensen met dementie. Zang ontroert. De aandacht en toewijding brengt hen heel dichtbij de mensen. Een heel bijzonder persoonlijk contact, dat maakt dat mensen uit hun schulp kruipen en in beweging komen.</p>
+        <div style="left: 5vw; position: relative; width: 90vw; height: 75vh" class="grid">
+            <div class="grid__col grid__col--1-of-2">
+                <div class="c-story-spacer">
+                    De Diva’s en Divo’s van Diva Dichtbij verzorgen kleinschalige, intieme optredens.
+                    Meestal in de huiskamer van een verpleeghuis of bij iemand aan bed.
+                    Met professionele zang, theater en oprechte aandacht maken ze contact met de mens achter de zieke.
+                </div>
+
+                <p>
+                    Dit contact, de aandacht, de interactie en het plezier zijn van grote waarde voor mensen met dementie. Zang ontroert. De aandacht en toewijding brengt hen heel dichtbij de mensen. Een heel bijzonder persoonlijk contact, dat maakt dat mensen uit hun schulp kruipen en in beweging komen.
+                </p>
             </div>
             <div class="grid__col grid__col--1-of-2" style="padding-left: 5vw">
                 <p>Tijdens optredens komen emoties weer in beweging. Er ontstaat interactie, die uiteindelijk resulteert in rust. Optredens zijn een aaneenschakeling van momenten van verlichting, geluk en emotie.</p>
@@ -149,8 +158,19 @@
                     <a href="http://divadichtbij.nl/nieuws/actueel/onderzoek-toont-driedubbel-effect-optredens-aan/">onderzoek toont driedubbel effect optredens aan</a><br/>
                     <a href="http://divadichtbij.nl">divadichtbij.nl</a>
                 </p>
+
+                <div class="c-project-nav">
+                    <a class="c-project-nav__link" href="/index.html#projects">
+                        <span>Bekijk ook onze andere projecten</span> 
+                        <i class="icon-chevron-right"></i>
+                    </a>
+                </div>                                
             </div>        
         </div>
+        
+        <!--
+        <div style="height: 128px;"></div>
+        -->        
     </div><!-- c-container -->
 
     <script src="https://player.vimeo.com/api/player.js"></script>
@@ -167,6 +187,6 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js"></script>
 
-    <script src="js/app.js"></script>
+    <script src="js/app.es5.js"></script>    
 </body>
 </html>

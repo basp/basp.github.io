@@ -5,26 +5,44 @@
 
     <link rel="stylesheet" href="https://i.icomoon.io/public/832d0feea6/RCOAK/style.css">
 
-    <link rel="stylesheet" href="css/utils.css" />
+    <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/project.css" />
-    <link rel="stylesheet" href="css/preloader.css" />
-    <link rel="stylesheet" href="css/popup.css" />
-
+   
     <style>
         #achtergrond {
             background: linear-gradient(to bottom, #252222, #603C56);
+        }
+
+        #achtergrond .c-popup__media img {
+            mix-blend-mode: lighten;
+        }
+
+        #achtergrond .c-popup__media iframe {
+            mix-blend-mode: lighten;
         }
 
         #realisatie {
             background: linear-gradient(to bottom, #ada49b, #da6f64);
         }
 
+        #realisatie .c-popup__media img {
+            mix-blend-mode: darken;
+        }
+
+        #realisatie .c-popup__media iframe {
+            mix-blend-mode: darken;
+        }
+
         #conclusies {
             background: linear-gradient(to bottom, #6e788c, #7596b0);
         }
 
-        .c-quote {
-            z-index: 2;
+        #conclusies .c-popup__media iframe {
+            mix-blend-mode: darken;
+        }
+
+        #conclusies .c-popup__media iframe {
+            mix-blend-mode: darken;
         }
 
         .c-quote--alt-1 {
@@ -41,17 +59,6 @@
 
         .c-quote--alt-4 {
             color: #a4b4d3;
-        }
-
-        #achtergrond .c-popup__media {
-            mix-blend-mode: lighten;
-        }
-
-        #realisatie .c-popup__media {
-            mix-blend-mode: darken;
-        }
-
-        #conclusies .c-popup__media {
         }
 
         .c-credits {
@@ -169,42 +176,43 @@
                 </div>
             </div>
 
-            <div id="quote-1" class="js-quote c-quote c-quote--alt-1" style="top: 175vh; right: 10vw" data-trigger-hook="1.0">
+            <div id="quote-1" class="js-quote c-quote c-quote--alt-1" style="top: 175vh; right: 5vw" data-trigger-hook="1.0">
                 <span class="c-quote__txt js-quote__txt">twee jaar geleden</span>
                 <span class="c-quote__txt js-quote__txt">was niet iedereen</span>
                 <span class="c-quote__txt js-quote__txt">hier even gelukkig</span>
             </div>
             
-            <div id="quote-2" class="js-quote c-quote c-quote--alt-1" style="top: 350vh; right: 10vw" data-trigger-hook="1.0">
+            <div id="quote-2" class="js-quote c-quote c-quote--alt-1" style="top: 350vh; right: 5vw" data-trigger-hook="1.0">
                 <span class="c-quote__txt js-quote__txt">onveiligheid</span>
                 <span class="c-quote__txt js-quote__txt">eenzaamheid en</span>
                 <span class="c-quote__txt js-quote__txt">onenigheid met</span>
                 <span class="c-quote__txt js-quote__txt">de woningbouw</span>
             </div>
 
-            <div id="quote-3" class="js-quote c-quote c-quote--alt-1" style="top: 500vh; right: 10vw" data-trigger-hook="1.0">
-                <span class="c-quote__txt js-quote__txt">dat levert nogal eenss</span>
+            <div id="quote-3" class="js-quote c-quote c-quote--alt-1" style="top: 500vh; right: 5vw" data-trigger-hook="1.0">
+                <span class="c-quote__txt js-quote__txt">dat levert</span>
+                <span class="c-quote__txt js-quote__txt">nogal eens</span>
                 <span class="c-quote__txt js-quote__txt">fricties op</span>
             </div>
 
-            <div id="quote-4" class="js-quote c-quote c-quote--alt-1" style="top: 575vh; right: 10vw" data-trigger-hook="1.0">
+            <div id="quote-4" class="js-quote c-quote c-quote--alt-1" style="top: 575vh; right: 5vw" data-trigger-hook="1.0">
                 <span class="c-quote__txt js-quote__txt">er moest iets</span>
                 <span class="c-quote__txt js-quote__txt">(anders) gebeuren</span>
             </div>
 
-            <div id="quote-5" class="js-quote c-quote c-quote--alt-2" style="top: 650vh; right: 10vw" data-trigger-hook="1.0">
+            <div id="quote-5" class="js-quote c-quote c-quote--alt-2" style="top: 650vh; right: 5vw" data-trigger-hook="1.0">
                 <span class="c-quote__txt js-quote__txt">wat kan een</span>
                 <span class="c-quote__txt js-quote__txt">gemeenschap</span>
                 <span class="c-quote__txt js-quote__txt">voor elkaar</span>
                 <span class="c-quote__txt js-quote__txt">krijgen?</span>
             </div>
 
-            <div id="quote-6" class="js-quote c-quote c-quote--alt-2" style="top: 750vh; right: 10vw" data-trigger-hook="1.0">
+            <div id="quote-6" class="js-quote c-quote c-quote--alt-2" style="top: 750vh; right: 5vw" data-trigger-hook="1.0">
                 <span class="c-quote__txt js-quote__txt">opnieuw leren</span>
                 <span class="c-quote__txt js-quote__txt">samenwerken</span>
             </div>
 
-            <div id="quote-7" class="js-quote c-quote c-quote--alt-2" style="top: 850vh; right: 10vw" data-trigger-hook="1.0">
+            <div id="quote-7" class="js-quote c-quote c-quote--alt-2" style="top: 850vh; right: 5vw" data-trigger-hook="1.0">
                 <span class="c-quote__txt js-quote__txt">iedereen heeft</span>
                 <span class="c-quote__txt js-quote__txt">iets te vertellen en</span>
                 <span class="c-quote__txt js-quote__txt">doet er toe</span>
@@ -216,14 +224,14 @@
                  data-popup-width="70vw"
                  data-speed="slow">
                 
-                <div class="c-popup__overlay js-popup__overlay">
-                    <div class="c-popup__icon js-popup__icon icon-zoom"
-                         data-trigger-hook="0.8"
-                         data-trigger-element="#image-1"></div>
+                <div class="c-popup__media">
+                    <img class="u-responsive" src="img/1-koornhorst-gebouw.jpg">                
+                    <div class="c-popup__overlay js-popup__overlay">
+                        <div class="c-popup__icon js-popup__icon icon-zoom"
+                            data-trigger-hook="0.8"
+                            data-trigger-element="#image-1"></div>
+                    </div>
                 </div>
-     
-                <img class="c-popup__media u-responsive" 
-                     src="img/1-koornhorst-gebouw.jpg">
 
                 <div class="c-popup__story js-popup__story" data-speed="xslow">
                     <i class="c-popup__close js-popup__close icon-close"></i>
@@ -231,39 +239,46 @@
             </div>      
        
             <div id="image-2" style="position: absolute; left: 20vw; top: 250vh; width: 20vw;">
-                <img class="c-popup__media u-responsive" src="img/bord1.svg">
+                <div class="c-popup__media">
+                    <img class="u-responsive" src="img/bord1.svg">
+                </div>
             </div>
 
-            <div id="image-3" style="position: absolute; right: 10vw; top: 300vh; width: 40vw;">
-                <img class="c-popup__media u-responsive" src="img/2-koornhorst-politie.jpg">
+            <div id="image-3" style="position: absolute; right: 5vw; top: 300vh; width: 40vw;">
+                <div class="c-popup__media">
+                    <img class="u-responsive" src="img/2-koornhorst-politie.jpg">
+                </div>
             </div>
 
-            <div id="image-4" style="position: absolute; left: 10vw; top: 315vh; width: 40vw;">
-                <img class="c-popup__media u-responsive" src="img/3-koornhorst-brandweer.jpg">
+            <div id="image-4" style="position: absolute; left: 5vw; top: 315vh; width: 40vw;">
+                <div class="c-popup__media">
+                    <img class="u-responsive" src="img/3-koornhorst-brandweer.jpg">
+                </div>
             </div>
 
             <div id="image-5" style="position: absolute; top: 400vh; width: 30vw;">
-                <img class="c-popup__media u-responsive" src="img/4-poster-security.jpg">
+                <div class="c-popup__media">
+                    <img class="u-responsive" src="img/4-poster-security.jpg">
+                </div>
             </div>
 
             <div id="video-1" class="c-popup js-popup" 
-                 style="top: 450vh; right: 10vw; width: 50vw;" 
+                 style="top: 450vh; right: 5vw; width: 50vw;" 
                  data-width="50vw" 
                  data-popup-width="80vw">
 
-                <div class="c-popup__media u-ar u-ar--16/9">
+                <div class="c-popup__media u-ar u-ar--16:9">
                     <iframe class="u-ar__content"
                             src="https://player.vimeo.com/video/180582612?title=0&byline=0&portrait=0&badge=0" 
                             width="100%" height="100%"
                             frameborder="0" 
                             webkitallowfullscreen mozallowfullscreen allowfullscreen>
                     </iframe>
-                </div>
-
-                <div class="c-popup__overlay js-popup__overlay">
-                    <div class="c-popup__icon js-popup__icon icon-play"
-                         data-trigger-element="#video-1"
-                         data-trigger-hook="0.8"></div>
+                    <div class="c-popup__overlay js-popup__overlay">
+                        <div class="c-popup__icon js-popup__icon icon-play"
+                            data-trigger-element="#video-1"
+                            data-trigger-hook="0.8"></div>
+                    </div>
                 </div>
 
                 <div class="c-popup__story js-popup__story" data-speed="normal">
@@ -272,12 +287,16 @@
                 </div>
             </div>
        
-            <div id="image-6" style="position: absolute; left: 10vw; top: 675vh; width: 50vw;">
-                <img class="c-popup__media u-responsive" src="img/5-keuken.jpg">
+            <div id="image-6" style="position: absolute; left: 5vw; top: 675vh; width: 50vw;">
+                <div class="c-popup__media">
+                    <img class="u-responsive" src="img/5-keuken.jpg">
+                </div>                
             </div>
 
             <div id="image-7" style="position: absolute; left: 20vw; top: 775vh; width: 60vw;">
-                <img class="c-popup__media u-responsive" src="img/6-3dames.jpg">
+                <div class="c-popup__media">
+                    <img class="u-responsive" src="img/6-3dames.jpg">
+                </div>                
             </div>
 
             <span class="c-scroll-icon icon-chevron-down" style="top: 990vh" />
@@ -335,7 +354,7 @@
                 </div>
             </div>
 
-            <div id="quote-2-1" class="js-quote c-quote c-quote--alt-3" style="top: 125vh; right: 10vw" data-trigger-hook="1.0">
+            <div id="quote-2-1" class="js-quote c-quote c-quote--alt-3" style="top: 125vh; right: 5vw" data-trigger-hook="1.0">
                 <span class="c-quote__txt js-quote__txt">zo, nu heb je</span>
                 <span class="c-quote__txt js-quote__txt">349 buren erbij</span>
                 <span class="c-quote__txt js-quote__txt">gekregen. Laat</span>
@@ -343,14 +362,14 @@
                 <span class="c-quote__txt js-quote__txt">dat zijn</span>
             </div>
 
-            <div id="quote-2-2" class="js-quote c-quote c-quote--alt-3" style="top: 225vh; right: 10vw" data-trigger-hook="1.0">
+            <div id="quote-2-2" class="js-quote c-quote c-quote--alt-3" style="top: 225vh; right: 5vw" data-trigger-hook="1.0">
                 <span class="c-quote__txt js-quote__txt">kom in</span>
                 <span class="c-quote__txt js-quote__txt">beweging,</span>
                 <span class="c-quote__txt js-quote__txt">blijf niet</span>
                 <span class="c-quote__txt js-quote__txt">thuis zitten!</span>
             </div>
 
-            <div id="quote-2-3" class="js-quote c-quote c-quote--alt-3" style="top: 350vh; right: 10vw" data-trigger-hook="1.0">
+            <div id="quote-2-3" class="js-quote c-quote c-quote--alt-3" style="top: 350vh; right: 5vw" data-trigger-hook="1.0">
                 <span class="c-quote__txt js-quote__txt">volgende</span>
                 <span class="c-quote__txt js-quote__txt">week gaan</span>
                 <span class="c-quote__txt js-quote__txt">we er weer</span>
@@ -358,7 +377,7 @@
                 <span class="c-quote__txt js-quote__txt">aan</span>
             </div>
 
-            <div id="quote-2-4" class="js-quote c-quote c-quote--alt-3" style="top: 450vh; right: 10vw" data-trigger-hook="1.0">
+            <div id="quote-2-4" class="js-quote c-quote c-quote--alt-3" style="top: 450vh; right: 5vw" data-trigger-hook="1.0">
                 <span class="c-quote__txt js-quote__txt">we waren</span>
                 <span class="c-quote__txt js-quote__txt">een beetje</span>
                 <span class="c-quote__txt js-quote__txt">ingezakt de</span>
@@ -366,34 +385,35 @@
                 <span class="c-quote__txt js-quote__txt">jaren</span>
             </div>
 
-            <div id="quote-2-5" class="js-quote c-quote c-quote--alt-3" style="top: 500vh; right: 10vw" data-trigger-hook="1.0">
+            <div id="quote-2-5" class="js-quote c-quote c-quote--alt-3" style="top: 500vh; right: 5vw" data-trigger-hook="1.0">
                 <span class="c-quote__txt js-quote__txt">iedereen is</span>
                 <span class="c-quote__txt js-quote__txt">wakker</span>
                 <span class="c-quote__txt js-quote__txt">gemaakt</span>
             </div>
 
             <div id="image-2-1" style="position: absolute; left: 30vw; top: 50vh; width: 60vw;">
-                <img class="c-popup__media u-responsive" src="img/groepsfoto.jpg">
+                <div class="c-popup__media">
+                    <img class="u-responsive" src="img/groepsfoto.jpg">
+                </div>
             </div>
 
              <div id="video-2-1" class="c-popup js-popup" 
-                 style="top: 175vh; right: 10vw; width: 50vw;" 
+                 style="top: 175vh; right: 5vw; width: 50vw;" 
                  data-width="50vw" 
                  data-popup-width="80vw">
 
-                <div class="c-popup__media u-ar u-ar--16/9">
+                <div class="c-popup__media u-ar u-ar--16:9">
                     <iframe class="u-ar__content"
                             src="https://player.vimeo.com/video/180315627?title=0&byline=0&portrait=0&badge=0" 
                             width="100%" height="100%"
                             frameborder="0" 
                             webkitallowfullscreen mozallowfullscreen allowfullscreen>
                     </iframe>
-                </div>
-
-                <div class="c-popup__overlay js-popup__overlay">
-                    <div class="c-popup__icon js-popup__icon icon-play"
-                         data-trigger-element="#video-2-1"
-                         data-trigger-hook="0.8"></div>
+                    <div class="c-popup__overlay js-popup__overlay">
+                        <div class="c-popup__icon js-popup__icon icon-play"
+                            data-trigger-element="#video-2-1"
+                            data-trigger-hook="0.8"></div>
+                    </div>
                 </div>
 
                 <div class="c-popup__story js-popup__story" data-speed="normal">
@@ -402,23 +422,22 @@
             </div>
 
              <div id="video-2-2" class="c-popup js-popup" 
-                 style="top: 275vh; right: 10vw; width: 50vw;" 
+                 style="top: 275vh; right: 5vw; width: 50vw;" 
                  data-width="50vw" 
                  data-popup-width="80vw">
 
-                <div class="c-popup__media u-ar u-ar--16/9">
+                <div class="c-popup__media u-ar u-ar--16:9">
                     <iframe class="u-ar__content"
                             src="https://player.vimeo.com/video/180582293?title=0&byline=0&portrait=0&badge=0" 
                             width="100%" height="100%"
                             frameborder="0" 
                             webkitallowfullscreen mozallowfullscreen allowfullscreen>
                     </iframe>
-                </div>
-
-                <div class="c-popup__overlay js-popup__overlay">
-                    <div class="c-popup__icon js-popup__icon icon-play"
-                         data-trigger-element="#video-2-2"
-                         data-trigger-hook="0.8"></div>
+                    <div class="c-popup__overlay js-popup__overlay">
+                        <div class="c-popup__icon js-popup__icon icon-play"
+                            data-trigger-element="#video-2-2"
+                            data-trigger-hook="0.8"></div>
+                    </div>
                 </div>
 
                 <div class="c-popup__story js-popup__story" data-speed="normal">
@@ -427,23 +446,23 @@
             </div>
 
              <div id="video-2-3" class="c-popup js-popup" 
-                 style="top: 400vh; left: 10vw; width: 50vw;" 
+                 style="top: 400vh; left: 5vw; width: 50vw;" 
                  data-width="50vw" 
                  data-popup-width="80vw">
 
-                <div class="c-popup__media u-ar u-ar--16/9">
+                <div class="c-popup__media u-ar u-ar--16:9">
                     <iframe class="u-ar__content"
                             src="https://player.vimeo.com/video/180315631?title=0&byline=0&portrait=0&badge=0" 
                             width="100%" height="100%"
                             frameborder="0" 
                             webkitallowfullscreen mozallowfullscreen allowfullscreen>
                     </iframe>
-                </div>
-
-                <div class="c-popup__overlay js-popup__overlay">
-                    <div class="c-popup__icon js-popup__icon icon-play"
-                         data-trigger-element="#video-2-3"
-                         data-trigger-hook="0.8"></div>
+                    <div class="c-popup__overlay js-popup__overlay">
+                        <div class="c-popup__icon js-popup__icon icon-play"
+                            data-trigger-element="#video-2-3"
+                            data-trigger-hook="0.8">
+                        </div>
+                    </div>
                 </div>
 
                 <div class="c-popup__story js-popup__story" data-speed="normal">
@@ -456,19 +475,19 @@
                  data-width="50vw" 
                  data-popup-width="70vw">
 
-                <div class="c-popup__media u-ar u-ar--16/9">
+                <div class="c-popup__media u-ar u-ar--16:9">
                     <iframe class="u-ar__content"
                             src="https://player.vimeo.com/video/180582097?title=0&byline=0&portrait=0&badge=0" 
                             width="100%" height="100%"
                             frameborder="0" 
                             webkitallowfullscreen mozallowfullscreen allowfullscreen>
                     </iframe>
-                </div>
-
-                <div class="c-popup__overlay js-popup__overlay">
-                    <div class="c-popup__icon js-popup__icon icon-play"
-                         data-trigger-element="#video-2-4"
-                         data-trigger-hook="0.8"></div>
+                    <div class="c-popup__overlay js-popup__overlay">
+                        <div class="c-popup__icon js-popup__icon icon-play"
+                            data-trigger-element="#video-2-4"
+                            data-trigger-hook="0.8">
+                        </div>
+                    </div>
                 </div>
 
                 <div class="c-popup__story js-popup__story" data-speed="normal">
@@ -515,7 +534,7 @@
                 </div>
             </div>
 
-            <div id="quote-3-1" class="js-quote c-quote c-quote--alt-4" style="top: 100vh; right: 10vw" data-trigger-hook="1.0">
+            <div id="quote-3-1" class="js-quote c-quote c-quote--alt-4" style="top: 100vh; right: 5vw" data-trigger-hook="1.0">
                 <span class="c-quote__txt js-quote__txt">we moeten</span>
                 <span class="c-quote__txt js-quote__txt">opstaan en wat</span>
                 <span class="c-quote__txt js-quote__txt">doen, zodat de</span>
@@ -524,14 +543,14 @@
                 <span class="c-quote__txt js-quote__txt">krijgt</span>
             </div>
 
-            <div id="quote-3-2" class="js-quote c-quote c-quote--alt-4" style="top: 200vh; right: 10vw" data-trigger-hook="1.0">
+            <div id="quote-3-2" class="js-quote c-quote c-quote--alt-4" style="top: 200vh; right: 5vw" data-trigger-hook="1.0">
                 <span class="c-quote__txt js-quote__txt">alert zijn op de</span>
                 <span class="c-quote__txt js-quote__txt">kleine dingen</span>
                 <span class="c-quote__txt js-quote__txt">die van belang</span>
                 <span class="c-quote__txt js-quote__txt">zijn</span>
             </div>
 
-            <div id="quote-3-3" class="js-quote c-quote c-quote--alt-4" style="top: 325vh; right: 10vw" data-trigger-hook="1.0">
+            <div id="quote-3-3" class="js-quote c-quote c-quote--alt-4" style="top: 325vh; right: 5vw" data-trigger-hook="1.0">
                 <span class="c-quote__txt js-quote__txt">de ruimte</span>
                 <span class="c-quote__txt js-quote__txt">hebben om met</span>
                 <span class="c-quote__txt js-quote__txt">mensen aan de</span>
@@ -539,23 +558,23 @@
             </div>
 
             <div id="video-3-1" class="c-popup js-popup" 
-                 style="top: 150vh; left: 10vw; width: 50vw;" 
+                 style="top: 150vh; left: 5vw; width: 50vw;" 
                  data-width="50vw" 
                  data-popup-width="80vw">
 
-                <div class="c-popup__media u-ar u-ar--16/9">
+                <div class="c-popup__media u-ar u-ar--16:9">
                     <iframe class="u-ar__content"
                             src="https://player.vimeo.com/video/180582206?title=0&byline=0&portrait=0&badge=0" 
                             width="100%" height="100%"
                             frameborder="0" 
                             webkitallowfullscreen mozallowfullscreen allowfullscreen>
                     </iframe>
-                </div>
-
-                <div class="c-popup__overlay js-popup__overlay">
-                    <div class="c-popup__icon js-popup__icon icon-play"
-                         data-trigger-element="#video-3-1"
-                         data-trigger-hook="0.8"></div>
+                    <div class="c-popup__overlay js-popup__overlay">
+                        <div class="c-popup__icon js-popup__icon icon-play"
+                            data-trigger-element="#video-3-1"
+                            data-trigger-hook="0.8">
+                        </div>
+                    </div>
                 </div>
 
                 <div class="c-popup__story js-popup__story" data-speed="normal">
@@ -564,23 +583,23 @@
             </div>
 
             <div id="video-3-2" class="c-popup js-popup" 
-                 style="top: 230vh; right: 10vw; width: 50vw;" 
+                 style="top: 230vh; right: 5vw; width: 50vw;" 
                  data-width="50vw" 
                  data-popup-width="80vw">
 
-                <div class="c-popup__media u-ar u-ar--16/9">
+                <div class="c-popup__media u-ar u-ar--16:9">
                     <iframe class="u-ar__content"
                             src="https://player.vimeo.com/video/180582206?title=0&byline=0&portrait=0&badge=0" 
                             width="100%" height="100%"
                             frameborder="0" 
                             webkitallowfullscreen mozallowfullscreen allowfullscreen>
                     </iframe>
-                </div>
-
-                <div class="c-popup__overlay js-popup__overlay">
-                    <div class="c-popup__icon js-popup__icon icon-play"
-                         data-trigger-element="#video-3-2"
-                         data-trigger-hook="0.8"></div>
+                    <div class="c-popup__overlay js-popup__overlay">
+                        <div class="c-popup__icon js-popup__icon icon-play"
+                            data-trigger-element="#video-3-2"
+                            data-trigger-hook="0.8">
+                        </div>
+                    </div>
                 </div>
 
                 <div class="c-popup__story js-popup__story" data-speed="normal">
@@ -601,7 +620,8 @@
                     <div class="c-credits__label">Mogelijk gemaakt door</div>
                     <div class="c-credits__content" style="font-size: 5vh">
                         <span class="icon-logotext"></span>
-                        <span style="float: right" class="icon-sluyterman"></span>
+                        <br/>
+                        <span class="icon-sluyterman"></span>
                     </div>
                 </div>
                 <div class="c-credits">
@@ -609,6 +629,12 @@
                     <div class="c-credits__content">
                         Pré Wonen, Rochdale, STadgenoot, Bewonerscommissie De Drecht, Vrienden van De Drecht, Gemeente Deventer
                     </div>
+                </div>
+                <div class="c-project-nav">
+                    <a class="c-project-nav__link" href="/index.html#projects">
+                        <span>Bekijk ook onze andere projecten</span> 
+                        <i class="icon-chevron-right"></i>
+                    </a>
                 </div>
             </div>
         </div>
@@ -628,6 +654,6 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js"></script>
 
-    <script src="js/app.js"></script>    
+    <script src="js/app.es5.js"></script>    
 </body>
 </html>
