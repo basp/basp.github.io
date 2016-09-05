@@ -3,21 +3,13 @@
 <head>
     <title>RCOAK - Stichting OOPOEH</title>
 
+    <meta charset="UTF-8">
+
     <link rel="stylesheet" href="https://i.icomoon.io/public/832d0feea6/RCOAK/style.css">
 
-    <link rel="stylesheet" href="css/grid.css" />
-    <link rel="stylesheet" href="css/utils.css" />
-    <link rel="stylesheet" href="css/base.css" />
-    <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/nav.css" />
-    <link rel="stylesheet" href="css/popup.css" />
-    <link rel="stylesheet" href="css/preloader.css" />
-    <link rel="stylesheet" href="css/quote.css" />
-    <link rel="stylesheet" href="css/story.css" />
-    <link rel="stylesheet" href="css/title.css" />
-    <link rel="stylesheet" href="css/video.css" />
-    <link rel="stylesheet" href="css/project.css" />
-
+    <link rel="stylesheet" href="css/project.css">
+    <link rel="stylesheet" href="css/styles.css">
+   
     <style>
         .c-content {
             background: linear-gradient(to bottom, #C7867C, #F2AB93);
@@ -88,7 +80,7 @@
                 </div>
             </div>
 
-            <span class="c-scroll-icon icon-chevron-down" />
+            <span class="c-scroll-icon c-scroll-icon--nudge icon-chevron-down" />
         </div>
 
         <div class="c-main js-pin-section" style="height: 400vh">
@@ -125,7 +117,7 @@
                  data-width="50vw" 
                  data-popup-width="80vw">
 
-                <div class="c-popup__media u-ar u-ar--16/9">
+                <div class="c-popup__media u-ar u-ar--16:9">
                     <iframe class="u-ar__content"
                             src="https://player.vimeo.com/video/180182236?title=0&byline=0&portrait=0&badge=0" 
                             width="100%" height="100%"
@@ -184,6 +176,13 @@
                     Meer achtergrondinformatie:<br/>
                     <a href="http://www.oopoeh.nl">www.oopoeh.nl</a>
                 </p>
+
+                <div class="c-project-nav">
+                    <a class="c-project-nav__link" href="/index.html#projects">
+                        <span>Bekijk ook onze andere projecten</span> 
+                        <i class="icon-chevron-right"></i>
+                    </a>
+                </div>                
             </div>
         </div>
 
@@ -204,6 +203,6 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js"></script>
 
-    <script src="js/app.js"></script>    
+    <script src="js/app.es5.js"></script>    
 </body>
 </html>

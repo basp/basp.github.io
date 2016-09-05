@@ -38,6 +38,7 @@ $(() => {
 
 },{}],3:[function(require,module,exports){
 /// <reference path="../../typings/index.d.ts" />
+"use strict";
 require('./pin');
 require('./popup');
 require('./quote');
@@ -302,6 +303,15 @@ $(() => {
         tl.to($strong, 0.5, {
             backgroundSize: '100% 3px, 0% 3px'
         });
+        // FIXME: This is a huge smoke screen - needs abstraction
+        if (data.foo) {
+            const fromVars = { opacity: 0, ease: Linear.easeNone };
+            const toVars = { opacity: 1, ease: Linear.easeNone };
+            tl.fromTo('#quote-0', 1, fromVars, toVars, '-=0.8');
+            tl.call(() => {
+                $('.js-nudge').addClass('c-scroll-icon--nudge');
+            }, [], {}, '-=0.8');
+        }
         const opts = {
             triggerElement: data && data.triggerElement ? data.triggerElement : elem,
             triggerHook: data && data.triggerHook ? data.triggerHook : 0.5,

@@ -3,21 +3,13 @@
 <head>
     <title>RCOAK - Stichting OOPOEH</title>
 
+    <meta charset="UTF-8">
+
     <link rel="stylesheet" href="https://i.icomoon.io/public/832d0feea6/RCOAK/style.css">
 
-    <link rel="stylesheet" href="css/grid.css" />
-    <link rel="stylesheet" href="css/utils.css" />
-    <link rel="stylesheet" href="css/base.css" />
-    <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/nav.css" />
-    <link rel="stylesheet" href="css/popup.css" />
-    <link rel="stylesheet" href="css/preloader.css" />
-    <link rel="stylesheet" href="css/quote.css" />
-    <link rel="stylesheet" href="css/story.css" />
-    <link rel="stylesheet" href="css/title.css" />
-    <link rel="stylesheet" href="css/video.css" />
-    <link rel="stylesheet" href="css/project.css" />
-
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/project.css">
+   
     <style>
         #achtergrond {
             background: linear-gradient(to bottom, #252222, #603C56);
@@ -139,7 +131,7 @@
                 </div>
             </div>
 
-            <span class="c-scroll-icon  icon-chevron-down" />
+            <span class="c-scroll-icon c-scroll-icon--nudge  icon-chevron-down" />
         </div>
 
         <div class="c-main js-pin-section" style="height: 1000vh">
@@ -309,7 +301,7 @@
                 </div>                
             </div>
 
-            <span class="c-scroll-icon icon-chevron-down" style="top: 990vh" />
+            <span class="c-scroll-icon c-scroll-icon--nudge icon-chevron-down" style="top: 990vh" />
         </div><!-- c-main -->
     </div><!-- c-content -->
 
@@ -505,7 +497,7 @@
                 </div>
             </div>
 
-            <span class="c-scroll-icon icon-chevron-down" style="z-index: 100; top: 590vh" />
+            <span class="c-scroll-icon c-scroll-icon--nudge icon-chevron-down" style="z-index: 100; top: 590vh" />
         </div><!-- c-main -->        
     </div><!-- c-content -->
 
@@ -630,7 +622,8 @@
                     <div class="c-credits__label">Mogelijk gemaakt door</div>
                     <div class="c-credits__content" style="font-size: 5vh">
                         <span class="icon-logotext"></span>
-                        <span style="float: right" class="icon-sluyterman"></span>
+                        <br/>
+                        <span class="icon-sluyterman"></span>
                     </div>
                 </div>
                 <div class="c-credits">
@@ -638,6 +631,12 @@
                     <div class="c-credits__content">
                         Pré Wonen, Rochdale, STadgenoot, Bewonerscommissie De Drecht, Vrienden van De Drecht, Gemeente Deventer
                     </div>
+                </div>
+                <div class="c-project-nav">
+                    <a class="c-project-nav__link" href="/index.html#projects">
+                        <span>Bekijk ook onze andere projecten</span> 
+                        <i class="icon-chevron-right"></i>
+                    </a>
                 </div>
             </div>
         </div>
@@ -657,6 +656,6 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js"></script>
 
-    <script src="js/app.js"></script>    
+    <script src="js/app.es5.js"></script>    
 </body>
 </html>

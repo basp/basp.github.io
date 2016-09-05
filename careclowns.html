@@ -3,20 +3,12 @@
 <head>
     <title>RCOAK - CareClowns</title>
 
-    <link rel="stylesheet" href="https://i.icomoon.io/public/832d0feea6/RCOAK/style.css">
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="https://i.icomoon.io/public/832d0feea6/RCOAK/style.css">    
     
-    <link rel="stylesheet" href="css/grid.css" />
-    <link rel="stylesheet" href="css/utils.css" />
-    <link rel="stylesheet" href="css/base.css" />
-    <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/nav.css" />
-    <link rel="stylesheet" href="css/popup.css" />
-    <link rel="stylesheet" href="css/preloader.css" />
-    <link rel="stylesheet" href="css/quote.css" />
-    <link rel="stylesheet" href="css/story.css" />
-    <link rel="stylesheet" href="css/title.css" />
-    <link rel="stylesheet" href="css/video.css" />
-    <link rel="stylesheet" href="css/project.css" />
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/project.css">
 
     <style>
         .c-content {
@@ -24,7 +16,7 @@
         }
 
         .c-quote {
-            color: #9354BC;
+            color: #93719E;
         }
 
         .c-popup__media img {
@@ -36,7 +28,8 @@
         }
 
         .c-video-wrapper {
-            mix-blend-mode: lighten;
+            mix-blend-mode: normal;
+            opacity: 0.3;
         }
 
         .c-preloader__path {
@@ -91,7 +84,7 @@
                 </div>
             </div>
 
-            <span class="c-scroll-icon icon-chevron-down" />
+            <span class="c-scroll-icon c-scroll-icon--nudge icon-chevron-down" />
         </div>
 
         <div class="c-main js-pin-section" style="height: 350vh">
@@ -101,8 +94,13 @@
                         <span class="js-story__part" data-speed="fast" data-trigger-element="#image-1">
                             <span class="js-text">CareClowns zijn specialisten in het maken van respectvol contact met mensen met dementie.</span>
                         </span>
-                        <span class="js-story__part" data-speed="fast" data-trigger-element="#image-2">
+                        <span class="js-story__part" data-speed="fast" data-trigger-element="#video-1">
                             <span class="js-text">Daar is veel meer voor nodig dan even een rode neus opzetten.</span>    
+                        </span>
+                    </p>
+                    <p>
+                        <span class="js-story__part" data-speed="fast" data-trigger-element="#image-2">
+                            <span class="js-text">CareClowns zijn speciaal opgeleid om mee te gaan in de belevingswereld van deze mensen. Ze geven geen voorstelling, maar nodigen mensen onbevangen uit om via muziek en samenspel persoonlijk contact te maken.</span>
                         </span>
                     </p>
                 </div>
@@ -141,7 +139,7 @@
                     </div>
                 </div>
 
-                <div class="c-popup__story js-popup__story" data-speed="xfast">
+                <div class="c-popup__story js-popup__story" data-speed="xxfast">
                     <i class="icon-close c-popup__close js-popup__close"></i>
                     
                     <h3 class="js-text">Ter inspiratie</h2>
@@ -230,12 +228,8 @@
             </div>      
         </div>
 
-        <div style="left: 5vw; position: relative; width: 80vw; height: 100vh" class="grid">
-            <div class="grid__col grid__col--1-of-2" style="padding-top: 30vh">
-                <p>
-                    CareClowns zijn speciaal opgeleid om mee te gaan in de belevingswereld van deze mensen. Ze geven geen voorstelling, maar nodigen mensen onbevangen uit om via muziek en samenspel persoonlijk contact te maken.
-                </p>            
-            </div>
+        <div style="left: 5vw; position: relative; width: 90vw; height: 85vh" class="grid">
+            <div class="grid__col grid__col--1-of-2"></div>
             <div class="grid__col grid__col--1-of-2" style="padding-left: 5vw">
                 <p>
                     Een bezoek van CareClowns zorgt voor afwisseling. Met liefde en respect stemmen de clowns hun spel af op de belevingswereld van bewoners en maken oprecht contact. Door te zingen, dansen of gewoon even rustig samen zitten, net wat nodig is. Een CareClownsbezoek ontspant, geeft plezier, verwondert en ontroert. Ook na het bezoek ervaren activiteitenbegeleiders en verzorgenden vaak een positief effect op de mensen en de sfeer.
@@ -249,7 +243,14 @@
                 <p>
                     Meer achtergrondinformatie:<br/>
                     <a href="#">het effect van CareClowns bij dementerenden een inventariserend onderzoek</a>
-                </p>                
+                </p>     
+
+                <div class="c-project-nav">
+                    <a class="c-project-nav__link" href="/index.html#projects">
+                        <span>Bekijk ook onze andere projecten</span> 
+                        <i class="icon-chevron-right"></i>
+                    </a>
+                </div>                           
             </div>        
         </div>
     </div><!-- c-container -->
@@ -268,6 +269,6 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js"></script>
 
-    <script src="js/app.js"></script>    
+    <script src="js/app.es5.js"></script>    
 </body>
 </html>

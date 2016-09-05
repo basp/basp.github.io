@@ -3,20 +3,12 @@
 <head>
     <title>Het Straatpastoraat</title>
 
+    <meta charset="UTF-8">
+
     <link rel="stylesheet" href="https://i.icomoon.io/public/832d0feea6/RCOAK/style.css">
 
-    <link rel="stylesheet" href="css/grid.css" />
-    <link rel="stylesheet" href="css/utils.css" />
-    <link rel="stylesheet" href="css/base.css" />
-    <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/nav.css" />
-    <link rel="stylesheet" href="css/popup.css" />
-    <link rel="stylesheet" href="css/preloader.css" />
-    <link rel="stylesheet" href="css/quote.css" />
-    <link rel="stylesheet" href="css/story.css" />
-    <link rel="stylesheet" href="css/title.css" />
-    <link rel="stylesheet" href="css/video.css" />
-    <link rel="stylesheet" href="css/project.css" />
+    <link rel="stylesheet" href="css/project.css">
+    <link rel="stylesheet" href="css/styles.css">
 
     <style>
         .c-content {
@@ -86,7 +78,7 @@
                 </div>
             </div>
 
-            <span class="c-scroll-icon icon-chevron-down" />            
+            <span class="c-scroll-icon c-scroll-icon--nudge icon-chevron-down" />            
         </div>
 
         <div class="c-main js-pin-section" style="height: 400vh">
@@ -228,8 +220,12 @@
             </div>      
         </div><!-- c-main -->
 
-        <div style="left: 5vw; position: relative; width: 80vw; height: 75vh" class="grid">
-            <div class="grid__col grid__col--1-of-2" style="padding-top: 50vh">
+        <div style="left: 5vw; position: relative; width: 90vw; height: 75vh" class="grid">
+            <div class="grid__col grid__col--1-of-2">
+                <div class="c-story-spacer">
+                    De Protestantse Diaconie Amsterdam zet zich al eeuwenlang in voor een rechtvaardige en barmhartige samenleving.
+                    Zij ondersteunen dak- en thuislozen, vluchtelingen, mensen die eenzaam zijn of in armoede leven via diverse projecten w.o. het Straatpastoraat.
+                </div>
                 <p>Ook in Amsterdam horen dak- en thuislozen erbij. Hun ervaringen, talenten en inzichten zijn uniek en waardevol.</p>
             </div>
             <div class="grid__col grid__col--1-of-2" style="padding-left: 5vw">
@@ -241,10 +237,20 @@
                     <li>Hulp bij boetes voor bijv. slapen in het openbaar of wildplassen</li>
                     <li>Advies over uitkeringen, (zorg)verzekeringen, instanties en woonrecht</li>
                 </ul>
-                <p>Meer achtergrondinformatie:</p>
-                <p><a href="#">Straatpastoraat op YouTube kanaal</a></p>
-                <p><a href="#">Straatpastoraat op Facebook</a></p>
-            </div>        
+
+                <p>
+                    Meer achtergrondinformatie:<br/>
+                    <a href="#">Straatpastoraat op YouTube kanaal</a><br/>
+                    <a href="#">Straatpastoraat op Facebook</a>
+                </p>
+
+                <div class="c-project-nav">
+                    <a class="c-project-nav__link" href="/index.html#projects">
+                        <span>Bekijk ook onze andere projecten</span> 
+                        <i class="icon-chevron-right"></i>
+                    </a>
+                </div>        
+            </div>
         </div>
 
         <div style="height: 64px;"></div>
@@ -264,6 +270,6 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js"></script>
 
-    <script src="js/app.js"></script>    
+    <script src="js/app.es5.js"></script>    
 </body>
 </html>

@@ -1,26 +1,17 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html>
 <head>
     <title>RCOAK</title>
     
-    <script>
-        document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
-    </script>
-    
+    <meta charset="UTF-8">
+
     <link rel="stylesheet" href="https://i.icomoon.io/public/832d0feea6/RCOAK/style.css">
 
-    <link rel="stylesheet" href="css/grid.css" />
-    <link rel="stylesheet" href="css/utils.css" />
-    <link rel="stylesheet" href="css/base.css" />
-    <link rel="stylesheet" href="css/nav.css" />
-    <link rel="stylesheet" href="css/popup.css" />
-    <link rel="stylesheet" href="css/preloader.css" />
-    <link rel="stylesheet" href="css/quote.css" />
-    <link rel="stylesheet" href="css/story.css" />
-    <link rel="stylesheet" href="css/title.css" />
-    <link rel="stylesheet" href="css/video.css" />
-    <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <style>
+    </style>
 </head>
 
 <body>
@@ -70,7 +61,7 @@
     <section id="home" class="c-section js-pin-section">
         <div class="c-side-content" class="js-pin" data-trigger-element="home">
             <div class="c-story js-story">
-                <div class="js-story__part" data-speed="xfast">
+                <div class="js-story__part" data-speed="xfast" data-foo="1">
                     <p>
                         <span class="js-text js-text--strong">Geld nodig voor uw maatschappelijke project?</span>
                     </p>
@@ -93,7 +84,7 @@
                 </div>
             </div>            
 
-            <span style="left: 100%" class="c-scroll-icon icon-chevron-down" />
+            <span style="left: 100%" class="c-scroll-icon icon-chevron-down js-nudge" />
     </section>
 
     <div class="c-logo">
@@ -905,7 +896,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js"></script>    
    
-    <script src="js/app.js"></script>
+    <script src="js/app.es5.js"></script>    
 
     <script>
         $(function () {
