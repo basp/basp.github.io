@@ -30,6 +30,18 @@
         .c-preloader__path {
             stroke: #C7867C;
         }                        
+
+        .c-video-wrapper {
+            opacity: 0.7;
+        }
+
+        .c-popup__media iframe {
+            opacity: 0.7;
+        }
+
+        .c-blind {
+            background-color: #c9877d;
+        }
     </style>
 </head>
 <body>
@@ -104,9 +116,10 @@
             </div>
 
             <div id="video-1" class="c-popup js-popup" 
-                 style="top: 75vh; left: 5vw; width: 40vw;" 
-                 data-width="40vw" 
-                 data-popup-width="80vw">
+                 style="top: 75vh; right: 5vw; width: 50vw;" 
+                 data-width="50vw"
+                 data-right="5vw" 
+                 data-popup-width="70vw">
 
                 <div class="c-popup__media u-ar u-ar--16:9">
                     <iframe class="u-ar__content"
@@ -125,13 +138,15 @@
 
                 <div class="c-popup__story js-popup__story" data-speed="normal">
                     <i class="icon-close c-popup__close js-popup__close"></i>
+                    <h3 class="js-text">Stichting Zorgdier</h3>
                 </div>
             </div>
 
             <div id="video-2" class="c-popup js-popup" 
-                 style="top: 150vh; left: 5vw; width: 40vw;" 
+                 style="top: 180vh; right: 15vw; width: 40vw;" 
                  data-width="40vw" 
-                 data-popup-width="80vw">
+                 data-right="15vw"
+                 data-popup-width="60vw">
 
                 <div class="c-popup__media u-ar u-ar--16:9">
                     <iframe class="u-ar__content"
@@ -150,11 +165,12 @@
 
                 <div class="c-popup__story js-popup__story" data-speed="normal">
                     <i class="icon-close c-popup__close js-popup__close"></i>
+                    <h3 class="js-text">Stichting Zorgdier</h3>
                 </div>
             </div>
         </div><!-- c-main -->
 
-        <div style="left: 5vw; position: relative; width: 90vw; height: 75vh" class="grid">
+        <div style="left: 5vw; position: relative; width: 90vw; height: 100vh" class="grid">
             <div class="grid__col grid__col--1-of-2">
                 <div class="c-story-spacer">
                     Stichting ZorgDier Nederland startte 10 jaar geleden een initiatief waardoor mensen met eigen hond of kat wekelijks op bezoek gaan bij kwetsbare mensen die zelf de zorg voor hun dier niet meer kunnen dragen en die in veel gevallen ook niet meer zelfstandig wonen.

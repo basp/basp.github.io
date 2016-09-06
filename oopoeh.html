@@ -23,13 +23,17 @@
             stroke: #c7867c;
         }        
 
-        .c-popup__media img {
+        .c-popup__media img, .c-popup__media iframe {
             mix-blend-mode: darken;
         }            
 
-        .c-popup__media iframe {
-            mix-blend-mode: darken;
-        }                    
+        .c-video-wrapper {
+            opacity: 0.5;
+        }
+        
+        .c-blind {
+            background-color: #ada49b;
+        }
     </style>
 </head>
 <body>
@@ -83,7 +87,7 @@
             <span class="c-scroll-icon c-scroll-icon--nudge icon-chevron-down" />
         </div>
 
-        <div class="c-main js-pin-section" style="height: 400vh">
+        <div class="c-main js-pin-section" style="height: 300vh">
             <div class="c-pin js-pin" data-trigger-hook="0.25">
                 <div class="c-story js-story">
                     <p>
@@ -134,12 +138,12 @@
 
                 <div class="c-popup__story js-popup__story" data-speed="normal">
                     <i class="icon-close c-popup__close js-popup__close"></i>
-                    <h2 class="js-text">Oopoeh's aan het woord</h2>
+                    <h3 class="js-text">Oopoeh's aan het woord</h3>
                 </div>
             </div>
-        
+
             <div id="image-1" class="c-popup js-popup" 
-                 style="left: 0vw; width: 30vw; top: 225vh"
+                 style="left: 0vw; width: 30vw; top: 180vh"
                  data-width="30vw" 
                  data-popup-width="40vw"
                  data-left="0vw"
@@ -163,7 +167,7 @@
         </div><!-- c-main -->
 
         <div style="height: 75vh">
-            <div style="position: absolute; left: 55vw; width: 35vw;">
+            <div style="position: absolute; left: 55vw; width: 40vw;">
                 <p style="margin-bottom: 16px">
                     OOPOEH biedt alleenstaande ouderen laagdrempelige mogelijkheden om actiever te worden en het sociaal netwerk te vergroten. Door een vast oppasdier uit de buurt ontstaat er met de baasjes een vertrouwensrelatie, een echte vriendschap. Ook zal het contact tussen de mensen op straat en de ouderen, de OOPOEH’s, worden gestimuleerd door een huisdier. Een dier blijkt namelijk minstens net zo’n goede ‘conversation piece’ te zijn als het weer.
                 </p>

@@ -21,6 +21,17 @@
 
         .c-sitemap a {
             color: white;
+            background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff);
+            background-size: 0% 3px, 0% 3px;
+            background-repeat: no-repeat, no-repeat;
+            background-position: 0% 87%, 0% 50%;
+            padding-bottom: 4px;
+        }
+
+        .c-sitemap a:hover {
+            text-decoration: none;
+            transition: background-size 500ms;
+            background-size: 100% 3px, 0% 3px;
         }
 
         .c-sitemap ul {
@@ -58,7 +69,7 @@
             </div>  
         </div>
 
-        <div class="c-sitemap grid" style="padding-left: 10vw; padding-right: 10vw; padding-top: 20vh">
+        <div class="c-sitemap grid" style="padding-left: 5vw; padding-right: 5vw; padding-top: 20vh">
             <div class="grid__col grid__col--1-of-3">
                 <h2>
                     <a href="/index.html#projects">parelprojecten</a>

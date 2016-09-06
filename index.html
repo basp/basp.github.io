@@ -11,6 +11,14 @@
     <link rel="stylesheet" href="css/index.css">
 
     <style>
+        .c-blind {
+            background-color: #945750; 
+        }
+
+        .c-rotate-hint {
+            bottom: 10vh;
+            right: 10vw;
+        }
     </style>
 </head>
 
@@ -22,6 +30,12 @@
     </div>
 
     <div class="c-blind js-blind"></div>
+
+    <div class="c-rotate-hint">
+        <!--
+        <h1>ROTATE</h1>
+        -->
+    </div>
 
     <div class="c-menu">
         <div class="c-menu__logo">
@@ -87,11 +101,7 @@
             <span style="left: 100%" class="c-scroll-icon icon-chevron-down js-nudge" />
     </section>
 
-    <div class="c-logo">
-        <img src="img/logo.svg" />
-    </div>
-
-    <div id="quote-0" class="js-quote c-quote" style="top: 60vh; right: 5vw" data-trigger-hook="1.0">
+    <div id="quote-0" class="js-quote c-quote" style="top: 55vh; right: 5vw" data-trigger-hook="1">
         <span class="c-quote__txt js-quote__txt">scroll naar</span>
         <span class="c-quote__txt js-quote__txt">beneden om</span>
         <span class="c-quote__txt js-quote__txt">kennis te maken</span>
@@ -100,8 +110,12 @@
         <span class="c-quote__txt js-quote__txt">projecten</span>
     </div>
 
+    <div id="logo" class="c-logo">
+        <img src="img/logo.svg" />
+    </div>
+
     <section id="projects" class="c-section js-pin-section">
-        <div class="c-side-content js-pin" data-trigger-element="projects" data-duration="225">
+        <div class="c-side-content js-pin" data-trigger-element="projects" data-duration="250" style="z-index: 5">
             <h3 class="c-sub-nav-header">parelprojecten</h3>
             
             <nav class="c-sub-nav" class="js-story" style="color: white">
@@ -136,8 +150,8 @@
             </div>
 
             <div id="gewoon-bijzonder-preview" class="c-popup js-popup" 
-                style="width: 40vw; top: 5vh; right: 0vw"
-                data-width="40vw" 
+                style="width: 45vw; top: 5vh; right: 0vw"
+                data-width="45vw" 
                 data-popup-width="50vw"
                 data-speed="slow">
                     
@@ -167,9 +181,9 @@
             </div>      
 
             <div id="straatpastoraat-preview" class="c-popup js-popup" 
-                style="width: 40vw; top: 35vh; left: -45vw"
-                data-width="40vw"
-                data-left="-45vw"
+                style="width: 35vw; top: 60vh; left: -40vw"
+                data-width="35vw"
+                data-left="-40vw"
                 data-popup-left="-40vw" 
                 data-popup-width="50vw"
                 data-speed="slow">
@@ -201,7 +215,7 @@
             </div>      
 
             <div id="oopoeh-preview" class="c-popup js-popup" 
-                style="width: 40vw; top: 90vh; right: 10vw"
+                style="width: 40vw; top: 100vh; right: 20vw"
                 data-width="40vw" 
                 data-popup-width="50vw"
                 data-speed="slow">
@@ -263,7 +277,7 @@
             </div>
 
             <div id="careclowns-preview" class="c-popup js-popup" 
-                style="width: 40vw; top: 175vh; left: -40vw"
+                style="width: 40vw; top: 200vh; left: -40vw"
                 data-width="40vw" 
                 data-popup-width="50vw"
                 data-speed="slow">
@@ -295,8 +309,9 @@
             </div>    
 
             <div id="zorgdier-preview" class="c-popup js-popup" 
-                style="width: 40vw; top: 240vh; right: 0vw"
+                style="width: 40vw; top: 250vh; right: 20vw"
                 data-width="40vw" 
+                data-right="20vw"
                 data-popup-width="50vw"
                 data-speed="slow">
                 
@@ -627,7 +642,7 @@
         </div>
 
         <div class="c-main-content">
-            <article id="missies">
+            <article id="missies" class="c-article">
                 <div class="js-dim c-dim c-dim--anim" data-trigger-hook="0.05">                    
                     <h3 class="c-article__header">Missie</h3>
                 </div>
@@ -645,7 +660,7 @@
                 </div>
             </article>
 
-            <article id="geschiedenis">
+            <article id="geschiedenis" class="c-article">
                 <div class="js-dim c-dim c-dim--anim" data-trigger-hook="0.05">                    
                     <h3 class="c-article__header">Geschiedenis</h3>
                 </div>
@@ -675,7 +690,7 @@
                 </div>
             </article>
 
-            <article id="bestuur">
+            <article id="bestuur" class="c-article">
                 <div class="js-dim c-dim c-dim--anim" data-trigger-hook="0.05">                    
                     <h3 class="c-article__header">Bestuur en beheer</h3>
                     <p>Stichting RCOAK wordt bestuurd door het College van Regenten:</p>
@@ -712,7 +727,7 @@
                 </div>
             </article>
 
-            <article id="hofjes">
+            <article id="hofjes" class="c-article">
                 <div class="js-dim c-dim c-dim--anim" data-trigger-hook="0.05">
                     <h3 class="c-article__header">Hofjes</h3>
                 </div>
@@ -756,7 +771,7 @@
                 </div>
             </article>
 
-            <article id="samenwerkingen">
+            <article id="samenwerkingen" class="c-article">
                 <div class="js-dim c-dim c-dim--anim" data-trigger-hook="0.05">
                     <h3 class="c-article__header">Samenwerking met andere fondsen</h3>
                     <p>Stichting RCOAK werkt samen met een aantal fondsen die ook donaties verstrekken aan projecten gericht op de bevordering van de kwaliteit van leven van ouderen, zie www.fondsenvoorouderen.nl. Elk fonds stelt zijn eigen donatiebeleid vast, waardoor specifieke aandachtsgebieden of prioriteiten kunnen verschillen. Bij grotere projecten hecht Stichting RCOAK er waarde aan dat uw project ook wordt ondersteund door één of meer van de volgende fondsen:</p>
@@ -781,7 +796,7 @@
                 </div>
             </article>
 
-            <article id="jaarverslag">
+            <article id="jaarverslag" class="c-article">
                 <h3 class="c-article__header">Jaarverslag</h3>
 
                 <p>Stichting RCOAK streeft naar een transparant donatiebeleid en publiceert sinds 2003 een jaarverslag.</p>
@@ -845,7 +860,7 @@
             </article>
             -->
 
-            <article id="vragen">
+            <article id="vragen" class="c-article">
                 <div class="js-dim c-dim c-dim--anim" data-trigger-hook="0.05">
                     <h3 class="c-article__header">Vragen of opmerkingen?</h3>
                     <p>Aarzel niet om onderstaand formulier in te vullen.</p>

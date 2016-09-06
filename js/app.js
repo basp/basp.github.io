@@ -38,7 +38,6 @@ $(() => {
 
 },{}],3:[function(require,module,exports){
 /// <reference path="../../typings/index.d.ts" />
-"use strict";
 require('./pin');
 require('./popup');
 require('./quote');
@@ -307,6 +306,7 @@ $(() => {
         if (data.foo) {
             const fromVars = { opacity: 0, ease: Linear.easeNone };
             const toVars = { opacity: 1, ease: Linear.easeNone };
+            tl.fromTo('#logo', 1, fromVars, toVars, '-=0.8');
             tl.fromTo('#quote-0', 1, fromVars, toVars, '-=0.8');
             tl.call(() => {
                 $('.js-nudge').addClass('c-scroll-icon--nudge');

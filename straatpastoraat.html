@@ -30,6 +30,14 @@
         .c-popup__media iframe {
             mix-blend-mode: darken;
         }            
+
+        .c-video-wrapper {
+            opacity: 0.25;
+        }
+
+        .c-blind {
+            background-color: #95999a; 
+        }
     </style>
 </head>
 <body>
@@ -92,6 +100,11 @@
                             <span class="js-text">Zij ondersteunen dak- en thuislozen, vluchtelingen, mensen die eenzaam zijn of in armoede leven via diverse projecten w.o. het Straatpastoraat.</span>    
                         </span>
                     </p>
+                    <p>
+                        <span class="js-story__part" data-speed="fast" data-trigger-element="#image-4">
+                            <span class="js-text">Ook in Amsterdam horen dak- en thuislozen erbij. Hun ervaringen, talenten en inzichten zijn uniek en waardevol.</span>
+                        </span>
+                    </p>
                 </div>
             </div>
 
@@ -118,24 +131,31 @@
 
             <div id="image-1" class="c-popup js-popup" 
                  style="width: 40vw; top: 65vh; right: 20vw"
-                 data-width="50vw" 
+                 data-width="40vw" 
                  data-popup-width="70vw"
                  data-speed="slow">
      
                 <div class="c-popup__media">
                     <img class="u-responsive" src="img/straatpastoraat1.jpg">
                     <div class="c-popup__overlay js-popup__overlay">
+                        <div class="c-popup__icon js-popup__icon icon-zoom"
+                            data-trigger-hook="0.8"
+                            data-trigger-element="#image-1">
+                        </div>
+
+                        <!--
                         <div class="c-popup__icon js-popup__icon glyphicon glyphicon-search"
                             data-trigger-hook="0.8"
                             data-trigger-element="#image-1">
                         </div>
+                        -->
                     </div>
                 </div>
 
                 <div class="c-popup__story js-popup__story" data-speed="fast">
                     <i class="icon-close c-popup__close js-popup__close"></i>
 
-                    <h2 class="js-text">Daklozenkoor de straatklinkers</h2>
+                    <h3 class="js-text">Daklozenkoor de straatklinkers</h3>
                     <p class="js-text">"Optredens en oefenen van het daklozenkoor zijn de kleine hoogtepunten in de week." (Huub)</p>
                 </div>
             </div>      
@@ -159,7 +179,7 @@
                 <div class="c-popup__story js-popup__story" data-speed="fast">
                     <i class="icon-close c-popup__close js-popup__close"></i>
 
-                    <h2 class="js-text">De social media club</h2>
+                    <h3 class="js-text">De social media club</h3>
                     <p class="js-text">
                         Wekelijks komt een klein groepje bij elkaar om te werken op Facebook, Twitter en aan 
                         het <a href="#">eigen blog</a> van de Social Media Club. Eén van de activiteiten 
@@ -187,15 +207,17 @@
                 <div class="c-popup__story js-popup__story" data-speed="fast">
                     <i class="icon-close c-popup__close js-popup__close"></i>
 
-                    <h2 class="js-text">Zomerprogramma van het straatpastoraat</h2>
+                    <h3 class="js-text">Zomerprogramma van het straatpastoraat</h3>
                     <p class="js-text">"Er is een basis van vriendschap en tegemoetkoming zeker door de lange duur. Blij dat we er met elkaar nog zijn." (Marinus)</p>                        
                 </div>
             </div>      
 
             <div id="image-4" class="c-popup js-popup" 
-                 style="left: 5vw; width: 40vw; top: 290vh"
-                 data-width="40vw" 
-                 data-popup-width="50vw"
+                 style="left: 5vw; width: 60vw; top: 290vh"
+                 data-width="60vw" 
+                 data-left="5vw"
+                 data-popup-left="15vw"
+                 data-popup-width="60vw"
                  data-speed="slow">
                 
                 <div class="c-popup__media">
@@ -211,7 +233,7 @@
                 <div class="c-popup__story js-popup__story" data-speed="fast">
                     <i class="icon-close c-popup__close js-popup__close"></i>
 
-                    <h2 class="js-text">This occupation</h2>
+                    <h3 class="js-text">This occupation</h3>
                     <p class="js-text">Deelnemers van het Straatpastoraat met kunstenaar Tino Sehgal op de trap van het 
                         Stedelijk Museum. Deze groep vertolkte in de maand december het werk "This Occupation" van 
                         <a href="#">Tino Sehgal in het Stedelijk Museum</a>.
@@ -226,7 +248,6 @@
                     De Protestantse Diaconie Amsterdam zet zich al eeuwenlang in voor een rechtvaardige en barmhartige samenleving.
                     Zij ondersteunen dak- en thuislozen, vluchtelingen, mensen die eenzaam zijn of in armoede leven via diverse projecten w.o. het Straatpastoraat.
                 </div>
-                <p>Ook in Amsterdam horen dak- en thuislozen erbij. Hun ervaringen, talenten en inzichten zijn uniek en waardevol.</p>
             </div>
             <div class="grid__col grid__col--1-of-2" style="padding-left: 5vw">
                 <p>Het Straatpastoraat van de Protestantse Diaconie Amsterdam is er voor dak- en thuislozen met:</p>

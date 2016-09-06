@@ -34,6 +34,10 @@
         .c-preloader__path {
             stroke: #6e788c;
         }        
+
+        .c-blind {
+            background-color: #6e788c;
+        }
     </style>
 </head>
 <body>
@@ -86,7 +90,7 @@
             <span class="c-scroll-icon c-scroll-icon--nudge icon-chevron-down" />            
         </div>
 
-        <div class="c-main js-pin-section" style="height: 400vh">
+        <div class="c-main js-pin-section" style="height: 350vh">
             <div class="c-pin js-pin" data-trigger-hook="0.25">
                 <div class="c-story js-story">
                     <p>
@@ -115,7 +119,8 @@
             </div>
 
             <div id="video-1" class="c-popup js-popup" 
-                 style="top: 75vh; left: 5vw; width: 50vw;" 
+                 style="top: 75vh; right: 5vw; width: 50vw;"
+                 data-right="5vw" 
                  data-width="50vw" 
                  data-popup-width="80vw">
 
@@ -136,6 +141,7 @@
 
                 <div class="c-popup__story js-popup__story" data-speed="normal">
                     <i class="icon-close c-popup__close js-popup__close"></i>
+                    <h3 class="js-text">Een kennismaking met Diva Dichtbij</h3>
                 </div>
             </div>            
         </div><!-- c-main -->
