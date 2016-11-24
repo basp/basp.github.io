@@ -3,26 +3,35 @@
 
 <head>
     <title>Hi there!</title>
+
+    <style>
+        .c-input__command {
+            border: 0;
+            outline: none;
+        }
+    </style>
 </head>
 
 <body>
     <div id="root"></div>
+
     <script src="node_modules/mithril/mithril.js"></script>
     <script src="node_modules/jquery/dist/jquery.js"></script>
-    <script>
-        const KeyCode = {
-            Enter: 13
-        };
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
 
+    <script>
         const Direction = {
             In: 'in',
             Out: 'out'
         };
 
-        const messages = [];
+        const messages = m.prop([
+            { direction: Direction.Out, text: 'Welcome!' }
+        ]);
 
         const prompt = m.prop('>');
         const command = m.prop('');
+        const banner = m.prop('basp.github.io (c) 2016 [unknown version]');
 
         const Term = {
             controller: function () {
@@ -30,10 +39,17 @@
                     messages: messages,
                     prompt: prompt,
                     command: command,
+                    banner: banner,
                     exec: function (e) {
                         var input = e.target['value'], output;                  
 
                         try {
+                            // This naive `eval` will not work in such 
+                            // examples as "{ foo: 'quux', bar: 'frotz' }".
+                            // `q = { foo: 'quux', bar: 'frotz' }` *does* work
+                            // however. Wat?
+                            //
+                            // https://www.destroyallsoftware.com/talks/wat
                             output = eval(input);
                         }
                         catch (ex) {
@@ -45,8 +61,13 @@
                             };
                         }
 
-                        messages.push({
+                        messages().push({
                             direction: Direction.In,
+                            text: input
+                        });
+
+                        messages().push({
+                            direction: Direction.Out,
                             text: JSON.stringify(output)
                         });
 
@@ -56,8 +77,15 @@
                         // Apparently it is *too* fast so it tries to set
                         // focus even before redrawing the element (it 
                         // only happens when messages are pushed).
+                        //
+                        // To be fair to Mithril, this is a bit of an
+                        // uncommon use case and it's a browser specific 
+                        // timing bug that.
+                        //
+                        // And still I have this nagging gut feeling that 
+                        // I'm just doing it wrong.
                         setTimeout(() => {
-                            // I also hat involving jQuery in this hack
+                            // I also hate involving jQuery in this hack
                             // but it still *is* the most readable way to
                             // get to a DOM element if you have to fudge it.
                             $('.js-refocus-on-input').focus();
@@ -67,21 +95,25 @@
             },
 
             view: function (ctrl) {
-                const messages = ctrl.messages.map(msg => m('div', [                  
+                const messages = ctrl.messages().map(msg => m('div', [                  
                     m('span', msg.direction === Direction.In ? '>' : '<'),
                     m('span', msg.text)
                 ]));
                 
-                const prompt = m('div', [
+                const prompt = m('div', { class: 'c-input' }, [
                     m('span', ctrl.prompt()),
                     m('input', {
-                        class: 'js-refocus-on-input',
+                        class: 'js-refocus-on-input c-input__command',
+                        autofocus: true,
                         type: 'text',
                         onchange: ctrl.exec
                     })
                 ]);
 
+                const banner = m('div', { class: 'c-banner' }, ctrl.banner());
+
                 return m('div', [
+                    banner,
                     messages,
                     prompt
                 ]);
