@@ -50,7 +50,7 @@ But let's investigate further what we can do... Try this next:
 
 Holy cow, now we have a `Kirk` prompt! But wait we can do better. Try this next:
 
-    prompt(\`heh[{${user()}\`)
+    prompt(`heh[{${user()}`)
 
 And now the `Shikari` prompt should display something like: 
 
