@@ -8,9 +8,8 @@ Shikari is pretty much experimental. It currently depends on both
 can (or should) be easy to use and integrate.
 
 # Setup
-1. Start with a blank HTML file (`godzilla.html` for example).
-2. Make sure you include the dependies:
-```
+1. Start with a blank HTML file (`kirk.html` for example).
+2. Make sure you include the dependies: ```
 <script src="//code.jquery.com/jquery-3.1.1.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
 ```
