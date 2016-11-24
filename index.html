@@ -5,9 +5,16 @@
     <title>Hi there!</title>
 
     <style>
-        .c-input__command {
+        .c-term {
+            font-family: monospace;
+            font-size: 5vw;
+        }
+
+        .c-term__command {
             border: 0;
             outline: none;
+            font-family: monospace;
+            font-size: 5vw;
         }
     </style>
 </head>
@@ -95,15 +102,17 @@
             },
 
             view: function (ctrl) {
-                const messages = ctrl.messages().map(msg => m('div', [                  
+                const messages = ctrl.messages().map(msg => m('div', {
+                    class: 'c-term___message'
+                }, [                  
                     m('span', msg.direction === Direction.In ? '>' : '<'),
                     m('span', msg.text)
                 ]));
                 
-                const prompt = m('div', { class: 'c-input' }, [
+                const prompt = m('div', [
                     m('span', ctrl.prompt()),
                     m('input', {
-                        class: 'js-refocus-on-input c-input__command',
+                        class: 'js-refocus-on-input c-term__command',
                         autofocus: true,
                         type: 'text',
                         onchange: ctrl.exec
@@ -112,7 +121,7 @@
 
                 const banner = m('div', { class: 'c-banner' }, ctrl.banner());
 
-                return m('div', [
+                return m('div', { class: 'c-term'}, [
                     banner,
                     messages,
                     prompt
@@ -121,7 +130,8 @@
         };
 
         $(function () {
-            m.mount(document.getElementById('root'), Term);
+            const root = document.getElementById('root'); 
+            m.mount(root, Term);
         });
     </script>
 </body>
