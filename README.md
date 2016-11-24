@@ -15,7 +15,7 @@ can (or should) be easy to use and integrate.
 <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
 ```
 
-* Add a container somewhere *before* the dependencies.
+* Add a container:
 ```
 <div id="container">
 <script src="//code.jquery.com/jquery-3.1.1.js"></script>
@@ -25,3 +25,6 @@ can (or should) be easy to use and integrate.
 > TODO: Make sure `Shikari` can be used as *library*
 
 > TODO: Finish documentation on `Shikari` setup 
+
+# Demo
+I'm running `Shikari` on my *personal* page at [basp.github.io](https://basp.github.io) if you're curious.
