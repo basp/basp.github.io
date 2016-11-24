@@ -45,13 +45,14 @@
             Out: 'out'
         };
 
-        const messages = m.prop([
-            { direction: Direction.Out, text: 'Welcome!' }
-        ]);
-
         const prompt = m.prop('>');
         const command = m.prop('');
         const banner = m.prop('basp.github.io (c) 2016 [experimental version]');
+        const user = m.prop('guest');
+
+        const messages = m.prop([
+            { direction: Direction.Out, text: `Welcome ${user()}` }
+        ]);
 
         const Term = {
             controller: function () {
