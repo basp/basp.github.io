@@ -21,4 +21,5 @@ can (or should) be easy to use and integrate.
 <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
 
 > TODO: Make sure `Shikari` can be used as *library*
+
 > TODO: Finish documentation on `Shikari` setup 
