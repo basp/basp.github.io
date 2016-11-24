@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Hi there!</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script src="node_modules/mithril/mithril.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script>
+        const KeyCode = {
+            Enter: 13
+        };
+
+        const Direction = {
+            In: 'in',
+            Out: 'out'
+        };
+
+        const messages = [];
+
+        const prompt = m.prop('>');
+        const command = m.prop('');
+
+        const Term = {
+            controller: function () {
+                return {
+                    messages: messages,
+                    prompt: prompt,
+                    command: command,
+                    exec: function (e) {
+                        var input = e.target['value'], output;                  
+
+                        try {
+                            output = eval(input);
+                        }
+                        catch (ex) {
+                            output = { 
+                                // The type of `ex` is some weird *native*
+                                // thing that we can't just `JSON.stringify`
+                                // it seems.
+                                error: ex.toString() 
+                            };
+                        }
+
+                        messages.push({
+                            direction: Direction.In,
+                            text: JSON.stringify(output)
+                        });
+
+                        // This is quite hacky but it was the only way
+                        // to get the desired behavior on Chrome. 
+                        // 
+                        // Apparently it is *too* fast so it tries to set
+                        // focus even before redrawing the element (it 
+                        // only happens when messages are pushed).
+                        setTimeout(() => {
+                            // I also hat involving jQuery in this hack
+                            // but it still *is* the most readable way to
+                            // get to a DOM element if you have to fudge it.
+                            $('.js-refocus-on-input').focus();
+                        }, 0);
+                    }
+                };
+            },
+
+            view: function (ctrl) {
+                const messages = ctrl.messages.map(msg => m('div', [                  
+                    m('span', msg.direction === Direction.In ? '>' : '<'),
+                    m('span', msg.text)
+                ]));
+                
+                const prompt = m('div', [
+                    m('span', ctrl.prompt()),
+                    m('input', {
+                        class: 'js-refocus-on-input',
+                        type: 'text',
+                        onchange: ctrl.exec
+                    })
+                ]);
+
+                return m('div', [
+                    messages,
+                    prompt
+                ]);
+            }
+        };
+
+        $(function () {
+            m.mount(document.getElementById('root'), Term);
+        });
+    </script>
+</body>
+
+</html>

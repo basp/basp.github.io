@@ -1,0 +1,23 @@
+1. focus() doesn't work... in Chrome (of all browsers)
+2. apparently focus() doesn't work well with development console open
+3. *closes dev console*
+4. check again
+5. still doesn't work... that sucks
+6. opens dev console again
+7. starts logging to make sure event handlers work
+8. check
+9. wraps focus() in a `setTimeout` with 0 delay to just force it to back of the queue
+10. still doesn't work
+11. more debugging, logging, checking
+12. changes everything a few times back and forth, ends up at starting point
+13. notices the dev console is open... Wait... I didn't did I?
+14. closes dev console for the second time
+15. wraps the `focus()` in a `setTimeout` with 0 delay, again just to force it to the ends
+16. refreshes the page
+17. it @#$#@$@#$ works
+18. has a private facepalm moment
+19. removes all the clutter and fail safes and what-not
+20. it looks nice and simple, will it work?
+21. refresh the page.... anticipation....
+22. IT WORKS!
+
