@@ -5,23 +5,19 @@
     <title>Hi there!</title>
 
     <style>
-        .u-push-left {
-            padding-left: 16px;
-        }
-        
-        .u-push-right {
-            padding-right: 32px;
-        }
-        
         .u-force--inline-block {
             display: inline-block;
+        }
+
+        .u-force--one {
+            width: 10vw;
         }
         
         .c-term {
             font-family: monospace;
             font-size: 5vw;
         }
-        
+
         .c-term__command {
             border: 0;
             outline: none;
@@ -120,14 +116,14 @@
                     class: 'c-term___message'
                 }, [                  
                     m('span', {
-                        class: 'u-force--inline-block u-push-right'
+                        class: 'u-force--inline-block u-force--one'
                     },
-                    msg.direction === Direction.In ? '>' : '<'),
+                    msg.direction === Direction.In ? '>' : '<·'),
                     m('span', msg.text)
                 ]));
                 
                 const prompt = m('div', [
-                    m('span', { class: 'u-force--inline-block u-push-right' }, ctrl.prompt()),
+                    m('span', { class: 'u-force--inline-block u-force--one' }, ctrl.prompt()),
                     m('input', {
                         class: 'js-refocus-on-input c-term__command',
                         autofocus: true,
