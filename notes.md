@@ -63,7 +63,8 @@ die klant iets wil? En belangrijjker - waarom de gebruikers van een klant iets w
 van "het is beter". Ja tuurlijk is het beter, een klant zou wel gek zijn als dat niet zo was. 
 Maar waarom moet een ontwikkelaar elke keer weer ontcijferen *waarom* iets beter is hij of zij aan 
 het werk gaat? En als je zegt: "ja maar dat hoeft niet" dan zeg ik dat je project/product/team en alles 
-daaromheen gedoemd zijn. In dat geval, als je er echt zo over denkt, dan is het een *sinking ship*. 
+daaromheen gedoemd zijn. In dat geval, als je er echt zo over denkt, dan is het een *sinking ship*. Ik zou 
+daar echt over kunnen verhalen maar ik ben al weer veel te slecht bezig dut hou ik dat voor een ander keertje.
 
 # Testplannen
 Het aller aller aller belangrijkste is een testplan. Eigenlijk zou het *verboten*
