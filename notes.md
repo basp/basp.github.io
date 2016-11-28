@@ -155,7 +155,7 @@ redenen heb ik momenteel niet genoeg informatie om deze case "correct" te specif
 maar ik kan een aardige gok wagen:
 
 > Als veehouder zijn er een aantal kolommen in het kunstmestregistratieoverzicht die
-> dusdanig belangrijjk zijn dat ik hier zelf ook notities over bij heb. Het zou voor 
+> dusdanig belangrijjk zijn dat ik hier zelf ook administratie over bij houdt. Het zou voor 
 > mij extreem behulpzaam zijn als ik een manier heb om het totaal van meerdere
 > registraties te vergelijken met eventuele administratie die ik zelf al heb zodat ik
 > niet met een rekenmachine terzijde het kunstmestregistratiescherm hoef in te vullen
