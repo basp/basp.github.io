@@ -1,5 +1,5 @@
 # Scrum master
-Ik realiseer me heel goed dat het naar Peter stappen van mij over komt als
+Ik realiseer me heel goed dat het naar ### stappen van mij over komt als
 het omzeilen van authoriteit of net hoe dat je het wilt noemen maar dat is
 niet de manier waarop ik met elkaar om kan gaan.
 
@@ -42,9 +42,15 @@ waarmee je werkt). Issues vereisen text en uitleg voor het nageslacht, team-vera
 etc. 
 
 En mijn issue met de issues (no pun intended) is aan het hele team. Er zijn
-er een paar maar de meeste zijn belabberd. Ik denk dat dit niet persee onwil
-is maar wellicht de manier waarop we ze beschrijven en de verantwoordelijkheden
-die iedereen voelt. De issues zijn gewoon erg slecht. 
+niet een paar issues maar de *meeste* zijn belabberd. En mensen zijn er ook niet al
+te critisch over. Ik denk niet dat dit onwil is maar wellicht de manier waarop we ze 
+beschrijven en de verantwoordelijkheden die iedereen voelt. De issues zijn gewoon erg 
+slecht en dat is de schuld van heel het team. Hoeveel tijd zou het wel niet schelen
+als iemand eenmalig 5 minuten zou spenderen aan het beschrijven van de daadwerkelijke
+wens i.p.v. iets wat daar op lijkt? Denk je niet dat onwikkelaars veel minder tijd 
+nodig hebben om iedereen en elkaar "lastig te vallen" om informatie en duidelijkheid
+in te winnen? En alsjebliefft, geen "if", "or" or dat soort ongein. Beschrijf de issue
+nou eens daadwerkelijk vanuit een gebruikker en niet zomaar de naam van de klant. 
 
 # Testplannen
 Het aller aller aller belangrijkste is een testplan. Eigenlijk zou het *verboten*
