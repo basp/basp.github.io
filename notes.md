@@ -49,8 +49,17 @@ slecht en dat is de schuld van heel het team. Hoeveel tijd zou het wel niet sche
 als iemand eenmalig 5 minuten zou spenderen aan het beschrijven van de daadwerkelijke
 wens i.p.v. iets wat daar op lijkt? Denk je niet dat onwikkelaars veel minder tijd 
 nodig hebben om iedereen en elkaar "lastig te vallen" om informatie en duidelijkheid
-in te winnen? En alsjebliefft, geen "if", "or" or dat soort ongein. Beschrijf de issue
-nou eens daadwerkelijk vanuit een gebruikker en niet zomaar de naam van de klant. 
+in te winnen? En alsjebliefft, geen "if", "or" or dat soort ongein. 
+
+Beschrijf de issue nou eens daadwerkelijk vanuit een eindgebruiker (de veehouder, adviseur, 
+etc) en niet generiek vanuit de naam van een klant ("omdat hij/zij het nou eenmaal wil"). Die 
+klant is toch ook niet dom? Die gaat toch geen geld uitgeven omdat hij of zij zomaar
+"iets wil". Het is toch geen klein kind? Waarom is het zo moeilijk om ons te vertellen **waarom**
+die klant iets wil? En belangrijjker - waarom de gebruikers van een klant iets willen. In plaats
+van "het is beter". Ja tuurlijk is het beter, een klant zou wel gek zijn als dat niet zo was. 
+Maar waarom moet een ontwikkelaar dat elke keer weer ontcijferen voordat hij of zij aan het werk 
+gaat? En als je zegt: "ja maar dat hoeft niet" dan zeg ik dat je project/product/team en alles 
+daaromheen gedoemd zijn. In dat geval, als je er echt zo over denkt, dan is het een *sinking ship*. 
 
 # Testplannen
 Het aller aller aller belangrijkste is een testplan. Eigenlijk zou het *verboten*
