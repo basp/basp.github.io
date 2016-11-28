@@ -1,3 +1,7 @@
+> Het belangrijjkste aspect van software ontwikkeling is communicatie.
+> We kunnen ons het niet veroorloven om hier nalaltig te zijn of om er
+> laks mee om te gaan.
+
 # Scrum master
 Ik realiseer me heel goed dat het naar ### stappen van mij over komt als
 het omzeilen van authoriteit of net hoe dat je het wilt noemen maar dat is
