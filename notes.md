@@ -132,6 +132,8 @@ zelf niet eens wat er precies van ze verwacht wordt.
 niet goed kunnen vervullen.
 * En door bovengenoemde zaken opereren ze vaak in het spanningsveld tussen klant en uitvoerende 
 (ontwikkelaars) waardoor er een hoop druk bij komt en het er allemaal niet makkelijer op wordt.
+* En de *klant-product-owner" (`kpo`) ja dat is det is wel een beetje funest vaak als deze
+ook nog op de stoel van de programmeur gaat zitten.
 
 Echter, hoezeer ik de moeilijke rol en omstandigheden van de analist/surrogaat-po begrijjp er zijn een 
 paar dingen die ze beter kunnen doen:
