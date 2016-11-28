@@ -158,7 +158,16 @@ maar ik kan een aardige gok wagen:
 > dusdanig belangrijjk zijn dat ik hier zelf ook notities over bij heb. Het zou voor 
 > mij extreem behulpzaam zijn als ik een manier heb om het totaal van meerdere
 > registraties te vergelijken met eventuele administratie die ik zelf al heb zodat ik
-> niet met een rekenmachine terzijde het kunstmestregistratiescherm hoef in te vullen.
+> niet met een rekenmachine terzijde het kunstmestregistratiescherm hoef in te vullen
+> om de totalen te controleren. 
+
+Er is niets mis met deze omschrijving en ik zou deze als bijna perfect beschouwen echter:
+
+* Zonder nadere specificatie zal een ontwikkelaar naar de specialist moeten
+
+Of er is nadere specificatie in de vorm van (een relatief brede scope aan) test cases
+en/of nadere rekenregels (geen `of` en `and` a.u.b.). Denk als een kind: "waarom?". Dat is 
+wat we willen weten..
 
 Wat zien we:
 
