@@ -3,7 +3,7 @@
 > laks mee om te gaan.
 
 # Scrum master
-Ik realiseer me heel goed dat het naar ### stappen van mij over komt als
+Ik realiseer me heel goed dat het naar `<redacted>` stappen van mij over komt als
 het omzeilen van authoriteit of net hoe dat je het wilt noemen maar dat is
 niet de manier waarop ik met elkaar om kan gaan.
 
@@ -85,10 +85,10 @@ heeft deze impressies ook in meer of mindere mate).
 Dit was een zeer tekenend voorbeeld van vandaag wat ik tegenkwam (veelal door het feit
 dat ik me graag met elke issue op het bord bemoei):
 
-Thom is bezig met zogenaamde "totalen".  Ten eerste is deze functionaliteit zeer beperkt
+`<redaccted>` is bezig met zogenaamde "totalen".  Ten eerste is deze functionaliteit zeer beperkt
 beschreven in de PBI. Als noob heb je geen idee waar je zou moeten beginnen. Na navragen
 bleek er een "schermvoorbeeld" beschikbaar. Dit is vaak een fantastisch begin. Na wat 
-uitleg van Thom en het zien van het schermvoorbeeld begreep ik wat de functionaliteit
+uitleg van `<redacted>` en het zien van het schermvoorbeeld begreep ik wat de functionaliteit
 inhield. Nou zijn er inmiddels een paar zaken fout gegaan met verschillende redenen, ik 
 geef effe een opsomming van gedachten:
 
