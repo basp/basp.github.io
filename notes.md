@@ -163,11 +163,18 @@ maar ik kan een aardige gok wagen:
 
 Er is niets mis met deze omschrijving en ik zou deze als bijna perfect beschouwen echter:
 
-* Zonder nadere specificatie zal een ontwikkelaar naar de specialist moeten
+* Zonder nadere specificatie zal een ontwikkelaar naar de specialist moeten.
+
+PROTIP: 
+Dit hoeft niet erg te zijn, begroot een halft uurtje uitleg in je planning en als het goed
+is zou daarmee zelfs een relatief complexe bereking te doen moeten zijn. Begroot meer naar 
+gelang complexiteit/ervarenheid/affiniteit van de resource (werknemer) die je in gaat zetten.
+Als je iemand inzet die wellicht minder geschikt is maar wel interesse toont dan kweek je 
+kwalieit. 
 
 Of er is nadere specificatie in de vorm van (een relatief brede scope aan) test cases
 en/of nadere rekenregels (geen `of` en `and` a.u.b.). Denk als een kind: "waarom?". Dat is 
-wat we willen weten..
+wat we willen weten.
 
 Wat zien we:
 
