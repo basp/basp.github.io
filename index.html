@@ -5,25 +5,27 @@
     <title>Hi there!</title>
 
     <style>
+        /*
         .u-force--inline-block {
             display: inline-block;
         }
 
         .u-force--one {
-            width: 10vw;
+            width: 5vw;
         }
         
         .c-term {
             font-family: monospace;
-            font-size: 5vw;
+            font-size: 3vw;
         }
 
         .c-term__command {
             border: 0;
             outline: none;
             font-family: monospace;
-            font-size: 5vw;
+            font-size: 3vw;
         }
+        */
     </style>
 </head>
 
@@ -41,8 +43,12 @@
             Out: 'out'
         };
 
+        const KeyCode = {
+            Up: 38,
+            Down: 40
+        };
+
         const prompt = m.prop('>');
-        const command = m.prop('');
         const banner = m.prop('basp.github.io (c) 2016 [experimental version]');
         const user = m.prop('guest');
 
@@ -50,23 +56,18 @@
             { direction: Direction.Out, text: `Welcome ${user()}` }
         ]);
 
+        const input = $('.js-refocus-on-input');
+
         const Term = {
             controller: function () {
                 return {
                     messages: messages,
                     prompt: prompt,
-                    command: command,
                     banner: banner,
                     exec: function (e) {
                         var input = e.target['value'], output;                  
 
                         try {
-                            // This naive `eval` will not work in such 
-                            // examples as "{ foo: 'quux', bar: 'frotz' }".
-                            // `q = { foo: 'quux', bar: 'frotz' }` *does* work
-                            // however. Wat?
-                            //
-                            // https://www.destroyallsoftware.com/talks/wat
                             output = eval(input);
                         }
                         catch (ex) {
@@ -88,23 +89,7 @@
                             text: JSON.stringify(output)
                         });
 
-                        // This is quite hacky but it was the only way
-                        // to get the desired behavior on Chrome. 
-                        // 
-                        // Apparently it is *too* fast so it tries to set
-                        // focus even before redrawing the element (it 
-                        // only happens when messages are pushed).
-                        //
-                        // To be fair to Mithril, this is a bit of an
-                        // uncommon use case and it's a browser specific 
-                        // timing bug that.
-                        //
-                        // And still I have this nagging gut feeling that 
-                        // I'm just doing it wrong.
                         setTimeout(() => {
-                            // I also hate involving jQuery in this hack
-                            // but it still *is* the most readable way to
-                            // get to a DOM element if you have to fudge it.
                             $('.js-refocus-on-input').focus();
                         }, 0);
                     }
@@ -113,7 +98,7 @@
  
             view: function (ctrl) {
                 const messages = ctrl.messages().map(msg => m('div', {
-                    class: 'c-term___message'
+                    class: 'c-term__message'
                 }, [                  
                     m('span', {
                         class: 'u-force--inline-block u-force--one'
@@ -128,6 +113,17 @@
                         class: 'js-refocus-on-input c-term__command',
                         autofocus: true,
                         type: 'text',
+                        onkeydown: function (e) {
+                            if (e.keyCode === KeyCode.Up) {
+                                e.preventDefault();
+                                setTimeout(() => {
+                                    $('.js-refocus-on-input')
+                                        .focus()
+                                        .val('foo');                                                                        
+                                });
+                                return false;
+                            }
+                        },
                         onchange: ctrl.exec
                     })
                 ]);
