@@ -68,9 +68,13 @@ of je de issue functioneel correct geimplementeerd hebt? Mijn voorstel is dan oo
 ons proces veranderen en beginnen met het testplan. Ga desneeds maar met een analist 
 (or beter, product owner) zitten en bespreek maar wat de verwachtingen zijn.
 
-Ik heb in de 5 dagen tijd al meerder4e situaties gezien waar het niet duidelijk is hoe
-dit mis ging. Een ontwikkelaar krijgt een issue zonder testplan en probeert de issue
-te begrijpen met behulp van (de helaas) vaak beperkte aanwezige informatie. 
+Ik heb in de 5 dagen tijd al meerder4e situaties gezien waar de PBI niet duidelijk was en
+hoe dit uiteindeliljk mis ging. Een ontwikkelaar krijgt een issue zonder testplan en 
+probeert de issue te begrijpen met behulp van (de helaas) vaak beperkte aanwezige informatie. 
+Nou is me verteld dat ik "dingen niet groter moet maken als ze zijn" en dat was goed advies dus
+wellicht zie ik hier problemen die er niet structureel zijn. Echter het feit dat ze op mij
+als "tekened" overkomen schets wel enigzins de impressie die ze wekken (en denk eraan, de klant
+heeft deze impressies ook in meer of mindere mate). 
 
 ## Voorbeeld
 Dit was een zeer tekenend voorbeeld van vandaag wat ik tegenkwam (veelal door het feit
@@ -95,6 +99,40 @@ duidelijk verteld is hoe hij of zij deze kan testen.
 * In her 3-na beste geval zou een ontwikkelaar eerst een testplan 
 schrijven/controleren/aanvullen alvorens hij of zij aan het ontwikkelen gaat (hier is 
 vaak hulp bij nodig).
+* Ergste nog, het schermvoorbeeld bevatte een mix van realistisch ogende en onrealistisch ogende
+waardes. Een ervaren ontwikkelaar zou hier meteen over moeten struikelen maar ik kan me goed
+voorstellen dat een minder ervaren ontwikkelaar het scherm "as is" implementeerd. Er is namelijk
+gewoon niet genoeg info aanwezig om daadwerkelijk te snappen wat je moet doen.
+* Als je een schermvoorbeeld maakt, gebruik dan a.u.b. realistche waardes. Je hebt geen idee
+hoe nuttig dit is voor een ontwikkelaar. Juist door dit soort subtiele informatie kunnen we
+(hopelijk) eventuele problemen al vroegtijdig signaleren.
+* Als je geen idee hebt en je doet maar wat, gebruik dan overduidelijk niet 
+realischtische waardes maar gebruik nooit een combo want dat schept enorme onduidelijkheid en
+uiteindelijk alleen maar vertraging in de snelheid waarmee je backlog weggewerkt wordt.
+* Investeer wat meer tijd in issues en minder in verduidelijking van issues.
+* Issies dienen in normaal taalgebruik beschreven te worden. Als dit niet mogelijk is dan heb je 
+duidelijk geen goed begrip van de klantwens. Zelfs als de klant "frivole" wensen heeft dan nog
+zou je als analist/po in staat moeten zijn om de wens te vertalen.
+
+## De analyst
+* Ik wil de analist rol niet afschrijven maar wat doet deze voor ons? Or beter, wat is nu echt de
+verantwoordelijkheid van analist? "Klantwensen vertalen voor de programmeurs?" sorry maar dat is
+echt bullshit op de manier waarop we het nu doen.
+* Ik heb gezien dat analysten testplannen schrijven (als ik het goed heb)). Hier wordt ik erg blij 
+van. De testplannen zagen er ook erg goed uit. 
+* Echter analysten is gewoon een @#$ rol als ik het effe bot mag uitdrukken. Ik bedoel, vaak weten ze
+zelf niet eens wat er precies van ze verwacht wordt. 
+* Ze hebben ze te maken met zogenaamd *cat-herding* van programmeurs.
+* Als ergste, ze hebben vaak een dubbelfunctie als "surrogaat-product owner" waardoor ze beide taken
+niet goed kunnen vervullen.
+* En door bovengenoemde zaken opereren ze vaak in het spanningsveld tussen klant en uitvoerende 
+(ontwikkelaars) waardoor er een hoop druk bij komt en het er allemaal niet makkelijer op wordt.
+
+Echter, hoezeer ik de moeilijke rol en omstandigheden van de analist/surrogaat-po begrijjp er zijn een 
+paar dingen die ze beter kunnen doen:
+
+* Ga niet op de stoel van programmeur zitten, ik vertel jou toch ook niet dat een analyse 
+taak maar een uurtje of zo werk is? 
 
 Ok en nu terug naar het voorbeeld. Dit is de wens (van de klant, hopelijk) en helaas ben
 het specifieke scherm vergeten maar dat maakt niet uit voor het voorbeeld. De wens was als
@@ -103,6 +141,9 @@ volgt:
 * In een scherm will ik een gepivoteerde optelling (sommering) zien van een vooraf bekend
 aantal kolommoen. De bereking van de gepivoteerde optelling is afhankelijk van de kolom
 die gepivoteerd wordt. 
+
+Laten we wel wezen, de wens was half niet zo duidelijk beschreven als hier (ik kan
+voorschiedenis/info missen) en het was meer "berekening totalen".
 
 Veel teams verplichten dit in een bepaald formaat. Helaas door een x-aantal bovengenoemde
 redenen heb ik momenteel niet genoeg informatie om deze case "correct" te specificieren 
