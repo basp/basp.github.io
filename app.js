@@ -54,10 +54,8 @@ $(function () {
 
     // We are going to treat every key press as a potentially
     // expensive operation (a promise eventually) so we need to 
-    // wrap them accordingly. 
-    // 
-    // This is just a small factory function to reduce clutter in 
-    // the meat of the code.
+    // wrap them accordingly. This is just a small factory 
+    // function to reduce clutter in the meat of the code.
     const handle = x => {
         event.preventDefault();
         m.startComputation();
