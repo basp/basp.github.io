@@ -5,17 +5,14 @@ $(function () {
 
     const Debug = {
         controller: function () {
-            return {
-                command: command()
-            };
         },
 
         view: function (ctrl) {
-            // return m('pre', ctrl.command);
+            return m('pre', `> ${command()}`);
         }
     }
 
-    const Prompt = {
+   const Prompt = {
         controller: function () {
             return {
                 exec: function (e) {
@@ -23,7 +20,7 @@ $(function () {
                 }
             };
         },
-        
+
         view: function (ctrl) {
             var input = m('input', {
                 type: 'text',
@@ -57,13 +54,25 @@ $(function () {
                     });
                 }
             });
+
+            return input;
         }
     };
 
-    const App {
+    const App = {
+        controller: function () {
 
+        },
+
+        view: function (ctrl) {
+            return m('div', [
+                Debug,
+                Prompt
+            ]);
+        }
     }
 
+   
     const app = document.getElementById('app');
-    m.mount(app, Prompt);
+    m.mount(app, App);
 });
