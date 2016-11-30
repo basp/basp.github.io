@@ -25,12 +25,18 @@ $(function () {
             return m('input', {
                 type: 'text',
                 config: function (el, isInitialized) {
+                    // We don't want to run this config function
+                    // more than once. Mithril will make sure that
+                    // the `isInitialized` argument is falsy.
                     if (isInitialized) return;
+
                     $(el).keydown(function (e) {
                         if (handlers[e.keyCode]) {
                             return handlers[e.keyCode]();
                         }
 
+                        // No handler? No problem!
+                        // Just let the event go bubble up.
                         return true;
                     });
                 }
@@ -48,9 +54,11 @@ $(function () {
     };
 
     // We are going to treat every key press as a potentially
-    // expensive operation (promise) so we need to wrap them
-    // accordingly. This is just a small factory function to
-    // reduce clutter in the meat of the code.
+    // expensive operation (a promise eventually) so we need to 
+    // wrap them accordingly. 
+    // 
+    // This is just a small factory function to reduce clutter in 
+    // the meat of the code.
     const handle = x => {
         event.preventDefault();
         m.startComputation();
