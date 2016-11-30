@@ -15,12 +15,6 @@ $(function () {
     };
 
     const Prompt = {
-        controller: function () {
-            return {
-                command
-            };
-        },
-
         // Mithril will take care of passing along `handlers`
         // via the top level `App` component.
         view: function (ctrl, handlers) {
