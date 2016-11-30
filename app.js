@@ -1,86 +1,86 @@
 $(function () {
-    const command = m.prop('');
+    const KeyCode = {
+        UP: 38,
+        DOWN: 40,
+        ENTER: 13
+    };
 
-    command('foo');
+    const command = m.prop('');
+    const messages = m.prop([]);
 
     const Debug = {
-        controller: function () {
-        },
-
-        view: function (ctrl) {
+        view: function () {
             return m('pre', `> ${command()}`);
         }
-    }
-
-    const exec = x => {
-        console.log(x);
     };
 
     const Prompt = {
         controller: function () {
             return {
-                exec,
                 command
             };
         },
 
-        view: function (ctrl) {
-            var input = m('input', {
+        view: function (ctrl, handlers) {
+            return m('input', {
                 type: 'text',
                 config: function (el, isInitialized) {
                     if (isInitialized) return;
-
-                    const $el = $(el);
-
-                    const handle = x => {
-                        event.preventDefault();
-                        m.startComputation();
-                        const ret = x();
-                        m.endComputation();
-                        return ret;
-                    };
-
-                    $el.keydown(function (e) {
-                        switch(e.keyCode)
-                        {
-                            case 38:
-                                handle(() => ctrl.command('UP'));
-                                return false;
-                            case 40:
-                                handle(() => ctrl.command('DOWN'));
-                                return false;
-                            case 13:
-                                const h = () => {
-                                    ctrl.command(e.target['value']);
-                                    e.target['value'] = '';
-                                    ctrl.exec(`exec ${ctrl.command()}`);
-                                };
-                                return handle(h);
-                            default:
-                                return true;
+                    $(el).keydown(function (e) {
+                        if (handlers[e.keyCode]) {
+                            return handlers[e.keyCode]();
                         }
-                    });
-                },
-            });
 
-            return input;
+                        return true;
+                    });
+                }
+            });
         }
     };
 
     const App = {
-        controller: function () {
-
-        },
-
-        view: function (ctrl) {
+        view: function (ctrl, handlers) {
             return m('div', [
                 Debug,
-                Prompt
+                m(Prompt, handlers)
             ]);
         }
-    }
+    };
 
+    // We are going to treat every key press as a potentially
+    // expensive operation (promise) so we need to wrap them
+    // accordingly. This is just a small factory function to
+    // reduce clutter in the meat of the code.
+    const handle = x => {
+        event.preventDefault();
+        m.startComputation();
+        const ret = x();
+        m.endComputation();
+        return ret;
+    };
+
+    const handlers = {};
+
+    handlers[KeyCode.UP] = () => {
+        handle(() => command('UP'));
+        return false;
+    };
+
+    handlers[KeyCode.DOWN] = () => {
+        handle(() => command('DOWN'));
+        return false;
+    };
+
+    handlers[KeyCode.ENTER] = () => {
+        const h = () => {
+            command(event.target['value']);
+            event.target['value'] = '';
+            console.log(`> ${command()}`);
+        };
+
+        return handle(h);
+    };
 
     const app = document.getElementById('app');
-    m.mount(app, App);
+    m.mount(app, m(App, handlers));
 });
