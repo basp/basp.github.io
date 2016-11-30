@@ -6,8 +6,8 @@ $(function () {
     };
 
     const command = m.prop('');
-    const messages = m.prop([]);
-
+    const history = m.prop([]);
+ 
     const Debug = {
         view: function () {
             return m('pre', `> ${command()}`);
@@ -21,6 +21,8 @@ $(function () {
             };
         },
 
+        // Mithril will take care of passing along `handlers`
+        // via the top level `App` component.
         view: function (ctrl, handlers) {
             return m('input', {
                 type: 'text',
@@ -45,6 +47,9 @@ $(function () {
     };
 
     const App = {
+        // Note the `handlers` parameter. That is our
+        // service layer. That is, the real meat of the
+        // app (injected via the main function).
         view: function (ctrl, handlers) {
             return m('div', [
                 Debug,
@@ -67,6 +72,8 @@ $(function () {
         return ret;
     };
 
+    // Sadly we can't nicely inline our `KeyCode` 
+    // as a key for another literal. Ah well.
     const handlers = {};
 
     handlers[KeyCode.UP] = () => {
@@ -81,14 +88,17 @@ $(function () {
 
     handlers[KeyCode.ENTER] = () => {
         const h = () => {
-            command(event.target['value']);
+            let input = event.target['value'];
             event.target['value'] = '';
-            console.log(`> ${command()}`);
+            command(input);
+            history().push(input);
         };
-
         return handle(h);
     };
 
+    // This is just a small ritual to bootstrap the
+    // app. Note that all our functionality is injected
+    // via the `handlers` service.
     const app = document.getElementById('app');
     m.mount(app, m(App, handlers));
 });
