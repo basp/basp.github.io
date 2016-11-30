@@ -8,7 +8,7 @@ $(function () {
     const command = m.prop('');
     const history = m.prop([]);
  
-    const Debug = {
+    const Echo = {
         view: function () {
             return m('pre', `> ${command()}`);
         }
@@ -52,7 +52,7 @@ $(function () {
         // app (injected via the main function).
         view: function (ctrl, handlers) {
             return m('div', [
-                Debug,
+                Echo,
                 m(Prompt, handlers)
             ]);
         }
