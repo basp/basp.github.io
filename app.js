@@ -7,7 +7,7 @@ $(function () {
 
     const command = m.prop('');
     const history = m.prop([]);
- 
+
     const Echo = {
         view: function () {
             return m('pre', `> ${command()}`);
@@ -57,15 +57,18 @@ $(function () {
     // wrap them accordingly. This is just a small factory 
     // function to reduce clutter in the meat of the code.
     const handle = x => {
-        event.preventDefault();
         m.startComputation();
         const ret = x();
         m.endComputation();
+        if (!ret) {
+            // Handler does not want us to bubble.
+            event.preventDefault();
+        }
         return ret;
     };
 
     // Sadly we can't nicely inline our `KeyCode` 
-    // as a key for another literal. Ah well.
+    // as a key for another literal. Ah well...
     const handlers = {};
 
     handlers[KeyCode.UP] = () => {
