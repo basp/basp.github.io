@@ -45,7 +45,7 @@ $(function () {
         meta: () => StringResource.help.Message,
 
         view: function (ctrl, args) {
-            var attrs = {
+            const attrs = {
                 config: function () {
                     console.log(`CONFIG ${args}`);
                 }
