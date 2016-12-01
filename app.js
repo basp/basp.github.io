@@ -156,15 +156,10 @@ handlers[KeyCode.ENTER] = () => {
     return handle(h);
 };
 
-const Help = () => StringResource.help.general;
-Help.meta = () => `This is the help function. Try invoking with help().`;
+const help = () => StringResource.help.general;
+help.meta = () => `This is the help function. Try invoking with help().`;
    
 $(function () {
-    // Hook up our whole `meta` thing to a global `help`
-    // function so we can provide some guidance to the user
-    // if he or she types "help" or "help()".
-    window.help = Help;
-
     // This is just a small ritual to bootstrap the
     // app. Note that all our functionality is injected
     // via the `handlers` argument right here.
