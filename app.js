@@ -157,7 +157,7 @@ handlers[KeyCode.ENTER] = () => {
 };
 
 const help = () => StringResource.help.general;
-help.meta = () => `This is the help function. Try invoking with help().`;
+help.meta = () => `This is the help function. Try invoking it with help().`;
    
 $(function () {
     // This is just a small ritual to bootstrap the
