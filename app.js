@@ -1,4 +1,5 @@
 const StringResource = {
+    banner: `You just [object window] to love JavaScript!`,
     help: {
         general: `Try inspecting stuff just by asking for it. Anything that returns something is a result! You could start by asking about Prompt, Output and Message and hopefully pickup some leads along the way. Good luck and have fun!`,
         Message: `This represents what used to be called a line of output in the old days. Nowaways we'll just use this fancy thing.`,
@@ -8,11 +9,12 @@ const StringResource = {
 };
 
 $(function () {
-    // Poor man's VM stand-in
-    function exec(input) {
+    // Poor man's VM stand-in. This will surely end up in
+    // its own file(s) at some point but for now it will do.
+    function exec(inp) {
         var out;
         try {
-            const ret = eval(input);
+            const ret = eval(inp);
             if (!ret) {
                 return `After evaluation of the input we got a falsy result.`;
             }
@@ -20,7 +22,7 @@ $(function () {
                 return JSON.stringify(ret.meta());
             }
             if (typeof ret === 'function') {
-                return `This seems to be something that you can invoke, try typing "${input}()".`;
+                return `This seems to be something that you can invoke, try typing "${inp}()".`;
             }
             return JSON.stringify(ret);
         }
@@ -37,13 +39,19 @@ $(function () {
 
     const command = m.prop('');
     const history = m.prop([]);
-    const output = m.prop('');
+    const output = m.prop(StringResource.banner);
 
     const Message = {
         meta: () => StringResource.help.Message,
 
         view: function (ctrl, args) {
-            return m('div', [
+            var attrs = {
+                config: function () {
+                    console.log(`CONFIG ${args}`);
+                }
+            };
+
+            return m('div', attrs, [
                 m('span', args.direction),
                 m('span', args.message)
             ]);
@@ -54,6 +62,7 @@ $(function () {
         meta: () => StringResource.help.Output,
 
         view: function () {
+            console.log(output());
             return m('div', { class: 'c-output' }, output());
         }
     };
@@ -64,7 +73,7 @@ $(function () {
         // Mithril will take care of passing along `handlers`
         // via the top level `App` component.
         view: function (ctrl, handlers) {
-            var input = m('input', {
+            const attrs = {
                 type: 'text',
                 config: function (element, isInitialized) {
                     // We don't want to run this config function
@@ -82,9 +91,11 @@ $(function () {
                         return true;
                     });
                 }
-            });
+            };
 
-            return m('div', [input]);
+            return m('div', [
+                m('input', attrs)
+            ]);
         }
     };
 
@@ -132,19 +143,17 @@ $(function () {
     };
 
     handlers[KeyCode.ENTER] = () => {
-        const input = event.target['value'];
+        const inp = event.target['value'];
         const h = () => {
             const msg = {
                 direction: 'IN',
-                message: input
+                message: inp
             };
-
-            const out = exec(input);
-
+            const outp = exec(inp);
             history().push(msg);
-            command(input);
-            output(out);
-            event.target['value'] = '';
+            command(inp);
+            output(outp);
+            event.target['value'] = '';            
             return false;
         };
         return handle(h);
