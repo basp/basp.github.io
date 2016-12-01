@@ -1,4 +1,34 @@
+const StringResource = {
+    help: {
+        general: `Try inspecting stuff just by asking for it. Anything that returns something is a result! You could start by asking about Prompt, Output and Message and hopefully pickup some leads along the way. Good luck and have fun!`,
+        Message: `This represents what used to be called a line of output in the old days. Nowaways we'll just use this fancy thing.`,
+        Prompt: `This is your basic prompt, you can type stuff into it, press the big key (that's enter or return) and hope for interesting results. Experiment!`,
+        Output: `This thing is responsible for showing the output after you execute something using the Prompt.`
+    }
+};
+
 $(function () {
+    // Poor man's VM stand-in
+    function exec(input) {
+        var out;
+        try {
+            const ret = eval(input);
+            if (!ret) {
+                return `After evaluation of the input we got a falsy result.`;
+            }
+            if (ret.meta) {
+                return JSON.stringify(ret.meta());
+            }
+            if (typeof ret === 'function') {
+                return `This seems to be something that you can invoke, try typing "${input}()".`;
+            }
+            return JSON.stringify(ret);
+        }
+        catch (ex) {
+            return ex.toString();
+        }
+    }
+
     const KeyCode = {
         UP: 38,
         DOWN: 40,
@@ -7,26 +37,42 @@ $(function () {
 
     const command = m.prop('');
     const history = m.prop([]);
+    const output = m.prop('');
 
-    const Echo = {
+    const Message = {
+        meta: () => StringResource.help.Message,
+
+        view: function (ctrl, args) {
+            return m('div', [
+                m('span', args.direction),
+                m('span', args.message)
+            ]);
+        }
+    }
+
+    const Output = {
+        meta: () => StringResource.help.Output,
+
         view: function () {
-            return m('pre', `> ${command()}`);
+            return m('div', { class: 'c-output' }, output());
         }
     };
 
     const Prompt = {
+        meta: () => StringResource.help.Prompt,
+
         // Mithril will take care of passing along `handlers`
         // via the top level `App` component.
         view: function (ctrl, handlers) {
-            return m('input', {
+            var input = m('input', {
                 type: 'text',
-                config: function (el, isInitialized) {
+                config: function (element, isInitialized) {
                     // We don't want to run this config function
                     // more than once. Mithril will make sure that
                     // the `isInitialized` argument is falsy.
                     if (isInitialized) return;
 
-                    $(el).keydown(function (e) {
+                    $(element).keydown(function (e) {
                         if (handlers[e.keyCode]) {
                             return handlers[e.keyCode]();
                         }
@@ -37,17 +83,21 @@ $(function () {
                     });
                 }
             });
+
+            return m('div', [input]);
         }
     };
 
     const App = {
+        meta: () => StringResource.help.general,
+
         // Note the `handlers` parameter. That is our
         // service layer. That is, the real meat of the
         // app (injected via the main function).
         view: function (ctrl, handlers) {
             return m('div', [
-                Echo,
-                m(Prompt, handlers)
+                m(Prompt, handlers),
+                Output
             ]);
         }
     };
@@ -59,11 +109,11 @@ $(function () {
     const handle = x => {
         m.startComputation();
         const ret = x();
-        m.endComputation();
         if (!ret) {
             // Handler does not want us to bubble.
             event.preventDefault();
         }
+        m.endComputation();
         return ret;
     };
 
@@ -82,18 +132,34 @@ $(function () {
     };
 
     handlers[KeyCode.ENTER] = () => {
+        const input = event.target['value'];
         const h = () => {
-            let input = event.target['value'];
-            event.target['value'] = '';
+            const msg = {
+                direction: 'IN',
+                message: input
+            };
+
+            const out = exec(input);
+
+            history().push(msg);
             command(input);
-            history().push(input);
+            output(out);
+            event.target['value'] = '';
+            return false;
         };
         return handle(h);
     };
 
+    // Hook up our whole `meta` thing to a global `help`
+    // function so we can provide some guidance to the user
+    // if he or she types "help" or "help()".
+    const Help = () => StringResource.help.general;
+    Help.meta = () => `This is the help function. Try invoking with help().`;
+    window.help = Help;
+
     // This is just a small ritual to bootstrap the
     // app. Note that all our functionality is injected
-    // via the `handlers` service.
+    // via the `handlers` argument right here.
     const app = document.getElementById('app');
     m.mount(app, m(App, handlers));
 });
