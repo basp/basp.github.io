@@ -156,6 +156,8 @@ handlers[KeyCode.ENTER] = () => {
     return handle(h);
 };
 
+// Make sure the user gets some feedback when typing
+// either `help` or `help()`.
 const help = () => StringResource.help.general;
 help.meta = () => `This is the help function. Try invoking it with help().`;
    
