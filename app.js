@@ -133,13 +133,11 @@ $(function () {
     const handlers = {};
 
     handlers[KeyCode.UP] = () => {
-        handle(() => command('UP'));
-        return false;
+        return handle(() => command('UP'));
     };
 
     handlers[KeyCode.DOWN] = () => {
-        handle(() => command('DOWN'));
-        return false;
+        return handle(() => command('DOWN'));
     };
 
     handlers[KeyCode.ENTER] = () => {
