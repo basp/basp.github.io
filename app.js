@@ -1,5 +1,5 @@
 const StringResource = {
-    banner: `You just [object window] to love JavaScript!`,
+    banner: `You gotta [object window] to love JavaScript!`,
     help: {
         general: `Try inspecting stuff just by asking for it. Anything that returns something is a result! You could start by asking about Prompt, Output and Message and hopefully pickup some leads along the way. Good luck and have fun!`,
         Message: `This represents what used to be called a line of output in the old days. Nowaways we'll just use this fancy thing.`,
@@ -74,6 +74,7 @@ const Prompt = {
     view: function (ctrl, handlers) {
         const attrs = {
             type: 'text',
+            class: 'c-prompt',
             config: function (element, isInitialized) {
                 // We don't want to run this config function
                 // more than once. Mithril will make sure that
