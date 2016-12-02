@@ -61,7 +61,6 @@ const Output = {
     meta: () => StringResource.help.Output,
 
     view: function () {
-        console.log(output());
         return m('div', { class: 'c-output' }, output());
     }
 };
