@@ -19,11 +19,6 @@
   </url>
   
   <url>
-    <loc>https://basp.github.io/posts/procedures-and-functions/</loc>
-    <lastmod>2018-01-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://basp.github.io/tags/bootstrap/</loc>
     <priority>0</priority>
   </url>
@@ -69,12 +64,6 @@
   </url>
   
   <url>
-    <loc>https://basp.github.io/posts/</loc>
-    <lastmod>2018-01-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://basp.github.io/projects/</loc>
     <priority>0</priority>
   </url>
@@ -96,7 +85,6 @@
   
   <url>
     <loc>https://basp.github.io/</loc>
-    <lastmod>2018-01-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

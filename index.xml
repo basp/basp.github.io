@@ -6,7 +6,6 @@
     <description>Recent content on chances are nil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 04 Jan 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://basp.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -45,15 +44,6 @@
       
       <guid>https://basp.github.io/projects/project4/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>procedures and functions</title>
-      <link>https://basp.github.io/posts/procedures-and-functions/</link>
-      <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://basp.github.io/posts/procedures-and-functions/</guid>
-      <description>In the Pascal programming language, there&amp;rsquo;s a clear distinction between callable code that returns a result and callable code that returns nothing. They are called function and procedure respectively. Most programming languages don&amp;rsquo;t really bother to make such a distinction though. Often, procedures are indicated by using a special-purpose none (or null) type. In the C-family of programming languages, this type is called void and in functional programming languages they often call it the unit type.</description>
     </item>
     
   </channel>
