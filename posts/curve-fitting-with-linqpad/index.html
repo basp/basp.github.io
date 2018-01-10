@@ -140,13 +140,15 @@
 
     <br> <div class="text-justify">
 
-<h3 id="tldr">tldr</h3>
+<p>Is <strong>LINQPad</strong> a replacement for the likes of <strong>R</strong>, <strong>IPython</strong> and <strong>MATLAB</strong>?</p>
 
-<p>Is <strong>LINQPad</strong> a replacement for the likes of <strong>R</strong>, <strong>IPython</strong> and <strong>MATLAB</strong>? Probably not. Yet, thanks to some nifty libraries, it does come pretty close nowadays.</p>
+<p>Probably not.</p>
 
-<p>Today we&rsquo;re going to look at doing some curve fitting for dummies. We&rsquo;re going to use <strong>Math.NET Numerics</strong> to do the heavy lifting and <strong>OxyPlot</strong> for <strong>WPF</strong> to render our results. Now, you could do this all this just from a console or windows app and it would work. It would however be a lot less fun, a lot more tedious and a lot slower as well.</p>
+<p>Yet, thanks to some nifty libraries, it can come pretty close nowadays.</p>
 
-<p>The main reason why LINQPad is so great for doing this kind of exploratory programming is because thanks to the awesome <code>Dump</code> extension method that is available on any object. The method is already super useful in itself but it&rsquo;s even more awesome in our case. That&rsquo;s because it&rsquo;s also smart enough to render WPF controls when <code>Dump</code> is invoked on those. This means we don&rsquo;t need any application infrastructure to render our results because LINQPad will provide that for us.</p>
+<h3 id="summary">summary</h3>
+
+<p>We&rsquo;re going to look at doing some <em>curve fitting</em> for programmers using <strong>Math.NET Numerics</strong> to do the heavy lifting and <strong>OxyPlot</strong> for <strong>WPF</strong> to render our results. We&rsquo;ll be doing this from <strong>LINQPad</strong> so we can evaluate our results interactively (although you could follow along in any other <strong>.NET</strong> application type).</p>
 
 <h3 id="setup">setup</h3>
 
@@ -237,13 +239,13 @@ var coefficients = Fit.Polynomial(xdata, ydata, degree);
 };
 </code></pre>
 
-<p>Note that you don&rsquo;t have to give up on the lambda but darn&hellip; It&rsquo;s pretty ugly and (arguably) hides even more of what the actual general principle is. In other words, the code is being more <strong>obtuse</strong> than it has to be. However, it <strong>is</strong> more generic so in that regard it is a slight improvement on the previous version.</p>
+<p>You don&rsquo;t have to give up on the lambda but darn&hellip; It&rsquo;s pretty ugly and (arguably) hides even more of what the actual general principle is. In other words, the code is being more <strong>obtuse</strong> than it has to be. However, it <strong>is</strong> more generic so in that regard it is a slight improvement on the previous version.</p>
 
 <blockquote>
 <p>Whenever you are lambdas that contain statements you probably should consider <strong>not</strong> using lambdas (opting for a named method or function instead) or revise the way you write code. Just because you <strong>can</strong> use statements in lambdas doesn&rsquo;t mean you <strong>should</strong>. Try to have a strong expression bias.</p>
 </blockquote>
 
-<p>Anway, we should really use a LINQ expression for this instad of a lambda with <strong>statements</strong> that looks super ugly and is not very memory efficient either. Although to be fair, we can reasonably assume to deal with small numbers of coefficients as the algorithm tends to break down otherwise anyway.</p>
+<p>Anway, we should really use a LINQ expression for this instead of a lambda with <strong>statements</strong> that looks super ugly and is not very memory efficient either. Although to be fair, we can reasonably assume to deal with small numbers of coefficients as the algorithm tends to break down otherwise anyway.</p>
 
 <pre><code>Func&lt;double, double&gt; f = x =&gt; Enumerable.Range(0, points.Length)
     .Select(i =&gt; coefficients[i] * Math.Pow(x, i))
@@ -251,14 +253,14 @@ var coefficients = Fit.Polynomial(xdata, ydata, degree);
 </code></pre>
 
 <blockquote>
-<p>Note that <em>implicitely typed</em> lambdas are not yet a thing so we need the explicit <code>Func&lt;double, double&gt;</code> type declaration even though in theory that could be inferred as well.</p>
+<p>Sadly, <em>implicitely typed</em> lambdas are not yet a thing so we need the explicit <code>Func&lt;double, double&gt;</code> type declaration even though in theory that could be inferred as well.</p>
 </blockquote>
 
-<p>The above lambda is a proper expression and it&rsquo;s a pretty tight way to express how to build the function <code>f</code> from a <em>vector</em> (array) of coefficients. On top of that, it&rsquo;s efficient on memory (due to <em>streaming</em>) and because LINQ is mantained by some very smart people at Microsoft, you can safely count on it being pretty efficient, smart about the underlying data structure (the implementation supporting the <code>IEnumerable</code> or <code>IEnumerable&lt;T&gt;</code> interface) so that it&rsquo;s friendly on the CPU as well.</p>
+<p>The above lambda is a proper expression and it&rsquo;s a pretty tight way to express how to build the function <code>f</code> from a <em>vector</em> (array) of coefficients. On top of that, it&rsquo;s efficient on memory (due to <em>streaming</em>) and because LINQ is mantained by some very smart people at Microsoft, you can safely count on it being pretty efficient and considerate about the underlying data structure (the implementation supporting the <code>IEnumerable</code> or <code>IEnumerable&lt;T&gt;</code> interface) so that it&rsquo;s friendly on the CPU as well.</p>
 
 <h3 id="verification">verification</h3>
 
-<p>Now that we have a <code>Func&lt;double, double&gt;</code> called <code>f</code> we can consider plotting it. Before we do that we could try out if <code>f</code> even works:</p>
+<p>Now that we have a <code>Func&lt;double, double&gt;</code> called <code>f</code> we can consider plotting it. Before we do that we should try out if <code>f</code> even works:</p>
 
 <pre><code>Enumerable.Range(0, 10).Select(x =&gt; f(x)).Dump();
 </code></pre>
@@ -280,7 +282,7 @@ var coefficients = Fit.Polynomial(xdata, ydata, degree);
 </code></pre>
 
 <blockquote>
-<p>Note that you generally don&rsquo;t explicity name the <code>keySelector</code> and <code>elementSelector</code> arguments like this but I&rsquo;m doing it here just in case people are not too familiar with the <em>signature</em> of the <code>ToDictionary</code> extension method.</p>
+<p>We generally don&rsquo;t explicity name the <code>keySelector</code> and <code>elementSelector</code> arguments like this but I&rsquo;m doing it here just in case people are not too familiar with the <em>signature</em> of the <code>ToDictionary</code> extension method.</p>
 </blockquote>
 
 <p>The <code>Exact</code> property is included because you might get (even more) approximated results when <em>dumping</em> the output in LINQPad. It might decide to round off your very long doubles for presentation purposes. So when visually inspecting the <code>Act</code> (actual) and <code>Exp</code> (expected) values you will probably see a good correspondence. However, (at least in my case) the value of the <code>Exact</code> property is <code>false</code> for at least three of the four assertions. This means there&rsquo;s a discrepancy between the expectation (the original data point) and the value that results from our fitted polynomial <code>f</code>.</p>
@@ -295,13 +297,15 @@ var coefficients = Fit.Polynomial(xdata, ydata, degree);
 
 <h3 id="plotting">plotting</h3>
 
-<p>Now that we have our polynomial <code>f</code> it would be fun to plot it as well. Things always make more sense when you plot them. There&rsquo;s a number of plotting libraries for .NET but I like <a href="http://www.oxyplot.org/">OxyPlot</a> because it did exactly what I wanted it to do: feed it a <code>Func&lt;double,double&gt;</code> and some <code>x</code> and <code>y</code> data points and have it print a bitmap of the results for usage in a WPF container control.</p>
+<p>Now that we have our polynomial <code>f</code> it would be fun to plot it as well. Things always make more sense when you plot them.</p>
+
+<p>There&rsquo;s a number of plotting libraries for .NET but I like <a href="http://www.oxyplot.org/">OxyPlot</a> because it did exactly what I wanted it to do the first time I tried it. Feed it a <code>Func&lt;double,double&gt;</code> and some <code>x</code> and <code>y</code> data points and it will render a bitmap of the results for display in a WPF container control.</p>
 
 <blockquote>
-<p>Since we are (hopefully) using LINQPad we can use the <code>Dump</code> method to render WPF controls. To be honest, I never realized this feature existed untill today. It&rsquo;s glorious since you can skip a lot of stuff and just <code>Dump</code> controls to be rendered inside LINQPad itself.</p>
+<p>Since we are (hopefully) using LINQPad we can use the <code>Dump</code> method to render WPF controls. To be honest, I never realized this feature existed untill today. It&rsquo;s glorious since you can skip a lot of WPF rituals and just <code>Dump</code> controls to be rendered inside LINQPad itself.</p>
 </blockquote>
 
-<p>The hardest part of plotting is actually including the <em>nuget</em> package for <strong>OxyPlot</strong> and realizing that you have to assign some dimensions to your <code>PlotView</code> control otherwise it will not render in a visible way:</p>
+<p>The hardest part of plotting is actually including the <em>nuget</em> package for <strong>OxyPlot</strong> and realizing that you have to assign some dimensions to your <code>PlotView</code> control, otherwise it will not render in a visible way:</p>
 
 <pre><code>const width = 640;
 const height = 480;

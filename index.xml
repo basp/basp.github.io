@@ -6,7 +6,7 @@
     <description>Recent content on chances are nil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 04 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jan 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://basp.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -45,6 +45,18 @@
       
       <guid>https://basp.github.io/projects/project4/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>curve fitting and plotting</title>
+      <link>https://basp.github.io/posts/curve-fitting-with-linqpad/</link>
+      <pubDate>Wed, 10 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://basp.github.io/posts/curve-fitting-with-linqpad/</guid>
+      <description>Is LINQPad a replacement for the likes of R, IPython and MATLAB?
+Probably not.
+Yet, thanks to some nifty libraries, it can come pretty close nowadays.
+summary We&amp;rsquo;re going to look at doing some curve fitting for programmers using Math.NET Numerics to do the heavy lifting and OxyPlot for WPF to render our results. We&amp;rsquo;ll be doing this from LINQPad so we can evaluate our results interactively (although you could follow along in any other .</description>
     </item>
     
     <item>
