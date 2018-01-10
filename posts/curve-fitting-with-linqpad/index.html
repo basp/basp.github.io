@@ -245,7 +245,7 @@ var coefficients = Fit.Polynomial(xdata, ydata, degree);
 <p>Whenever you are lambdas that contain statements you probably should consider <strong>not</strong> using lambdas (opting for a named method or function instead) or revise the way you write code. Just because you <strong>can</strong> use statements in lambdas doesn&rsquo;t mean you <strong>should</strong>. Try to have a strong expression bias.</p>
 </blockquote>
 
-<p>Anway, we should really use a LINQ expression for this instead of a lambda with <strong>statements</strong> that looks super ugly and is not very memory efficient either. Although to be fair, we can reasonably assume to deal with small numbers of coefficients as the algorithm tends to break down otherwise anyway.</p>
+<p>Anway, we should really use a <strong>LINQ expression</strong> for this instead of a <strong>lambda with statements</strong> that looks super ugly and is not very memory efficient either. Although to be fair, we can reasonably assume to deal with small numbers of coefficients as the algorithm tends to break down otherwise anyway.</p>
 
 <pre><code>Func&lt;double, double&gt; f = x =&gt; Enumerable.Range(0, points.Length)
     .Select(i =&gt; coefficients[i] * Math.Pow(x, i))
@@ -332,7 +332,7 @@ view.Dump();
 <p>The unfortunate part about the above code is the <code>model.Series.Add</code> statement. I would&rsquo;ve loved to inline that in the object constructor but for some reason that doesn&rsquo;t work.</p>
 
 <blockquote>
-<p>I could&rsquo;ve sworn that collections in the object initializer would call the <code>Add</code> method if it was supported by the underlying collection implementation but it seems that&rsquo;s not a thing (yet).</p>
+<p>Shouldn&rsquo;t there be <em>syntactic sugar</em> to call the <code>Add</code> method on collections in the object initializer if that&rsquo;s supported? Is this not a thing yet?</p>
 </blockquote>
 
 <h2 id="conclusion">conclusion</h2>
