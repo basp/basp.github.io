@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>curve fitting and plotting</title>
+        <style>
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: hotpink;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://basp.github.io//css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+ <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.31.1" />
+        
+        
+        
+    </head>
+
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">curve fitting and plotting</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/posts/">Posts</a></li>
+                            
+                                <li><a href="/projects/">Projects</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:me@example.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/basp/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/meticulous/"><i class="fa fa-twitter"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/posts/curve-fitting-with-linqpad/">curve fitting and plotting</a></h4>
+    <h5>January 10, 2018</h5>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+<h3 id="tldr">tldr</h3>
+
+<p>Is <strong>LINQPad</strong> a replacement for the likes of <strong>R</strong>, <strong>IPython</strong> and <strong>MATLAB</strong>? Probably not. Yet, thanks to some nifty libraries, it does come pretty close nowadays.</p>
+
+<p>Today we&rsquo;re going to look at doing some curve fitting for dummies. We&rsquo;re going to use <strong>Math.NET Numerics</strong> to do the heavy lifting and <strong>OxyPlot</strong> for <strong>WPF</strong> to render our results. Now, you could do this all this just from a console or windows app and it would work. It would however be a lot less fun, a lot more tedious and a lot slower as well.</p>
+
+<p>The main reason why LINQPad is so great for doing this kind of exploratory programming is because thanks to the awesome <code>Dump</code> extension method that is available on any object. The method is already super useful in itself but it&rsquo;s even more awesome in our case. That&rsquo;s because it&rsquo;s also smart enough to render WPF controls when <code>Dump</code> is invoked on those. This means we don&rsquo;t need any application infrastructure to render our results because LINQPad will provide that for us.</p>
+
+<h3 id="setup">setup</h3>
+
+<p>Let&rsquo;s assume have a set of known points and we want to fit some order polynomial through those points. Our points look like this:</p>
+
+<pre><code>X       Y
+1       4.589382
+3       5.923746
+7       6.290475
+8       6.484757
+</code></pre>
+
+<p>Because those are the only points we have, we can also assume that our polynonimal will be <em>cubic</em> (third degree).</p>
+
+<blockquote>
+<p>Sometimes (or often) you are working with a total data set that is much larger than just four points. It&rsquo;s almost never a good idea to sample random points for the purpose of curve fitting. In that case, you&rsquo;ll probably have to do some analysis using something like regression or have some other way to locate a subset of <em>key data points</em> for the curve fitting algorithm.</p>
+</blockquote>
+
+<p>We&rsquo;ll use a data structure to hold our points (a <code>struct</code> seemed appropriate in this case) and declare our data point array:</p>
+
+<pre><code>struct Point 
+{ 
+    public double X;
+    public double Y;
+}
+
+var points = new[]
+{
+    new Point { X = 1, Y = 4.589382 },
+    new Point { X = 3, Y = 5.923746 },
+    new Point { X = 7, Y = 6.290475 },
+    new Point { X = 8, Y = 6.484757 },
+};
+</code></pre>
+
+<h3 id="fitting">fitting</h3>
+
+<p>Now we&rsquo;re actually going to <em>fit</em> our polynomial. We will use <strong>Math.NET Numerics</strong> for this so make sure to get the package if you&rsquo;re trying out the code.</p>
+
+<blockquote>
+<p>With most modern tools (including LINQPad) you can usually just type the code and have the IDE/tool offer you suggestions on which namespaces to import but they will be listed here as well for reference. In this case, we only need the <code>MathNet.Numerics</code> namespace.</p>
+</blockquote>
+
+<p>Since we already know that we are looking for a degree three polynomial this task becomes rather simple. It&rsquo;s just a matter of knowing which API to use. And thankfully the documentation (although not complete) is <a href="https://numerics.mathdotnet.com/regression.html#Polynomial-Regression">rather good</a> so finding it shouldn&rsquo;t be too difficult.</p>
+
+<p>As it turns out we just need to call <code>Fit.Polynomial</code> to get the things we are really looking for. This function requires two <code>double[]</code> arguments for the <em>x</em> and <em>y</em> values and the <em>degree</em> of the polynomial we are looking for. With our <code>points</code> array and the given that we are looking for a <strong>degree three polynomial</strong> we can write:</p>
+
+<pre><code>var xdata = points.Select(p =&gt; p.X).ToArray();
+var ydata = points.Select(p =&gt; p.Y).ToArray();
+
+const degree = 3;
+
+var coefficients = Fit.Polynomial(xdata, ydata, degree); 
+</code></pre>
+
+<p>This will give us an array of <code>degree + 1</code> values that represent the <em>coefficents</em> of the polynomial.</p>
+
+<p>If you look at a more typical representation of a <em>cubic polynomial</em> such as <code>f(x) = ax**3 + bx**2 + cx + d</code> then those four values in the <code>coefficients</code> array <code>[0..3]</code> would correspond to <code>d</code>, <code>c</code>, <code>b</code> and <code>a</code> respectively. Note that we could also write (more superfluously) <code>f(x) = ax**3 + bx**2 + cx**1 + dx**0</code> in order to reveal the pattern.</p>
+
+<blockquote>
+<p>This also explains why we get <strong>four</strong> values from a degree <strong>three</strong> polynomial, the <em>first</em> degree is called <strong>degree zero</strong> (good for programmers) and that is resembled in the <code>dx**0</code> factor. The value of <code>dx**0 = d*1 = d</code> is just a constant equal to <code>d</code> and sometimes called the <em>interceptor</em>.</p>
+</blockquote>
+
+<p>Now the fun part (for programmers at least) is to translate those (in this case) four coefficients into a <em>lambda</em> expression (or to be more explicit, a <code>Func&lt;double,double&gt;</code> that we can feed into the plotter) to plot.</p>
+
+<p>The naive way would be to just write it out:</p>
+
+<pre><code>Func&lt;double, double&gt; f = x =&gt; 
+    coefficients[0] * Math.Pow(x, 0) +
+    coefficients[1] * Math.Pow(x, 1) + 
+    coefficients[2] * Math.Pow(x, 2) + 
+    coefficients[3] * Math.Pow(x, 3);
+</code></pre>
+
+<p>And although it works well enough for cubic polynomials, this is terribly lame, sloppy programming and a waste of an opportunity for a nice <strong>LINQ</strong> expression. Not to mention that it is a very limited implementation of a much more general form and even if a programmer is not aware of the underlying mathematics, he or she should at least pickup on the obvious fact that the <em>indices</em> to our <code>coefficients</code> array correspond exactly with the <em>powers</em> of <code>x</code> in our polynomials.</p>
+
+<p>Now we could also rewrite it <strong>imperatively</strong> and to be honest this is even worse in my opinion. Even though you should rightfully frown on this, this is sadly still a pattern that I encounter frequently:</p>
+
+<pre><code>Func&lt;double, double&gt; f = x =&gt;
+{
+    var result = 0.0;
+    for(var i = 0; i &lt; points.Length - 1; i++)
+    {
+        result += coefficients[i] * Math.Pow(x, i);
+    }
+
+    return result;
+};
+</code></pre>
+
+<p>Note that you don&rsquo;t have to give up on the lambda but darn&hellip; It&rsquo;s pretty ugly and (arguably) hides even more of what the actual general principle is. In other words, the code is being more <strong>obtuse</strong> than it has to be. However, it <strong>is</strong> more generic so in that regard it is a slight improvement on the previous version.</p>
+
+<blockquote>
+<p>Whenever you are lambdas that contain statements you probably should consider <strong>not</strong> using lambdas (opting for a named method or function instead) or revise the way you write code. Just because you <strong>can</strong> use statements in lambdas doesn&rsquo;t mean you <strong>should</strong>. Try to have a strong expression bias.</p>
+</blockquote>
+
+<p>Anway, we should really use a LINQ expression for this instad of a lambda with <strong>statements</strong> that looks super ugly and is not very memory efficient either. Although to be fair, we can reasonably assume to deal with small numbers of coefficients as the algorithm tends to break down otherwise anyway.</p>
+
+<pre><code>Func&lt;double, double&gt; f = x =&gt; Enumerable.Range(0, points.Length)
+    .Select(i =&gt; coefficients[i] * Math.Pow(x, i))
+    .Sum();
+</code></pre>
+
+<blockquote>
+<p>Note that <em>implicitely typed</em> lambdas are not yet a thing so we need the explicit <code>Func&lt;double, double&gt;</code> type declaration even though in theory that could be inferred as well.</p>
+</blockquote>
+
+<p>The above lambda is a proper expression and it&rsquo;s a pretty tight way to express how to build the function <code>f</code> from a <em>vector</em> (array) of coefficients. On top of that, it&rsquo;s efficient on memory (due to <em>streaming</em>) and because LINQ is mantained by some very smart people at Microsoft, you can safely count on it being pretty efficient, smart about the underlying data structure (the implementation supporting the <code>IEnumerable</code> or <code>IEnumerable&lt;T&gt;</code> interface) so that it&rsquo;s friendly on the CPU as well.</p>
+
+<h3 id="verification">verification</h3>
+
+<p>Now that we have a <code>Func&lt;double, double&gt;</code> called <code>f</code> we can consider plotting it. Before we do that we could try out if <code>f</code> even works:</p>
+
+<pre><code>Enumerable.Range(0, 10).Select(x =&gt; f(x)).Dump();
+</code></pre>
+
+<p>This will Create a <em>range</em> (a sequence of integers in this case) of <code>x</code> values from zero to nine. It then <em>maps</em> (using LINQ&rsquo;s <code>Select</code>) the <code>x</code> value to a <code>y</code> value using <code>f</code> and finally dumps the results to the LINQPad output window.</p>
+
+<p>Let&rsquo;s <em>visually</em> inspect our values first:</p>
+
+<pre><code>points
+    .ToDictionary(
+        keySelector: p =&gt; p.X, 
+        elementSelector: p =&gt; new 
+        { 
+            Exp = p.Y, 
+            Act = f(p.X), 
+            Exact = f(p.X) == p.Y 
+        })
+    .Dump();
+</code></pre>
+
+<blockquote>
+<p>Note that you generally don&rsquo;t explicity name the <code>keySelector</code> and <code>elementSelector</code> arguments like this but I&rsquo;m doing it here just in case people are not too familiar with the <em>signature</em> of the <code>ToDictionary</code> extension method.</p>
+</blockquote>
+
+<p>The <code>Exact</code> property is included because you might get (even more) approximated results when <em>dumping</em> the output in LINQPad. It might decide to round off your very long doubles for presentation purposes. So when visually inspecting the <code>Act</code> (actual) and <code>Exp</code> (expected) values you will probably see a good correspondence. However, (at least in my case) the value of the <code>Exact</code> property is <code>false</code> for at least three of the four assertions. This means there&rsquo;s a discrepancy between the expectation (the original data point) and the value that results from our fitted polynomial <code>f</code>.</p>
+
+<p>How bad is this? Well it really depends on how much significant numbers that you need. Generally, the algorithm works well if the input makes sense and the number of coefficients is low. Working with <em>floating point values</em> is always gonna be tricky and you&rsquo;ll have to do some proper evaluation on the algorithm to make sure that it suits your use-case.</p>
+
+<blockquote>
+<p>Be sure to check out the various parameters for curve fitting in the <strong>Math.NET Numerics</strong> documentation as well.</p>
+</blockquote>
+
+<p>So even though we don&rsquo;t get 100% the same values as before, if you inspect the actual numbers you will find them to be <em>really</em> close and they tend to differ only when you involve eight or more significant digits. They are good enough for the purpose of this example.</p>
+
+<h3 id="plotting">plotting</h3>
+
+<p>Now that we have our polynomial <code>f</code> it would be fun to plot it as well. Things always make more sense when you plot them. There&rsquo;s a number of plotting libraries for .NET but I like <a href="http://www.oxyplot.org/">OxyPlot</a> because it did exactly what I wanted it to do: feed it a <code>Func&lt;double,double&gt;</code> and some <code>x</code> and <code>y</code> data points and have it print a bitmap of the results for usage in a WPF container control.</p>
+
+<blockquote>
+<p>Since we are (hopefully) using LINQPad we can use the <code>Dump</code> method to render WPF controls. To be honest, I never realized this feature existed untill today. It&rsquo;s glorious since you can skip a lot of stuff and just <code>Dump</code> controls to be rendered inside LINQPad itself.</p>
+</blockquote>
+
+<p>The hardest part of plotting is actually including the <em>nuget</em> package for <strong>OxyPlot</strong> and realizing that you have to assign some dimensions to your <code>PlotView</code> control otherwise it will not render in a visible way:</p>
+
+<pre><code>const width = 640;
+const height = 480;
+const step = 0.1;
+
+var x0 = points.Min(p =&gt; p.X);
+var x1 = points.Max(p =&gt; p.X);
+
+var model = new PlotModel();
+model.Series.Add(new FunctionSeries(f, x0, x1, step));
+
+var view = new PlotView
+{ 
+    Model = model,
+    Width = width,
+    Height = height,
+};
+
+view.Dump();
+</code></pre>
+
+<p>And there you have it, that should present a plot of <code>f</code> in the LINQPad WPF tab.</p>
+
+<p>The unfortunate part about the above code is the <code>model.Series.Add</code> statement. I would&rsquo;ve loved to inline that in the object constructor but for some reason that doesn&rsquo;t work.</p>
+
+<blockquote>
+<p>I could&rsquo;ve sworn that collections in the object initializer would call the <code>Add</code> method if it was supported by the underlying collection implementation but it seems that&rsquo;s not a thing (yet).</p>
+</blockquote>
+
+<h2 id="conclusion">conclusion</h2>
+
+<p>Before I started to play around with curve fitting I did some research on the theory. It&rsquo;s pretty well documented and it wouldn&rsquo;t be too hard to write your own curve fitting algorithm instead of relying on something like Math.NET Numerics.</p>
+
+<p>My original plan was to write about the fundamental maths but then I realized there&rsquo;s really no need and also I&rsquo;m not that qualified to do so right now. However, that doesn&rsquo;t mean I won&rsquo;t write about it in the future. For now, I was content on just relaying my findings on how a few .NET packages and LINQPad actually make up for a pretty decent data analysis and exploration environment. Especially for .NET people who might be more tempted to use R, IPython or MATLAB at first but are not too keen on learning a whole new environment and programming language/style just to do some basic data science tasks.</p>
+</div>
+
+    
+    
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>chances are nil</title>
+    <link>https://basp.github.io/</link>
+    <description>Recent content on chances are nil</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 10 Jan 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://basp.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Project 1</title>
+      <link>https://basp.github.io/projects/project1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://basp.github.io/projects/project1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Project 2</title>
+      <link>https://basp.github.io/projects/project2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://basp.github.io/projects/project2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Project 3</title>
+      <link>https://basp.github.io/projects/project3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://basp.github.io/projects/project3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Project 4</title>
+      <link>https://basp.github.io/projects/project4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://basp.github.io/projects/project4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>curve fitting and plotting</title>
+      <link>https://basp.github.io/posts/curve-fitting-with-linqpad/</link>
+      <pubDate>Wed, 10 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://basp.github.io/posts/curve-fitting-with-linqpad/</guid>
+      <description>tldr Is LINQPad a replacement for the likes of R, IPython and MATLAB? Probably not. Yet, thanks to some nifty libraries, it does come pretty close nowadays.
+Today we&amp;rsquo;re going to look at doing some curve fitting for dummies. We&amp;rsquo;re going to use Math.NET Numerics to do the heavy lifting and OxyPlot for WPF to render our results. Now, you could do this all this just from a console or windows app and it would work.</description>
+    </item>
+    
+    <item>
+      <title>procedures and functions</title>
+      <link>https://basp.github.io/posts/procedures-and-functions/</link>
+      <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://basp.github.io/posts/procedures-and-functions/</guid>
+      <description>In the Pascal programming language, there&amp;rsquo;s a clear distinction between callable code that returns a result and callable code that returns nothing. They are called function and procedure respectively. Most programming languages don&amp;rsquo;t really bother to make such a distinction though. Often, procedures are indicated by using a special-purpose none (or null) type. In the C-family of programming languages, this type is called void and in functional programming languages they often call it the unit type.</description>
+    </item>
+    
+  </channel>
+</rss>
