@@ -216,7 +216,7 @@ static double[] f = Enumerable.Range(0, 10).Select(x =&gt; rng.NextDouble()).ToA
 
 <p>When applying convolution in practice you probably want to keep your input and output dimensions the same. That means you need to find a way to make up values at some points. The easiest value is just a constant but you could apply more fancy algorithms depending on your use case.</p>
 
-<p>If we look very carefully at the body of <code>createF2</code> we see the inner machinery of convolution at work as expressed in code. The trick is actually in the bits that look at the previous and next values: <code>weights[0] * f[x - 1]</code> and <code>weights[0] * f[x + 1]</code>.</p>
+<p>If we look very carefully at the body of <code>createF2</code> we see the inner machinery of convolution at work as expressed in code. The trick is actually in the bits that look at the previous, current and next values: <code>weights[0] * f[x - 1]</code>, <code>weights[1] * f[x - 0]</code> and <code>weights[2] * f[x + 1]</code>.</p>
 
 <p>We also have a bit of technical debt that we inherited from when we used <code>u</code>, <code>v</code> and <code>w</code> earlier. Not all is lost though! What we need is a more generic way of looking back and forward. In other words, it would be nice if our range was not limited to <code>x - 1</code> to <code>x + 1</code> but that we could involve <code>x - n</code> to <code>x + n</code>.</p>
 
