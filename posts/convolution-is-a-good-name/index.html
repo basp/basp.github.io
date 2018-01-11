@@ -226,7 +226,7 @@ static double[] f = Enumerable.Range(0, 10).Select(x =&gt; rng.NextDouble()).ToA
 
 <p>From an engineering perspective, we see the function <code>f</code> as some kind of value that is dependant on time. So <code>f</code> is a function of <em>time</em> and not of some abstract <code>x</code> value. Hence we have <code>f(t)</code> instead of <code>f(x)</code> (at least that&rsquo;s my no-research take on it).</p>
 
-<p>Anyway, if we go back to our problem, we need <code>f[x - 1]</code> to <code>f[x - 1]</code> to be <code>f[x - n]</code> to <code>f[x + n]</code> instead. That way, we can at least <em>look around</em> the function outputs a bit more and do some more fancy stuff. But we might wanna go even further. Ideally we want to look even between known datapoints.</p>
+<p>Anyway, if we go back to our problem, we need <code>f[x - 1]</code> to <code>f[x - 1]</code> to be <code>f[x - n]</code> to <code>f[x + n]</code> instead. That way, we can &ldquo;look around&rdquo; infinitely and also do some more fancy stuff. But we might wanna go even further. Ideally, we want to ditch the <code>int</code> and be able to <em>sample</em> on doubles instead.</p>
 
 <p>Currently, our <code>f</code> can only deal with inputs where <code>x</code> is an <code>int</code> and <code>0 &lt;= x &lt;= 10</code> and that is limited. In a similar fashion, our <code>h</code> can only deal with inputs where <code>x</code> is an int and also limited to the values of <code>{-1, 0, 1}</code> since we hardcoded them. Actually, we don&rsquo;t even have a <code>h</code> except that it&rsquo;s floating around in our little bit of code that we have.</p>
 </div>
