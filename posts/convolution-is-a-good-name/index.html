@@ -212,7 +212,7 @@ static double[] f = Enumerable.Range(0, 10).Select(x =&gt; rng.NextDouble()).ToA
 
 <p>Note that we&rsquo;ve already been doing convolution for qutie a while now. Albeit in a very rudimentary and limited way. Mathematicians would frown upon us perhaps but since we&rsquo;re engineers we just care most about making things work anyway. Some of us even plow on without even knowing the name for the thing that they are doing (like me).</p>
 
-<p>One of the things to notice straightaway is that our result array is smaller than our input array. We&rsquo;re missing the convoluted values of the first and last index (<code>0</code> and <code>9</code> in this case). The reason for this is that those values are undefined for us. We dont&rsquo; know what is beyond <code>0</code> and <code>9</code> since we rely on <em>discrete</em> cases for now and that means <code>f[x - 1]</code> and <code>f[x + 1]</code> are undefined as well when <code>x &lt; 1</code> or <code>x &gt; 8</code>.</p>
+<p>One of the things to notice straightaway is that our result array is smaller than our input array. We&rsquo;re missing the convoluted values of the first and last index (<code>0</code> and <code>9</code> in this case). The reason for this is that those values are undefined for us. We dont&rsquo; know what is beyond <code>0</code> and <code>9</code> since we rely on <em>discrete</em> cases for now and that means <code>x &lt; 1</code> or <code>x &gt; 8</code> are undefined (in this case).</p>
 
 <p>When applying convolution in practice you probably want to keep your input and output dimensions the same. That means you need to find a way to make up values at some points. The easiest value is just a constant but you could apply more fancy algorithms depending on your use case.</p>
 
