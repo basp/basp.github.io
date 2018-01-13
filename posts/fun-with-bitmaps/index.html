@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>fun with bitmaps</title>
+        <style>
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: hotpink;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://basp.github.io//css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+ <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.31.1" />
+        
+        
+        
+    </head>
+
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">fun with bitmaps</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/posts/">Posts</a></li>
+                            
+                                <li><a href="/projects/">Projects</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:me@example.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/basp/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/meticulous/"><i class="fa fa-twitter"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/posts/fun-with-bitmaps/">fun with bitmaps</a></h4>
+    <h5>January 12, 2018</h5>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+<p>Weekend is here so let&rsquo;s have some fun with bitmaps. Before we can start though, we need to grab a bitmap or two to work with. Make sure to get one or two good sized ones (around 1000x1000 will do) and make sure to put them in an easy path.</p>
+
+<p>Oh, and of course I&rsquo;m doing this from <strong>LINQPad</strong> so that&rsquo;s where the <code>Dump</code> method comes from. If you don&rsquo;t have LINQPad you can still follow along but you <em>will</em> have to do some extra work to actually view the results.</p>
+
+<h3 id="loading-a-bitmap">loading a bitmap</h3>
+
+<p>One of the base classes for <code>Bitmap</code> is <code>Image</code> and in fact, when we call <code>Bitmap.FromFile</code> we actually get an <code>Image</code> instance. We could probably cast it but I resorted to:</p>
+
+<pre><code>const path = @&quot;some/path/to/image&quot;;
+var img = Image.FromFile(path);
+var src = new Bitmap(img);
+src.Dump();
+</code></pre>
+
+<p>We need a <code>Bitmap</code> otherwise we don&rsquo;t have access to the <code>GetPixel</code> and <code>SetPixel</code> methods.</p>
+
+<p>Note that you can just <code>Dump</code> the bitmap and LINQPad will render it for you in the output. If you don&rsquo;t have LINQPad it&rsquo;s probably easiest to just write the bitmap back to disk and use an external viewer. <strong>Make sure to use a different path</strong> because you don&rsquo;t want to overwrite your original image!</p>
+
+<pre><code>src.Save(@&quot;some/path/to/image&quot;);
+</code></pre>
+
+<h3 id="what-s-a-bitmap">what&rsquo;s a bitmap?</h3>
+
+<p>We can consider the bitmap as a 3D dimensional array. The <em>dimension</em> of the <code>x</code> axis is the <strong>width</strong> of the image. The dimension of the <code>y</code> axis is the <strong>height</strong> of the image. And the dimension of the <code>z</code> axis hold the color data. We&rsquo;re mostly going to use the  <strong>RGB</strong> color model because it&rsquo;s widely used and easy to understand from a programmer perspective.</p>
+
+<h3 id="colors">colors</h3>
+
+<p>If you ever took a painting class, you know that we can represent any color using a combination of red green and blue. If you look at your screen with a magnification tool you can probably seen these <strong>subpixels</strong> as well.</p>
+
+<p>Representing a color as a red, green and blue, or <strong>RGB</strong> value is easy on the computer and not that hard to understand as well so that&rsquo;s what we&rsquo;re gonna use. Be aware though that there are different ways to look at the color spectrum and it&rsquo;s quite a deep and interesting subject to research.</p>
+
+<p>Nowdays you will often actually work with the <strong>ARGB</strong> model which has an extra channel to hold the <em>alpha</em> (opaque/transparant) value but we won&rsquo;t bother too much with that. Once you understand RGB you can easily work with ARGB as well as the principles are completely the same.</p>
+
+<h3 id="a-basic-filter">a basic filter</h3>
+
+<p>Let&rsquo;s implement a filter. A good starting point is to convert the image using a <a href="https://en.wikipedia.org/wiki/Relative_luminance">relative luminance</a> map. The formula for <strong>relative luminance</strong> is very simple and just takes the RGB value and a set of constants:</p>
+
+<pre><code>Func&lt;byte, byte, byte, double&gt; RLum = (r, g, b) =&gt;
+    0.2126 * r + 0.7152 * g + 0.0722 * b;
+</code></pre>
+
+<p>This filter is just a direct translation of the formula but you can implement all kinds of fancy filters. Filtering is so important that it&rsquo;s bound to come up a lot.</p>
+
+<h3 id="color-maps">color maps</h3>
+
+<p>We&rsquo;re now left with a 2D array instead of a 3D one so we have to devise a way how to find the colors for our image. When we have a 2D image and we need a 3D (i.e. <strong>colorized</strong>) visual we often utilize a <strong>color map</strong>.</p>
+
+<p>A color map takes a value in a certaain range (let&rsquo;s say <code>0..255</code> in our case) and maps that to another value that represents a color. Let&rsquo;s define the <em>identity</em> color map:</p>
+
+<pre><code>Func&lt;int,Color&gt; cmap1 = x =&gt; Color.FromArgb(x, x, x);
+</code></pre>
+
+<p>A very simple (and naive) way to do it is just to grayscale our image using the luminance function and then use that luminance value to compute a new color.</p>
+
+<p>By the way, if you think that the nested loop below is horrible code then I can only agree. It <em>is</em> horrible but we&rsquo;ll deal with that later. For now our focus is on understanding and no so much on efficiency.</p>
+
+<pre><code>var @out = new Bitmap(src.Width, src.Height);
+for (var y = 0; y &lt; src.Height; y++)
+{
+    for (var x = 0; x &lt; src.Width; x++)
+    {
+        var p = src.GetPixel(x, y);
+        var rlum = (int)RLum(p.R, p.G, p.B);
+        @out.SetPixel(x, y, Color.FromArgb(rlum, rlum, rlum));
+    }
+}
+
+return @out;
+</code></pre>
+
+<p>In the code above, the <code>GetPixel</code> method will return a <code>Color</code> with <code>R</code>, <code>G</code> and <code>B</code> values (stored in a variable called <code>p</code>). The <code>RLum</code> function is what we defined in the section above.</p>
+
+<p>We&rsquo;ll read through every pixel, get its <code>Color</code> (RGB) value using the <code>GetPixel</code> method and calculate the <strong>relative luminance</strong> using the <code>RLum</code> function and store the result in a variable called <code>rlum</code>. We&rsquo;ll use the value of <code>rlum</code> to calculate new color where <code>R = G = B = rlum</code> (i.e. a grayscale color). Since we know that <code>lum</code> will return something between <code>0</code> and <code>256</code> we can directly feed this value into our new <code>Color</code>.</p>
+
+<h3 id="why-are-we-so-slow">why are we so slow?</h3>
+
+<p>If you&rsquo;re following along you&rsquo;ll quickly notice that our code is quite slow. On my machine the execution time for even a small 900x600 image is expressed in seconds rather than milliseconds. This is not good.</p>
+
+<p>The reason for this slowness is the usuage of the <code>GetPixel</code> and <code>SetPixel</code> methods. For each call to <code>GetPixel</code> or <code>SetPixel</code> the .NET virtual machine (VM) has to <em>marshal</em> into the underlying C++ GDI DLL. So if we have a 900x600 image that means about <strong>one million</strong> (900x600x2) calls will have to be marshalled and that&rsquo;s where our overhead is.</p>
+
+<h3 id="marshalling">marshalling</h3>
+
+<p>This is the term that&rsquo;s used for interfacing between the .NET virtual machine (which is considerd <strong>safe</strong>) and directly calling into native code in the outside world (in the form of DLL&rsquo;s, which is considered <strong>unsafe</strong>). Even if you&rsquo;re not writing unsafe code there&rsquo;s a lot of marshalling going on behind the scenes without you even realizing it.</p>
+
+<p>And usually, we don&rsquo;t even have to worry about it but in this case, since we&rsquo;re about to do direct memory manipulation we should at least realize what&rsquo;s going on, where the bottleneck is and why our solution works.</p>
+
+<p>For now, it&rsquo;s enough to realize that marshalling a call (or invocation) is quite expensive so you really want to limit the frequency on those invocations. In other words, if you&rsquo;re gonna go unsafe then <strong>make sure you get some heavy lifting done</strong>.</p>
+
+<h3 id="improving">improving</h3>
+
+<p>So now that we (hopefully) understand how a basic filter works, we&rsquo;re going to improve <strong>a lot</strong> on things. We&rsquo;ll not only make it more generic but also a whole lot faster in the process.</p>
+
+<p>The first thing we need is some kind of definition for our filter. I like functional programming and try to define as much as I can in a functional style. A filter is basically a <strong>mapping</strong> over a bitmap so ideally we want to express it as such.</p>
+
+<p>For simplicity, we&rsquo;ll deal with only RGB for now but the principles are the same for any color scheme. We&rsquo;re going to have to go a bit more lower level so we probably have to deal with <code>byte</code> values as well.</p>
+
+<p>We know that a filter (for now) is basically a <code>Color -&gt; Color</code> map. I don&rsquo;t wanna rely on <code>Color</code> though so instead I&rsquo;m going to model a color as a <code>Tuple&lt;byte, byte, byte&gt;</code> which has exactly the bits we need and none of the extra baggage that comes with the <code>Color</code> data structure.</p>
+
+<p>Here&rsquo;s the <code>id</code> filter for reference. The <code>id</code> function just returns its input:</p>
+
+<pre><code>Func&lt;Tuple&lt;byte, byte, byte&gt;, Tuple&lt;byte, byte, byte&gt;&gt; id = c =&gt; c;
+</code></pre>
+
+<p>And I apologize, <strong>big generic types</strong> are <strong>not pretty</strong> and using <code>Tuple&lt;T1, T2...Tn&gt;</code> is always scary as well. However, I think in this case, the additional mental overhead of <code>Tuple</code> is not that big since it&rsquo;s quite localized and in this specialized domain it should not take too long to understand that a <code>Tuple&lt;byte, byte, byte&gt;</code> represents a color.</p>
+
+<p>The signature basically says that you feed it one triple of RGB values and you get back another triple of RGB values (which might be the equivalent but <strong>it is still another triple</strong>). This signature seems reasonable for a filter.</p>
+
+<h3 id="direct-memory-manipulation">direct memory manipulation</h3>
+
+<p>In order to get rid of this overhead we&rsquo;re gonna do some direct memory manipulation. For someone that is inclined to write things in a functional way this is unnatural but we can still write it in a functional flavor though even though the underlying algorithm is imperative in nature.</p>
+</div>
+
+    
+    
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

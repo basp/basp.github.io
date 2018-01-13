@@ -6,7 +6,7 @@
     <description>Recent content on chances are nil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 10 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 12 Jan 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://basp.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -48,13 +48,13 @@
     </item>
     
     <item>
-      <title>convolution is a good name</title>
-      <link>https://basp.github.io/posts/convolution-is-a-good-name/</link>
-      <pubDate>Wed, 10 Jan 2018 00:00:00 +0000</pubDate>
+      <title>fun with bitmaps</title>
+      <link>https://basp.github.io/posts/fun-with-bitmaps/</link>
+      <pubDate>Fri, 12 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://basp.github.io/posts/convolution-is-a-good-name/</guid>
-      <description>Today I spend some time trying to figure out what convolution is. It&amp;rsquo;s not hard to find definitions but the problem is that every single one of them seems to assume that I&amp;rsquo;m some kind of math wizard already. That&amp;rsquo;s why we work in from the software engineering side to gain a better understanding.
-When I finally realized what it actually meant it dawned on me that I have been doing convulation for decades without even realizing there was a word for it.</description>
+      <guid>https://basp.github.io/posts/fun-with-bitmaps/</guid>
+      <description>Weekend is here so let&amp;rsquo;s have some fun with bitmaps. Before we can start though, we need to grab a bitmap or two to work with. Make sure to get one or two good sized ones (around 1000x1000 will do) and make sure to put them in an easy path.
+Oh, and of course I&amp;rsquo;m doing this from LINQPad so that&amp;rsquo;s where the Dump method comes from. If you don&amp;rsquo;t have LINQPad you can still follow along but you will have to do some extra work to actually view the results.</description>
     </item>
     
     <item>
