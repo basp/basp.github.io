@@ -189,10 +189,10 @@ src.Dump();
 
 <p>A color map takes a value in a certaain range (let&rsquo;s say <code>0..255</code> in our case) and maps that to another value that represents a color. Let&rsquo;s define the <em>identity</em> color map:</p>
 
-<pre><code>Func&lt;int,Color&gt; cmap1 = x =&gt; Color.FromArgb(x, x, x);
+<pre><code>Func&lt;int,Color&gt; cmapid = x =&gt; Color.FromArgb(x, x, x);
 </code></pre>
 
-<p>A very simple (and naive) way to do it is just to grayscale our image using the luminance function and then use that luminance value to compute a new color.</p>
+<p>A very simple way to do it is just to grayscale our image using the luminance function and then use that luminance value to compute a new color.</p>
 
 <p>By the way, if you think that the nested loop below is horrible code then I can only agree. It <em>is</em> horrible but we&rsquo;ll deal with that later. For now our focus is on understanding and no so much on efficiency.</p>
 
@@ -245,11 +245,138 @@ return @out;
 
 <p>And I apologize, <strong>big generic types</strong> are <strong>not pretty</strong> and using <code>Tuple&lt;T1, T2...Tn&gt;</code> is always scary as well. However, I think in this case, the additional mental overhead of <code>Tuple</code> is not that big since it&rsquo;s quite localized and in this specialized domain it should not take too long to understand that a <code>Tuple&lt;byte, byte, byte&gt;</code> represents a color.</p>
 
-<p>The signature basically says that you feed it one triple of RGB values and you get back another triple of RGB values (which might be the equivalent but <strong>it is still another triple</strong>). This signature seems reasonable for a filter.</p>
+<p>The signature basically says that you feed it one triple of RGB values and you get back another triple of RGB values (which might be the equivalent but <strong>it is still another triple</strong>). This signature seems reasonable for a filter on RGB values.</p>
 
 <h3 id="direct-memory-manipulation">direct memory manipulation</h3>
 
-<p>In order to get rid of this overhead we&rsquo;re gonna do some direct memory manipulation. For someone that is inclined to write things in a functional way this is unnatural but we can still write it in a functional flavor though even though the underlying algorithm is imperative in nature.</p>
+<p>In order to get rid of our marshalling overhead we&rsquo;re gonna do some direct memory manipulation. For someone that is inclined to write things in a functional way this is not natural and feels a kind of bad but we can still write it in a functional flavor though even though the underlying algorithm is imperative in nature.</p>
+
+<p>When designing an <strong>API</strong> I always like to thing from the <em>consumer</em> perspective first. That means that I first ask the question: &ldquo;how would I like to interact with this API?&rdquo; and work from there. In this case I would like to write something like to very much  write the following:</p>
+
+<pre><code>var bmp = new Bitmap(Image.FromFile(path));
+bmp.MapUnsafe(p =&gt; Tuple.Create(0, 0, 0));
+</code></pre>
+
+<p>I&rsquo;ve called the method <code>MapUnsafe</code> and made the (hypothetical) method return <code>void</code> as well. The reason why I return <code>void</code> is to make it extra clear that this method <em>will</em> mutate the <code>bmp</code> variable. There&rsquo;s only one argument and that is the <strong>filter</strong> definition that we defined earlier (<code>Func&lt;Tuple&lt;byte, byte, byte&gt;, Tuple&lt;byte, byte, byte&gt;&gt;</code>).</p>
+
+<p>It wouldn&rsquo;t be that hard to write a more functional <code>Map</code> that copies the bitmap and returns a manipulated copy, leaving the original intact. However, as it turns out, you don&rsquo;t really need this and with the foreknowledge we have, we are sticking with manipulating memory in place since that&rsquo;s easier and more efficient as well.</p>
+
+<h3 id="implementation">implementation</h3>
+
+<p>Now that we have the <em>signature</em> of our generic <strong>filter</strong> and also have considered how we would want to use it we can start to implement the <strong>API</strong> that we need.</p>
+
+<p>It would be nice if we could call <code>MapUnsafe</code> on the <code>Bitmap</code> instance itself. We would need an <strong>extension method</strong> for that. Now there are some gripes with extension methods but those are for another ramble. For now, I&rsquo;m just gonna go ahead and use an extension in order to comply with our spec. For reference, what we wanna do is this:</p>
+
+<pre><code>var bmp = new Bitmap(Image.FromFile(path));
+bmp.MapUnsafe(p =&gt; Tuple.Create(0, 0, 0));
+bmp.Dump(); // Expect filtered results
+</code></pre>
+
+<p>We&rsquo;ll need a <code>static</code> class to host our extensions and we&rsquo;ll also need a <code>static void MapUnsafe</code> method that manipulates the bitmap given our filter signature. Because this is an extension method, the first argument has to be the same type as the instance we intend to operate on. It also requires the <code>this</code> keyword.</p>
+
+<p>The second argument will be our filter, this is a function that takes a color tuple and returns a color tuple.</p>
+
+<pre><code>static class Extensions 
+{
+    public static void MapUnsafe(
+        this Bitmap self, 
+        Func&lt;Tuple&lt;byte, byte, byte&gt;, Tuple&lt;byte, byte, byte&gt;&gt; filter)
+    {
+        // ...
+    }
+}
+</code></pre>
+
+<p>What we did up to this point was mostly just ceremony and design. Now we finally get the implement the actual fun stuff but. The goal of the <code>MapUnsafe</code> method is to have a way of executing filters on the image data efficiently and without writing a lot of code. For example, I would like to do this:</p>
+
+<pre><code>Func&lt;Tuple&lt;byte, byte, byte&gt;, Tuple&lt;byte, byte, byte&gt;&gt; f = c =&gt;
+{
+    var lum = RLum(c.Item1, c.Item2, c.Item3);
+    return Tuple.Create(lum, lum, lum);
+};
+
+src.MapUnsafe(f);
+src.Dump();
+</code></pre>
+
+<p>And once we know how we want to write it we just have to implement it. I&rsquo;ll give the implementation first and then walk through the details:</p>
+
+<pre><code>static class Extensions
+{
+    public static unsafe void MapUnsafe(
+        this Bitmap self,
+        Func&lt;Tuple&lt;byte, byte, byte&gt;, Tuple&lt;byte, byte, byte&gt;&gt; filter)
+    {
+        const int BytesPerPixel = 3;
+
+        var data = self.LockBits(
+            new Rectangle(0, 0, self.Width, self.Height),
+            ImageLockMode.ReadWrite,
+            PixelFormat.Format24bppRgb);
+
+        var scan0 = (byte*)data.Scan0;
+        var stride = data.Stride;
+        for (var y = 0; y &lt; data.Height; y++)
+        {
+            var row = scan0 + (y * stride);
+            for (var x = 0; x &lt; data.Width; x++)
+            {
+                // Note that order is BGR (blame Microsoft)
+                var bi = x * BytesPerPixel;
+                var gi = bi + 1;
+                var ri = bi + 2;
+
+                var r = row[ri];
+                var g = row[gi];
+                var b = row[bi];
+
+                var c = filter(Tuple.Create(r, g, b));
+                row[ri] = c.Item1;
+                row[gi] = c.Item2;
+                row[bi] = c.Item3;
+            }
+        }
+
+        self.UnlockBits(data);
+    }
+}
+</code></pre>
+
+<p>Now there&rsquo;s quite a lot of code in there so don&rsquo;t worry if you don&rsquo;t understand all of it at once. It&rsquo;s also <code>unsafe</code> so that might throw you off as well.</p>
+
+<p>The key to doing fast bitmap operations is using the <a href="https://msdn.microsoft.com/nl-nl/library/5ey6h79d(v=vs.110).aspx">Bitmap.LockBits</a> and <a href="https://msdn.microsoft.com/en-us/library/system.drawing.bitmap.unlockbits(v=vs.110).aspx">Bitmap.UnlockBits</a> methods that are available on any <code>Bitmap</code> instance.</p>
+
+<h3 id="dissection">dissection</h3>
+
+<p>In the code above, the first thing we notice is that <code>const int BytesPerPixel = 3</code> which is not that pretty. We need that constant for stepping through bytes later though.</p>
+
+<p>The fun part is in the next statement:</p>
+
+<pre><code>var data = self.LockBits(
+    new Rectangle(0, 0, self.Width, self.Height),
+    ImageLockMode.ReadWrite,
+    PixelFormat.Format24bppRgb);
+</code></pre>
+
+<p>It looks like quite a handfull but it&rsquo;s not that bad. The <code>LockBits</code> method returns a <code>BitmapData</code> instance that gives us direct access to the region that is specfied by the <code>Rectangle</code> that is given as the first argument. In this case, we&rsquo;re modifiying the whole image so we use the dimensions of our <code>Bitmap self</code>.</p>
+
+<p>There&rsquo;s a slight problem though since <code>BitmapData</code> is essentially a 1D representation of our 3D bitmap. Reconstructing it is not hat hard and essentially we&rsquo;ll use the same pattern as before:</p>
+
+<pre><code>var scan0 = (byte*)data.Scan0;
+var stride = data.Stride;
+for(var y = 0; y &lt; data.Height; y++)
+{
+    var row = scan0 + (y * stride);
+    for(var x = 0; x &lt; data.Width; x++)
+    {
+        // ...
+    }
+}
+</code></pre>
+
+<p>Because we&rsquo;re essentially dealing with a single stream of <code>byte</code> values we have to consider the <strong>stride</strong> value in order to reconstruct a 2D array. This value is defined as the number of bytes that are required to represent one line along the <code>y</code> axis.</p>
+
+<p>Inside the loops you will find a declaration for <code>row</code> which will give us the offset in the entire block of memory where the row of pixels starts. The <code>scan0</code> position is the <code>byte</code> offset from where the image data starts. The <code>stride</code> is the <strong>length</strong> of one row in pixel units.</p>
 </div>
 
     

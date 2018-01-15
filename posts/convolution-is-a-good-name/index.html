@@ -132,7 +132,7 @@
     
 
     <h4><a href="/posts/convolution-is-a-good-name/">convolution is a good name</a></h4>
-    <h5>January 10, 2018</h5>
+    <h5>January 11, 2018</h5>
     
 
 </div>
@@ -218,19 +218,11 @@ static double[] f = Enumerable.Range(0, 10).Select(x =&gt; rng.NextDouble()).ToA
 
 <p>If we look very carefully at the body of <code>createF2</code> we see the inner machinery of convolution at work as expressed in code. The trick is actually in the bits that look at the previous, current and next values: <code>weights[0] * f[x - 1]</code>, <code>weights[1] * f[x - 0]</code> and <code>weights[2] * f[x + 1]</code>.</p>
 
-<p>We also have a bit of technical debt that we inherited from when we used <code>u</code>, <code>v</code> and <code>w</code> earlier. Not all is lost though! What we need is a more generic way of looking back and forward. In other words, it would be nice if our range was not limited to <code>x - 1</code> to <code>x + 1</code> but that we could involve <code>x - n</code> to <code>x + n</code>.</p>
+<h3 id="covoconcolusion-for-now">covoconcolusion (for now)</h3>
 
-<h3 id="enter-t-and-tau">enter t and tau</h3>
+<p>We have a bit of technical debt that we inherited from when we used <code>u</code>, <code>v</code> and <code>w</code> earlier. Not all is lost though! What we need is a more generic way of looking back and forward. In other words, it would be nice if our range was not limited to <code>x - 1</code> to <code>x + 1</code> but that we could involve <code>x - n</code> to <code>x + n</code>.</p>
 
-<p>When you go look for more formal definitions of convolution you&rsquo;ll quickly find yourself in the land of <em>integrals</em> and abstract formulas. You&rsquo;ll also meet our friends <code>t</code> and <code>tau</code> who are almost guaranteed to pop up at some point. The reason why you often see <code>f(t)</code> and <code>h(t)</code> instead of <code>f(x)</code> and <code>h(x)</code> is because of engineers (I think).</p>
-
-<p>From an engineering perspective, we see the function <code>f</code> as some kind of value that is dependant on time. So <code>f</code> is a function of <em>time</em> and not of some abstract <code>x</code> value. Hence we have <code>f(t)</code> instead of <code>f(x)</code> (at least that&rsquo;s my no-research take on it).</p>
-
-<p>Anyway, if we go back to our problem, we need <code>f[x - 1]</code> to <code>f[x - 1]</code> to be <code>f[x - n]</code> to <code>f[x + n]</code> instead. That way, we can &ldquo;look around&rdquo; infinitely and also do some more fancy stuff. But we might wanna go even further. Ideally, we want to ditch the <code>int</code> and be able to <em>sample</em> on doubles instead.</p>
-
-<p>Currently, our <code>f</code> can only deal with inputs where <code>x</code> is an <code>int</code> and <code>0 &lt;= x &lt;= 10</code> and that is limited. In a similar fashion, our <code>h</code> can only deal with inputs where <code>x</code> is an int and also limited to the values of <code>{-1, 0, 1}</code> since we hardcoded them. Actually, we don&rsquo;t even have a <code>h</code> except that it&rsquo;s floating around in our little bit of code that we have.</p>
-
-<p>TODO: Clarify <code>tau</code></p>
+<p>We&rsquo;ll tackle those and other problems in a next post though (because I <em>will</em> follow up on this).</p>
 </div>
 
     

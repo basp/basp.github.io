@@ -6,10 +6,30 @@
     <description>Recent content in Posts on chances are nil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 12 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 15 Jan 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://basp.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>introducing lina</title>
+      <link>https://basp.github.io/posts/introducing-lina/</link>
+      <pubDate>Mon, 15 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://basp.github.io/posts/introducing-lina/</guid>
+      <description>Lina is a linear algebra library that I&amp;rsquo;m working on. I already have a lot of random algorithms lying around and I decided to incorporate them into a new .NET library that is easy to explain, generic and funtional and also fast while doing interactive programming.
+The goal is to grow Lina into a more capable libraby eventually but for now she&amp;rsquo;s really good at doing convolutions on vectors show that&amp;rsquo;s what I want to show off today.</description>
+    </item>
+    
+    <item>
+      <title>two dimensional discrete convolution</title>
+      <link>https://basp.github.io/posts/two-dimensional-discrete-convolution/</link>
+      <pubDate>Sun, 14 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://basp.github.io/posts/two-dimensional-discrete-convolution/</guid>
+      <description>Today I&amp;rsquo;m (finally) able to introduce something concrete: 2D convolutions for .NET (i.e. linear filtering). I just wrote this quickly so it&amp;rsquo;s not that optimized and probably needs some more love but it&amp;rsquo;s usuable and it works.
+I tried to dig into convolutions from a more general perspective but they are (no pun intended) quite convoluted. So we&amp;rsquo;re going to limit ourselves to a very particular case of convultions.</description>
+    </item>
     
     <item>
       <title>fun with bitmaps</title>
@@ -19,6 +39,16 @@
       <guid>https://basp.github.io/posts/fun-with-bitmaps/</guid>
       <description>Weekend is here so let&amp;rsquo;s have some fun with bitmaps. Before we can start though, we need to grab a bitmap or two to work with. Make sure to get one or two good sized ones (around 1000x1000 will do) and make sure to put them in an easy path.
 Oh, and of course I&amp;rsquo;m doing this from LINQPad so that&amp;rsquo;s where the Dump method comes from. If you don&amp;rsquo;t have LINQPad you can still follow along but you will have to do some extra work to actually view the results.</description>
+    </item>
+    
+    <item>
+      <title>convolution is a good name</title>
+      <link>https://basp.github.io/posts/convolution-is-a-good-name/</link>
+      <pubDate>Thu, 11 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://basp.github.io/posts/convolution-is-a-good-name/</guid>
+      <description>Today I spend some time trying to figure out what convolution is. It&amp;rsquo;s not hard to find definitions but the problem is that every single one of them seems to assume that I&amp;rsquo;m some kind of math wizard already. That&amp;rsquo;s why we work in from the software engineering side to gain a better understanding.
+When I finally realized what it actually meant it dawned on me that I have been doing convulation for decades without even realizing there was a word for it.</description>
     </item>
     
     <item>
