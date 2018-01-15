@@ -17,8 +17,9 @@
       <pubDate>Mon, 15 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>https://basp.github.io/posts/introducing-lina/</guid>
-      <description>Lina is a linear algebra library that I&amp;rsquo;m working on. I already have a lot of random algorithms lying around and I decided to incorporate them into a new .NET library that is easy to explain, generic and funtional and also fast while doing interactive programming.
-The goal is to grow Lina into a more capable libraby eventually but for now she&amp;rsquo;s really good at doing convolutions on vectors show that&amp;rsquo;s what I want to show off today.</description>
+      <description>Lina Fast utilities for linear algebra.
+overview Lina is a linear algebra library that I&amp;rsquo;m working on. I have a lot of random algorithms lying around and I decided to incorporate them into a new .NET library that is easy to explain, generic and funtional and also fast while doing interactive programming.
+The goal is to grow Lina into a more capable libraby eventually but for now she&amp;rsquo;s really good at doing convolutions on vectors at least&amp;hellip;</description>
     </item>
     
     <item>

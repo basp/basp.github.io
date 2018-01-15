@@ -140,9 +140,15 @@
 
     <br> <div class="text-justify">
 
-<p><strong>Lina</strong> is a <strong>linear algebra</strong> library that I&rsquo;m working on. I already have a lot of random algorithms lying around and I decided to incorporate them into a new <strong>.NET</strong> library that is easy to explain, generic and <strong>funtional</strong> and also fast while doing interactive programming.</p>
+<h2 id="lina">Lina</h2>
 
-<p>The goal is to grow <strong>Lina</strong> into a more capable libraby eventually but for now she&rsquo;s really good at doing convolutions on <strong>vectors</strong> show that&rsquo;s what I want to show off today.</p>
+<p>Fast utilities for linear algebra.</p>
+
+<h3 id="overview">overview</h3>
+
+<p><strong>Lina</strong> is a <strong>linear algebra</strong> library that I&rsquo;m working on. I have a lot of random algorithms lying around and I decided to incorporate them into a new <strong>.NET</strong> library that is easy to explain, generic and <strong>funtional</strong> and also fast while doing interactive programming.</p>
+
+<p>The goal is to grow <strong>Lina</strong> into a more capable libraby eventually but for now she&rsquo;s really good at doing convolutions on <strong>vectors</strong> at least&hellip;</p>
 
 <h3 id="creating-a-vector">creating a vector</h3>
 
@@ -151,7 +157,7 @@
 <pre><code>var u = Vector.Create(8, _ =&gt; 10);
 </code></pre>
 
-<p>This will give us a <code>Vector&lt;int&gt;</code> with a <code>Length</code> of 8 elements, all initialized to the value of 10. As an aside, we can manipulate <code>Vector&lt;T&gt;</code> instances if we really want to:</p>
+<p>This will give us a <code>Vector&lt;int&gt;</code> with a <code>Length</code> of 8 elements that are all initialized to the <code>int</code> value of 10. As an aside, we can manipulate <code>Vector&lt;T&gt;</code> instances if we really want to:</p>
 
 <pre><code>u[4] = 5;
 </code></pre>
