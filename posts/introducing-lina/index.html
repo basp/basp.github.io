@@ -174,9 +174,9 @@
 <h3 id="convoluting">convoluting</h3>
 
 <p>There&rsquo;s a few ways that we can evaluate a convolution:
-* <strong>valid</strong> will only involve cells that are valid in the original source (<code>u</code>) combined with the area (overlap) of our kernel (<code>v</code>) which may not lie outside the range of the original image. The size of the output will be smaller by two times the value of the kernel center point index.
-* <strong>same</strong> will only involve cells that are valid in the original source image. Since the combination of kernel and source image will not always completely overlap we have to make up imaginary values for the missing positions. The size of the output will be exactly the same as the size as the input.
-* <strong>all</strong> in this case we will examine all cells that have some combination between the kernel and the source. This means we still have to make up values but that the kernel center point will shift even more outside the boundaries of the original source. This is in effect, a widening operation, the size of the output will be larger by two times the value of the kernel center point index.</p>
+* valid will only involve cells that are valid in the original source (<code>u</code>) combined with the area (overlap) of our kernel (<code>v</code>) which may not lie outside the range of the original image. The size of the output will be smaller by two times the value of the kernel center point index.
+* same will only involve cells that are valid in the original source image. Since the combination of kernel and source image will not always completely overlap we have to make up imaginary values for the missing positions. The size of the output will be exactly the same as the size as the input.
+* all in this case we will examine all cells that have some combination between the kernel and the source. This means we still have to make up values but that the kernel center point will shift even more outside the boundaries of the original source. This is in effect, a widening operation, the size of the output will be larger by two times the value of the kernel center point index.</p>
 
 <h3 id="trying-it-out">trying it out</h3>
 
