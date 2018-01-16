@@ -175,7 +175,7 @@
 
 <p>There&rsquo;s a few ways that we can evaluate a convolution:
 <ul>
-<li> <strong>valid</strong> will only involve cells that are valid in the original source (<code>u</code>) combined with the area (overlap) of our kernel (<code>v</code>) which may not lie outside the range of the original image. The size of the output will be smaller by two times the value of the kernel center point index in all dimensions.
+<li> <strong>valid</strong> will only involve cells that are valid in the original source (<code>u</code>) combined with the area (overlap) of our kernel (<code>v</code>) which will always lie in a valid range with respect to the original source image. The size of the output will be smaller by two times the value of the kernel center point index in all dimensions.
 <li> <strong>same</strong> will only involve cells that are valid in the original source image. Since the combination of kernel and source image will not always completely overlap we have to make up imaginary values for the missing positions. The size of the output will be exactly the same as the size as the input in all dimensions.
 <li> <strong>all</strong> will examine all cells that have some combination between the kernel and the source. This means we still have to make up values but that the kernel center point will shift even more outside the boundaries of the original source. This is in effect, a widening operation, the size of the output will be larger by two times the value of the kernel center point index in all dimensions.
 </ul></p>
