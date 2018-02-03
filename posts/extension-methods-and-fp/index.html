@@ -150,7 +150,7 @@
 
 <p>In order to really understand why the correlation described above pops up so naturally we need to really understand why <strong>FP</strong> (function programming) is better than <strong>OOP</strong> in some instances and vice versa.</p>
 
-<h3 id="behavior-v-s-data">Behavior v.s. data</h3>
+<h3 id="behaviour-v-s-data">behaviour v.s. data</h3>
 
 <p>When you learn about <strong>OOP</strong> hopefully you&rsquo;ll also learn that it&rsquo;s really important to think about your <strong>operations</strong> (methods) first and not so much your data.</p>
 
@@ -164,7 +164,21 @@
 <p>If you&rsquo;re doing OOP and your class diagrams have 80% properties and 20% methods (and that&rsquo;s even better than what I encounter in real life) <strong>you&rsquo;re doing it wrong</strong>.</p>
 </blockquote>
 
-<p>In contrast, when you learn about <strong>FP</strong> you will learn that it&rsquo;s really important how you model your data and not worry too much about any operations (functions).</p>
+<p>In contrast, when you learn about <strong>FP</strong> you will learn that it&rsquo;s really important how you model your data and not worry too much about any operations (functions) too much.</p>
+
+<p>We can summarive the whole thing by just two simple rules of thumb:
+* If your operations are stabile but your data changes, use OOP.
+* If your data is stable but your operations change, use FP.</p>
+
+<h3 id="the-problem">the problem</h3>
+
+<p>The thing is that <strong>OOP</strong> is so <em>fancy</em> to the point that it&rsquo;s almost a herisy to do something else. It has become a huge marketing, selling and recruiting term to the point that it doesn&rsquo;t mean anything anymore. And people are actually forcing their code into so-called <em>object-oriented</em> constraints even though the actual problem to solve doesn&rsquo;t wanna be force-fit into those constraints.</p>
+
+<h2 id="you-are-hopefully-already-doing-fp">you are (hopefully) already doing FP</h2>
+
+<p>Are you using <code>System.Linq</code> for most of your problem solving? If not you should. To be honest, I&rsquo;m gonna be blunt and just say that if your solutions to general problems don&rsquo;t involve <strong>LINQ</strong> in 80% of the cases you&rsquo;re just a poor programmer.</p>
+
+<p>Finding a way to automate or repeatedly execute the same thing over and over is one of the key things that we have to do and have to know about doing it well. If you are not capable of able to see how you can repeat a singular problem or if you do operations on sequeneces that don&rsquo;t involve LINQ then you are <strong>doing it wrong</strong>.</p>
 </div>
 
     
