@@ -4,7 +4,7 @@
          
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Posts</title>
+        <title>extension methods and fp</title>
         <style>
 
     html body {
@@ -60,9 +60,6 @@
 <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
  <meta name="generator" content="Hugo 0.31.1" />
         
-        <link href="https://basp.github.io/posts/index.xml" rel="alternate" type="application/rss+xml" title="chances are nil" />
-        <link href="https://basp.github.io/posts/index.xml" rel="feed" type="application/rss+xml" title="chances are nil" />
-        
         
         
     </head>
@@ -80,7 +77,7 @@
 
                 <div class="navbar-header">
 
-                    <a class="navbar-brand visible-xs" href="#">Posts</a>
+                    <a class="navbar-brand visible-xs" href="#">extension methods and fp</a>
 
                     <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
                         <span class="icon-bar"></span>
@@ -125,9 +122,7 @@
 
 <main>
 
-    <h2>Posts</h2>
-
-     <div class="item">
+    <div class="item">
 
     
     
@@ -141,79 +136,45 @@
     
 
 </div>
-  <div class="item">
 
-    
-    
-    
 
-    
-    
+    <br> <div class="text-justify">
 
-    <h4><a href="/posts/introducing-lina/">introducing lina</a></h4>
-    <h5>January 15, 2018</h5>
-    
+<h2 id="extension-methods-and-functional-programming">extension methods and functional programming</h2>
 
+<p>Recently I started on a new project for calculating code metrics. And I found myself using extension methods more than I used to and this got me wondered. I know that my programming style tends to be more functional than object oriented but in this particular case I noticed a correlation I didn&rsquo;t really notice so clearly before (even though I saw this pop up in other projects as well).</p>
+
+<p>In this post I&rsquo;ll try to explain why that happens.</p>
+
+<h2 id="function-v-s-object-oriented">function v.s. object oriented</h2>
+
+<p>In order to really understand why the correlation described above pops up so naturally we need to really understand why <strong>FP</strong> (function programming) is better than <strong>OOP</strong> in some instances and vice versa.</p>
+
+<h3 id="behavior-v-s-data">Behavior v.s. data</h3>
+
+<p>When you learn about <strong>OOP</strong> hopefully you&rsquo;ll also learn that it&rsquo;s really important to think about your <strong>operations</strong> (methods) first and not so much your data.</p>
+
+<blockquote>
+<p>I have to say in practice people fall into the trap of thinking about data first (like OOP can be summarized as a database dictionary)just because it is so much easier to <em>fake</em> actual progress.</p>
+</blockquote>
+
+<p>Or in other (more concrete) words:</p>
+
+<blockquote>
+<p>If you&rsquo;re doing OOP and your class diagrams have 80% properties and 20% methods (and that&rsquo;s even better than what I encounter in real life) <strong>you&rsquo;re doing it wrong</strong>.</p>
+</blockquote>
+
+<p>In contrast, when you learn about <strong>FP</strong> you will learn that it&rsquo;s really important how you model your data and not worry too much about any operations (functions).</p>
 </div>
-  <div class="item">
-
-    
-    
-    
 
     
     
 
-    <h4><a href="/posts/fun-with-bitmaps/">fun with bitmaps</a></h4>
-    <h5>January 12, 2018</h5>
-    
-
-</div>
-  <div class="item">
-
-    
-    
     
 
     
-    
-
-    <h4><a href="/posts/convolution-is-a-good-name/">convolution is a good name</a></h4>
-    <h5>January 11, 2018</h5>
-    
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/posts/curve-fitting-with-linqpad/">curve fitting with linqpad</a></h4>
-    <h5>January 10, 2018</h5>
-    
-
-</div>
- 
 
 </main>
-
-
-
-<div class="pages">
-
-     
-    <a class="icon pages-icon" href="/posts/page/2/" rel="next">
-        <i class="fa fa-arrow-right"></i>
-    </a>
-    
-
-</div>
-
-
 
         <footer>
 
