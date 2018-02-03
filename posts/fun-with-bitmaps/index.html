@@ -187,14 +187,14 @@ src.Dump();
 
 <p>We&rsquo;re now left with a 2D array instead of a 3D one so we have to devise a way how to find the colors for our image. When we have a 2D image and we need a 3D (i.e. <strong>colorized</strong>) visual we often utilize a <strong>color map</strong>.</p>
 
-<p>A color map takes a value in a certaain range (let&rsquo;s say <code>0..255</code> in our case) and maps that to another value that represents a color. Let&rsquo;s define the <em>identity</em> color map:</p>
+<p>A color map takes a value in a certain range (let&rsquo;s say <code>0..255</code> in our case) and maps that to another value that represents a color. Let&rsquo;s define the <em>identity</em> color map:</p>
 
 <pre><code>Func&lt;int,Color&gt; cmapid = x =&gt; Color.FromArgb(x, x, x);
 </code></pre>
 
 <p>A very simple way to do it is just to grayscale our image using the luminance function and then use that luminance value to compute a new color.</p>
 
-<p>By the way, if you think that the nested loop below is horrible code then I can only agree. It <em>is</em> horrible but we&rsquo;ll deal with that later. For now our focus is on understanding and no so much on efficiency.</p>
+<p>By the way, if you think that the nested loop below is horrible code then I can only agree. It <em>is</em> horrible but we&rsquo;ll deal with that later. For now our focus is on understanding and not so much on efficiency.</p>
 
 <pre><code>var @out = new Bitmap(src.Width, src.Height);
 for (var y = 0; y &lt; src.Height; y++)
