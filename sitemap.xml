@@ -3,22 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://basp.github.io/projects/project1/</loc>
-  </url>
-  
-  <url>
-    <loc>https://basp.github.io/projects/project2/</loc>
-  </url>
-  
-  <url>
-    <loc>https://basp.github.io/projects/project3/</loc>
-  </url>
-  
-  <url>
-    <loc>https://basp.github.io/projects/project4/</loc>
-  </url>
-  
-  <url>
     <loc>https://basp.github.io/posts/extension-methods-and-fp/</loc>
     <lastmod>2018-02-03T00:00:00+00:00</lastmod>
   </url>
@@ -49,47 +33,7 @@
   </url>
   
   <url>
-    <loc>https://basp.github.io/tags/bootstrap/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://basp.github.io/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://basp.github.io/tags/css/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://basp.github.io/tags/go/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://basp.github.io/tags/golang/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://basp.github.io/tags/highlight-js/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://basp.github.io/tags/html/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://basp.github.io/tags/hugo/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://basp.github.io/tags/js/</loc>
     <priority>0</priority>
   </url>
   
@@ -105,16 +49,6 @@
   </url>
   
   <url>
-    <loc>https://basp.github.io/tags/responsive/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://basp.github.io/tags/syntax-highlighting/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://basp.github.io/tags/</loc>
     <priority>0</priority>
   </url>
@@ -123,6 +57,22 @@
     <loc>https://basp.github.io/</loc>
     <lastmod>2018-02-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://basp.github.io/projects/lina/</loc>
+  </url>
+  
+  <url>
+    <loc>https://basp.github.io/projects/nanibot/</loc>
+  </url>
+  
+  <url>
+    <loc>https://basp.github.io/projects/pixlr/</loc>
+  </url>
+  
+  <url>
+    <loc>https://basp.github.io/projects/raina/</loc>
   </url>
   
 </urlset>
