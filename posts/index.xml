@@ -23,15 +23,6 @@ Now suppose we have a BigRational Round(BigRational a, int digits) function that
     
     <item>
       <title>extension methods and fp</title>
-      <link>https://basp.github.io/posts/extension-methods-and-fp.1/</link>
-      <pubDate>Sat, 03 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://basp.github.io/posts/extension-methods-and-fp.1/</guid>
-      <description>extension methods and functional programming Recently I started on a new project for calculating code metrics. And I found myself using extension methods more than I used to and this got me wondered. I know that my programming style tends to be more functional than object oriented but in this particular case I noticed a correlation I didn&amp;rsquo;t really notice so clearly before (even though I saw this pop up in other projects as well).</description>
-    </item>
-    
-    <item>
-      <title>extension methods and fp</title>
       <link>https://basp.github.io/posts/extension-methods-and-fp/</link>
       <pubDate>Sat, 03 Feb 2018 00:00:00 +0000</pubDate>
       
