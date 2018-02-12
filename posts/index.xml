@@ -6,10 +6,20 @@
     <description>Recent content in Posts on chances are nil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 03 Feb 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 12 Feb 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://basp.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>rounding big rational numbers</title>
+      <link>https://basp.github.io/posts/rounding-big-rationals/</link>
+      <pubDate>Mon, 12 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://basp.github.io/posts/rounding-big-rationals/</guid>
+      <description>Let&amp;rsquo;s assume we have a BigRational class. This class is used to represent fractions like A/B (e.g. 1&amp;frasl;3, 4&amp;frasl;5, 5&amp;frasl;4) with a precision that is only limited by the memory your runtime has available. This means the use-case is numbers that don&amp;rsquo;t typically fit in 64 bits (so we can&amp;rsquo;t just convert them to a pair of double or long values for example).
+Now suppose we have a Round(BigRational a, int digits) function that rounds the BigRational value to a specified number of digits.</description>
+    </item>
     
     <item>
       <title>extension methods and fp</title>
@@ -18,17 +28,6 @@
       
       <guid>https://basp.github.io/posts/extension-methods-and-fp/</guid>
       <description>extension methods and functional programming Recently I started on a new project for calculating code metrics. And I found myself using extension methods more than I used to and this got me wondered. I know that my programming style tends to be more functional than object oriented but in this particular case I noticed a correlation I didn&amp;rsquo;t really notice so clearly before (even though I saw this pop up in other projects as well).</description>
-    </item>
-    
-    <item>
-      <title>introducing lina</title>
-      <link>https://basp.github.io/posts/introducing-lina/</link>
-      <pubDate>Mon, 15 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://basp.github.io/posts/introducing-lina/</guid>
-      <description>Lina Fast utilities for linear algebra.
-overview Lina is a linear algebra library that I&amp;rsquo;m working on. I have a lot of random algorithms lying around and I decided to incorporate them into a new .NET library that is easy to explain, generic and funtional and also fast while doing interactive programming.
-The goal is to grow Lina into a more capable libraby eventually but for now she&amp;rsquo;s really good at doing convolutions on vectors at least&amp;hellip;</description>
     </item>
     
     <item>

@@ -3,13 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://basp.github.io/posts/extension-methods-and-fp/</loc>
-    <lastmod>2018-02-03T00:00:00+00:00</lastmod>
+    <loc>https://basp.github.io/posts/rounding-big-rationals/</loc>
+    <lastmod>2018-02-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://basp.github.io/posts/introducing-lina/</loc>
-    <lastmod>2018-01-15T00:00:00+00:00</lastmod>
+    <loc>https://basp.github.io/posts/extension-methods-and-fp/</loc>
+    <lastmod>2018-02-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -44,7 +44,7 @@
   
   <url>
     <loc>https://basp.github.io/posts/</loc>
-    <lastmod>2018-02-03T00:00:00+00:00</lastmod>
+    <lastmod>2018-02-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -60,7 +60,7 @@
   
   <url>
     <loc>https://basp.github.io/</loc>
-    <lastmod>2018-02-03T00:00:00+00:00</lastmod>
+    <lastmod>2018-02-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

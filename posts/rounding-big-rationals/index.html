@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>rounding big rational numbers</title>
+        <style>
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: hotpink;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://basp.github.io//css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+ <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.31.1" />
+        
+        
+        
+    </head>
+
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">rounding big rational numbers</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/posts/">Posts</a></li>
+                            
+                                <li><a href="/projects/">Projects</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:me@example.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/basp/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/meticulous/"><i class="fa fa-twitter"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/posts/rounding-big-rationals/">rounding big rational numbers</a></h4>
+    <h5>February 12, 2018</h5>
+    
+
+</div>
+
+
+    <br> <div class="text-justify"><p>Let&rsquo;s assume we have a <code>BigRational</code> class. This class is used to represent fractions like A/B (e.g. <sup>1</sup>&frasl;<sub>3</sub>, <sup>4</sup>&frasl;<sub>5</sub>, <sup>5</sup>&frasl;<sub>4</sub>) with a precision that is only limited by the memory your runtime has available. This means the use-case is numbers that don&rsquo;t typically fit in 64 bits (so we can&rsquo;t just convert them to a pair of <code>double</code> or <code>long</code> values for example).</p>
+
+<p>Now suppose we have a <code>Round(BigRational a, int digits)</code> function that rounds the <code>BigRational</code> value to a specified number of digits. How can we do this? We can&rsquo;t just simply convert it to a <code>decimal</code> or <code>double</code> and do some rounding before converting it back again in a reasonable
+way. Are we stuck? No not at all. In fact, rounding fractions is even easier than rounding decimal or floating point values. And the best thing is that we will preserve our fractional
+quality as well.</p>
+
+<p>Let&rsquo;s start with something concrete. Take the <code>BigRational</code> below, it&rsquo;s <strong><sup>1</sup>&frasl;<sub>3</sub></strong> which, in decimal, translates to <code>0.333333..</code> that is, a 0 followed by a never ending sequence of 3s.</p>
+
+<pre><code>var oneOverThree = new BigRational(1, 3);
+var a = oneOverThree.Numerator;
+var b = oneOverThree.Denominator;
+</code></pre>
+
+<p>Now let&rsquo;s say we wanna round this to two decimals. So instead of <code>0.333...</code> we get just <code>0.33</code> that is, a 0 followed by two 3s. The first instinct (at least for me) was to try to convert this into a decimal, cut off any digits that we don&rsquo;t need and be done with it. Sadly, that approach is not feasible at all.</p>
+
+<p>The solution is actually quite simple if we step back. If we had no built-in rounding routine then how would we round? Well we would multiply by some power of 10 and then just chop off everything we don&rsquo;t need before dividing it by 10 again. Can we use the same trick? Turns
+out we can, we just have to follow the laws of rational numbers a bit more clearly and do a little bit of switcharoo.</p>
+
+<p>We start with creating a new var <code>c</code> that is initialized to a value of <code>10**digits</code>. So if we want 3 digits that will be <code>c = 10**3 = 1000</code>. Since we&rsquo;re dealing with <code>BigRational</code> we will also use <code>BigInteger</code> for our calculations.</p>
+
+<pre><code>var c = BigInteger.Pow(10, digits);
+</code></pre>
+
+<p>Once we have this scaling factor it&rsquo;s super easy to create a new <code>BigRactional</code> that is equivalent to the amount of digits we need. First we need a new <em>numerator</em> (this is
+the <code>a2</code> in the fraction <code>a2/b2</code>). This numerator will be equal to <code>c / b</code> (that is <code>100/3</code> in this case since the denominator of the fraction we want to round is equal to <code>3</code>).</p>
+
+<pre><code>var a2 = a * BigInteger.Divide(c, b); // a2 == 1 * 100 / 3 == 33
+</code></pre>
+
+<p>Since <code>BigInteger.Divide</code> does a so-called <em>integer divide</em> it has no decimals. They are just chopped off. This basically gives us a new numerator by scaling the old one up by <code>10**digits</code>.</p>
+
+<p>For our new demoninator <code>b2</code> it&rsquo;s even easier. We&rsquo;ll just multiply our old <code>a</code> with our scaling factor.</p>
+
+<pre><code>var b2 = BigInteger.Divide(a / digits);
+</code></pre>
+
+<p>Yep. We just set it to equal <code>c</code> and now we can create our perfectly rounded to <code>digits</code> digits fraction:</p>
+
+<pre><code>var oneOverThreeRoundedToTwoDecimals = BigRational.Normalize(new BigRational(a2, b2)); 
+oneOverThreeRoundedToTwoDecimals.Dump();
+// 33/100
+</code></pre>
+
+<p>In the actual code, the method looks like this:</p>
+
+<pre><code>static BigRational Round(BigRational a, int digits)
+{
+    var c = BigInteger.Pow(10, digits);
+    return BigRational.Normalize(new BigRational(
+        a.Numerator * BigInteger.Divide(c, a.Denominator),
+        c));
+}
+</code></pre>
+
+<p>If we try it out with a bit more challenging rational like <strong><sup>2</sup>&frasl;<sub>3</sub></strong> we expect to see something like (<code>66666/100000 == 333333/50000</code>) when we round it to 5 digits. Let&rsquo;s try it out:</p>
+
+<pre><code>var r2 = new BigRational(2, 3);
+Round(r2, 5).Dump()
+// 33333/50000
+</code></pre>
+</div>
+
+    
+    
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+
+        </footer>
+       
+    </body>
+
+</html>
+
