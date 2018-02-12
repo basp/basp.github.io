@@ -150,8 +150,8 @@ quality as well and you can do this in any base that you want. For this purpose 
 <p>Let&rsquo;s start with something concrete. Take the <code>BigRational</code> below, it&rsquo;s <strong><sup>1</sup>&frasl;<sub>3</sub></strong> which, in decimal, translates to <code>0.333333..</code> that is, a 0 followed by a never ending sequence of 3s.</p>
 
 <pre><code>var oneOverThree = new BigRational(1, 3);
-var a = oneOverThree.Numerator;
-var b = oneOverThree.Denominator;
+var a = oneOverThree.Numerator;     // 1
+var b = oneOverThree.Denominator;   // 3
 </code></pre>
 
 <p>Now let&rsquo;s say we wanna round this to two decimals. So instead of <code>0.333...</code> we get just <code>0.33</code> that is, a 0 followed by two 3s. The first instinct (at least for me) was to try to convert this into a decimal, cut off any digits that we don&rsquo;t need and be done with it. Sadly, that approach is not feasible at all.</p>
