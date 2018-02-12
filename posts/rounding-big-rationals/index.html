@@ -164,22 +164,23 @@ out we can, we just have to follow the laws of rational numbers a bit more clear
 <pre><code>var c = BigInteger.Pow(10, digits);
 </code></pre>
 
-<p>Once we have this scaling factor it&rsquo;s super easy to create a new <code>BigRactional</code> that is equivalent to the amount of digits we need. First we need a new <em>numerator</em> (this is
-the <code>a2</code> in the fraction <code>a2/b2</code>). This numerator will be equal to <code>c / b</code> (that is <code>100/3</code> in this case since the denominator of the fraction we want to round is equal to <code>3</code>).</p>
+<p>Once we have this scaling factor it&rsquo;s super easy to create a new <code>BigRational</code> that is equivalent to the amount of digits we need. First we need a new <em>numerator</em> (this is the <code>a2</code> in the fraction <code>a2/b2</code>). This <strong>numerator</strong> will be equal to <code>c / b</code> (that is <code>100/3</code> in this case because the <strong>denominator</strong> of the fraction we want to round is equal to <code>3</code>).</p>
 
 <pre><code>var a2 = a * BigInteger.Divide(c, b); // a2 == 1 * 100 / 3 == 33
 </code></pre>
 
-<p>Since <code>BigInteger.Divide</code> does a so-called <em>integer divide</em> it has no decimals. They are just chopped off. This basically gives us a new numerator by scaling the old one up by <code>10**digits</code>.</p>
+<p>Since <code>BigInteger.Divide</code> does a so-called <em>integer divide</em> the result has no decimals, they are just chopped off. This basically gives us a new numerator by scaling the old one up by <code>10**digits</code> (note that the rounding is biased to zero since we&rsquo;re just chopping off decimals).</p>
 
-<p>For our new demoninator <code>b2</code> it&rsquo;s even easier. We&rsquo;ll just multiply our old <code>a</code> with our scaling factor.</p>
+<p>For our new demoninator <code>b2</code> it&rsquo;s even easier</p>
 
-<pre><code>var b2 = BigInteger.Divide(a / digits);
+<pre><code>var b2 = c;
 </code></pre>
 
 <p>Yep. We just set it to equal <code>c</code> and now we can create our perfectly rounded to <code>digits</code> digits fraction:</p>
 
-<pre><code>var oneOverThreeRoundedToTwoDecimals = BigRational.Normalize(new BigRational(a2, b2)); 
+<pre><code>var oneOverThreeRoundedToTwoDecimals = 
+    BigRational.Normalize(new BigRational(a2, b2)); 
+    
 oneOverThreeRoundedToTwoDecimals.Dump();
 // 33/100
 </code></pre>
