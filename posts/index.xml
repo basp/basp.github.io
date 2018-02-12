@@ -18,7 +18,7 @@
       
       <guid>https://basp.github.io/posts/rounding-big-rationals/</guid>
       <description>Let&amp;rsquo;s assume we have a BigRational class. This class is used to represent fractions like A/B (e.g. 1&amp;frasl;3, 4&amp;frasl;5, 5&amp;frasl;4) with a precision that is only limited by the memory your runtime has available. This means the use-case is numbers that don&amp;rsquo;t typically fit in 64 bits (so we can&amp;rsquo;t just convert them to a pair of double or long values for example).
-Now suppose we have a Round(BigRational a, int digits) function that rounds the BigRational value to a specified number of digits.</description>
+Now suppose we have a BigRational Round(BigRational a, int digits) function that rounds the BigRational value to a specified number of digits.</description>
     </item>
     
     <item>

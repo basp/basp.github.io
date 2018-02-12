@@ -140,9 +140,10 @@
 
     <br> <div class="text-justify"><p>Let&rsquo;s assume we have a <code>BigRational</code> class. This class is used to represent fractions like A/B (e.g. <sup>1</sup>&frasl;<sub>3</sub>, <sup>4</sup>&frasl;<sub>5</sub>, <sup>5</sup>&frasl;<sub>4</sub>) with a precision that is only limited by the memory your runtime has available. This means the use-case is numbers that don&rsquo;t typically fit in 64 bits (so we can&rsquo;t just convert them to a pair of <code>double</code> or <code>long</code> values for example).</p>
 
-<p>Now suppose we have a <code>Round(BigRational a, int digits)</code> function that rounds the <code>BigRational</code> value to a specified number of digits. How can we do this? We can&rsquo;t just simply convert it to a <code>decimal</code> or <code>double</code> and do some rounding before converting it back again in a reasonable
-way. Are we stuck? No not at all. In fact, rounding fractions is even easier than rounding decimal or floating point values. And the best thing is that we will preserve our fractional
-quality as well.</p>
+<p>Now suppose we have a <code>BigRational Round(BigRational a, int digits)</code> function that rounds the <code>BigRational</code> value to a specified number of digits. How can we do this? We can&rsquo;t just simply convert it to a <code>decimal</code> or <code>double</code> and do some rounding before converting it back again in a reasonable way. We&rsquo;re not stuck though, in fact, rounding fractions is even easier than rounding decimal or floating point values.</p>
+
+<p>The best thing is that we will preserve our fractional
+quality as well and you can do this in any base that you want. For this purpose we&rsquo;ll use <strong>base-10</strong> but you can use <em>binary</em>, <em>hexadecimal</em> or even <em>octal</em> or whatever crazy base you desire.</p>
 
 <p>Let&rsquo;s start with something concrete. Take the <code>BigRational</code> below, it&rsquo;s <strong><sup>1</sup>&frasl;<sub>3</sub></strong> which, in decimal, translates to <code>0.333333..</code> that is, a 0 followed by a never ending sequence of 3s.</p>
 
