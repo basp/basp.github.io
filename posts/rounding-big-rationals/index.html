@@ -180,7 +180,7 @@ out we can, we just have to follow the laws of rational numbers a bit more clear
 
 <pre><code>var oneOverThreeRoundedToTwoDecimals = 
     BigRational.Normalize(new BigRational(a2, b2)); 
-    
+
 oneOverThreeRoundedToTwoDecimals.Dump();
 // 33/100
 </code></pre>
@@ -202,6 +202,8 @@ oneOverThreeRoundedToTwoDecimals.Dump();
 Round(r2, 5).Dump()
 // 33333/50000
 </code></pre>
+
+<p>Oh and if you are wondering about how to implement a <code>BigRational</code> data structure? That is easy enough using <code>System.Numerics.BigInteger</code> a little bit of programming and some math but we&rsquo;ll look into that later.</p>
 </div>
 
     
