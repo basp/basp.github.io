@@ -6,10 +6,20 @@
     <description>Recent content in Posts on chances are nil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 12 Feb 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 21 Feb 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://basp.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>implementing a tiny float</title>
+      <link>https://basp.github.io/posts/implementing-a-tiny-float/</link>
+      <pubDate>Wed, 21 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://basp.github.io/posts/implementing-a-tiny-float/</guid>
+      <description>Recently I became interested in the IEEE standard of floating punt numbers for various reasons and as always I figured the best way to learn about something is to (try and) create it myself. So that&amp;rsquo;s what I did.
+Carl Burch&amp;rsquo;s book helped me a lot while trying to figuring out this stuff. Also, if you&amp;rsquo;re interested in these kinds of things then you might find the ryg blog interesting as well.</description>
+    </item>
     
     <item>
       <title>rounding big rational numbers</title>
