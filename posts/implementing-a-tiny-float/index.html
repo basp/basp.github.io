@@ -298,6 +298,10 @@ static byte GetSign(byte v) =&gt; (byte)(v &amp; 0b00000001);
     static byte GetSign(byte v) =&gt; (byte)(v &amp; 0b00000001);
 }
 </code></pre>
+
+<p>Note that <code>ToBitString</code> uses <code>Convert</code> and a base of two to get a reasonable bit string from our <code>s</code> storage variable. It&rsquo;s mostly for debugging and trying to make sense of the numbers even though it&rsquo;s actually a pretty poor representation.</p>
+
+<p>And since this is already much longer than I planned I will keep the rest of our tiny float structure for a next post.</p>
 </div>
 
     
