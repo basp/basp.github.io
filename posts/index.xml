@@ -18,7 +18,7 @@
       
       <guid>https://basp.github.io/posts/implementing-a-tiny-float/</guid>
       <description>Recently I became interested in the IEEE standard of floating punt numbers for various reasons and as always I figured the best way to learn about something is to (try and) create it myself. So that&amp;rsquo;s what I did.
-Carl Burch&amp;rsquo;s book helped me a lot while trying to figuring out this stuff. Also, if you&amp;rsquo;re interested in these kinds of things then you might find the ryg blog interesting as well.</description>
+This post will walk you through implementing a software IEEE (hopefully) compatible float value of exactly 8 bits long. We&amp;rsquo;ll look at some of the challengese we face and hopefully learn a bit more about what floating point values are.</description>
     </item>
     
     <item>
