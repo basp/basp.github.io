@@ -6,10 +6,21 @@
     <description>Recent content in Posts on chances are nil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 Feb 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 27 Feb 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://basp.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>automatic differentation and dual numbers</title>
+      <link>https://basp.github.io/posts/automatic-differentation-and-dual-numbers/</link>
+      <pubDate>Tue, 27 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://basp.github.io/posts/automatic-differentation-and-dual-numbers/</guid>
+      <description>If you look up automatic differentation and eventually dual numbers you will get a lot of infomration but it&amp;rsquo;s hard to make sense of it all at first.
+So I did what I always do i n this case, just implement the damn thing myself and see how it actually works.
+data structure I like to tackle things from a functional perspectvei so that means we need to consider our data structure first.</description>
+    </item>
     
     <item>
       <title>implementing a tiny float</title>

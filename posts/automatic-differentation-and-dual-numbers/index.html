@@ -4,7 +4,7 @@
          
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Posts</title>
+        <title>automatic differentation and dual numbers</title>
         <style>
 
     html body {
@@ -60,9 +60,6 @@
 <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
  <meta name="generator" content="Hugo 0.31.1" />
         
-        <link href="https://basp.github.io/posts/index.xml" rel="alternate" type="application/rss+xml" title="chances are nil" />
-        <link href="https://basp.github.io/posts/index.xml" rel="feed" type="application/rss+xml" title="chances are nil" />
-        
         
         
     </head>
@@ -80,7 +77,7 @@
 
                 <div class="navbar-header">
 
-                    <a class="navbar-brand visible-xs" href="#">Posts</a>
+                    <a class="navbar-brand visible-xs" href="#">automatic differentation and dual numbers</a>
 
                     <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
                         <span class="icon-bar"></span>
@@ -125,9 +122,7 @@
 
 <main>
 
-    <h2>Posts</h2>
-
-     <div class="item">
+    <div class="item">
 
     
     
@@ -141,79 +136,56 @@
     
 
 </div>
-  <div class="item">
 
-    
-    
-    
 
-    
-    
+    <br> <div class="text-justify">
 
-    <h4><a href="/posts/implementing-a-tiny-float/">implementing a tiny float</a></h4>
-    <h5>February 21, 2018</h5>
-    
+<p>If you look up <a href="https://en.wikipedia.org/wiki/Automatic_differentiation">automatic differentation</a> and eventually <a href="https://en.wikipedia.org/wiki/Dual_number">dual numbers</a> you will get a lot of infomration but it&rsquo;s hard to make sense of it all at first.</p>
 
+<p>So I did what I always do i n this case, just implement the damn thing myself and see how it actually works.</p>
+
+<h2 id="data-structure">data structure</h2>
+
+<p>I like to tackle things from a functional perspectvei so that means we need to consider our data structure first. For a dual number we&rsquo;ll just gonna go with good old <code>double</code> (we make it more generic later) and model it as a simple <code>struct</code> like so:</p>
+
+<pre><code>struct Dual
+{
+    private readonly double Re;
+    private readonly double Ep;
+}
+</code></pre>
+
+<p>We&rsquo;ll use <code>Re</code> for the <strong>real</strong> part and <code>Ep</code> for the <strong>epsilon</strong> (sometimes called <em>dual</em>) part of this number.</p>
+
+<h2 id="a-little-bit-about-dual-numbers">a little bit about dual numbers</h2>
+
+<p>Now if you go look up things about dual numbers and automatic differentation you will pretty quickly hit some scary looking math. For example, mathematicians will say that dual numbers are defined where <code>ep * ep = 0</code> and that&rsquo;s fine however, we don&rsquo;t really need to worry about that stuff (unless we want to).</p>
+
+<p>From an engineer&rsquo;s point of perspective those numbers are just a smart <em>trick</em> to help us calculate derivatives on the fly. Basically, for every operation that we execute in the original function we execute a second operation that calculates the derivative.</p>
+
+<h2 id="a-little-bit-about-derivatives">a little bit about derivatives</h2>
+
+<p>The term derivative is from math and it basically means taking one function <code>f</code> and somehow calculating how fast <code>f</code> changes at some point. That new function that calculates the rate of change is often called <code>f'</code> (or <code>f</code> <em>prime</em>). Now you can actually calculate derivates from derivates as well. So you could calculcate <code>f''</code> (the rate of change of the rate of change) or <code>f'''</code> (the rate of change of the rate of change of the rate of change) as well. You could try even higher orders but for now I think the pattern is clear.</p>
+
+<p>The most important thing to remember is that a deriviate is a function <code>g(x)</code> that calculates the <strong>rate of change</strong> of another function at some point <code>x</code>.</p>
+
+<h2 id="putting-stuff-together">putting stuff together</h2>
+
+<p>Now what we wanna do is to calculate the rate of change of some operation <code>f(x)</code> for some value of <code>x</code>. With all that discussion out of the way we&rsquo;re getting closer. We also have our data structure so let&rsquo;s get to work with one of the most essential of operations: adding some <code>Dual a</code> and some <code>Dual b</code> together to create a new <code>Dual c</code>.</p>
+
+<h2 id="to-be-continued">to be continued</h2>
+
+<p>Next time we&rsquo;ll show how to do operations on <code>Dual</code> numbers so both the <code>Re</code> and <code>Ep</code> components behave exactly as we want them to.</p>
 </div>
-  <div class="item">
-
-    
-    
-    
 
     
     
 
-    <h4><a href="/posts/rounding-big-rationals/">rounding big rational numbers</a></h4>
-    <h5>February 12, 2018</h5>
-    
-
-</div>
-  <div class="item">
-
-    
-    
     
 
     
-    
-
-    <h4><a href="/posts/extension-methods-and-fp/">extension methods and fp</a></h4>
-    <h5>February 3, 2018</h5>
-    
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/posts/two-dimensional-discrete-convolution/">two dimensional discrete convolution</a></h4>
-    <h5>January 14, 2018</h5>
-    
-
-</div>
- 
 
 </main>
-
-
-
-<div class="pages">
-
-     
-    <a class="icon pages-icon" href="/posts/page/2/" rel="next">
-        <i class="fa fa-arrow-right"></i>
-    </a>
-    
-
-</div>
-
-
 
         <footer>
 
