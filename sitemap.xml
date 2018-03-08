@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://basp.github.io/posts/factorizing-numbers/</loc>
+    <lastmod>2018-03-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://basp.github.io/posts/automatic-differentation-and-dual-numbers/</loc>
     <lastmod>2018-02-27T00:00:00+00:00</lastmod>
   </url>
@@ -20,11 +25,6 @@
   <url>
     <loc>https://basp.github.io/posts/extension-methods-and-fp/</loc>
     <lastmod>2018-02-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://basp.github.io/posts/two-dimensional-discrete-convolution/</loc>
-    <lastmod>2018-01-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -54,7 +54,7 @@
   
   <url>
     <loc>https://basp.github.io/posts/</loc>
-    <lastmod>2018-02-27T00:00:00+00:00</lastmod>
+    <lastmod>2018-03-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -70,7 +70,7 @@
   
   <url>
     <loc>https://basp.github.io/</loc>
-    <lastmod>2018-02-27T00:00:00+00:00</lastmod>
+    <lastmod>2018-03-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

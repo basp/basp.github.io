@@ -6,10 +6,20 @@
     <description>Recent content in Posts on chances are nil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Feb 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 08 Mar 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://basp.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>factorizing numbers</title>
+      <link>https://basp.github.io/posts/factorizing-numbers/</link>
+      <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://basp.github.io/posts/factorizing-numbers/</guid>
+      <description>In this (hopefully short) post we&amp;rsquo;ll take a quick look at factoring numbers into prime factors. My math is not that strong but basically any integer (whole) number can be factorized into prime numbers. If the number is a prime, it has only one factor, its identity and that is the number itself (i.e. factorize(5) = 5).
+Some numbers have more interesting factors than other numbers. For example, if we take the number 123 we get the factors of 3 and 41 (so that 3 * 41 = 123).</description>
+    </item>
     
     <item>
       <title>automatic differentation and dual numbers</title>
@@ -49,16 +59,6 @@ Now suppose we have a BigRational Round(BigRational a, int digits) function that
       
       <guid>https://basp.github.io/posts/extension-methods-and-fp/</guid>
       <description>extension methods and functional programming Recently I started on a new project for calculating code metrics. And I found myself using extension methods more than I used to and this got me wondered. I know that my programming style tends to be more functional than object oriented but in this particular case I noticed a correlation I didn&amp;rsquo;t really notice so clearly before (even though I saw this pop up in other projects as well).</description>
-    </item>
-    
-    <item>
-      <title>two dimensional discrete convolution</title>
-      <link>https://basp.github.io/posts/two-dimensional-discrete-convolution/</link>
-      <pubDate>Sun, 14 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://basp.github.io/posts/two-dimensional-discrete-convolution/</guid>
-      <description>Today I&amp;rsquo;m (finally) able to introduce something concrete: 2D convolutions for .NET (i.e. linear filtering). I just wrote this quickly so it&amp;rsquo;s not that optimized and probably needs some more love but it&amp;rsquo;s usuable and it works.
-I tried to dig into convolutions from a more general perspective but they are (no pun intended) quite convoluted. So we&amp;rsquo;re going to limit ourselves to a very particular case of convultions.</description>
     </item>
     
     <item>
