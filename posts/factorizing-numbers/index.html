@@ -148,7 +148,7 @@
 
 <p>Eventually I ended up feeding it <code>321000000</code> and it turned up with the following factors:</p>
 
-<p><code>321000000 = 2 * 2 * 2 * 2 * 2 * 2 * 3 * 5 * 5 * 5 * 5 * 5 * 5 * 107</code></p>
+<p><code>321_000_000 = 2 * 2 * 2 * 2 * 2 * 2 * 3 * 5 * 5 * 5 * 5 * 5 * 5 * 107</code></p>
 
 <p>There&rsquo;s quite a few interesting things about this:</p>
 
@@ -161,6 +161,12 @@
 <p>Of course this is all easily explainable using <em>math</em> but going into that will be a slightly more involved post to write.</p>
 
 <p>One thing I really like to take a look at is the distrubution of exponents at least but I need some statistical code for that though!</p>
+
+<p>Another interesting thing to note is that when we have a factorization in this form we we can also write it:</p>
+
+<p><code>321_000_000 = Math.Pow(2, 6) * 3 * Math.Pow(5, 6) * 107</code></p>
+
+<p>If we could assume <code>2</code>, <code>3</code> and <code>5</code> as constants (or <em>given</em>) values we could reduce it even more. We would just have to store two very small values, <code>6</code> and <code>107</code> in this case and we could backwards compute our number.</p>
 </div>
 
     
