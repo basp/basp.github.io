@@ -6,10 +6,20 @@
     <description>Recent content in Posts on chances are nil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Feb 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 08 Mar 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://basp.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>factoring numbers</title>
+      <link>https://basp.github.io/posts/factoring-numbers/</link>
+      <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://basp.github.io/posts/factoring-numbers/</guid>
+      <description>In this (hopefully short) post we&amp;rsquo;ll take a quick look at factoring numbers into prime factors. My math is not that strong but basically any integer (whole) number can be factorized into prime numbers. If the number is a prime, it has only one factor, it&amp;rsquo;s identity and that is the number itself (i.e. factorize(5) = 5).
+Some numbers have more interesting factors than other numbers. For example, if we take the number 123 we get the factors of 3 and 41 (so that 3 * 41 = 123).</description>
+    </item>
     
     <item>
       <title>automatic differentation and dual numbers</title>
