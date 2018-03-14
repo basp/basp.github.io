@@ -6,10 +6,20 @@
     <description>Recent content on chances are nil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 08 Mar 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 14 Mar 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://basp.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>floating point division</title>
+      <link>https://basp.github.io/posts/floating-point-division/</link>
+      <pubDate>Wed, 14 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://basp.github.io/posts/floating-point-division/</guid>
+      <description>Suppose we have two floats a and b with a = 1 * 2**0 = 1 and b = 3 * 2**0 = 3 and we want to divide these. Remember that the mantissa values are stored as int so we have to sort this out using integer division.
+Let&amp;rsquo;s start out by writing that a / b = (1 * 2**0) / (3 * 2**0) = 1/3 * 2**0. Clearly we can&amp;rsquo;t store 1/3 as our new mantissa since this is a rational and not an integer number.</description>
+    </item>
     
     <item>
       <title>factorizing numbers</title>
