@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>floating point arithmetic</title>
+        <style>
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: hotpink;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://basp.github.io//css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+ <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.31.1" />
+        
+        
+        
+    </head>
+
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+        });
+    </script>    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">floating point arithmetic</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/posts/">Posts</a></li>
+                            
+                                <li><a href="/projects/">Projects</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:me@example.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/basp/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/meticulous/"><i class="fa fa-twitter"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/posts/2018-03-20-floating-point-p1/">floating point arithmetic</a></h4>
+    <h5>March 20, 2018</h5>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+<p>In this series of posts we&rsquo;ll take a look at how floating-point arithmetic works under the hood and how to implement <a href="https://en.wikipedia.org/wiki/IEEE_754">the IEEE standard for floating-point arithmetic</a>. It&rsquo;s a long (and probably winding) series of posts that will (hopefully) end in us implementing a floating-point type with arbitrary precision. Expect heavy editing while I&rsquo;m publishing this as a work in progress.</p>
+
+<h3 id="the-basics">the basics</h3>
+
+<p>A floating point number is represented by three components:</p>
+
+<ul>
+<li>the sign <span>$S$</span></li>
+<li>the mantissa <span>$M$</span></li>
+<li>the exponent <span>$E$</span></li>
+</ul>
+
+<p>On a high level, for any given <em>base</em> <span>$B$</span> the value of a floating-point number can be expressed as follows.</p>
+
+<div>$$-1^S \cdot M \cdot B^E$$</div>
+
+<p>Note that when <span>$S = 0$</span> we end up with a <strong>positive</strong> number and when <span>$S = 1$</span> we end up with a <strong>negative</strong> number.</p>
+
+<div>$$
+\begin{align}
+-1^0 & = 1 \\
+-1^1 & = -1
+\end{align}
+$$</div>
+
+<p>If we assume <span>$B = 10$</span> then the notation above has many similarities with <em>scientific notation</em> of numbers, for example the number <span>$300$</span> can be expressed as follows:
+<div>$$300 = -1^0 \cdot 3 \cdot 10^2 = 3 \times 10^2$$</div></p>
+
+<p>However, if we are to follow the standard, we should use <span>$B = 2$</span> instead. This means that we should come up with a way to store any kind of <em>real</em> number (or a reasonable approximation) using the expression:
+<div>$$-1^S \cdot M \cdot 2^E$$</div></p>
+
+<p>By looking at the formulas above, we can already see that if we increase the value of <span>$E$</span> our precision will be smaller but we can represent bigger numbers. If we decrease the value of <span>$E$</span> (into negatives even) our precision will be greater so we can represent smaller numbers. The <em>point</em> in a real number floats to the left or right as we increase or decrease our precision (the value of our exponent) while the size of the set of numbers that we can represent stays the same.</p>
+
+<p>So, when dealing with floating-point numbers, we have actually three factors to consider:</p>
+
+<ul>
+<li>The (machine) storage space available (usually fixed to a certain amount of bits)</li>
+<li>The desired precision of our number</li>
+<li>The range of numbers that we need to calculate</li>
+</ul>
+
+<p>This situation is sometimes known as the <em>iron triangle</em> where, when you change one thing, something else changes as well. If we increase storage space our precision and range will go up of course. This is the main difference between <em>single</em> (32 bit) and <em>double</em> (64 bit) precision.</p>
+
+<p>Since storage is most commonly limited by hardware we can&rsquo;t really change that (unless we implement software floating-point arithmetic as we will do later). However, if we decrease precision we can increase the range and of course the opposite is also true. This is the key feature of floating-point versus fixed-point numbers (fixed-point arithmetic will be covered separately).</p>
+
+<h3 id="examples-in-base-10">examples in base 10</h3>
+
+<p>Let&rsquo;s take a look at some more examples in base <span>$10$</span> to get a better feel for things. We&rsquo;ll focus on postive numbers first and we&rsquo;ll deal with signed arithmetic later. This means that <span>$S = 0$</span> and since <span>$-1^0 = 1$</span> we can just leave that out for now.</p>
+
+<p>For any <span>$n$</span> where <span>$n \in \mathbb N$</span> we have <span>$n = n \cdot 10^0$</span>. However, for a lot of numbers we also have different solutions. For example, the number <span>$100$</span> could be written the following ways:</p>
+
+<div>$$
+\begin{align}
+100 & = 100 \cdot 10^0 & = 100 \cdot 1 \\
+& =  10 \cdot 10^1 & = 10 \cdot 10 \\
+& =   1 \cdot 10^2 & =  1 \cdot 100 \\
+\end{align}
+$$</div>
+
+<p>Now let&rsquo;s look <span>$123000$</span> for example. Again, there&rsquo;s multiple ways to write this but the most sensible way (from an engineers perspective at least; we try to get rid of as much as zeros as possible) is <span>$123 \times 10^3$</span> because this cuts down on all the non-essentials and gives the most <em>compressed</em> form and well behaved structure.</p>
+
+<p>Now since we have two numbers we can try some actual arithmetic. Suppose we would want to add them together:
+<div>$$
+n = a + b = 100 \times 10^0 + 123 \times 10^3
+$$</div></p>
+
+<p>What would the value of <span>$n$</span> be? It&rsquo;s easy enough for us humans but it&rsquo;s not completely straightforward for a machine.</p>
+
+<p>We can&rsquo;t just add the <em>mantissa</em> values since both numbers since <span>$a$</span> and <span>$b$</span> have different exponents. However, adding the mantissa values is exactly the thing we would like to do. The solution is to rewrite either <span>$a$</span> using the exponent of <span>$b$</span> or vice versa.</p>
+
+<p>If we rewrite <span>$a$</span> with an exponent of <span>$3$</span> we get:
+<div>$$
+\begin{align}
+a = 100 \times 10^0 = 0.1 \times 10^3
+\end{align}
+$$</div></p>
+
+<p>And now it makes sense to actually add the mantissa values:
+<div>$$
+n = a + b = 0.1 \times 10^3 + 123 \times 10^3 = (0.1 + 123) \times 10^3 = 123.1 \times 10^3
+$$</div></p>
+
+<p>There&rsquo;s a slight problem though because we end up with values of <span>$0.1$</span> and <span>$123.1$</span> and we can&rsquo;t actually store those (since we can only use integers). We&rsquo;ll look at how to deal with this in the next section.</p>
+
+<p>Why do we rewrite the smaller number in terms of the bigger number? It makes sense if you think about it. If you multiply <span>$100.00000$</span> and <span>$0.00053$</span> which should have more significance? And it&rsquo;s even easier to assume things when dealing with floating-point numbers since the one that has the bigger exponent is clearly the most confident of numbers (since it doesn&rsquo;t require a high precision).</p>
+
+<h3 id="examples-in-base-2">examples in base 2</h3>
+
+<p>In this part we have to start considering <em>normalization</em> as well. Since that topic is cross-cutting a lot of other information it will be interspersed with the normal content flow.</p>
+
+<h4 id="preliminary-about-normalization">preliminary about normalization</h4>
+
+<p>The standard specifies that for an exponent <span>$E$</span> where <span>$E \neq 0$</span> we assume there&rsquo;s a <strong>hidden</strong> <span>$1$</span> in front of the point. This won&rsquo;t work for base <span>$10$</span> because we have a possibility of <span>$10$</span> digits but it <strong>will</strong> work for base <span>$2$</span> where we only have a choice of <span>$2$</span> possibilities (i.e. <span>$1$</span> or <span>$0$</span>). If we are able to exclude one of those it has to be the other.</p>
+
+<p>For example, if we have a number <span>$1.1$</span> we would only store the <span>$.1$</span> part with a non-zero exponent and assume there was a <span>$1$</span> in front of the point.</p>
+
+<p>Some examples will (hopefully) make things more clear. Suppose we want to store the number <span>$3$</span> with these new constraints. We can&rsquo;t just say <span>$n = 3 = 3 \cdot 2^0$</span> because that would mean <span>$E = 0$</span> and our number would be interpreted as being in the range of <span>$-1 &lt; n &lt; 1$</span> and that&rsquo;s not what we want because <span>$3 &gt; 1$</span>.</p>
+
+<p>However, we <strong>can</strong> use negative exponents though. We know that <span>${2^{-1}} = {1 \over 2}$</span> and that <span>${3 \over {1 \over 2}} = 3 \cdot 2 = 6$</span> so that for <span>$M = 6$</span> and <span>$E = -1$</span> we have:</p>
+
+<div>$$
+M \cdot 2^E = 6 \cdot 2^{-1} = 6 \cdot {1 \over 2} = 3
+$$</div>
+</div>
+
+    
+    
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

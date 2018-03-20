@@ -6,110 +6,19 @@
     <description>Recent content in Posts on chances are nil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 14 Mar 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 20 Mar 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://basp.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>floating point division</title>
-      <link>https://basp.github.io/posts/floating-point-division/</link>
-      <pubDate>Wed, 14 Mar 2018 00:00:00 +0000</pubDate>
+      <title>floating point arithmetic</title>
+      <link>https://basp.github.io/posts/2018-03-20-floating-point-p1/</link>
+      <pubDate>Tue, 20 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://basp.github.io/posts/floating-point-division/</guid>
-      <description>Suppose we have two floats a and b with a = 1 * 2**0 = 1 and b = 3 * 2**0 = 3 and we want to divide these. Remember that the mantissa values are stored as int so we have to sort this out using integer division.
-Let&amp;rsquo;s start out by writing that a / b = (1 * 2**0) / (3 * 2**0) = 1/3 * 2**0. Clearly we can&amp;rsquo;t store 1/3 as our new mantissa since this is a rational and not an integer number.</description>
-    </item>
-    
-    <item>
-      <title>factorizing numbers</title>
-      <link>https://basp.github.io/posts/factorizing-numbers/</link>
-      <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://basp.github.io/posts/factorizing-numbers/</guid>
-      <description>In this (hopefully short) post we&amp;rsquo;ll take a quick look at factoring numbers into prime factors. My math is not that strong but basically any integer (whole) number can be factorized into prime numbers. If the number is a prime, it has only one factor, its identity and that is the number itself (i.e. factorize(5) = 5).
-Some numbers have more interesting factors than other numbers. For example, if we take the number 123 we get the factors of 3 and 41 (so that 3 * 41 = 123).</description>
-    </item>
-    
-    <item>
-      <title>automatic differentation and dual numbers</title>
-      <link>https://basp.github.io/posts/automatic-differentation-and-dual-numbers/</link>
-      <pubDate>Tue, 27 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://basp.github.io/posts/automatic-differentation-and-dual-numbers/</guid>
-      <description>If you look up automatic differentation and eventually dual numbers you will get a lot of infomration but it&amp;rsquo;s hard to make sense of it all at first.
-So I did what I always do i n this case, just implement the damn thing myself and see how it actually works.
-data structure I like to tackle things from a functional perspectvei so that means we need to consider our data structure first.</description>
-    </item>
-    
-    <item>
-      <title>implementing a tiny float</title>
-      <link>https://basp.github.io/posts/implementing-a-tiny-float/</link>
-      <pubDate>Wed, 21 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://basp.github.io/posts/implementing-a-tiny-float/</guid>
-      <description>Recently I became interested in the IEEE standard of floating punt numbers for various reasons and as always I figured the best way to learn about something is to (try and) create it myself. So that&amp;rsquo;s what I did.
-This post will walk you through implementing a IEEE compatible software float value of exactly 8 bits long. We&amp;rsquo;ll look at some of the challenges and hopefully learn a bit more about what floating point values really are.</description>
-    </item>
-    
-    <item>
-      <title>rounding big rational numbers</title>
-      <link>https://basp.github.io/posts/rounding-big-rationals/</link>
-      <pubDate>Mon, 12 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://basp.github.io/posts/rounding-big-rationals/</guid>
-      <description>Let&amp;rsquo;s assume we have a BigRational class. This class is used to represent fractions like A/B (e.g. 1&amp;frasl;3, 4&amp;frasl;5, 5&amp;frasl;4) with a precision that is only limited by the memory your runtime has available. This means the use-case is numbers that don&amp;rsquo;t typically fit in 64 bits (so we can&amp;rsquo;t just convert them to a pair of double or long values for example).
-Now suppose we have a BigRational Round(BigRational a, int digits) function that rounds the BigRational value to a specified number of digits and returns a new BigRational value.</description>
-    </item>
-    
-    <item>
-      <title>extension methods and fp</title>
-      <link>https://basp.github.io/posts/extension-methods-and-fp/</link>
-      <pubDate>Sat, 03 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://basp.github.io/posts/extension-methods-and-fp/</guid>
-      <description>extension methods and functional programming Recently I started on a new project for calculating code metrics. And I found myself using extension methods more than I used to and this got me wondered. I know that my programming style tends to be more functional than object oriented but in this particular case I noticed a correlation I didn&amp;rsquo;t really notice so clearly before (even though I saw this pop up in other projects as well).</description>
-    </item>
-    
-    <item>
-      <title>fun with bitmaps</title>
-      <link>https://basp.github.io/posts/fun-with-bitmaps/</link>
-      <pubDate>Fri, 12 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://basp.github.io/posts/fun-with-bitmaps/</guid>
-      <description>Weekend is here so let&amp;rsquo;s have some fun with bitmaps. Before we can start though, we need to grab a bitmap or two to work with. Make sure to get one or two good sized ones (around 1000x1000 will do) and make sure to put them in an easy path.
-Oh, and of course I&amp;rsquo;m doing this from LINQPad so that&amp;rsquo;s where the Dump method comes from. If you don&amp;rsquo;t have LINQPad you can still follow along but you will have to do some extra work to actually view the results.</description>
-    </item>
-    
-    <item>
-      <title>convolution is a good name</title>
-      <link>https://basp.github.io/posts/convolution-is-a-good-name/</link>
-      <pubDate>Thu, 11 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://basp.github.io/posts/convolution-is-a-good-name/</guid>
-      <description>Today I spend some time trying to figure out what convolution is. It&amp;rsquo;s not hard to find definitions but the problem is that every single one of them seems to assume that I&amp;rsquo;m some kind of math wizard already. That&amp;rsquo;s why we work in from the software engineering side to gain a better understanding.
-When I finally realized what it actually meant it dawned on me that I have been doing convulation for decades without even realizing there was a word for it.</description>
-    </item>
-    
-    <item>
-      <title>curve fitting with linqpad</title>
-      <link>https://basp.github.io/posts/curve-fitting-with-linqpad/</link>
-      <pubDate>Wed, 10 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://basp.github.io/posts/curve-fitting-with-linqpad/</guid>
-      <description>Is LINQPad a replacement for the likes of R, IPython and MATLAB?
-Probably not.
-Yet, thanks to some nifty libraries, it can come pretty close nowadays.
-summary We&amp;rsquo;re going to look at doing some curve fitting for programmers using Math.NET Numerics to do the heavy lifting and OxyPlot for WPF to render our results. We&amp;rsquo;ll be doing this from LINQPad so we can evaluate our results interactively (although you could follow along in any other .</description>
-    </item>
-    
-    <item>
-      <title>procedures and functions</title>
-      <link>https://basp.github.io/posts/procedures-and-functions/</link>
-      <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://basp.github.io/posts/procedures-and-functions/</guid>
-      <description>In the Pascal programming language, there&amp;rsquo;s a clear distinction between callable code that returns a result and callable code that returns nothing. They are called function and procedure respectively. Most programming languages don&amp;rsquo;t really bother to make such a distinction though. Often, procedures are indicated by using a special-purpose none (or null) type. In the C-family of programming languages, this type is called void and in functional programming languages they often call it the unit type.</description>
+      <guid>https://basp.github.io/posts/2018-03-20-floating-point-p1/</guid>
+      <description>In this series of posts we&amp;rsquo;ll take a look at how floating-point arithmetic works under the hood and how to implement the IEEE standard for floating-point arithmetic. It&amp;rsquo;s a long (and probably winding) series of posts that will (hopefully) end in us implementing a floating-point type with arbitrary precision. Expect heavy editing while I&amp;rsquo;m publishing this as a work in progress.
+the basics A floating point number is represented by three components:</description>
     </item>
     
   </channel>
