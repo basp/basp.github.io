@@ -3,63 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://basp.github.io/posts/floating-point-division/</loc>
-    <lastmod>2018-03-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://basp.github.io/posts/factorizing-numbers/</loc>
-    <lastmod>2018-03-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://basp.github.io/posts/automatic-differentation-and-dual-numbers/</loc>
-    <lastmod>2018-02-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://basp.github.io/posts/implementing-a-tiny-float/</loc>
-    <lastmod>2018-02-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://basp.github.io/posts/rounding-big-rationals/</loc>
-    <lastmod>2018-02-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://basp.github.io/posts/extension-methods-and-fp/</loc>
-    <lastmod>2018-02-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://basp.github.io/posts/fun-with-bitmaps/</loc>
-    <lastmod>2018-01-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://basp.github.io/posts/convolution-is-a-good-name/</loc>
-    <lastmod>2018-01-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://basp.github.io/posts/curve-fitting-with-linqpad/</loc>
-    <lastmod>2018-01-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://basp.github.io/posts/procedures-and-functions/</loc>
-    <lastmod>2018-01-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://basp.github.io/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://basp.github.io/posts/</loc>
-    <lastmod>2018-03-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -75,7 +19,6 @@
   
   <url>
     <loc>https://basp.github.io/</loc>
-    <lastmod>2018-03-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
