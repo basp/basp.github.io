@@ -6,20 +6,9 @@
     <description>Recent content on chances are nil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 20 Mar 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://basp.github.io/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>floating point arithmetic</title>
-      <link>https://basp.github.io/posts/2018-03-20-floating-point-p1/</link>
-      <pubDate>Tue, 20 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://basp.github.io/posts/2018-03-20-floating-point-p1/</guid>
-      <description>In this series of posts we&amp;rsquo;ll take a look at how floating-point arithmetic works under the hood and how to implement the IEEE standard for floating-point arithmetic. It&amp;rsquo;s a long (and probably winding) series of posts that will (hopefully) end in us implementing a floating-point type with arbitrary precision. Expect heavy editing while I&amp;rsquo;m publishing this as a work in progress.
-the basics A floating point number is represented by three components:</description>
-    </item>
     
     <item>
       <title>lina</title>
