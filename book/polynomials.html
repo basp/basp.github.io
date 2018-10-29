@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Multiple Precision Arithmetic</title>
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:500|Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/arduino-light.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<root><section><hgroup><h2>Polynomials</h2><h4>A foundation for multiple precision arithmetic</h4></hgroup><p>Since arithmetic on polynomials and numbers in positional notation is so closely related we will first take a look at polynomials in order to develop a foundation for later chapters. We will only deal with polynomials with radixes and coefficients that are integers. We will allow negative powers of <mathjax>$x$</mathjax> since these will be essential later when we need to model fractional numbers.</p><p>We can write the general definition for a polynomial as</p><p><mathjax>$$P(x) = a_{m}x^{m} + a_{m-1}x^{m-1} + \cdots + a_{l}x^{l}$$</mathjax></p><p>with <mathjax>$a_i\in\mathbb{Z}$</mathjax> and <mathjax>$-\infty \lt l \le i \le m \lt \infty$</mathjax>. This just means that every <mathjax>$a_i$</mathjax> is an integer and that <mathjax>$l$</mathjax> and <mathjax>$m$</mathjax> are respectively less than and greater than <mathjax>$i$</mathjax> and not infinite. The coefficients <mathjax>$a_m$</mathjax> and <mathjax>$a_l$</mathjax> may be zero but in general we will only display non-zero coefficients.</p><aside><p>If <mathjax>$m = l$</mathjax> we call <mathjax>$P(x)$</mathjax> a <em>monomial</em> (which is just a polynomial with one term <mathjax>$a_{i}x^{i}$</mathjax> where <mathjax>$l = m = i$</mathjax>).</p><p>Sometimes these polynomials where the powers are allowed to go negative are called <em>extended polynomials</em>. Likewise, a monomial with a negative power can be called an <em>extended monomial</em>.</p></aside><p>There are a few key aspects that are attractive about polynomials for our purpose of modeling very large numbers. They can have as many terms as you desire (except not infinitely many) and we know how to do addition and multiplication with them which is bound to be useful.</p><p>In the rest of this book we will look at systems where <mathjax>$x$</mathjax> is known have some value <mathjax>$\beta$</mathjax> which is also known as the <strong>base</strong> or <em>radix</em> of our number system. Before we do that however, let's take a look at polynomial arithmetic first.</p></section><section><h4>Adding polynomials</h4><p>Let's start with some concrete examples first since the previous section was pretty abstract. We have the polynomials</p><p><mathjax>$$\begin{align}
+P(x) &amp;= 3x^2 + 5x + 3\\
+Q(x) &amp;= 5x^2 + 3x + 2
+\end{align}$$</mathjax></p><p>with <mathjax>$x\in\mathbb{Z}$</mathjax> (i.e. it's an integer) and we can calculate the sum of the polynomials</p><p><mathjax>$$\begin{align}
+S(x) &amp;= P(x) + Q(x)\\
+     &amp;= 3x^2 + 5x^2 + 5x + 3x + 3 + 2\\
+     &amp;= 8x^2 + 8x + 5
+\end{align}$$</mathjax></p><p>without even worrying about the actual value of <mathjax>$x$</mathjax>. We can write the polynomials more generally as</p><p><mathjax>$$\begin{align}
+P(x) &amp;= a_{m}x^{m} + a_{m-1}x^{m-1} + \cdots + a_{l}x^{l}\\
+Q(x) &amp;= a_{n}x^{n} + a_{n-1}x^{n-1} + \cdots + a_{k}x^{k}
+\end{align}$$</mathjax></p><p>and with <mathjax>$p = max(m, n)$</mathjax> and <mathjax>$q = min(l, k)$</mathjax> we can write</p><p><mathjax>$$\begin{align}
+S(x) &amp;= P(x) + Q(x)\\
+     &amp;= (a_p + b_p)x^p + (a_{p-1} + b_{p-1})x^{p - 1} + \cdots + (a_q + b_q)x^q
+\end{align}$$</mathjax></p><p>which is the generalized form of polynomial addition.</p><h4>Subtracting polynomials</h4><p>Subtraction works the same way as addition except we have:</p><p><mathjax>$$\begin{align}
+S(x) &amp;= P(x) - Q(x)\\
+     &amp;= (a_p - b_p)x^p + (a_{p-1} - b_{p-1})x^{p - 1} + \cdots + (a_q - b_q)x^q
+\end{align}$$</mathjax></p><p>which we mention mostly for completeness but it should also intuitively make sense.</p></section><section class="code"><h4>Code: adding polynomials</h4><p>Now that we covered addition and subtraction we can take a small detour and write a bit of code to verify all of the above. L</p><p>Let's start with two polynomials<br/><mathjax>$$\begin{align}
+P(x) &amp;= 5x^2 + 3x + 1\\
+Q(x) &amp;= 2x^2 + x + 4
+\end{align}$$</mathjax></p><p>represented as two arrays:</p><pre><code class="cs">var p = new[] { 1, 3, 5 };<br/>var q = new[] { 4, 1, 2 };</code></pre><p>These arrays can be thought of polynomials in a very straightforward way. Every element <code>a[i]</code> in the arrays <code>p</code> and <code>q</code> represents a term of <mathjax>$a_{i}x^{i}$</mathjax> in the polynomials <mathjax>$P$</mathjax> and <mathjax>$Q$</mathjax> respectively.</p><aside>Note that the literal form of <code>p</code> and <code>q</code> appears reversed since we specify arrays like <code>new [] { x0, x1, ..., xn }</code> in code but conventionally write them the opposite way when doing math.</aside><p>The code to perform an addition then:</p><pre><code class="cs"><p>public int[] PolyAdd(int[] p, int[] q)<br/>{<br/>    Debug.Assert(p.Length &gt;= 0);<br/>    Debug.Assert(q.Length &gt;= 0);<br/>    Debug.Assert(p.Length &gt;= q.Length);</p><p>    var c = new int[p.Length];<br/>    var i = 0;</p><p>    for(; i &lt; q.Length; i++)<br/>    {<br/>        c[i] = p[i] + q[i];<br/>    }</p><p>    for(; i &lt; p.Length; i++)<br/>    {<br/>        c[i] = p[i];<br/>    }</p><p>    return c;<br/>}</p></code></pre></section><section><h4>Multiplying polynomials</h4><p>Multiplying polynomials is a bit harder than just adding them but not too much. We'll do the same thing as before and start with a concrete example and then build up to a more generalized form.</p><p>We have the same two polynomials</p><p><mathjax>$$\begin{align}
+P(x) &amp;= 5x + 4\\
+Q(x) &amp;= 3x + 2
+\end{align}$$</mathjax></p><p>and when we multiply them we get</p><p><mathjax>$$\begin{align}
+R(x) &amp;= P(x) \cdot Q(x)\\
+     &amp;= 5x \cdot 3x + 5x \cdot 2 + 4 \cdot 3x + 4 \cdot 2\\
+     &amp;= 15x^2 + 10x + 12x + 8\\
+     &amp;= 15x^2 + 22x + 8
+\end{align}$$</mathjax></p><p>And more generally, remembering that we can write <mathjax>$P$</mathjax> and <mathjax>$Q$</mathjax> as<br/><mathjax>$$\begin{align}
+P(x) &amp;= a_{m}x^{m} + a_{m-1}x^{m-1} + \cdots + a_{l}x^{l}\\
+Q(x) &amp;= a_{n}x^{n} + a_{n-1}x^{n-1} + \cdots + a_{k}x^{k}
+\end{align}$$</mathjax></p><p>with <mathjax>$p = max(m, n)$</mathjax> and <mathjax>$q = min(l, k)$</mathjax> we can write<br/><mathjax>$$\begin{align}
+R(X) &amp;= P(x) \cdot Q(x)\\
+     &amp;= c_{m+n}x^{m+n} + c_{m+n-1}x^{m+n-1} + \cdots + c_{l+k}x^{l+k}
+\end{align}$$</mathjax></p><p>where</p><p><mathjax>$$\begin{align}
+c_j = a_{l}b_{j-l} + a_{l+1}b_{j-l-1} + \cdots + a_{j-k}b_{k}
+\end{align}$$</mathjax></p></section><section class="code"><h4>Code: multiplying polynomials</h4><p>The code to multiply two polynomials actually is a lot less daunting than the math notation from the previous section. Basically we multiply all the terms from <code>p</code> with all the terms of <code>q</code> in a nested loop:</p><pre><code class="cs"><p>public static int[] PolyMultiply(int[] p, int[] q)<br/>{<br/>    Debug.Assert(p.Length &gt;= 0);<br/>    Debug.Assert(q.Length &gt;= 0);<br/>    Debug.Assert(p.Length &gt;= q.Length);</p><p>    var len = Math.Max(0, p.Length + q.Length - 1);<br/>    var c = new int[len];</p><p>    for(var i = 0; i &lt; p.Length; i++)<br/>    {<br/>        for(var j = 0; j &lt; q.Length; j++)<br/>        {<br/>            c[i + j] = p[i] * q[j];<br/>        }<br/>    }</p><p>    return c;<br/>}</p></code></pre></section><section><h4>Onwards!</h4><p>If you made it so far or even only skimped it then you are ready for the next section. Don't worry if the math does not make much sense yet. Keep reading and just glare over the parts that make no sense. Most of this is just quick notes but if you really want to understand it, the tools are out there; just start googling.</p><p>In the next chapter we will be focussing at an interesting <em>subset</em> of polynomials that is equivalent to the <em>fixed radix number systems</em> that we mostly use today.</p></section></root>
+<script>hljs.initHighlightingOnLoad();</script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});</script>
+</body>
+</html>
