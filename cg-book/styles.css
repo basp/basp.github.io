@@ -23,6 +23,8 @@ aside {
     padding: 16px 32px 16px 32px;
     background-color: azure;
     color: black;
+    border: 0px solid deepskyblue;
+    border-left-width: 4px;
 }
 
 aside pre code.hljs {
