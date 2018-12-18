@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>drawing arrows in 2d</title>
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:500|Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/arduino-light.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<root><section><h1>drawing arrows in 2d</h1><p>An interesting problem is how to draw arrows in two dimensions. While writing this book I was dealing with this problem and it seemed like a good idea to share some insights as an appendix.</p><p>For the rest of this chapter we are going to assume we are working in two dimensions but this will work in <mathjax>$n$</mathjax> dimensions as well of course. Some knowledge of vector and matrix operations is assumed.</p><h3>the problem</h3><p>Given two points <mathjax>$P_1$</mathjax> and <mathjax>$P_2$</mathjax>, draw an arrow between those points with an arrow head of specified length (specified in units) and sharpness which is specified in radians.</p><p>We start with defining the vector <mathjax>$\alpha = P_1 - P_2$</mathjax>. This vector represents the line between <mathjax>$P_1$</mathjax> and <mathjax>$P_2$</mathjax> if we would draw it from the origin.</p><p>The length of our arrow head <mathjax>$L_h$</mathjax> is a known constant and we might call it <mathjax>$L_h$</mathjax>. And although we can calculate something reasonable, for now it is up to the user to specify it according to the data she or he is using to visualize her or his problem.</p><h3>the solution</h3><p>We want to express the length of our arrow head <mathjax>$L_h$</mathjax> in terms of the length of our base line <mathjax>$P_1$</mathjax> to <mathjax>$P_2$</mathjax> so that<br/><mathjax>$$\begin{align}
+     L &amp;= P_2 - P_1&amp;\quad\text{and}\\
+   L_h &amp;= t(P_2 - P_1)
+\end{align}$$</mathjax></p><p>Since we will be dealing with <mathjax>$P_2 - P_1$</mathjax> <em>a lot</em> we will give this vector the name <mathjax>$A$</mathjax> so that</p><p><mathjax>$$\begin{align}
+A = P_2 - P_1
+\end{align}$$</mathjax></p><p>and that we also have</p><p><mathjax>$$\begin{align}
+L   &amp;= A\\
+L_h &amp;= tA
+\end{align}$$</mathjax></p><p>since we have <mathjax>$A = P_2 - P_1$</mathjax>.</p><p>The reason why we are going all round and through these loops is that we want to write everything in terms of <mathjax>$P_1$</mathjax> and <mathjax>$P_2$</mathjax> since those two points are telling us how to draw our arrow.</p><p>Now suppose the length of our head <mathjax>$L_h$</mathjax> is <mathjax>$1$</mathjax>. In order to normalize this from the origin, we are just going to calculate the ratio of the length of our head compared to the length of our total vector.</p><p>That will give us soem number a ratio which we need to travel <mathjax>$P_2 - P_1$</mathjax> in order to reach our reference point. Since that point is already referenced from the origin we can simply proceed to rotate it in <mathjax>$\theta$</mathjax> radians in order to make up our arrow head. Once we have the points rotated in the right way, we just need to add them to our arrow vector in order to draw the pointy shape.</p></section></root>
+<script>hljs.initHighlightingOnLoad();</script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});</script>
+</body>
+</html>

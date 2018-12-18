@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Moving objects in space</title>
+    <title>moving objects in space</title>
     <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:500|Raleway" rel="stylesheet">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/arduino-light.min.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
@@ -10,7 +10,13 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </head>
 <body>
-<root><section><h1>Moving objects in space</h1></section></root>
+<root><section><h1>moving objects in space</h1><p>Suppose we have a frame with origin point <mathjax>$O$</mathjax> and two vectors <mathjax>$\vec{u}$</mathjax> and <mathjax>$\vec{v}$</mathjax> pointing in the <mathjax>$x$</mathjax> and <mathjax>$y$</mathjax> direction respectively. Then we can say that</p><p><mathjax>$$P = x\vec{u} + y\vec{v} + O$$</mathjax></p><p>which means that we can get to any point inside the frame by adding together  scaled versions of the vectors <mathjax>$\vec{u}$</mathjax> and <mathjax>$\vec{v}$</mathjax>, resulting in a new vector and adding that to the origin <mathjax>$O$</mathjax>, resulting in a new point <mathjax>$P$</mathjax>.</p><p>We can also write this using matrices</p><p><mathjax>$$P = \begin{bmatrix}x &amp; y &amp; 1\end{bmatrix}
+    \begin{bmatrix}\vec{u}\\\vec{v}\\O\end{bmatrix}$$</mathjax></p><p>which is a common trick that we use.</p><aside>It might be confusing to see a two-dimensional point written as a vector with three elements. Or rather, why is that <mathjax>$1$</mathjax> in there? Well if you look at the first definition of <mathjax>$P$</mathjax> above, you will see that we also need to pick up the origin point <mathjax>$O$</mathjax> and having a one in the row matrix makes sure we will pick up the <mathjax>$O$</mathjax> that appears in the column matrix when multiplying them together.</aside><h3>translation</h3><p>We use translation to translate a point <mathjax>$\left(x, y\right)$</mathjax> to a position <mathjax>$\left(x+a, y+b\right)$</mathjax>.</p><p><mathjax>$$\begin{bmatrix}x &amp; y &amp; 1\end{bmatrix}
+\begin{bmatrix}
+1 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 0\\
+a &amp; b &amp; 1
+\end{bmatrix} = \begin{bmatrix}x+a &amp; y+b &amp; 1\end{bmatrix}$$</mathjax></p></section></root>
 <script>hljs.initHighlightingOnLoad();</script>
 <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});</script>
 </body>
