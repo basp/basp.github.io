@@ -1,15 +1,9 @@
-1581
-((3) 0 () 5 ((q lib "lumex/math.rkt") (q 216 . 4) (q 144 . 4) (q 72 . 4) (q 0 . 4)) () (h ! (equal) ((c def c (c (? . 0) q M2x2)) c (? . 3)) ((c def c (c (? . 0) q vec4-z)) q (1618 . 3)) ((c def c (c (? . 0) q vec4-dot)) q (2032 . 3)) ((c def c (c (? . 0) q M4x4?)) c (? . 1)) ((c def c (c (? . 0) q Vec4-flv)) c (? . 4)) ((c def c (c (? . 0) q vec4-w)) q (1667 . 3)) ((c def c (c (? . 0) q struct:M3x3)) c (? . 2)) ((c def c (c (? . 0) q m4x4)) q (771 . 33)) ((c def c (c (? . 0) q M4x4)) c (? . 1)) ((c def c (c (? . 0) q vec4-x)) q (1520 . 3)) ((c def c (c (? . 0) q M3x3-flv)) c (? . 2)) ((c def c (c (? . 0) q struct:M2x2)) c (? . 3)) ((c def c (c (? . 0) q vec4)) q (288 . 6)) ((c def c (c (? . 0) q struct:Vec4)) c (? . 4)) ((c def c (c (? . 0) q m4x4-ref)) q (1716 . 5)) ((c def c (c (? . 0) q vec4+)) q (1838 . 4)) ((c def c (c (? . 0) q vec4-ref)) q (1442 . 4)) ((c def c (c (? . 0) q rad->deg)) q (2262 . 3)) ((c def c (c (? . 0) q =~)) q (2092 . 5)) ((c def c (c (? . 0) q Vec4?)) c (? . 4)) ((c def c (c (? . 0) q M2x2?)) c (? . 3)) ((c def c (c (? . 0) q M3x3)) c (? . 2)) ((c def c (c (? . 0) q deg->rad)) q (2209 . 3)) ((c def c (c (? . 0) q struct:M4x4)) c (? . 1)) ((c def c (c (? . 0) q Vec4)) c (? . 4)) ((c def c (c (? . 0) q vec4-y)) q (1569 . 3)) ((c def c (c (? . 0) q vec4*)) q (1966 . 4)) ((c def c (c (? . 0) q M3x3?)) c (? . 2)) ((c def c (c (? . 0) q m2x2)) q (395 . 6)) ((c def c (c (? . 0) q M4x4-flv)) c (? . 1)) ((c def c (c (? . 0) q vec4-)) q (1902 . 4)) ((c def c (c (? . 0) q m3x3)) q (523 . 11)) ((c def c (c (? . 0) q M2x2-flv)) c (? . 3))))
+1217
+((3) 0 () 3 ((q lib "lumex/math.rkt") (q 116 . 4) (q 44 . 4)) () (h ! (equal) ((c def c (c (? . 0) q vec4-z)) q (1137 . 3)) ((c def c (c (? . 0) q vec4-dot)) q (1551 . 4)) ((c def c (c (? . 0) q M4x4?)) c (? . 1)) ((c def c (c (? . 0) q Vec4-flv)) c (? . 2)) ((c def c (c (? . 0) q m4x4)) q (295 . 33)) ((c def c (c (? . 0) q M4x4)) c (? . 1)) ((c def c (c (? . 0) q vec4-x)) q (1039 . 3)) ((c def c (c (? . 0) q vec4)) q (188 . 6)) ((c def c (c (? . 0) q vec4-w)) q (1186 . 3)) ((c def c (c (? . 0) q m4x4-ref)) q (1235 . 5)) ((c def c (c (? . 0) q vec4+)) q (1357 . 4)) ((c def c (c (? . 0) q vec4-ref)) q (961 . 4)) ((c def c (c (? . 0) q rad->deg)) q (1871 . 3)) ((c def c (c (? . 0) q default-epsilon)) q (0 . 2)) ((c def c (c (? . 0) q =~)) q (1620 . 5)) ((c def c (c (? . 0) q Vec4?)) c (? . 2)) ((c def c (c (? . 0) q deg->rad)) q (1814 . 3)) ((c def c (c (? . 0) q struct:M4x4)) c (? . 1)) ((c def c (c (? . 0) q Vec4)) c (? . 2)) ((c def c (c (? . 0) q vec4-y)) q (1088 . 3)) ((c def c (c (? . 0) q vec4*)) q (1485 . 4)) ((c def c (c (? . 0) q vec4=~)) q (1746 . 4)) ((c def c (c (? . 0) q M4x4-flv)) c (? . 1)) ((c def c (c (? . 0) q vec4-)) q (1421 . 4)) ((c def c (c (? . 0) q struct:Vec4)) c (? . 2))))
+value
+default-epsilon : Flonum = 1e-005
 struct
 (struct Vec4 (flv)
-    #:transparent)
-  flv : FlVector
-struct
-(struct M2x2 (flv)
-    #:transparent)
-  flv : FlVector
-struct
-(struct M3x3 (flv)
     #:transparent)
   flv : FlVector
 struct
@@ -22,23 +16,6 @@ procedure
   y : Flonum
   z : Flonum
   w : Flonum
-procedure
-(m2x2 m00 m01 m10 m11) -> Matrix2x2
-  m00 : Flonum
-  m01 : Flonum
-  m10 : Flonum
-  m11 : Flonum
-procedure
-(m3x3 m00 m01 m02 m10 m11 m12 m20 m21 m22) -> Matrix3x3
-  m00 : Flonum
-  m01 : Flonum
-  m02 : Flonum
-  m10 : Flonum
-  m11 : Flonum
-  m12 : Flonum
-  m20 : Flonum
-  m21 : Flonum
-  m22 : Flonum
 procedure
 (m4x4 m00      
       m01      
@@ -55,7 +32,7 @@ procedure
       m30      
       m31      
       m32      
-      m33) -> Matrix4x4
+      m33) -> M4x4
   m00 : Flonum
   m01 : Flonum
   m02 : Flonum
@@ -106,16 +83,21 @@ procedure
   c : Flonum
   v : Vec4
 procedure
-(vec4-dot [u]) -> Flonum
-  u : Vv = Vec4
+(vec4-dot u v) -> Flonum
+  u : Vec4
+  v : Vec4
 procedure
 (=~ v1 v2 [epsilon]) -> Boolean
   v1 : Flonum
   v2 : Flonum
-  epsilon : Flonum = 1e-005
+  epsilon : Flonum = default-epsilon
 procedure
-(deg->rad deg) -> Real
-  deg : Real
+(vec4=~ u v) -> Boolean
+  u : Vec4
+  v : Vec4
 procedure
-(rad->deg deg) -> Real
-  deg : Real
+(deg->rad deg) -> Flonum
+  deg : Flonum
+procedure
+(rad->deg rad) -> Flonum
+  rad : Flonum
