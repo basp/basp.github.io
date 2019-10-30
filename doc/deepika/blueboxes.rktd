@@ -1,5 +1,5 @@
-1435
-((3) 0 () 2 ((q lib "deepika/tasks.rkt") (q lib "deepika/db.rkt")) () (h ! (equal) ((c def c (c (? . 0) q get-task)) q (1495 . 3)) ((c def c (c (? . 0) q task-id)) q (1106 . 3)) ((c def c (c (? . 1) q valid+?)) q (313 . 3)) ((c def c (c (? . 1) q objid?)) q (82 . 3)) ((c def c (c (? . 1) q get-object-name)) q (508 . 3)) ((c def c (c (? . 0) q task/valid?)) q (1214 . 3)) ((c def c (c (? . 0) q task-remove!)) q (1434 . 3)) ((c def c (c (? . 1) q get-parent)) q (664 . 3)) ((c def c (c (? . 1) q create-object!)) q (366 . 3)) ((c def c (c (? . 1) q get-children)) q (820 . 3)) ((c def c (c (? . 1) q get-location)) q (891 . 3)) ((q def ((lib "deepika/parser.rkt") parse/args)) q (1650 . 3)) ((c def c (c (? . 0) q task-th)) q (1159 . 3)) ((c def c (c (? . 0) q task?)) q (1055 . 3)) ((c def c (c (? . 0) q tasks)) q (1554 . 2)) ((c def c (c (? . 1) q objid->number)) q (134 . 3)) ((c def c (c (? . 1) q set-object-name!)) q (573 . 4)) ((c def c (c (? . 0) q tasks/ready)) q (1599 . 2)) ((c def c (c (? . 0) q task-start!)) q (1276 . 4)) ((c def c (c (? . 1) q set-parent!)) q (724 . 4)) ((c def c (c (? . 1) q set-location!)) q (953 . 4)) ((c def c (c (? . 1) q valid?)) q (261 . 3)) ((c def c (c (? . 0) q task-ready?)) q (1369 . 3)) ((c def c (c (? . 1) q nothing?)) q (28 . 3)) ((c def c (c (? . 1) q number->objid)) q (197 . 3)) ((c def c (c (? . 1) q destroy-object!)) q (445 . 3)) ((c def c (c (? . 1) q $nothing)) q (0 . 2))))
+1508
+((3) 0 () 2 ((q lib "deepika/tasks.rkt") (q lib "deepika/db.rkt")) () (h ! (equal) ((c def c (c (? . 0) q get-task)) q (1495 . 3)) ((c def c (c (? . 0) q task-id)) q (1106 . 3)) ((c def c (c (? . 1) q valid+?)) q (313 . 3)) ((c def c (c (? . 1) q objid?)) q (82 . 3)) ((c def c (c (? . 1) q get-object-name)) q (508 . 3)) ((c def c (c (? . 0) q task/valid?)) q (1214 . 3)) ((c def c (c (? . 0) q task-remove!)) q (1434 . 3)) ((c def c (c (? . 1) q get-parent)) q (664 . 3)) ((q def ((lib "deepika/cmd-parser.rkt") string->args)) q (1650 . 3)) ((c def c (c (? . 1) q create-object!)) q (366 . 3)) ((c def c (c (? . 1) q get-children)) q (820 . 3)) ((c def c (c (? . 1) q get-location)) q (891 . 3)) ((c def c (c (? . 0) q task-th)) q (1159 . 3)) ((c def c (c (? . 0) q task?)) q (1055 . 3)) ((q def ((lib "deepika/match.rkt") match-verb-spec)) q (1719 . 4)) ((c def c (c (? . 0) q tasks)) q (1554 . 2)) ((c def c (c (? . 1) q objid->number)) q (134 . 3)) ((c def c (c (? . 1) q set-object-name!)) q (573 . 4)) ((c def c (c (? . 0) q tasks/ready)) q (1599 . 2)) ((c def c (c (? . 0) q task-start!)) q (1276 . 4)) ((c def c (c (? . 1) q set-parent!)) q (724 . 4)) ((c def c (c (? . 1) q set-location!)) q (953 . 4)) ((c def c (c (? . 1) q valid?)) q (261 . 3)) ((c def c (c (? . 0) q task-ready?)) q (1369 . 3)) ((c def c (c (? . 1) q nothing?)) q (28 . 3)) ((c def c (c (? . 1) q number->objid)) q (197 . 3)) ((c def c (c (? . 1) q destroy-object!)) q (445 . 3)) ((c def c (c (? . 1) q $nothing)) q (0 . 2))))
 value
 $nothing : nothing?
 procedure
@@ -80,5 +80,9 @@ procedure
 procedure
 (tasks/ready) -> (listof task/valid?)
 procedure
-(parse/args s) -> (listof string?)
+(string->args s) -> (listof string?)
   s : string?
+procedure
+(match-verb-spec s spec) -> boolean?
+  s : string?
+  spec : string?
