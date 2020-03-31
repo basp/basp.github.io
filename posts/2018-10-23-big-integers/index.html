@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>big integers</title>
+        <style>
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: hotpink;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://basp.github.io//css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+ <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.31.1" />
+        
+        
+        
+    </head>
+
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+        });
+    </script>    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">big integers</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/posts/">Posts</a></li>
+                            
+                                <li><a href="/projects/">Projects</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:me@example.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/basp/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/meticulous/"><i class="fa fa-twitter"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/posts/2018-10-23-big-integers/">big integers</a></h4>
+    <h5>October 23, 2018</h5>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+<p>This (series) of posts describes the basics of implementing a big integer from scratch. The implementation will be optimized for readability first so don&rsquo;t expect great performance. I&rsquo;ll be using C# to implement this <code>BigInt</code> but it should be fairly trivial to port. There will be some math involved so lets all hope I get it correct.</p>
+
+<h3 id="the-base-of-a-number">the base of a number</h3>
+
+<p>Before we even start modelling our <code>BigInt</code> properly we need to answer two questions:</p>
+
+<ul>
+<li>What does a number like $1234$ actually represent?</li>
+<li>How is $5 + 5 = 10$ (instead of some other number or symbol)?</li>
+</ul>
+
+<p>Not these might seem obvious but let&rsquo;s take a look at decimal notation a bit closer:</p>
+
+<ul>
+<li>When we write a number like $1234$ what it actually means is $1 \cdot 1000 + 2 \cdot 100 + 3 \cdot 10 + 4$.</li>
+<li>We can rewrite this like $1 \cdot 10^3 + 2 \cdot 10^2 + 3 \cdot 10^1 + 4 \cdot 10^0$.</li>
+<li>Note that this is equal to a polynomial $P(x) = 1x^3 + 2x^2 + 3x^1 + 4$ when $x = 10$.</li>
+</ul>
+
+<p>This suggests that there is a close relation between polynomial arithmetic and the kind of arithmetic we need for our numbers and in fact there is. However, in polynomial arithmetic the value for $x$ is usually unbounded and in our case we are limited by the size of registers and amount of memory in the machine. Also, most of the heavy lifting will be in the <em>unsigned</em> arithmetic which means we&rsquo;re going to be dealing with positive integers for large parts of our routines.</p>
+
+<p>When we represent numbers in polynomial form we often use $\beta$ (<em>beta</em>) instead of $x$. So in the above case it would look like $1\beta^3 + 2\beta^2 + 3\beta + 4$. Note that we also usually write $\beta^1$ as just $\beta$ because $\beta^1 = \beta$. And we also leave out $\beta^0$ completely since $\beta^0 = 1$. Also note that for the most part we&rsquo;ll be dealing with situations where $\beta = 10$ or later when $\beta = 2$. When we refer to the $\beta$ part of a number in polynomial form we also call it the <strong>base</strong> of the number. Most humans are naturally fit to deal with numbers in base $10$ and to a lot of us base $2$ (<em>binary</em>) and base $16$ (<em>hexadecimal</em>) are pretty familiar.</p>
+
+<p>As a sidenote, why do (most) humans prefer thinking in decimal anyway? There&rsquo;s some interesting theories about that but that&rsquo;s for later.</p>
+
+<h3 id="the-burden-of-carrying">the burden of carrying</h3>
+
+<p>Now let&rsquo;s take a look at what it means that $5 + 5 = 10$. It might be obvious but there&rsquo;s actually quite a nifty thing going on here. To really appreciate it, we have to think about how in old times people used to carve notches into a piece of wood to keep track of count. As your numbers grow you get a huge number of notches so you need some way to keep track of them. That&rsquo;s also why you see cartoon prisoners using diagonal notches to <em>mark</em> the groups of (usually) $5$ if they serve especially long sentences. At some point you need a better system than just notches so that&rsquo;s where the diagonal notches come in.</p>
+
+<p>It&rsquo;s sort of like a base $5$ system of numbers where you just multiply the number of diagonals by $5$ and add $x$ for the $x$ number of notches that haven&rsquo;t been crossed. Written in polynomial form it&rsquo;s $a\beta + b$ where $a$ equals the amount of <em>grouped notches</em>, $b$ equals the amount of <em>ungrouped notches</em> and $\beta = 5$.</p>
+
+<p>Now back to decimal numbers, in daily life, when we add two numbers $x$ and $y$ together in such a way that $x + y &gt; 9$, something special happens, we suddenly get <strong>two</strong> numbers: $10$. Even though we consider this pretty natural it&rsquo;s not completely obvious if you weren&rsquo;t thinking in decimal where $\beta = 10$ in the first place.</p>
+
+<p>Sidenote, for a really good number system you need a $\beta$ value that is really useful or that everybody agrees upon. And you need some kind of convention when writing them down. In our decimal case the convention is that $\beta = 10$ and you write the <em>most significant digit</em> to the left. The most significant digit, <em>msd</em>, is the digit that contributes most to the end result of the number. The least significant digit, <em>lsd</em>, is all the way to the right. This is inline with the way we usually write polynomials as well.</p>
+
+<p>Dealing with a constant $\beta$ is fine but in a polynomial $P = a_i\beta^i + a_{i - 1}\beta^{i - 1} \dots a_{0}\beta^0$ where $a &lt; \beta$, things suddenly are not so elegant anymore. Suppose we are adding up two terms of a polynomial $A_i = a\beta^i$ and $B_i = b\beta^i$ with $\beta = 10$, $a = 5$ and $b = 5$ with the restriction that $a + b &lt; \beta$ (only room for a one digit). What would be the most correct answer?</p>
+
+<p>Well, according to unsigned arithmetic and the fact that our values of $a$ and $b$ are bounded by $a &lt; \beta$ and $b &lt; \beta$ we answer: $(a + b) \mod \beta = 0$. Too bad there wasn&rsquo;t enough room for our answer, otherwise we could&rsquo;ve answered $10$. At least we got half of the digits correct.</p>
+
+<p>Sidenote, this is a slight intro into <em>modulo arithmetic</em>.</p>
+
+<p>The problem that we have is the <em>carry</em>. The name is appropriate since it&rsquo;s a huge nuisance when doing polynomial arithmetic when your $a$ values are limited to a <em>bounded set</em> (i.e. something we can actually calculate).</p>
+
+<p>So if we have $C_i\beta^i = A_i\beta^i + B_i\beta^i$ where $C_i &gt; \beta$ we need to <em>carry one extra</em> $c$ to $C_{i+1}$ for a correct result so $C_{i+1}\beta^{i+1} = A_i\beta^i + B_i\beta^i + c$ and have $C_i\beta^i = (A_i\beta^i + B_i\beta^i) \mod \beta$. We will assume that $C_i &lt; 2\cdot\beta$ for $C_i\beta^i = A_i\beta^i + B_i\beta^i$.</p>
+
+<p>Dealing with the carry in new ways is worth a study on its own. Here we won&rsquo;t bother to be really smart about it.</p>
+
+<h4 id="boxes">boxes</h4>
+
+<p>Suppose we&rsquo;re still in our normal decimal system ($\beta = 10$) and we had a box with the number $3$ inside and a box with the number $7$ inside. The host asks us to look at the digits in both of the boxes and add (sum) them together. We can only pick one digit to answer from a selection of $0..9$. Our answer is going into a single empty box. Which digit would you put in the box?</p>
+
+<h3 id="summary">summary</h3>
+
+<p>Now that the stage has been set we can conclude a few things:</p>
+
+<ul>
+<li>We&rsquo;re gonna look at numbers from a very polynomial way.</li>
+<li>The $\beta$ value will be pretty much constant throughout our calculations.</li>
+<li>Sadly our polynomials will be bounded so we need to deal with the carry situation.</li>
+<li>We&rsquo;re going to focus on unsigned arithmetic at first and deal with signs later.</li>
+</ul>
+</div>
+
+    
+    
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+
+        </footer>
+       
+    </body>
+
+</html>
+
