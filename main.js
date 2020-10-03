@@ -263,7 +263,6 @@ class AppComponent {
     load() {
         let json = localStorage.getItem('save');
         let save = JSON.parse(json);
-        console.log(save);
         this.state.energy = new break_infinity_js__WEBPACK_IMPORTED_MODULE_1__["default"](save.energy);
         this.state.lastUpdate = save.lastUpdate;
         this.state.level = save.level;
