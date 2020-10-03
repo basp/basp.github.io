@@ -373,7 +373,7 @@ class AppComponent {
     }
 }
 AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(); };
-AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 42, vars: 15, consts: [[1, "container", "mb-3"], [1, "text-center"], ["class", "text-center", 4, "ngIf"], [1, "progress", "mb-2", "mt-2", 2, "height", "20px"], ["role", "progressbar", "aria-valuemin", "0", "aria-valuemax", "100", 1, "progress-bar", "progress-bar-striped", "progress-bar-animated"], [4, "ngIf"], ["class", "row align-items-center", 4, "ngFor", "ngForOf"], [1, "row"], [1, "col-sm", "pt-1"], ["type", "button", 1, "btn", "btn-primary", "btn-block", 3, "disabled", "click"], ["type", "button", 1, "btn", "btn-primary", "btn-block", "btn-danger", 3, "click"], ["type", "button", 1, "btn", "btn-primary", "btn-block", 3, "click"], [1, "row", "align-items-center"], [1, "col-sm", "pt-1", 2, "font-family", "'Secular One', sans-serif", "font-size", "1.1em"], [1, "col-sm", "pt-1", "text-right"], ["type", "button", 1, "btn", "btn-secondary", "btn-block", 3, "disabled", "click"], [1, "badge", "badge-light"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
+AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 45, vars: 15, consts: [[1, "container", "mb-3"], [1, "text-center"], ["class", "text-center", 4, "ngIf"], [1, "progress", "mb-2", "mt-2", 2, "height", "20px"], ["role", "progressbar", "aria-valuemin", "0", "aria-valuemax", "100", 1, "progress-bar", "progress-bar-striped", "progress-bar-animated"], [4, "ngIf"], ["class", "row align-items-center", 4, "ngFor", "ngForOf"], [1, "row"], [1, "col-sm", "pt-1"], ["type", "button", 1, "btn", "btn-primary", "btn-block", 3, "disabled", "click"], ["type", "button", 1, "btn", "btn-primary", "btn-block", "btn-danger", 3, "click"], ["type", "button", 1, "btn", "btn-primary", "btn-block", 3, "click"], [1, "row", "align-items-center"], [1, "col-sm", "pt-1", 2, "font-family", "'Secular One', sans-serif", "font-size", "1.1em"], [1, "col-sm", "pt-1", "text-right"], ["type", "button", 1, "btn", "btn-secondary", "btn-block", 3, "disabled", "click"], [1, "badge", "badge-light"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "h1", 1);
@@ -415,23 +415,28 @@ AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCompo
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](28, "hr");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "div");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](30, " Reset will ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](31, "strong");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](32, "totally wipe");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](30, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](31, "Nothing is eternal. Eternal is darkness. Darkness is bliss.");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](33, " all your progress. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](33, "Reset will ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "strong");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](35, "totally wipe");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "div", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](35, "div", 8);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](36, "button", 10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function AppComponent_Template_button_click_36_listener() { return ctx.reset(); });
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](37, " Reset ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](36, " all your progress.");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](38, "div", 8);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](39, "div", 8);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](40, "div", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](37, "div", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](38, "div", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](39, "button", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function AppComponent_Template_button_click_39_listener() { return ctx.reset(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](40, " Reset ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](41, "div", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](42, "div", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](43, "div", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](44, "div", 8);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     } if (rf & 2) {
