@@ -87,7 +87,7 @@ function AppComponent_div_14_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](8, "formatProduction");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "div", 9);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "div", 5);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "button", 10);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function AppComponent_div_14_Template_button_click_10_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r4); const dim_r2 = ctx.$implicit; const ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return dim_r2.buy(ctx_r3.state); });
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "span", 11);
@@ -508,7 +508,7 @@ class FormatNumberPipe {
             return value.toFixed(0);
         }
         if (!hasKnownSuffix(value)) {
-            return `${value.round()}e${value.exponent}`;
+            return `${value.toFixed(1)}e${value.exponent}`;
         }
         let [val, suffix] = shorten(value);
         return `${val.toFixed(1)} ${suffix}`;
@@ -526,7 +526,7 @@ class FormatProductionPipe {
             return value.toFixed(1);
         }
         if (!hasKnownSuffix(value)) {
-            return `${value.mantissa}e${value.exponent}`;
+            return `${value.mantissa.toFixed(1)}e${value.exponent}`;
         }
         let [val, suffix] = shorten(value);
         return `${val.toFixed(1)} ${suffix}`;
