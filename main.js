@@ -508,7 +508,7 @@ class FormatNumberPipe {
             return value.toFixed(0);
         }
         if (!hasKnownSuffix(value)) {
-            return `${value.toFixed(1)}e${value.exponent}`;
+            return `${value.mantissa.toFixed(1)}e${value.exponent}`;
         }
         let [val, suffix] = shorten(value);
         return `${val.toFixed(1)} ${suffix}`;
