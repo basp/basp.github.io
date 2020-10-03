@@ -148,6 +148,12 @@ function AppComponent_div_19_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](18, 14, dim_r6.costTo10()), " ");
 } }
+// TODO
+// * achievements
+// * energy anomalies
+// * energy anomaliess upon evolve
+// * energy anomaly gain % boost by achievements
+// * vaporwave
 class Dimension {
     constructor(tier, name, baseCost, costMultiplier, baseProduction, requiredLevel) {
         this.tier = tier;
@@ -222,8 +228,8 @@ const refspeed = 1000;
 const tickspeed = 1000;
 const rate = 10;
 const interval = 1000 / rate;
-const baseTarget = new break_infinity_js__WEBPACK_IMPORTED_MODULE_1__["default"](1e5);
-const targetMultiplier = new break_infinity_js__WEBPACK_IMPORTED_MODULE_1__["default"](1e9);
+const baseTarget = new break_infinity_js__WEBPACK_IMPORTED_MODULE_1__["default"](1e4);
+const targetMultiplier = new break_infinity_js__WEBPACK_IMPORTED_MODULE_1__["default"](1e6);
 const SAVE_FILE = 'sandbox.save';
 class AppComponent {
     constructor() {
@@ -264,10 +270,11 @@ class AppComponent {
         this.state = new State();
         this.state.level = level + 1;
         for (let dim of this.state.dimensions) {
-            if (!dim.isVisible(this.state)) {
+            if (dim.requiredLevel >= this.state.level) {
                 continue;
             }
-            dim.baseProduction = new break_infinity_js__WEBPACK_IMPORTED_MODULE_1__["default"](1 + this.state.level * 0.5);
+            let gain = this.state.level - dim.requiredLevel;
+            dim.baseProduction = dim.baseProduction.plus(gain * 0.5);
         }
     }
     reset() {
@@ -328,19 +335,24 @@ class AppComponent {
         // If we are running too fast (usually only happens due to tiny
         // browser scheduling variations) then `r` will be less than 1.0.
         let r = dt / interval;
+        // However, if `r` is less than 1.0 we'll clamp it to 1 so we dont
+        // get weird number behavior going between growth and decline.
+        // If we didn't do this your energy gain of 3.2 might suddenly become
+        // 3.17 on the next frame and that is really annoying.
         r = r < 1.0 ? 1.0 : r;
         // Now we just need to compensate this with either a higher
         // or lower tickspeed. The `tickspeed` value starts of at 1000
-        // but can be dynamically adjusted. The `refspeed` value never
-        // changes but it should probably be equal to the `tickspeed`
-        // starting value for normal purposes.
+        // but can be dynamically adjusted by whatever the game requires. 
+        // The `refspeed` value never changes but it should be equal 
+        // to the `tickspeed` at the beginning of the game.
         // First we convert our scaled unit value `r` into "speed" domain.
         // If we are running exactly on time then `r` should be very close
-        // to 1.0 and to normalize it we want it to be around a 1000.
+        // to 1.0 and to normalize it we want it to be around a `refspeed` 
+        // instead.
         let s = r * refspeed;
         // Now we scale `s` with our actual tickspeed. If the tickspeed
         // is lower than a 1000 then time should be progressing faster
-        // scorewise even though we're not actually decreasing `interval`.
+        // scorewise (even though we're still ticking along the same `interval`).
         // If tickspeed is 1000 and we are running on time then this should
         // return back into a scale unit of around 1.0.
         s = s / tickspeed;
@@ -400,16 +412,16 @@ AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCompo
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](28, "hr");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "div", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](30, "div", 8);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](31, "div", 8);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](32, "div", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](30, "div", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](31, "button", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function AppComponent_Template_button_click_31_listener() { return ctx.reset(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](32, " Reset ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](33, "div", 8);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "div", 8);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](35, "button", 10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function AppComponent_Template_button_click_35_listener() { return ctx.reset(); });
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](36, " Reset ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](34, "div", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](35, "div", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](36, "div", 8);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     } if (rf & 2) {
