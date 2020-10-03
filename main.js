@@ -224,6 +224,7 @@ const rate = 10;
 const interval = 1000 / rate;
 const baseTarget = new break_infinity_js__WEBPACK_IMPORTED_MODULE_1__["default"](1e5);
 const targetMultiplier = new break_infinity_js__WEBPACK_IMPORTED_MODULE_1__["default"](1e9);
+const SAVE_FILE = 'sandbox.save';
 class AppComponent {
     constructor() {
         this.title = 'Sandbox';
@@ -241,10 +242,10 @@ class AppComponent {
         }, 30 * 1000);
     }
     save() {
-        localStorage.setItem('save', JSON.stringify(this.state));
+        localStorage.setItem(SAVE_FILE, JSON.stringify(this.state));
     }
     load() {
-        let json = localStorage.getItem('save');
+        let json = localStorage.getItem(SAVE_FILE);
         if (!json) {
             return;
         }
@@ -271,6 +272,7 @@ class AppComponent {
     }
     reset() {
         this.state = new State();
+        localStorage.removeItem(SAVE_FILE);
     }
     target() {
         return baseTarget.mul(targetMultiplier.pow(this.state.level));
