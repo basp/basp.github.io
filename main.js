@@ -246,11 +246,32 @@ class AppComponent {
         this.title = 'Sandbox';
         this.state = new State();
         this.state.lastUpdate = performance.now();
+        this.load();
         setInterval(() => {
             const thisUpdate = performance.now();
             this.update(thisUpdate - this.state.lastUpdate);
             this.state.lastUpdate = thisUpdate;
         }, interval);
+        setInterval(() => {
+            this.save();
+            console.log('game saved');
+        }, 30 * 1000);
+    }
+    save() {
+        localStorage.setItem('save', JSON.stringify(this.state));
+    }
+    load() {
+        let json = localStorage.getItem('save');
+        let save = JSON.parse(json);
+        console.log(save);
+        this.state.energy = new break_infinity_js__WEBPACK_IMPORTED_MODULE_1__["default"](save.energy);
+        this.state.lastUpdate = save.lastUpdate;
+        this.state.level = save.level;
+        for (let i = 0; i < this.state.dimensions.length; i++) {
+            this.state.dimensions[i].baseProduction = new break_infinity_js__WEBPACK_IMPORTED_MODULE_1__["default"](save.dimensions[i].baseProduction);
+            this.state.dimensions[i].number = new break_infinity_js__WEBPACK_IMPORTED_MODULE_1__["default"](save.dimensions[i].number);
+            this.state.dimensions[i].numberBought = save.dimensions[i].numberBought;
+        }
     }
     evolve() {
         const level = this.state.level;
