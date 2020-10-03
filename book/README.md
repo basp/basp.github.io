@@ -1,2 +1,0 @@
-# pollen-sandbox
-Pollen sandbox
