@@ -410,7 +410,7 @@ class ScoreComponent {
         return baseTarget.mul(targetMultiplier.pow(this.state.level));
     }
     progress() {
-        if (this.state.output.lessThanOrEqualTo(0)) {
+        if (this.state.output.lessThan(1)) {
             return 0;
         }
         let e = this.state.energy.plus(1).log10();
@@ -423,7 +423,7 @@ class ScoreComponent {
             if (g.requiredLevel === this.state.level) {
                 this.toastr.info(`${g.name} unlocked!`, 'New generator', {
                     disableTimeOut: true,
-                    closeButton: true
+                    closeButton: false
                 });
             }
         }
@@ -683,37 +683,69 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+// In order to increase game speed without increasing
+// the actual framerate we'll use `refspeed` and `tickspeed`.
+// At the start of the game `refspeed` and `tickspeed` should
+// be equal. This will yield a production multiplier of 1.
+// During the game, `tickspeed` might become lower and thus the 
+// ratio of `refspeed` divided by `tickspeed` will be greater
+// than one. If production is then multiplied with this value
+// we will get a "virtual" time boost.
 const refspeed = 1000;
 const tickspeed = 1000;
+// This is the actual "framerate" (i.e the game will update `rate` 
+// times per second).
 const rate = 10;
+// This is the expect duration of each "frame" in milliseconds if
+// the game would run on an infinitely fast CPU with 100% accurate
+// browser scheduling.
 const interval = 1000 / rate;
 class AppComponent {
     constructor(stateService, toastr) {
         this.stateService = stateService;
         this.toastr = toastr;
         this.title = 'Legendary Fiesta';
-        this.active = 'generators';
     }
     ngOnInit() {
+        // State is now shared between multiple components
+        // so we'll obtain it via a state service.
         this.state = this.stateService.getState();
+        // We probably don't want to do this once
+        // we enable offline progression.
         this.state.lastUpdate = performance.now();
+        // Try to load any save game we might have.
+        // This will do nothing if there's no stored
+        // save file available (i.e. a completely new user).
         this.load();
+        // Initialize the main gameloop timer.
         setInterval(() => {
             const thisUpdate = performance.now();
-            this.update(thisUpdate - this.state.lastUpdate);
+            // The value of `dt` is the amount of time that
+            // has passed since we last updated the game.
+            const dt = thisUpdate - this.state.lastUpdate;
+            this.update(dt);
+            // Make sure we remember the last time that
+            // we updated for the next frame update.
             this.state.lastUpdate = thisUpdate;
         }, interval);
+        // We'll save every 30 seconds which seems reasonable.
+        const saveInterval = 30 * 1000;
         setInterval(() => {
             this.save();
-            this.toastr.info('Game saved.');
-        }, 30 * 1000);
+            this.toastr.info('Game saved.', null, {
+                closeButton: false,
+            });
+        }, saveInterval);
     }
-    select(name) {
-        this.active = name;
-    }
+    // Returns the head of our generator list. This is the
+    // generator that actually produces energy.
     head() {
         return this.state.generators[0];
     }
+    // Return all generators (in order) except the main
+    // generator (which is returned by `head`). All generators
+    // except the main generator produce other generators
+    // one tier below them.
     tail() {
         return this.state.generators.slice(1);
     }
@@ -722,9 +754,15 @@ class AppComponent {
     }
     load() {
         let json = localStorage.getItem(_common__WEBPACK_IMPORTED_MODULE_1__["SAVE_FILE"]);
+        // Make sure we actually have a save file, otherwise just
+        // return early and do nothing.
         if (!json) {
             return;
         }
+        // The rest of this code just copies the values from our
+        // save file into the actual state. This code is quite
+        // error prone and may lead to really weird stuff if you
+        // forget anything.
         let save = JSON.parse(json);
         this.state.energy = new break_infinity_js__WEBPACK_IMPORTED_MODULE_2__["default"](save.energy);
         this.state.lastUpdate = save.lastUpdate;
@@ -738,8 +776,8 @@ class AppComponent {
     }
     update(dt) {
         // The value of `dt` should be around 1000 / rate. 
-        // With rate of 20 this boils down to 50 millisecods.
-        // However, it might be a bit shorter or longer.
+        // With `rate` of 10 this boils down to 100 millisecods.
+        // It might be a bit shorter or longer depending on browser timing.
         // First we need to find out if we under- or overshot our
         // intended interval. We expect this method to be called
         // every `interval` of time (which is a number in milliseconds)
@@ -772,10 +810,27 @@ class AppComponent {
         // return back into a scale unit of around 1.0.
         s = s / tickspeed;
         // Now we can finally scale our production with time and tickspeed.
+        // The way we need to deal with generators depends on whether it 
+        // produces energy or other generators. All generators except the first
+        // one (`head`) produce generators one tier below them. The `head`
+        // generators produce the actual energy.
         let first = this.head();
+        // The value of `grossEnergy` is what we would've produced if the
+        // game was running perfectly on time.
         let grossEnergy = first.number.mul(first.production());
-        this.state.energy = this.state.energy.add(grossEnergy);
+        // The value of `nettEnergy` is compensated for the slight variations
+        // of actual frame duration (`dt`).
+        let nettEnergy = grossEnergy.mul(s);
+        this.state.energy = this.state.energy.add(nettEnergy);
+        // We'll use `grossEnergy` to display current output because it's a
+        // much more stable number than `nettEnergy`. So even though we're
+        // technically lying to the user this leads to a much more pleasant
+        // experience.
         this.state.output = grossEnergy.mul(rate).floor();
+        // The rest of the generators can all be handled by just looping
+        // through them and adding their production to the number of 
+        // generators one tier below (i.e. a hyper booster produces boosters
+        // and a booster produces generators).
         let rest = this.tail();
         for (let g of rest) {
             let x = g.number.mul(g.production()).mul(s);
