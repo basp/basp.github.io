@@ -20,6 +20,7 @@ class State {
         this.output = new break_infinity_js__WEBPACK_IMPORTED_MODULE_0__["default"](0);
         this.interval = new break_infinity_js__WEBPACK_IMPORTED_MODULE_0__["default"](1000);
         this.level = 0;
+        this.toasters = 0;
         this.generators = [
             new _generator__WEBPACK_IMPORTED_MODULE_1__["Generator"](0, 'Generator', new break_infinity_js__WEBPACK_IMPORTED_MODULE_0__["default"](1e1), new break_infinity_js__WEBPACK_IMPORTED_MODULE_0__["default"](1e3), 0),
             new _generator__WEBPACK_IMPORTED_MODULE_1__["Generator"](1, 'Booster', new break_infinity_js__WEBPACK_IMPORTED_MODULE_0__["default"](1e2), new break_infinity_js__WEBPACK_IMPORTED_MODULE_0__["default"](1e4), 1),
@@ -358,12 +359,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ScoreComponent", function() { return ScoreComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
 /* harmony import */ var break_infinity_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! break_infinity.js */ "X9ex");
-/* harmony import */ var _state_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../state.service */ "Ebwu");
-/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ngx-toastr */ "5eHb");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "ofXK");
-/* harmony import */ var _format_score_pipe__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../format-score.pipe */ "2vsq");
-/* harmony import */ var _format_number_pipe__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../format-number.pipe */ "yvgr");
-/* harmony import */ var _format_cost_pipe__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../format-cost.pipe */ "4BTn");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "kU1M");
+/* harmony import */ var _state_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../state.service */ "Ebwu");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-toastr */ "5eHb");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common */ "ofXK");
+/* harmony import */ var _format_score_pipe__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../format-score.pipe */ "2vsq");
+/* harmony import */ var _format_number_pipe__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../format-number.pipe */ "yvgr");
+/* harmony import */ var _format_cost_pipe__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../format-cost.pipe */ "4BTn");
 
 
 
@@ -373,16 +375,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function ScoreComponent_div_14_Template(rf, ctx) { if (rf & 1) {
+
+function ScoreComponent_div_18_Template(rf, ctx) { if (rf & 1) {
     const _r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 4);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "button", 5);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function ScoreComponent_div_14_Template_button_click_1_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r3); const ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r2.evolve(); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function ScoreComponent_div_18_Template_button_click_1_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r3); const ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r2.evolve(); });
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, " Evolve ");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } }
-function ScoreComponent_div_15_Template(rf, ctx) { if (rf & 1) {
+function ScoreComponent_div_19_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 4);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Next evolutionary algorithm at ");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "code");
@@ -421,16 +424,23 @@ class ScoreComponent {
         this.stateService.evolve();
         for (let g of this.state.generators) {
             if (g.requiredLevel === this.state.level) {
-                this.toastr.info(`${g.name} unlocked!`, 'New generator', {
+                this.toastr
+                    .info(`${g.name} unlocked!`, 'New generator', {
                     disableTimeOut: true,
                     closeButton: false
-                });
+                })
+                    .onTap
+                    .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["take"])(1))
+                    .subscribe(() => this.toasterClickHandler());
             }
         }
     }
+    toasterClickHandler() {
+        this.state.toasters += 1;
+    }
 }
-ScoreComponent.ɵfac = function ScoreComponent_Factory(t) { return new (t || ScoreComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_state_service__WEBPACK_IMPORTED_MODULE_2__["StateService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](ngx_toastr__WEBPACK_IMPORTED_MODULE_3__["ToastrService"])); };
-ScoreComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: ScoreComponent, selectors: [["app-score"]], decls: 16, vars: 12, consts: [[1, "text-center"], [1, "progress", "mb-2", "mt-2", 2, "height", "20px"], ["role", "progressbar", "aria-valuemin", "0", "aria-valuemax", "100", 1, "progress-bar", "progress-bar-striped", "progress-bar-animated"], ["class", "mb-2", 4, "ngIf"], [1, "mb-2"], ["type", "button", 1, "btn", "btn-success", "btn-block", 3, "click"]], template: function ScoreComponent_Template(rf, ctx) { if (rf & 1) {
+ScoreComponent.ɵfac = function ScoreComponent_Factory(t) { return new (t || ScoreComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_state_service__WEBPACK_IMPORTED_MODULE_3__["StateService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"])); };
+ScoreComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: ScoreComponent, selectors: [["app-score"]], decls: 20, vars: 13, consts: [[1, "text-center"], [1, "progress", "mb-2", "mt-2", 2, "height", "20px"], ["role", "progressbar", "aria-valuemin", "0", "aria-valuemax", "100", 1, "progress-bar", "progress-bar-striped", "progress-bar-animated"], ["class", "mb-2", 4, "ngIf"], [1, "mb-2"], ["type", "button", 1, "btn", "btn-success", "btn-block", 3, "click"]], template: function ScoreComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "h1", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "code");
@@ -446,20 +456,28 @@ ScoreComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCom
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, " joule per second.");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "h5", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12, "Toasters: ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "code");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](14);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "div", 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "div", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](13);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](14, ScoreComponent_div_14_Template, 3, 0, "div", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](15, ScoreComponent_div_15_Template, 6, 3, "div", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "div", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "div", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](17);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](18, ScoreComponent_div_18_Template, 3, 0, "div", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](19, ScoreComponent_div_19_Template, 6, 3, "div", 3);
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](4, 8, ctx.state.energy));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](4, 9, ctx.state.energy));
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](9, 10, ctx.state.output));
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](9, 11, ctx.state.output));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx.state.toasters);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵstyleProp"]("width", ctx.progress().toFixed(0) + "%");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵattribute"]("aria-valuenow", ctx.progress());
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
@@ -468,7 +486,7 @@ ScoreComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCom
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.progress() >= 100);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.progress() < 100);
-    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_4__["NgIf"]], pipes: [_format_score_pipe__WEBPACK_IMPORTED_MODULE_5__["FormatScorePipe"], _format_number_pipe__WEBPACK_IMPORTED_MODULE_6__["FormatNumberPipe"], _format_cost_pipe__WEBPACK_IMPORTED_MODULE_7__["FormatCostPipe"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Njb3JlL3Njb3JlLmNvbXBvbmVudC5jc3MifQ== */", ".progress-bar[_ngcontent-%COMP%] {\n    color: white;\n  }"] });
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"]], pipes: [_format_score_pipe__WEBPACK_IMPORTED_MODULE_6__["FormatScorePipe"], _format_number_pipe__WEBPACK_IMPORTED_MODULE_7__["FormatNumberPipe"], _format_cost_pipe__WEBPACK_IMPORTED_MODULE_8__["FormatCostPipe"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Njb3JlL3Njb3JlLmNvbXBvbmVudC5jc3MifQ== */", ".progress-bar[_ngcontent-%COMP%] {\n    color: white;\n  }"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](ScoreComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -476,7 +494,7 @@ ScoreComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCom
                 templateUrl: './score.component.html',
                 styleUrls: ['./score.component.css']
             }]
-    }], function () { return [{ type: _state_service__WEBPACK_IMPORTED_MODULE_2__["StateService"] }, { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_3__["ToastrService"] }]; }, null); })();
+    }], function () { return [{ type: _state_service__WEBPACK_IMPORTED_MODULE_3__["StateService"] }, { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"] }]; }, null); })();
 
 
 /***/ }),
@@ -664,14 +682,16 @@ const SAVE_FILE = 'sandbox.save';
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./common */ "Lw2Y");
-/* harmony import */ var break_infinity_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! break_infinity.js */ "X9ex");
-/* harmony import */ var _state_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./state.service */ "Ebwu");
-/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-toastr */ "5eHb");
-/* harmony import */ var _score_score_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./score/score.component */ "7kv/");
-/* harmony import */ var _generators_generators_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./generators/generators.component */ "gA45");
-/* harmony import */ var _achievements_achievements_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./achievements/achievements.component */ "vZP+");
-/* harmony import */ var _options_options_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./options/options.component */ "8cSL");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs/operators */ "kU1M");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./common */ "Lw2Y");
+/* harmony import */ var break_infinity_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! break_infinity.js */ "X9ex");
+/* harmony import */ var _state_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./state.service */ "Ebwu");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ngx-toastr */ "5eHb");
+/* harmony import */ var _score_score_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./score/score.component */ "7kv/");
+/* harmony import */ var _generators_generators_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./generators/generators.component */ "gA45");
+/* harmony import */ var _achievements_achievements_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./achievements/achievements.component */ "vZP+");
+/* harmony import */ var _options_options_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./options/options.component */ "8cSL");
+
 
 
 
@@ -733,8 +753,14 @@ class AppComponent {
             this.save();
             this.toastr.info('Game saved.', null, {
                 closeButton: false,
-            });
+            })
+                .onTap
+                .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["take"])(1))
+                .subscribe(() => this.toasterClickHandler());
         }, saveInterval);
+    }
+    toasterClickHandler() {
+        this.state.toasters += 1;
     }
     // Returns the head of our generator list. This is the
     // generator that actually produces energy.
@@ -749,10 +775,10 @@ class AppComponent {
         return this.state.generators.slice(1);
     }
     save() {
-        localStorage.setItem(_common__WEBPACK_IMPORTED_MODULE_1__["SAVE_FILE"], JSON.stringify(this.state));
+        localStorage.setItem(_common__WEBPACK_IMPORTED_MODULE_2__["SAVE_FILE"], JSON.stringify(this.state));
     }
     load() {
-        let json = localStorage.getItem(_common__WEBPACK_IMPORTED_MODULE_1__["SAVE_FILE"]);
+        let json = localStorage.getItem(_common__WEBPACK_IMPORTED_MODULE_2__["SAVE_FILE"]);
         // Make sure we actually have a save file, otherwise just
         // return early and do nothing.
         if (!json) {
@@ -763,12 +789,12 @@ class AppComponent {
         // error prone and may lead to really weird stuff if you
         // forget anything.
         let save = JSON.parse(json);
-        this.state.energy = new break_infinity_js__WEBPACK_IMPORTED_MODULE_2__["default"](save.energy);
+        this.state.energy = new break_infinity_js__WEBPACK_IMPORTED_MODULE_3__["default"](save.energy);
         this.state.lastUpdate = save.lastUpdate;
         this.state.level = save.level;
         for (let i = 0; i < this.state.generators.length; i++) {
-            this.state.generators[i].baseProduction = new break_infinity_js__WEBPACK_IMPORTED_MODULE_2__["default"](save.generators[i].baseProduction);
-            this.state.generators[i].number = new break_infinity_js__WEBPACK_IMPORTED_MODULE_2__["default"](save.generators[i].number);
+            this.state.generators[i].baseProduction = new break_infinity_js__WEBPACK_IMPORTED_MODULE_3__["default"](save.generators[i].baseProduction);
+            this.state.generators[i].number = new break_infinity_js__WEBPACK_IMPORTED_MODULE_3__["default"](save.generators[i].number);
             this.state.generators[i].numberBought = save.generators[i].numberBought;
             this.state.generators[i].level = save.generators[i].level;
         }
@@ -838,7 +864,7 @@ class AppComponent {
         }
     }
 }
-AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_state_service__WEBPACK_IMPORTED_MODULE_3__["StateService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"])); };
+AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_state_service__WEBPACK_IMPORTED_MODULE_4__["StateService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](ngx_toastr__WEBPACK_IMPORTED_MODULE_5__["ToastrService"])); };
 AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 17, vars: 0, consts: [[1, "container"], ["id", "nav-tab", "role", "tablist", 1, "nav", "nav-pills", "mb-2"], ["id", "nav-generators-tab", "data-toggle", "tab", "href", "#nav-generators", "role", "tab", "aria-controls", "nav-generators", "aria-selected", "true", 1, "nav-item", "nav-link", "active"], ["id", "nav-achievements-tab", "data-toggle", "tab", "href", "#nav-achievements", "role", "tab", "aria-controls", "nav-achievements", "aria-selected", "false", 1, "nav-item", "nav-link"], ["id", "nav-options-tab", "data-toggle", "tab", "href", "#nav-options", "role", "tab", "aria-controls", "nav-options", "aria-selected", "false", 1, "nav-item", "nav-link"], ["id", "nav-tabContent", 1, "tab-content"], ["id", "nav-generators", "role", "tabpanel", "aria-labelledby", "nav-generators-tab", 1, "tab-pane", "fade", "show", "active"], ["id", "nav-achievements", "role", "tabpanel", "aria-labelledby", "nav-achievements-tab", 1, "tab-pane", "fade"], ["id", "nav-options", "role", "tabpanel", "aria-labelledby", "nav-options-tab", 1, "tab-pane", "fade"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "app-score");
@@ -867,7 +893,7 @@ AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCompo
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    } }, directives: [_score_score_component__WEBPACK_IMPORTED_MODULE_5__["ScoreComponent"], _generators_generators_component__WEBPACK_IMPORTED_MODULE_6__["GeneratorsComponent"], _achievements_achievements_component__WEBPACK_IMPORTED_MODULE_7__["AchievementsComponent"], _options_options_component__WEBPACK_IMPORTED_MODULE_8__["OptionsComponent"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIn0= */", ".nav-pills[_ngcontent-%COMP%]   .nav-link.active[_ngcontent-%COMP%], .nav-pills[_ngcontent-%COMP%]   .show[_ngcontent-%COMP%] > .nav-link[_ngcontent-%COMP%] {\n    color: white;\n  }"] });
+    } }, directives: [_score_score_component__WEBPACK_IMPORTED_MODULE_6__["ScoreComponent"], _generators_generators_component__WEBPACK_IMPORTED_MODULE_7__["GeneratorsComponent"], _achievements_achievements_component__WEBPACK_IMPORTED_MODULE_8__["AchievementsComponent"], _options_options_component__WEBPACK_IMPORTED_MODULE_9__["OptionsComponent"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIn0= */", ".nav-pills[_ngcontent-%COMP%]   .nav-link.active[_ngcontent-%COMP%], .nav-pills[_ngcontent-%COMP%]   .show[_ngcontent-%COMP%] > .nav-link[_ngcontent-%COMP%] {\n    color: white;\n  }"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AppComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -875,7 +901,7 @@ AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCompo
                 templateUrl: './app.component.html',
                 styleUrls: ['./app.component.css']
             }]
-    }], function () { return [{ type: _state_service__WEBPACK_IMPORTED_MODULE_3__["StateService"] }, { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"] }]; }, null); })();
+    }], function () { return [{ type: _state_service__WEBPACK_IMPORTED_MODULE_4__["StateService"] }, { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_5__["ToastrService"] }]; }, null); })();
 
 
 /***/ }),
