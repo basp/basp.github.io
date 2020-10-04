@@ -7,8 +7,8 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\basp\sandbox\src\styles.css */"OmL/");
-module.exports = __webpack_require__(/*! D:\basp\sandbox\node_modules\bootstrap\dist\css\bootstrap.min.css */"q4sD");
+__webpack_require__(/*! D:\basp\legendary-fiesta\src\styles.css */"OmL/");
+module.exports = __webpack_require__(/*! D:\basp\legendary-fiesta\node_modules\bootstrap\dist\css\bootstrap.min.css */"q4sD");
 
 
 /***/ }),

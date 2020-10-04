@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\basp\sandbox\src\polyfills.ts */"hN/g");
+module.exports = __webpack_require__(/*! D:\basp\legendary-fiesta\src\polyfills.ts */"hN/g");
 
 
 /***/ }),
