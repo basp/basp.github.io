@@ -867,7 +867,7 @@ AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCompo
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    } }, directives: [_score_score_component__WEBPACK_IMPORTED_MODULE_5__["ScoreComponent"], _generators_generators_component__WEBPACK_IMPORTED_MODULE_6__["GeneratorsComponent"], _achievements_achievements_component__WEBPACK_IMPORTED_MODULE_7__["AchievementsComponent"], _options_options_component__WEBPACK_IMPORTED_MODULE_8__["OptionsComponent"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIn0= */"] });
+    } }, directives: [_score_score_component__WEBPACK_IMPORTED_MODULE_5__["ScoreComponent"], _generators_generators_component__WEBPACK_IMPORTED_MODULE_6__["GeneratorsComponent"], _achievements_achievements_component__WEBPACK_IMPORTED_MODULE_7__["AchievementsComponent"], _options_options_component__WEBPACK_IMPORTED_MODULE_8__["OptionsComponent"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIn0= */", ".nav-pills[_ngcontent-%COMP%]   .nav-link.active[_ngcontent-%COMP%], .nav-pills[_ngcontent-%COMP%]   .show[_ngcontent-%COMP%] > .nav-link[_ngcontent-%COMP%] {\n    color: white;\n  }"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AppComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
