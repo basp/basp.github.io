@@ -1233,9 +1233,11 @@ class GeneratorsComponent {
         });
     }
     max() {
-        for (let g of this.generators()) {
-            if (this.state.energy.greaterThanOrEqualTo(g.costTo10())) {
-                g.buyTo10(this.state);
+        while (this.isMaxEnabled()) {
+            for (let g of this.generators()) {
+                if (this.state.energy.greaterThanOrEqualTo(g.costTo10())) {
+                    g.buyTo10(this.state);
+                }
             }
         }
     }
