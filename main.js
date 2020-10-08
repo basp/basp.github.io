@@ -391,7 +391,7 @@ function ScoreComponent_h5_11_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx_r0.state.toasters);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", ctx_r0.state.toasters === 1 ? "toaster" : "toasters", " flying around.");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", ctx_r0.state.toasters === 1 ? "toaster" : "toasters", " flying around");
 } }
 function ScoreComponent_div_15_Template(rf, ctx) { if (rf & 1) {
     const _r4 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
@@ -471,7 +471,7 @@ ScoreComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCom
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](9, "formatNumber");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, " joule per second.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, " joule per second");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](11, ScoreComponent_h5_11_Template, 5, 3, "h5", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -774,13 +774,43 @@ const rate = 10;
 // the game would run on an infinitely fast CPU with 100% accurate
 // browser scheduling.
 const interval = 1000 / rate;
+const QUOTES = [
+    {
+        quote: 'There are many things of which a wise man might wish to be ignorant.',
+        author: 'Ralph Waldo Emerson',
+    },
+    {
+        quote: "Confidence is ignorance. If you're feeling cocky, it's because there's something you don't know.",
+        author: 'Eoin Colfer',
+    },
+    {
+        quote: 'Living is easy with eyes closed.',
+        author: 'John Lennon',
+    },
+    {
+        quote: 'Without education, we are in a horrible and deadly danger of taking educated people seriously.',
+        author: 'G.K. Chesterton',
+    },
+    {
+        quote: 'Being ignorant is not so much a shame, as being unwilling to learn.',
+        author: 'Benjamin Franklin',
+    }
+];
+const BANNER = ".:;.;:.         .:  ;:.      .:;.;:. .:;S;:. .:;S;:. .:  ;:.              .:;S;:. .       .: S;:.\n" +
+    "S  S  S .:;s;:' S   ' S      S  S  S S  S     /      S   ' S      S     S S  S    S:;s;:' S  S  S\n" +
+    "`:;S;:'         `:;S;:'      `:;S;:' `:;S;:' `:;S;:' `:;S;:'      `:;S;:' `:;S;:' `       `:;S :'\n";
+const VERSION = "0.1";
 class AppComponent {
     constructor(stateService, toastr) {
         this.stateService = stateService;
         this.toastr = toastr;
         this.title = 'Legendary Fiesta';
+        this.quote = "There are many things of which a wise man might wish to be ignorant.";
+        this.author = "Ralph Waldo Emerson";
     }
     ngOnInit() {
+        console.info(BANNER);
+        console.info(`Big Bang Cats v${VERSION}`);
         // State is now shared between multiple components
         // so we'll obtain it via a state service.
         this.state = this.stateService.getState();
@@ -901,7 +931,7 @@ class AppComponent {
     }
 }
 AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_state_service__WEBPACK_IMPORTED_MODULE_2__["StateService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](ngx_toastr__WEBPACK_IMPORTED_MODULE_3__["ToastrService"])); };
-AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 102, vars: 0, consts: [[1, "container"], ["id", "nav-tab", "role", "tablist", 1, "nav", "nav-pills", "mb-2"], ["id", "nav-generators-tab", "data-toggle", "tab", "href", "#nav-generators", "role", "tab", "aria-controls", "nav-generators", "aria-selected", "true", 1, "nav-item", "nav-link", "active"], ["id", "nav-achievements-tab", "data-toggle", "tab", "href", "#nav-achievements", "role", "tab", "aria-controls", "nav-achievements", "aria-selected", "false", 1, "nav-item", "nav-link"], ["id", "nav-options-tab", "data-toggle", "tab", "href", "#nav-options", "role", "tab", "aria-controls", "nav-options", "aria-selected", "false", 1, "nav-item", "nav-link"], ["id", "nav-info-tab", "data-toggle", "tab", "href", "#nav-info", "role", "tab", "aria-controls", "nav-info", "aria-selected", "false", 1, "nav-item", "nav-link"], ["id", "nav-tabContent", 1, "tab-content"], ["id", "nav-generators", "role", "tabpanel", "aria-labelledby", "nav-generators-tab", 1, "tab-pane", "fade", "show", "active"], ["id", "nav-achievements", "role", "tabpanel", "aria-labelledby", "nav-achievements-tab", 1, "tab-pane", "fade"], ["id", "nav-options", "role", "tabpanel", "aria-labelledby", "nav-options-tab", 1, "tab-pane", "fade"], ["id", "nav-info", "role", "tabpanel", "aria-labelledby", "nav-info-tab", 1, "tab-pane", "fade"], [1, "row"], [1, "col-sm-7"], [1, "blockquote"], [1, "mb-0"], [1, "blockquote-footer"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
+AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 102, vars: 2, consts: [[1, "container"], ["id", "nav-tab", "role", "tablist", 1, "nav", "nav-pills", "mb-2"], ["id", "nav-generators-tab", "data-toggle", "tab", "href", "#nav-generators", "role", "tab", "aria-controls", "nav-generators", "aria-selected", "true", 1, "nav-item", "nav-link", "active"], ["id", "nav-achievements-tab", "data-toggle", "tab", "href", "#nav-achievements", "role", "tab", "aria-controls", "nav-achievements", "aria-selected", "false", 1, "nav-item", "nav-link"], ["id", "nav-options-tab", "data-toggle", "tab", "href", "#nav-options", "role", "tab", "aria-controls", "nav-options", "aria-selected", "false", 1, "nav-item", "nav-link"], ["id", "nav-info-tab", "data-toggle", "tab", "href", "#nav-info", "role", "tab", "aria-controls", "nav-info", "aria-selected", "false", 1, "nav-item", "nav-link"], ["id", "nav-tabContent", 1, "tab-content"], ["id", "nav-generators", "role", "tabpanel", "aria-labelledby", "nav-generators-tab", 1, "tab-pane", "fade", "show", "active"], ["id", "nav-achievements", "role", "tabpanel", "aria-labelledby", "nav-achievements-tab", 1, "tab-pane", "fade"], ["id", "nav-options", "role", "tabpanel", "aria-labelledby", "nav-options-tab", 1, "tab-pane", "fade"], ["id", "nav-info", "role", "tabpanel", "aria-labelledby", "nav-info-tab", 1, "tab-pane", "fade"], [1, "row"], [1, "col-sm-7"], [1, "blockquote"], [1, "mb-0"], [1, "blockquote-footer"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "app-score");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "nav");
@@ -935,10 +965,10 @@ AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCompo
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "div", 12);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "blockquote", 13);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "p", 14);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](24, "There are many things of which a wise man might wish to be ignorant.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](24);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "footer", 15);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](26, "Ralph Waldo Emerson");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](26);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](27, "hr");
@@ -1048,6 +1078,11 @@ AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCompo
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](24);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx.quote);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx.author);
     } }, directives: [_score_score_component__WEBPACK_IMPORTED_MODULE_4__["ScoreComponent"], _generators_generators_component__WEBPACK_IMPORTED_MODULE_5__["GeneratorsComponent"], _achievements_achievements_component__WEBPACK_IMPORTED_MODULE_6__["AchievementsComponent"], _options_options_component__WEBPACK_IMPORTED_MODULE_7__["OptionsComponent"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIn0= */", ".nav-pills[_ngcontent-%COMP%]   .nav-link.active[_ngcontent-%COMP%], .nav-pills[_ngcontent-%COMP%]   .show[_ngcontent-%COMP%] > .nav-link[_ngcontent-%COMP%] {\n    color: white;\n  }"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AppComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
